@@ -1,9 +1,9 @@
 <script setup>
-import SliderDemo from './demo/SliderDemo.vue'
+import CardsDemo from './demo/CardsDemo.vue'
 </script>
 
 <template>
-  <SliderDemo />
+  <CardsDemo />
 </template>
 
 <style scoped></style>

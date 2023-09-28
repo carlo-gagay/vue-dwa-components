@@ -11,7 +11,22 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  class: String
+  class: String,
+  animation: {
+    type: String,
+    default: 'default',
+    validator: (value) => {
+      return ['stack-sliding'].includes(value)
+    }
+  }
+})
+
+const [container, slider] = useKeenSlider({
+  drag: props.drag,
+  loop: props.loop,
+  created: (instance) => updateTracker(instance),
+  slideChanged: (instance) => updateTracker(instance),
+  detailsChanged: (instance) => onDetailsChanged(instance)
 })
 
 const navigator = ref({
@@ -21,26 +36,29 @@ const navigator = ref({
   next: () => slider.value.next()
 })
 
-const [container, slider] = useKeenSlider({
-  drag: props.drag,
-  loop: props.loop,
-  created: (instance) => updateTracker(instance),
-  slideChanged: (instance) => updateTracker(instance)
-})
+const animationStyle = ref({})
 
 const updateTracker = (instance) => {
   const details = instance.track.details
-
-  // Navigator
+  // Navigator's properties
   navigator.value.index = details.rel
   navigator.value.length = details.slides.length
 }
+
+const onDetailsChanged = (instance) => {
+  if (props.animation === 'stack-sliding') {
+    staticCurrentAnimation(instance)
+  }
+}
+
+// Animation Handlers
+const staticCurrentAnimation = (instance) => {}
 </script>
 
 <template>
   <div class="keen-slider-container">
     <div ref="container" class="keen-slider" :class="class">
-      <slot />
+      <slot :animation-style="animationStyle" />
     </div>
     <div class="keen-slider-nav-container">
       <slot name="navigator" :navigator="navigator" />

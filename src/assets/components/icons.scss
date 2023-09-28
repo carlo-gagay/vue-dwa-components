@@ -1,0 +1,83 @@
+.icon {
+  @apply flex text-[24px] transition ease-linear duration-150;
+
+  &:before {
+    display: inherit;
+  }
+
+  &--primary {
+    @apply text-primary-500;
+  }
+
+  &--success {
+    @apply text-success-500;
+  }
+
+  &--warning {
+    @apply text-warning-500;
+  }
+
+  &--info {
+    @apply text-information-500;
+  }
+
+  &--neutral {
+    @apply text-neutral-500;
+  }
+
+  &--error {
+    @apply text-destructive-500;
+  }
+
+  &--danger {
+    @apply text-destructive-500;
+  }
+
+  &--btn-success {
+    @apply text-success-500 hover:bg-success-200;
+  }
+
+  &--btn-danger {
+    @apply text-destructive-500 hover:bg-destructive-200;
+  }
+
+  &--spin {
+    @apply animate-spin;
+  }
+
+  $sizes: (
+    's4': '4px',
+    's6': '6px',
+    's8': '8px',
+    's10': '10px',
+    's12': '12px',
+    's14': '14px',
+    's16': '16px',
+    's18': '18px',
+    's20': '20px',
+    's24': '24px',
+    's32': '32px',
+    's40': '40px',
+    's56': '56px'
+  );
+
+  @each $name, $size in $sizes {
+    &--#{$name} {
+      @apply text-[#{$size}];
+    }
+  }
+
+  $smSizes: (
+    'sm32': '32px'
+  );
+
+  @each $name, $size in $smSizes {
+    &--#{$name} {
+      @apply text-[#{$size}];
+
+      @screen md {
+        font-size: inherit;
+      }
+    }
+  }
+}

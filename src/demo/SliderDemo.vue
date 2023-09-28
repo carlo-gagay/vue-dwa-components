@@ -1,11 +1,15 @@
 <script setup>
 import { Slide, Slider } from '@components/sliders'
+
+const sliderAnimation = 'stack-sliding'
 </script>
 
 <template>
-  <Slider :loop="true" :drag="false">
-    <Slide v-for="(item, index) in 5" :key="index" class="hero-banner-image">
-      <img :src="`https://picsum.photos/90${index}`" alt="Picsum pics" />
+  <Slider :loop="true" :drag="true" :animation="sliderAnimation">
+    <Slide v-for="(item, index) in 5" :key="index" :class="sliderAnimation">
+      <div>
+        <img :src="`https://picsum.photos/90${index}`" alt="Picsum pics" />
+      </div>
     </Slide>
     <template #navigator="{ navigator }">
       <div class="navigator">
@@ -17,11 +21,11 @@ import { Slide, Slider } from '@components/sliders'
 </template>
 
 <style lang="scss">
-.hero-banner-image {
+.stack-sliding {
   @apply h-[95vh];
 }
 
-.hero-banner-image img {
+.stack-sliding img {
   @apply w-full h-full object-cover object-center;
 }
 
