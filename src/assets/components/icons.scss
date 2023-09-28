@@ -5,41 +5,41 @@
     display: inherit;
   }
 
-  &--primary {
-    @apply text-primary-500;
-  }
+  // &--primary {
+  //   @apply text-primary-500;
+  // }
 
-  &--success {
-    @apply text-success-500;
-  }
+  // &--success {
+  //   @apply text-success-500;
+  // }
 
-  &--warning {
-    @apply text-warning-500;
-  }
+  // &--warning {
+  //   @apply text-warning-500;
+  // }
 
-  &--info {
-    @apply text-information-500;
-  }
+  // &--info {
+  //   @apply text-information-500;
+  // }
 
-  &--neutral {
-    @apply text-neutral-500;
-  }
+  // &--neutral {
+  //   @apply text-neutral-500;
+  // }
 
-  &--error {
-    @apply text-destructive-500;
-  }
+  // &--error {
+  //   @apply text-destructive-500;
+  // }
 
-  &--danger {
-    @apply text-destructive-500;
-  }
+  // &--danger {
+  //   @apply text-destructive-500;
+  // }
 
-  &--btn-success {
-    @apply text-success-500 hover:bg-success-200;
-  }
+  // &--btn-success {
+  //   @apply text-success-500 hover:bg-success-200;
+  // }
 
-  &--btn-danger {
-    @apply text-destructive-500 hover:bg-destructive-200;
-  }
+  // &--btn-danger {
+  //   @apply text-destructive-500 hover:bg-destructive-200;
+  // }
 
   &--spin {
     @apply animate-spin;

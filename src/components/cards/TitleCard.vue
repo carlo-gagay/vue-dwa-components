@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   image: String,
   title: String,
   author: String,
@@ -17,25 +17,47 @@ defineProps({
       <figure>
         <img :src="image" />
       </figure>
-      <div class="playable audio-badge white">
+      <button class="playable audio-badge white">
+        <i class="icon icon-volume-up icon--s12"></i>
         <div class="text">Audio Available</div>
-      </div>
+      </button>
     </div>
-    <div class="text-wrapper">
-      <div class="main-text">
+    <div class="details-wrapper">
+      <div class="main-details">
         <div v-if="title" class="title">{{ title }}</div>
         <div v-if="author || published" class="subtitle">
           <div v-if="author" class="text name">{{ author }}</div>
+          <i class="icon icon-minus-solid icon--s4"></i>
           <div v-if="published" class="text date">{{ published }}</div>
         </div>
       </div>
-      <div class="details"></div>
+      <div v-if="description" class="sub-details">
+        <p class="description normally-hidden">
+          {{ description }}
+        </p>
+        <div class="visual-data">
+          <div v-if="genres" class="chips normally-hidden">
+            <div v-for="(genre, index) in genres.genres" class="chip green" v-text="genre" />
+          </div>
+          <div class="counts">
+            <div class="count-item">
+              <i class="icon icon-heart icon--s12"></i>
+              <span class="text">
+                {{ likes }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+// Title Card
 .title-card {
+  @apply rounded-t-[10px];
+
   .img-wrapper {
     @apply relative;
 
@@ -53,16 +75,67 @@ defineProps({
     }
   }
 
-  .text-wrapper {
-    .main-text {
+  .details-wrapper {
+    @apply flex flex-row justify-between gap-y-[5px] pt-[6px] px-[11px] pb-[13px];
+    .main-details {
+      @apply flex flex-col;
       .title {
+        @apply text-sm font-bold;
       }
       .subtitle {
+        @apply flex flex-row gap-x-[10px] items-center;
+        & .text {
+          @apply text-[10px] leading-[14px];
+        }
+      }
+    }
+
+    .sub-details {
+      @apply flex flex-col gap-y-[10px];
+      .description {
+        @apply text-xs;
+      }
+
+      .visual-data {
+        @apply flex flex-row justify-between items-center;
+
+        .chips {
+          @apply flex flex-row justify-start items-center gap-x-[11px];
+        }
+
+        .counts {
+          @apply flex flex-row justify-start items-center;
+
+          .count-item {
+            @apply flex flex-row gap-x-1 items-center;
+
+            & .text {
+              @apply text-xs;
+            }
+          }
+        }
       }
     }
   }
 }
+// End Title Card
 
+// Title Card Hover Effect
+.title-card:hover {
+  @apply scale-110;
+  box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+
+  .details-wrapper {
+    @apply flex-col;
+  }
+
+  .normally-hidden {
+    display: inherit !important;
+  }
+}
+// End Title Card Hover Effect
+
+// Audio Badge
 .audio-badge {
   @apply p-1 rounded-[2px] flex items-center gap-x-[2px];
 
@@ -73,5 +146,25 @@ defineProps({
   .text {
     @apply text-[10px] leading-[14px];
   }
+}
+// End Audio Badge
+
+// Chips
+.chip {
+  @apply rounded-[2px] py-0.5 px-1 text-[10px] leading-[14px];
+
+  &.green {
+    @apply bg-green-800 text-white;
+  }
+
+  &.md {
+    @apply py-0.5 px-1 text-[10px] leading-[14px];
+  }
+}
+// End Chips
+
+// Normally hidden
+.normally-hidden {
+  @apply hidden #{!important};
 }
 </style>
