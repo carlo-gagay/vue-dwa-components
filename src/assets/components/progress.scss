@@ -1,18 +1,17 @@
 .progress-bar {
+  &.title-card-progress-bar {
+    @apply h-1 w-full absolute bottom-0;
 
-    &.title-card-progress-bar {
-        @apply h-1 w-full absolute bottom-0;
-
-        & .progress {
-            @apply h-full w-fit;
-        }
+    & .progress {
+      @apply h-full w-fit;
     }
+  }
 
-    &.primary {
-        @apply bg-black;
+  &.primary {
+    @apply bg-black;
 
-        & .progress {
-            @apply bg-yellow-500;
-        }
+    & .progress {
+      @apply bg-yellow-500;
     }
+  }
 }

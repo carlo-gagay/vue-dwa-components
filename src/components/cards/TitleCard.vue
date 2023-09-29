@@ -6,7 +6,7 @@ const props = defineProps({
   published: String,
   description: String,
   genres: Object,
-contentRating: String,
+  contentRating: String,
   rating: String,
   likes: String,
   booksCount: Number,
@@ -35,7 +35,7 @@ const emit = defineEmits(['like', 'playAudio'])
         <div class="text">Audio Available</div>
       </button>
       <div v-if="progress" class="progress-bar title-card-progress-bar primary">
-        <div class="progress" :style="{'width': `${progress}%`}"></div>
+        <div class="progress" :style="{ width: `${progress}%` }"></div>
       </div>
     </div>
     <div class="title-card-details">
@@ -57,7 +57,10 @@ const emit = defineEmits(['like', 'playAudio'])
               </template>
             </div>
           </div>
-          <div v-if="booksCount || chaptersCount || issuesCount" class="visual-data-inline statistics">
+          <div
+            v-if="booksCount || chaptersCount || issuesCount"
+            class="visual-data-inline statistics"
+          >
             <div v-if="booksCount" class="statistics-item books">
               <i class="icon icon-news-paper icon--s10"></i>
               <div class="value">Books: {{ booksCount }}</div>
@@ -82,8 +85,13 @@ const emit = defineEmits(['like', 'playAudio'])
         </p>
         <div v-if="genres || likes" class="visual-data">
           <div v-if="genres || contentRating" class="visual-data-inline hideable-hidden">
-            <div v-if="genres" v-for="(genre, index) in genres.arr" class="chip green" v-text="genre" />
-            <div v-if="contentRating" class="chip orange" v-text="contentRating"/>
+            <div
+              v-if="genres"
+              v-for="(genre, index) in genres.arr"
+              class="chip green"
+              v-text="genre"
+            />
+            <div v-if="contentRating" class="chip orange" v-text="contentRating" />
           </div>
           <div class="visual-data-inline">
             <div v-if="likes" class="user-interaction-counter">

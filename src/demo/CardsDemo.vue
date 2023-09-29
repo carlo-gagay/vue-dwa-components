@@ -60,63 +60,59 @@ const title = {
       </div>
     </div>
 
-<hr />
+    <hr />
 
-<h1>Bookshelf cards</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
-  <div v-for="n in 2" :key="n" class="relative-container">
-    <TitleCard
-      class="minimal-default"
-      :title="title.title"
-      :author="title.author"
-      :published="title.published"
-      :description="title.description"
-      :genres="title.genres"
-      :image="`https://picsum.photos/18${n}`"
-      :audio="{ src: '' }"
-      :progress="60"
-      :content-rating="title.contentRating"
-    >
-      <template #header-actions>
-        <button class="hideable-show">
-          <i class="icon icon-bookmark icon--s20"></i>
-        </button>
-      </template>
-      <template #footer-actions>
-        <button class="hideable-hidden btn trans-outline">
-          Continue Reading
-        </button>
-      </template>
-    </TitleCard>
-  </div>
-  <div v-for="n in 2" :key="n" class="relative-container">
-    <TitleCard
-      class="minimal-default"
-      :title="title.title"
-      :author="title.author"
-      :published="title.published"
-      :description="title.description"
-      :genres="title.genres"
-      :image="`https://picsum.photos/18${n}`"
-      :audio="{ src: '' }"
-      :progress="0"
-      :content-rating="title.contentRating"
-    >
-      <template #header-actions>
-        <button class="hideable-show">
-          <i class="icon icon-heart icon--s20"></i>
-        </button>
-      </template>
-      <template #footer-actions>
-        <button class="hideable-hidden btn primary">
-          Start Reading
-        </button>
-      </template>
-    </TitleCard>
-  </div>
-</div>
+    <h1>Bookshelf cards</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
+      <div v-for="n in 2" :key="n" class="relative-container">
+        <TitleCard
+          class="minimal-default"
+          :title="title.title"
+          :author="title.author"
+          :published="title.published"
+          :description="title.description"
+          :genres="title.genres"
+          :image="`https://picsum.photos/18${n}`"
+          :audio="{ src: '' }"
+          :progress="60"
+          :content-rating="title.contentRating"
+        >
+          <template #header-actions>
+            <button class="hideable-show">
+              <i class="icon icon-bookmark icon--s20"></i>
+            </button>
+          </template>
+          <template #footer-actions>
+            <button class="hideable-hidden btn trans-outline">Continue Reading</button>
+          </template>
+        </TitleCard>
+      </div>
+      <div v-for="n in 2" :key="n" class="relative-container">
+        <TitleCard
+          class="minimal-default"
+          :title="title.title"
+          :author="title.author"
+          :published="title.published"
+          :description="title.description"
+          :genres="title.genres"
+          :image="`https://picsum.photos/18${n}`"
+          :audio="{ src: '' }"
+          :progress="0"
+          :content-rating="title.contentRating"
+        >
+          <template #header-actions>
+            <button class="hideable-show">
+              <i class="icon icon-heart icon--s20"></i>
+            </button>
+          </template>
+          <template #footer-actions>
+            <button class="hideable-hidden btn primary">Start Reading</button>
+          </template>
+        </TitleCard>
+      </div>
+    </div>
 
-<br>
-<br>
+    <br />
+    <br />
   </div>
 </template>

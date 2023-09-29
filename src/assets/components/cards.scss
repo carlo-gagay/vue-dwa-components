@@ -41,7 +41,7 @@
           }
           .subtitle {
             @apply flex flex-row gap-x-[10px] items-center;
-    
+
             & .text {
               @apply text-[10px] leading-[14px];
             }
@@ -79,7 +79,7 @@
 
 // Title Card Minimal Default Theme
 .title-card.minimal-default {
-  @apply z-10 w-full;
+  @apply z-10 w-full transition-all duration-150 ease-in-out;
 
   .title-card-details {
     @apply flex-row;
