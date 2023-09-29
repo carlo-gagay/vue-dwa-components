@@ -1,0 +1,11 @@
+.audio-badge {
+  @apply p-1 rounded-[2px] flex items-center gap-x-[2px];
+
+  &.white {
+    @apply bg-white text-neutral-900;
+  }
+
+  .text {
+    @apply text-[10px] leading-[14px];
+  }
+}

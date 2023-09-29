@@ -1,0 +1,130 @@
+// Title card container
+.relative-container {
+  @apply relative;
+}
+
+// Title Card
+.title-card {
+  @apply rounded-[10px] bg-[#FFFCF3];
+
+  .title-card-image {
+    @apply relative;
+
+    figure,
+    img {
+      @apply m-0 w-full rounded-t-[10px];
+    }
+
+    img {
+      @apply aspect-[306/190] object-cover object-center;
+    }
+
+    .title-card-badge {
+      @apply absolute right-[10px] top-[10px];
+    }
+  }
+
+  .title-card-details {
+    @apply flex flex-col justify-between gap-y-[5px] pt-[6px] pb-[13px];
+
+    .title-card-details-main {
+      @apply flex flex-row justify-between items-center w-full;
+
+      .title-infos-container {
+        @apply flex flex-col gap-y-[2px];
+
+        .title-infos {
+          @apply flex flex-col;
+
+          .title {
+            @apply text-sm font-bold;
+          }
+          .subtitle {
+            @apply flex flex-row gap-x-[10px] items-center;
+    
+            & .text {
+              @apply text-[10px] leading-[14px];
+            }
+          }
+        }
+      }
+    }
+
+    .title-card-details-sub {
+      @apply flex flex-col gap-y-[10px];
+
+      .description {
+        @apply text-xs;
+      }
+    }
+  }
+}
+
+.visual-data {
+  @apply flex flex-row justify-between items-end;
+}
+
+.visual-data-inline {
+  @apply flex flex-row justify-start items-center gap-x-[11px];
+}
+// End Title Card
+
+.user-interaction-counter {
+  @apply flex flex-row gap-x-1 items-center;
+
+  & .text {
+    @apply text-xs;
+  }
+}
+
+// Title Card Minimal Default Theme
+.title-card.minimal-default {
+  @apply z-10 w-full;
+
+  .title-card-details {
+    @apply flex-row;
+  }
+
+  .hideable-hidden {
+    @apply hidden #{!important};
+  }
+
+  .hideable-show {
+    display: inherit !important;
+  }
+
+  &:hover {
+    @apply absolute z-20 w-[412px] -ml-[56px] -mt-[10%];
+    box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+
+    .title-card-image img {
+      @apply aspect-[412/180];
+    }
+
+    .title-card-details {
+      @apply flex-col px-[11px];
+
+      .title-card-details-main .infos-container .subtitle {
+        @apply text-[10px] leading-[14px] text-neutral-500;
+      }
+    }
+
+    .hideable-hidden {
+      display: inherit !important;
+    }
+
+    .hideable-show {
+      display: none !important;
+    }
+  }
+}
+// End Title Card Hover Effect
+
+// Card's statistics item
+.statistics-item {
+  @apply flex flex-row gap-x-1 items-center text-neutral-500;
+
+  .value {
+    @apply text-[8px] leading-[14px];
+  }
+}

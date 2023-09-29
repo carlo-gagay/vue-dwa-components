@@ -1,0 +1,15 @@
+.chip {
+  @apply rounded-[2px] py-0.5 px-1 text-[10px] leading-[14px];
+
+  &.green {
+    @apply bg-green-800 text-white;
+  }
+
+  &.orange {
+    @apply bg-orange-500 text-neutral-900;
+  }
+
+  &.md {
+    @apply py-0.5 px-1 text-[10px] leading-[14px];
+  }
+}
