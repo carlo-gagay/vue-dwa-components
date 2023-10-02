@@ -1,5 +1,9 @@
 .btn {
-  @apply py-2 px-4 rounded-[5px];
+  @apply rounded-[5px];
+  
+  .md {
+    @apply py-2 px-4;
+  }
 
   &.primary {
     @apply bg-yellow-500 text-neutral-900;
@@ -7,5 +11,14 @@
 
   &.trans-outline {
     @apply bg-transparent border border-neutral-900 text-neutral-900;
+  }
+
+  &.opac {
+    @apply text-white;
+    background-color: rgba(0, 0, 0, 0.40);
+  }
+
+  &.round {
+    @apply p-0.5 rounded-full;
   }
 }

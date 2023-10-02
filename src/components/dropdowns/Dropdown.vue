@@ -1,57 +1,38 @@
 <template>
-  <div class="v-dropdown-container" :class="containerClass" :id="`app-dropdown${key}`">
-    <v-dropdown
-      v-bind="$attrs"
-      class="dropdown"
-      :key="`v-dropdown${key}`"
-      :container="container || `#app-dropdown${key}`"
-      :class="[origin, size, theme]"
-    >
-      <slot>
-        <button class="trigger" :disabled="$attrs.disabled">
-          <span>
-            <slot name="text" />
-          </span>
-          <i class="icon icon-arrow-drop-down icon--s24"></i>
-        </button>
-      </slot>
-      <template #popper>
-        <div class="v-popper-dropdown dropdown" :class="[origin, size, theme, popperClass]">
-          <slot name="dropdown" />
-        </div>
-      </template>
-    </v-dropdown>
+  <div
+      class="dropdown-container"
+      :id="id"
+  >
+      <v-dropdown
+          v-bind="$attrs"
+          class="dropdown"
+          container="title-options-dropdown"
+          :class="[size, theme]"
+      >
+          <slot>
+            <button class="select-button">
+                <span>{{ label ?? 'Select Options' }}</span>
+                <i class="icon icon-arrow-drop-down icon--s24"></i>
+            </button>
+          </slot>
+          <template #popper>
+            <slot name="dropdown" :size="size" :theme="theme" />
+          </template>
+      </v-dropdown>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-
 defineProps({
-  origin: {
-    type: String,
-    default: 'be',
-    validator(value) {
-      return ['fe', 'be'].includes(value)
-    }
-  },
-  size: {
-    type: String,
-    default: 'md',
-    validator(value) {
-      return ['md slim', 'md', 'lg'].includes(value)
-    }
-  },
+  id: String,
+  label: String,
+  size: String,
   theme: {
     type: String,
-    default: 'primary'
+    default: 'default',
+    validator(value) {
+      return ['default', 'primary'].includes(value)
+    }
   },
-  container: String,
-  containerClass: String,
-  popperClass: String
-})
-
-const key = computed(() => {
-  return Math.floor(Math.random() * 1000)
-})
+});
 </script>

@@ -2,5 +2,8 @@ import './assets/main.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import FloatingVue from 'floating-vue'
 
-createApp(App).mount('#app')
+createApp(App)
+.use(FloatingVue)
+.mount('#app')

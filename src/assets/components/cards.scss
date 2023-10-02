@@ -120,6 +120,18 @@
 }
 // End Title Card Hover Effect
 
+.title-card.auth {
+  @apply bg-white;
+
+  .title-card-image figure img {
+    @apply aspect-[326/119];
+  }
+
+  .title-card-details {
+    @apply px-[11px] pt-[8px] pb-[14px];
+  }
+}
+
 // Card's statistics item
 .statistics-item {
   @apply flex flex-row gap-x-1 items-center text-neutral-500;

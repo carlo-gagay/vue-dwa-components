@@ -30,11 +30,7 @@ const emit = defineEmits(['like'])
       <figure>
         <img :src="image" />
       </figure>
-      <div class="progress-bar-group-inline">
-        <div v-if="progress" v-for="n in 3" class="progress-bar title-card-progress-bar primary">
-          <div class="progress" :style="{ width: `${progress}%` }"></div>
-        </div>
-      </div>
+      <!-- progress bars -->
     </div>
     <div class="title-card-details">
       <div class="title-card-details-main">
