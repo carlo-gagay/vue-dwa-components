@@ -1,3 +1,4 @@
 import TitleCard from './TitleCard.vue'
+import TitleCardAuth from './TitleCardAuth.vue'
 
-export { TitleCard }
+export { TitleCard, TitleCardAuth }

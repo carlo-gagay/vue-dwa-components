@@ -1,9 +1,9 @@
 <script setup>
-import CardsDemo from './demo/CardsDemo.vue'
+import TitleCardAuthDemo from './demo/TitleCardAuthDemo.vue'
 </script>
 
 <template>
-  <CardsDemo />
+  <TitleCardAuthDemo />
 </template>
 
 <style scoped></style>

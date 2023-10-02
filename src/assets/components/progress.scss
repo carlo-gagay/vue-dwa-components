@@ -1,3 +1,7 @@
+.progress-bar-group-inline {
+  @apply flex flex-row gap-x-0.5 justify-between items-center w-full;
+}
+
 .progress-bar {
   &.title-card-progress-bar {
     @apply h-1 w-full absolute bottom-0;

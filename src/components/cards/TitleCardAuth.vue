@@ -12,7 +12,6 @@ const props = defineProps({
   booksCount: Number,
   chaptersCount: Number,
   issuesCount: Number,
-  audio: [Object],
   progress: {
     type: Number,
     validator(value) {
@@ -21,25 +20,20 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['like', 'playAudio'])
+const emit = defineEmits(['like'])
 </script>
 
 <template>
-  <div class="title-card">
+  <div class="title-card auth">
     <div class="title-card-image">
-      <button
-        v-if="audio"
-        class="image-top-right-action audio-badge white"
-        @click="emit('playAudio')"
-      >
-        <i class="icon icon-volume-up icon--s12"></i>
-        <div class="text">Audio Available</div>
-      </button>
+      <slot name="image-actions"></slot>
       <figure>
         <img :src="image" />
       </figure>
-      <div v-if="progress" class="progress-bar title-card-progress-bar primary">
-        <div class="progress" :style="{ width: `${progress}%` }"></div>
+      <div class="progress-bar-group-inline">
+        <div v-if="progress" v-for="n in 3" class="progress-bar title-card-progress-bar primary">
+          <div class="progress" :style="{ width: `${progress}%` }"></div>
+        </div>
       </div>
     </div>
     <div class="title-card-details">
@@ -54,8 +48,8 @@ const emit = defineEmits(['like', 'playAudio'])
                 {{ author }}
               </div>
               <template v-if="published">
-                <i class="icon icon-minus-solid icon--s4 hideable-hidden"></i>
-                <div class="text date hideable-hidden">
+                <i class="icon icon-minus-solid icon--s4"></i>
+                <div class="text date">
                   {{ published }}
                 </div>
               </template>
@@ -84,11 +78,11 @@ const emit = defineEmits(['like', 'playAudio'])
         </div>
       </div>
       <div class="title-card-details-sub">
-        <p v-if="description" class="description hideable-hidden">
+        <p v-if="description" class="description">
           {{ description }}
         </p>
         <div v-if="genres || likes" class="visual-data">
-          <div v-if="genres || contentRating" class="visual-data-inline hideable-hidden">
+          <div v-if="genres || contentRating" class="visual-data-inline">
             <div
               v-if="genres"
               v-for="(genre, index) in genres.arr"

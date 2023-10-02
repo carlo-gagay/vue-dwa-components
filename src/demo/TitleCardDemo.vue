@@ -20,7 +20,7 @@ const title = {
   <div class="p-8 bg-[#FFFCF3] border-box relative flex flex-col gap-y-4">
     <h1>Universal title cards</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
-      <div v-for="n in 4" :key="n" class="relative-container">
+      <div v-for="n in 8" :key="n" class="relative-container">
         <TitleCard
           class="minimal-default"
           :title="title.title"
