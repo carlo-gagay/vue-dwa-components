@@ -83,7 +83,7 @@ const title = {
             </button>
           </template>
           <template #footer-actions>
-            <button class="hideable-hidden btn trans-outline">Continue Reading</button>
+            <button class="hideable-hidden btn md trans-outline">Continue Reading</button>
           </template>
         </TitleCard>
       </div>
@@ -106,7 +106,7 @@ const title = {
             </button>
           </template>
           <template #footer-actions>
-            <button class="hideable-hidden btn primary">Start Reading</button>
+            <button class="hideable-hidden btn md primary">Start Reading</button>
           </template>
         </TitleCard>
       </div>
