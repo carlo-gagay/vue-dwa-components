@@ -1,6 +1,7 @@
 <script setup>
 import { AuthenticatedLayout } from '@components/layouts'
 import { TitleCardAuth } from '@components/cards'
+import { AppTab } from '@components/tabs'
 
 const title = {
   image: 'https://picsum.photos/20',
@@ -18,6 +19,7 @@ const title = {
 
 <template>
   <AuthenticatedLayout>
+    <AppTab class="mb-[33px]"></AppTab>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]">
       <TitleCardAuth
         v-for="n in 12"
