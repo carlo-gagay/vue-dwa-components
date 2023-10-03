@@ -27,11 +27,7 @@ const emit = defineEmits(['like', 'playAudio'])
 <template>
   <div class="title-card">
     <div class="title-card-image">
-      <button
-        v-if="audio"
-        class="image-top-right-action audio-badge white"
-        @click="emit('playAudio')"
-      >
+      <button v-if="audio" class="slot-top-right audio-badge white" @click="emit('playAudio')">
         <i class="icon icon-volume-up icon--s12"></i>
         <div class="text">Audio Available</div>
       </button>
@@ -65,15 +61,15 @@ const emit = defineEmits(['like', 'playAudio'])
             v-if="booksCount || chaptersCount || issuesCount"
             class="visual-data-inline statistics"
           >
-            <div v-if="booksCount" class="statistics-item books">
+            <div v-if="booksCount" class="statistic-item books">
               <i class="icon icon-news-paper icon--s10"></i>
               <div class="value">Books: {{ booksCount }}</div>
             </div>
-            <div v-if="chaptersCount" class="statistics-item chapters">
+            <div v-if="chaptersCount" class="statistic-item chapters">
               <i class="icon icon-news-paper icon--s10"></i>
               <div class="value">Chapers: {{ chaptersCount }}</div>
             </div>
-            <div v-if="issuesCount" class="statistics-item issues">
+            <div v-if="issuesCount" class="statistic-item issues">
               <i class="icon icon-news-paper icon--s10"></i>
               <div class="value">Issues: {{ issuesCount }}</div>
             </div>

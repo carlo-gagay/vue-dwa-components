@@ -30,8 +30,8 @@ const title = {
         :chapters="title.chapters"
         :pages="title.pages"
       >
-        <template #image-actions>
-          <button class="image-top-right-action btn opac round">
+        <template #slot-top-right>
+          <button class="btn opac round">
             <i class="icon icon-dots-horizontal-triple"></i>
           </button>
         </template>

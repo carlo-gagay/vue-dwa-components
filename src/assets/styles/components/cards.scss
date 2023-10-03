@@ -19,7 +19,7 @@
       @apply aspect-[306/190] object-cover object-center;
     }
 
-    .image-top-right-action {
+    .slot-top-right {
       @apply absolute right-[10px] top-[10px];
     }
   }
@@ -135,10 +135,10 @@
 }
 
 // Card's statistics item
-.statistics-item {
+.statistic-item {
   @apply flex flex-row gap-x-1 items-center text-neutral-500;
 
-  .value {
+  span {
     @apply text-[8px] leading-[14px];
   }
 }

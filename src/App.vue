@@ -6,4 +6,3 @@ import AuthenticatedLayoutDemo from './demo/AuthenticatedLayoutDemo.vue'
   <AuthenticatedLayoutDemo />
 </template>
 
-<style scoped></style>

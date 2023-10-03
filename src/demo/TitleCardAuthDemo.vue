@@ -36,7 +36,7 @@ const title = {
         >
           <template #image-actions>
             <v-dropdown class="dropdown" placement="bottom-end" distance="40" skidding="-10">
-              <button class="image-top-right-action btn opac round">
+              <button class="slot-top-right btn opac round">
                 <i class="icon icon-dots-horizontal-triple icon--s20"></i>
               </button>
               <template #popper>

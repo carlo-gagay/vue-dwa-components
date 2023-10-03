@@ -1,15 +1,22 @@
 <script setup>
-import { IconVisibility } from '@components/svg'
+import {
+  IconVisibility,
+  IconBook,
+  IconDescription,
+  IconBookMenu,
+  IconThumbUp
+} from '@components/svg'
 
 const props = defineProps({
   image: String,
   title: String,
   genres: Object,
-  views: String,
-  likes: String,
-  booksCount: Number,
-  chaptersCount: Number,
-  issuesCount: Number,
+  views: [Number, String],
+  likes: [Number, String],
+  books: [Number, String],
+  chapters: [Number, String],
+  issues: [Number, String],
+  pages: [Number, String],
   progress: {
     type: Number,
     validator(value) {
@@ -24,7 +31,9 @@ const emit = defineEmits(['like'])
 <template>
   <div class="title-card auth">
     <div class="title-card-image">
-      <slot name="image-actions"></slot>
+      <div class="slot-top-right">
+        <slot name="slot-top-right"></slot>
+      </div>
       <figure>
         <img :src="image" />
       </figure>
@@ -34,7 +43,7 @@ const emit = defineEmits(['like'])
       <div class="title-card-details-main">
         <div class="title-infos-container">
           <div class="title-infos">
-            <div class="row-centered gap-x-[11px]">
+            <div class="row-centered gap-x-[7px]">
               <div
                 v-if="genres"
                 v-for="(genre, index) in genres.data"
@@ -52,10 +61,26 @@ const emit = defineEmits(['like'])
         </div>
       </div>
       <div class="title-card-details-sub">
-        <div class="row-centered">
-          <div class="statistics-item">
-            <IconVisibility />
-            <div class="value">{{ views }}</div>
+        <div class="row-centered gap-x-[27px]">
+          <div v-if="views" class="statistic-item">
+            <IconVisibility class="w-[12px] h-[12px]" />
+            <span>{{ views }}</span>
+          </div>
+          <div v-if="likes" class="statistic-item">
+            <IconThumbUp class="w-[12px] h-[12px]" />
+            <span>{{ likes }}</span>
+          </div>
+          <div v-if="books" class="statistic-item">
+            <IconBookMenu class="w-[12px] h-[12px]" />
+            <span>{{ books }}</span>
+          </div>
+          <div v-if="chapters" class="statistic-item">
+            <IconBook class="w-[12px] h-[12px]" />
+            <span>{{ chapters }}</span>
+          </div>
+          <div v-if="pages" class="statistic-item">
+            <IconDescription class="w-[12px] h-[12px]" />
+            <span>{{ pages }}</span>
           </div>
         </div>
       </div>
