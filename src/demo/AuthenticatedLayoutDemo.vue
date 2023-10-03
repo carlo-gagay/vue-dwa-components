@@ -29,6 +29,7 @@ const title = {
         :books="title.books"
         :chapters="title.chapters"
         :pages="title.pages"
+        :key="n"
       >
         <template #slot-card-image>
           <button class="btn opac round">
