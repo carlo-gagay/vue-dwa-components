@@ -22,7 +22,7 @@ const title = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
       <div v-for="n in 8" :key="n" class="relative-container">
         <TitleCard
-          class="minimal-default"
+          class="expose-details-on-hover"
           :title="title.title"
           :author="title.author"
           :published="title.published"
@@ -30,7 +30,7 @@ const title = {
           :image="`${title.image}${n}`"
           :genres="title.genres"
           :likes="title.likes"
-          :audio="{ src: '' }"
+          :hasAudio="true"
           :content-rating="title.contentRating"
           @playAudio="() => {}"
         />
@@ -46,12 +46,12 @@ const title = {
           :title="title.title"
           :author="title.author"
           :image="`https://picsum.photos/19${n}`"
-          :audio="{ src: '' }"
+          :hasAudio="true"
           :progress="60"
-          :books-count="100"
-          :chapters-count="20"
+          :books="100"
+          :chapters="20"
         >
-          <template #header-actions>
+          <template #slot-card-body>
             <button>
               <i class="icon icon-dots-horizontal-triple icon--s24"></i>
             </button>
@@ -66,18 +66,18 @@ const title = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
       <div v-for="n in 2" :key="n" class="relative-container">
         <TitleCard
-          class="minimal-default"
+          class="expose-details-on-hover"
           :title="title.title"
           :author="title.author"
           :published="title.published"
           :description="title.description"
           :genres="title.genres"
           :image="`https://picsum.photos/18${n}`"
-          :audio="{ src: '' }"
+          :hasAudio="true"
           :progress="60"
           :content-rating="title.contentRating"
         >
-          <template #header-actions>
+          <template #slot-card-body>
             <button class="hideable-show">
               <i class="icon icon-bookmark icon--s20"></i>
             </button>
@@ -89,18 +89,18 @@ const title = {
       </div>
       <div v-for="n in 2" :key="n" class="relative-container">
         <TitleCard
-          class="minimal-default"
+          class="expose-details-on-hover"
           :title="title.title"
           :author="title.author"
           :published="title.published"
           :description="title.description"
           :genres="title.genres"
           :image="`https://picsum.photos/18${n}`"
-          :audio="{ src: '' }"
+          :hasAudio="true"
           :progress="0"
           :content-rating="title.contentRating"
         >
-          <template #header-actions>
+          <template #slot-card-body>
             <button class="hideable-show">
               <i class="icon icon-heart icon--s20"></i>
             </button>

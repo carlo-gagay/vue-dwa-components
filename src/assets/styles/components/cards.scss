@@ -19,7 +19,7 @@
       @apply aspect-[306/190] object-cover object-center;
     }
 
-    .slot-top-right {
+    .slot-card-image {
       @apply absolute right-[10px] top-[10px];
     }
   }
@@ -59,26 +59,10 @@
     }
   }
 }
-
-.visual-data {
-  @apply flex flex-row justify-between items-end;
-}
-
-.visual-data-inline {
-  @apply flex flex-row justify-start items-center gap-x-[11px];
-}
 // End Title Card
 
-.user-interaction-counter {
-  @apply flex flex-row gap-x-1 items-center;
-
-  & .text {
-    @apply text-xs;
-  }
-}
-
 // Title Card Minimal Default Theme
-.title-card.minimal-default {
+.title-card.expose-details-on-hover {
   @apply z-10 w-full;
   // @apply transition-all duration-150 ease-in-out;
 
@@ -121,6 +105,7 @@
 }
 // End Title Card Hover Effect
 
+// Additional card modification for TitleCardAuth
 .title-card.auth {
   @apply bg-[#FFFCF3];
   box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);

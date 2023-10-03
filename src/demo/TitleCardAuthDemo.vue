@@ -34,9 +34,9 @@ const title = {
           :content-rating="title.contentRating"
           @playAudio="() => {}"
         >
-          <template #image-actions>
+          <template #slot-card-image>
             <v-dropdown class="dropdown" placement="bottom-end" distance="40" skidding="-10">
-              <button class="slot-top-right btn opac round">
+              <button class="slot-card-image btn opac round">
                 <i class="icon icon-dots-horizontal-triple icon--s20"></i>
               </button>
               <template #popper>

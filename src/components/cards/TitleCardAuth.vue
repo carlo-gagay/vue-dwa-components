@@ -31,8 +31,8 @@ const emit = defineEmits(['like'])
 <template>
   <div class="title-card auth">
     <div class="title-card-image">
-      <div class="slot-top-right">
-        <slot name="slot-top-right"></slot>
+      <div class="slot-card-image">
+        <slot name="slot-card-image"></slot>
       </div>
       <figure>
         <img :src="image" />
@@ -43,7 +43,7 @@ const emit = defineEmits(['like'])
       <div class="title-card-details-main">
         <div class="title-infos-container">
           <div class="title-infos">
-            <div class="row-centered gap-x-[7px]">
+            <div class="row-middle gap-x-[7px]">
               <div
                 v-if="genres"
                 v-for="(genre, index) in genres.data"
@@ -57,11 +57,11 @@ const emit = defineEmits(['like'])
           </div>
         </div>
         <div class="title-actions-container">
-          <slot name="header-actions"></slot>
+          <slot name="slot-card-body"></slot>
         </div>
       </div>
       <div class="title-card-details-sub">
-        <div class="row-centered gap-x-[27px]">
+        <div class="row-middle gap-x-[27px]">
           <div v-if="views" class="statistic-item">
             <IconVisibility class="w-[12px] h-[12px]" />
             <span>{{ views }}</span>

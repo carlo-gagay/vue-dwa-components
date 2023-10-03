@@ -8,11 +8,11 @@ const props = defineProps({
   genres: Object,
   contentRating: String,
   rating: String,
-  likes: String,
-  booksCount: Number,
-  chaptersCount: Number,
-  issuesCount: Number,
-  audio: [Object],
+  hasAudio: Boolean,
+  likes: [Number, String],
+  books: [Number, String],
+  chapters: [Number, String],
+  issues: [Number, String],
   progress: {
     type: Number,
     validator(value) {
@@ -27,7 +27,7 @@ const emit = defineEmits(['like', 'playAudio'])
 <template>
   <div class="title-card">
     <div class="title-card-image">
-      <button v-if="audio" class="slot-top-right audio-badge white" @click="emit('playAudio')">
+      <button v-if="hasAudio" class="slot-card-image audio-badge white" @click="emit('playAudio')">
         <i class="icon icon-volume-up icon--s12"></i>
         <div class="text">Audio Available</div>
       </button>
@@ -58,33 +58,33 @@ const emit = defineEmits(['like', 'playAudio'])
             </div>
           </div>
           <div
-            v-if="booksCount || chaptersCount || issuesCount"
-            class="visual-data-inline statistics"
+            v-if="books || chapters || issues"
+            class="row-middle statistics"
           >
-            <div v-if="booksCount" class="statistic-item books">
+            <div v-if="books" class="statistic-item books">
               <i class="icon icon-news-paper icon--s10"></i>
-              <div class="value">Books: {{ booksCount }}</div>
+              <span>Books: {{ books }}</span>
             </div>
-            <div v-if="chaptersCount" class="statistic-item chapters">
+            <div v-if="chapters" class="statistic-item chapters">
               <i class="icon icon-news-paper icon--s10"></i>
-              <div class="value">Chapers: {{ chaptersCount }}</div>
+              <span>Chapers: {{ chapters }}</span>
             </div>
-            <div v-if="issuesCount" class="statistic-item issues">
+            <div v-if="issues" class="statistic-item issues">
               <i class="icon icon-news-paper icon--s10"></i>
-              <div class="value">Issues: {{ issuesCount }}</div>
+              <span>Issues: {{ issues }}</span>
             </div>
           </div>
         </div>
         <div class="title-actions-container">
-          <slot name="header-actions"></slot>
+          <slot name="slot-card-body"></slot>
         </div>
       </div>
       <div class="title-card-details-sub">
         <p v-if="description" class="description hideable-hidden">
           {{ description }}
         </p>
-        <div v-if="genres || likes" class="visual-data">
-          <div v-if="genres || contentRating" class="visual-data-inline hideable-hidden">
+        <div v-if="genres || likes" class="row-end justify-between">
+          <div v-if="genres || contentRating" class="row-middle hideable-hidden">
             <div
               v-if="genres"
               v-for="(genre, index) in genres.arr"
@@ -93,10 +93,10 @@ const emit = defineEmits(['like', 'playAudio'])
             />
             <div v-if="contentRating" class="chip orange" v-text="contentRating" />
           </div>
-          <div class="visual-data-inline">
-            <div v-if="likes" class="user-interaction-counter">
+          <div class="row-middle">
+            <div v-if="likes" class="row-middle gap-x-1">
               <i class="icon icon-heart icon--s12"></i>
-              <span class="text">
+              <span class="text-xs">
                 {{ likes }}
               </span>
             </div>

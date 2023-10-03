@@ -1,13 +1,13 @@
 @layer components {
-  .row-centered {
-    @apply flex flex-row items-center;
+  .row-middle {
+    @apply flex flex-row items-center gap-x-[11px];
   }
 
   .row-end {
-    @apply flex flex-row items-end;
+    @apply flex flex-row items-end gap-x-[11px];
   }
 
   .row-start {
-    @apply flex flex-row items-start;
+    @apply flex flex-row items-start gap-x-[11px];
   }
 }
