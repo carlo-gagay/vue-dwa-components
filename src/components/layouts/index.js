@@ -1,3 +1,3 @@
-import LayoutStickyAside from './StickyAside.vue'
+import AuthenticatedLayout from './AuthenticatedLayout.vue'
 
-export { LayoutStickyAside }
+export { AuthenticatedLayout }

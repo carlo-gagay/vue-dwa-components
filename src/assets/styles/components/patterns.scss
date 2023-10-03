@@ -1,0 +1,13 @@
+@layer components {
+  .row-centered {
+    @apply flex flex-row items-center;
+  }
+
+  .row-end {
+    @apply flex flex-row items-end;
+  }
+
+  .row-start {
+    @apply flex flex-row items-start;
+  }
+}

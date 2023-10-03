@@ -1,13 +1,11 @@
 <script setup>
+import { IconVisibility } from '@components/svg'
+
 const props = defineProps({
   image: String,
   title: String,
-  author: String,
-  published: String,
-  description: String,
   genres: Object,
-  contentRating: String,
-  rating: String,
+  views: String,
   likes: String,
   booksCount: Number,
   chaptersCount: Number,
@@ -36,36 +34,16 @@ const emit = defineEmits(['like'])
       <div class="title-card-details-main">
         <div class="title-infos-container">
           <div class="title-infos">
-            <div v-if="title" class="title">
+            <div class="row-centered gap-x-[11px]">
+              <div
+                v-if="genres"
+                v-for="(genre, index) in genres.data"
+                class="chip green"
+                v-text="genre"
+              />
+            </div>
+            <div v-if="title" class="title mt-[11px]">
               {{ title }}
-            </div>
-            <div v-if="author || published" class="subtitle">
-              <div v-if="author" class="text name">
-                {{ author }}
-              </div>
-              <template v-if="published">
-                <i class="icon icon-minus-solid icon--s4"></i>
-                <div class="text date">
-                  {{ published }}
-                </div>
-              </template>
-            </div>
-          </div>
-          <div
-            v-if="booksCount || chaptersCount || issuesCount"
-            class="visual-data-inline statistics"
-          >
-            <div v-if="booksCount" class="statistics-item books">
-              <i class="icon icon-news-paper icon--s10"></i>
-              <div class="value">Books: {{ booksCount }}</div>
-            </div>
-            <div v-if="chaptersCount" class="statistics-item chapters">
-              <i class="icon icon-news-paper icon--s10"></i>
-              <div class="value">Chapers: {{ chaptersCount }}</div>
-            </div>
-            <div v-if="issuesCount" class="statistics-item issues">
-              <i class="icon icon-news-paper icon--s10"></i>
-              <div class="value">Issues: {{ issuesCount }}</div>
             </div>
           </div>
         </div>
@@ -74,27 +52,10 @@ const emit = defineEmits(['like'])
         </div>
       </div>
       <div class="title-card-details-sub">
-        <p v-if="description" class="description">
-          {{ description }}
-        </p>
-        <div v-if="genres || likes" class="visual-data">
-          <div v-if="genres || contentRating" class="visual-data-inline">
-            <div
-              v-if="genres"
-              v-for="(genre, index) in genres.arr"
-              class="chip green"
-              v-text="genre"
-            />
-            <div v-if="contentRating" class="chip orange" v-text="contentRating" />
-          </div>
-          <div class="visual-data-inline">
-            <div v-if="likes" class="user-interaction-counter">
-              <i class="icon icon-heart icon--s12"></i>
-              <span class="text">
-                {{ likes }}
-              </span>
-            </div>
-            <slot name="footer-actions"></slot>
+        <div class="row-centered">
+          <div class="statistics-item">
+            <IconVisibility />
+            <div class="value">{{ views }}</div>
           </div>
         </div>
       </div>

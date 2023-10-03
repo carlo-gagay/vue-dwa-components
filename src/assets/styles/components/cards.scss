@@ -122,7 +122,8 @@
 // End Title Card Hover Effect
 
 .title-card.auth {
-  @apply bg-white;
+  @apply bg-[#FFFCF3];
+  box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 
   .title-card-image figure img {
     @apply aspect-[326/119];

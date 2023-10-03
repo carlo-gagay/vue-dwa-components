@@ -1,9 +1,9 @@
 <script setup>
-import TitleCardDemo from './demo/TitleCardDemo.vue'
+import AuthenticatedLayoutDemo from './demo/AuthenticatedLayoutDemo.vue'
 </script>
 
 <template>
-  <TitleCardDemo />
+  <AuthenticatedLayoutDemo />
 </template>
 
 <style scoped></style>
