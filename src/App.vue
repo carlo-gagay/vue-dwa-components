@@ -5,4 +5,3 @@ import AuthenticatedLayoutDemo from './demo/AuthenticatedLayoutDemo.vue'
 <template>
   <AuthenticatedLayoutDemo />
 </template>
-

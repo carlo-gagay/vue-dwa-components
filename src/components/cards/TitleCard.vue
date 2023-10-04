@@ -57,10 +57,7 @@ const emit = defineEmits(['like', 'playAudio'])
               </template>
             </div>
           </div>
-          <div
-            v-if="books || chapters || issues"
-            class="row-middle statistics"
-          >
+          <div v-if="books || chapters || issues" class="row-middle statistics">
             <div v-if="books" class="statistic-item books">
               <i class="icon icon-news-paper icon--s10"></i>
               <span>Books: {{ books }}</span>
@@ -75,7 +72,7 @@ const emit = defineEmits(['like', 'playAudio'])
             </div>
           </div>
         </div>
-        <div class="title-actions-container">
+        <div class="slot-card-body">
           <slot name="slot-card-body"></slot>
         </div>
       </div>

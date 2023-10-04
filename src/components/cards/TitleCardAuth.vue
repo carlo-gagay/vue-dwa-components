@@ -5,7 +5,7 @@ import {
   IconDescription,
   IconBookMenu,
   IconThumbUp
-} from '@components/svg'
+} from '@components/svgs'
 
 const props = defineProps({
   image: String,
@@ -24,8 +24,6 @@ const props = defineProps({
     }
   }
 })
-
-const emit = defineEmits(['like'])
 </script>
 
 <template>
@@ -44,19 +42,17 @@ const emit = defineEmits(['like'])
         <div class="title-infos-container">
           <div class="title-infos">
             <div class="row-middle gap-x-[7px]">
-              <div
-                v-if="genres"
-                v-for="(genre, index) in genres.data"
-                class="chip green"
-                v-text="genre"
-              />
+              <div v-if="genres" v-for="(genre, index) in genres.data" class="chip green">
+                {{ genre }}
+              </div>
+              <div v-else class="chip green-2">No Genre</div>
             </div>
             <div v-if="title" class="title mt-[11px]">
               {{ title }}
             </div>
           </div>
         </div>
-        <div class="title-actions-container">
+        <div class="slot-card-body">
           <slot name="slot-card-body"></slot>
         </div>
       </div>

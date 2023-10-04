@@ -7,7 +7,7 @@ import {
   IconDashboard,
   IconLogo,
   IconMenu
-} from '@components/svg'
+} from '@components/svgs'
 </script>
 
 <template>
@@ -69,7 +69,7 @@ import {
     </div>
   </aside>
 
-  <div class="p-4 sm:ml-[238px] mt-[60px]">
+  <div class="p-4 sm:ml-[238px] mt-[60px] transition-all">
     <div class="w-full h-full pt-[29px] pb-[27px] sm:px-5">
       <slot></slot>
     </div>
@@ -80,7 +80,9 @@ import {
 body {
   @apply bg-[#F5F1E5];
 }
+</style>
 
+<style lang="scss" scoped>
 .active {
   @apply bg-[#FFC94B] text-black;
 }

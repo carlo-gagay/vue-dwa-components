@@ -1,26 +1,29 @@
 #app-tab {
-    @apply row-middle gap-x-[30px];
+  @apply row-middle gap-x-[30px];
 
-    .tab-item {
-        @apply row-middle gap-x-1;
+  .tab-item {
+    @apply row-middle gap-x-1 relative;
 
-        a {
-            @apply text-[#857E76] text-sm capitalize;
-        }
-
-        .badge {
-            @apply rounded-[2px] text-white bg-[#BDB9B4] px-1 text-[10px] leading-[14px] w-fit;
-        }
-
-        &.active {
-            
-            a {
-                @apply text-[24px] leading-[32px] text-[#0C0B0B] underline border;
-            }
-
-            .badge {
-                @apply px-[5px] bg-[#FFC94B] text-[#0C0B0B];
-            }
-        }
+    a {
+      @apply text-[#857E76] text-sm capitalize;
     }
+
+    .badge {
+      @apply rounded-[2px] text-white bg-[#BDB9B4] px-1 text-[10px] leading-[14px] w-fit;
+    }
+
+    &.active {
+      a {
+        @apply text-[24px] leading-[32px] text-[#0C0B0B] font-medium;
+
+        &:after {
+          @apply h-[2px] w-full absolute content-[''] bg-[#0C0B0B] left-0 bottom-[-4px];
+        }
+      }
+
+      .badge {
+        @apply px-[5px] bg-[#FFC94B] text-[#0C0B0B] text-[14px] leading-[20px] font-bold;
+      }
+    }
+  }
 }
