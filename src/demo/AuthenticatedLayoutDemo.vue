@@ -40,6 +40,7 @@ const title = {
         :books="title.books"
         :chapters="title.chapters"
         :pages="title.pages"
+        :firstStep="30"
         :key="n"
       >
         <template #slot-card-image>

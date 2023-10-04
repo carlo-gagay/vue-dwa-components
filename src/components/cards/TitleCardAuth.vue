@@ -17,8 +17,23 @@ const props = defineProps({
   chapters: [Number, String],
   issues: [Number, String],
   pages: [Number, String],
-  progress: {
+  firstStep: {
     type: Number,
+    default: 0,
+    validator(value) {
+      return value >= 0 && value <= 100
+    }
+  },
+  secondStep: {
+    type: Number,
+    default: 0,
+    validator(value) {
+      return value >= 0 && value <= 100
+    }
+  },
+  thirdStep: {
+    type: Number,
+    default: 0,
     validator(value) {
       return value >= 0 && value <= 100
     }
@@ -35,7 +50,20 @@ const props = defineProps({
       <figure>
         <img :src="image" />
       </figure>
-      <!-- progress bars -->
+      <div
+        v-if="firstStep || secondStep || thirdStep"
+        class="row-middle justify-between absolute-bottom w-full gap-x-[2px]"
+      >
+        <div class="progress-bar black h-xs">
+          <div class="progress" :style="{ width: `${firstStep}%` }"></div>
+        </div>
+        <div class="progress-bar black h-xs">
+          <div class="progress" :style="{ width: `${secondStep}%` }"></div>
+        </div>
+        <div class="progress-bar black h-xs">
+          <div class="progress" :style="{ width: `${thirdStep}%` }"></div>
+        </div>
+      </div>
     </div>
     <div class="title-card-details">
       <div class="title-card-details-main">

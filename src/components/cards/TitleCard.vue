@@ -34,7 +34,7 @@ const emit = defineEmits(['like', 'playAudio'])
       <figure>
         <img :src="image" />
       </figure>
-      <div v-if="progress" class="progress-bar title-card-progress-bar primary">
+      <div v-if="progress" class="progress-bar absolute-bottom primary h-sm">
         <div class="progress" :style="{ width: `${progress}%` }"></div>
       </div>
     </div>
