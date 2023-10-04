@@ -19,7 +19,7 @@ const title = {
 
 <template>
   <AuthenticatedLayout>
-    <div class="row-middle justify-between mb-[33px]">
+    <div class="hidden sm:row-middle justify-between mb-[33px]">
       <AppTab>
         <AppTabItem title="Published" :count="5" :active="true" />
         <AppTabItem title="Draft" :count="8" />
@@ -40,7 +40,9 @@ const title = {
         :books="title.books"
         :chapters="title.chapters"
         :pages="title.pages"
-        :firstStep="30"
+        :firstStep="100"
+        :secondStep="60"
+        :thirdStep="20"
         :key="n"
       >
         <template #slot-card-image>

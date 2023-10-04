@@ -1,5 +1,5 @@
 <script setup>
-import { TitleCard } from '@components/cards'
+import { TitleCardDetailed } from '@components/cards'
 
 const title = {
   image: 'https://picsum.photos/20',
@@ -21,7 +21,7 @@ const title = {
     <h1>Universal title cards</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
       <div v-for="n in 8" :key="n" class="relative-container">
-        <TitleCard
+        <TitleCardDetailed
           class="expose-details-on-hover"
           :title="title.title"
           :author="title.author"
@@ -42,7 +42,7 @@ const title = {
     <h1>Continue reading cards</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
       <div v-for="n in 4" :key="n" class="relative-container">
-        <TitleCard
+        <TitleCardDetailed
           :title="title.title"
           :author="title.author"
           :image="`https://picsum.photos/19${n}`"
@@ -56,7 +56,7 @@ const title = {
               <i class="icon icon-dots-horizontal-triple icon--s24"></i>
             </button>
           </template>
-        </TitleCard>
+        </TitleCardDetailed>
       </div>
     </div>
 
@@ -65,7 +65,7 @@ const title = {
     <h1>Bookshelf cards</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] relative border-box">
       <div v-for="n in 2" :key="n" class="relative-container">
-        <TitleCard
+        <TitleCardDetailed
           class="expose-details-on-hover"
           :title="title.title"
           :author="title.author"
@@ -85,10 +85,10 @@ const title = {
           <template #footer-actions>
             <button class="hideable-hidden btn md trans-outline">Continue Reading</button>
           </template>
-        </TitleCard>
+        </TitleCardDetailed>
       </div>
       <div v-for="n in 2" :key="n" class="relative-container">
-        <TitleCard
+        <TitleCardDetailed
           class="expose-details-on-hover"
           :title="title.title"
           :author="title.author"
@@ -108,7 +108,7 @@ const title = {
           <template #footer-actions>
             <button class="hideable-hidden btn md primary">Start Reading</button>
           </template>
-        </TitleCard>
+        </TitleCardDetailed>
       </div>
     </div>
 

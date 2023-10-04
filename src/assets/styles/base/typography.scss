@@ -1,0 +1,38 @@
+@layer base {
+  .title {
+    @apply text-[60px] leading-[80px];
+  }
+
+  .heading-1 {
+    @apply text-[40px] leading-[48px];
+  }
+
+  .heading-2 {
+    @apply text-[30px] leading-[40px];
+  }
+
+  .sub-heading-1 {
+    @apply text-[24px] leading-[32px];
+  }
+
+  .sub-heading-2 {
+    @apply text-[20px] leading-[30px];
+  }
+
+  .body-1 {
+    @apply text-sm tracking-[0.28px];
+  }
+
+  .body-2 {
+    @apply text-sm tracking-[0.14px];
+  }
+
+  .caption,
+  .paragraph {
+    @apply text-xs;
+  }
+
+  .small-text {
+    @apply text-[10px] leading-[14px];
+  }
+}
