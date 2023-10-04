@@ -47,12 +47,12 @@ const updateTracker = (instance) => {
 
 const onDetailsChanged = (instance) => {
   if (props.animation === 'stack-sliding') {
-    staticCurrentAnimation(instance)
+    stackSlidingAnimation(instance)
   }
 }
 
 // Animation Handlers
-const staticCurrentAnimation = (instance) => {}
+const stackSlidingAnimation = (instance) => {}
 </script>
 
 <template>

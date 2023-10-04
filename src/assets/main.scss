@@ -3,9 +3,13 @@
 // Icons
 @import './font-icons/icons.css';
 
+// Basics
+@import './styles/base/typography.scss';
+@import './styles/base/patterns.scss';
+@import './styles/base/containers.scss';
+
 // Components
 @import './styles/components/positions.scss';
-@import './styles/components/patterns.scss';
 @import './styles/components/icons.scss';
 @import './styles/components/badges.scss';
 @import './styles/components/chips.scss';

@@ -1,0 +1,9 @@
+@layer components {
+    .container-flex {
+        @apply relative w-full h-full;
+    }
+
+    .container-padded-16 {
+        @apply p-4;
+    }
+}
