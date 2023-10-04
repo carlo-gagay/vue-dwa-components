@@ -1,7 +1,9 @@
 <script setup>
+import 'floating-vue/dist/style.css'
 import { AuthenticatedLayout } from '@components/layouts'
 import { TitleCardAuth } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
+import { IconDelete, IconEdit, IconSettings, IconVisibility } from '@components/svgs'
 
 const title = {
   image: 'https://picsum.photos/20',
@@ -46,9 +48,32 @@ const title = {
         :key="n"
       >
         <template #slot-card-image>
-          <button class="btn opac round">
-            <i class="icon icon-dots-horizontal-triple"></i>
-          </button>
+          <v-dropdown class="dropdown" placement="bottom-start">
+            <button class="btn opac round">
+              <i class="icon icon-dots-horizontal-triple"></i>
+            </button>
+            <template #popper>
+              <div class="dropdown-popper">
+                <div class="dropdown-item">
+                  <IconVisibility class="text-[#BDB9B4] w-4 h-4" />
+                  View Preview
+                </div>
+                <div class="dropdown-item">
+                  <IconEdit class="text-[#BDB9B4] w-4 h-4" />
+                  Edit Title
+                </div>
+                <div class="dropdown-item">
+                  <IconSettings class="text-[#BDB9B4] w-4 h-4" />
+                  Manage Episodes
+                </div>
+                <div class="divider"></div>
+                <div class="dropdown-item">
+                  <IconDelete class="text-[#BDB9B4] w-4 h-4" />
+                  Archive
+                </div>
+              </div>
+            </template>
+          </v-dropdown>
         </template>
       </TitleCardAuth>
     </div>

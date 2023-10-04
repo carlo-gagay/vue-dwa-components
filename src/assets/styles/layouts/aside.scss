@@ -12,6 +12,10 @@
 
         &.active {
           @apply bg-[#FFC94B] text-black;
+
+          .icon {
+            @apply text-black;
+          }
         }
       }
     }

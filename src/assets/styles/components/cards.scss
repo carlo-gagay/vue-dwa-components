@@ -37,13 +37,13 @@
           @apply flex flex-col;
 
           .title {
-            @apply text-sm font-bold;
+            @apply body-1 font-bold;
           }
           .subtitle {
             @apply flex flex-row gap-x-[10px] items-center;
 
             & .text {
-              @apply text-[10px] leading-[14px];
+              @apply caption;
             }
           }
         }
@@ -89,8 +89,8 @@
     .title-card-details {
       @apply flex-col px-[11px];
 
-      .title-card-details-main .infos-container .subtitle {
-        @apply text-[10px] leading-[14px] text-neutral-500;
+      .title-card-details-main .title-infos .subtitle .text {
+        @apply small-text text-neutral-500;
       }
     }
 
@@ -121,7 +121,7 @@
 
 // Card's statistics item
 .statistic-item {
-  @apply flex flex-row gap-x-1 items-center text-neutral-500;
+  @apply flex flex-row gap-x-1 items-center text-[#BDB9B4];
 
   span {
     @apply text-[8px] leading-[14px];

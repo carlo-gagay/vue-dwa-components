@@ -1,9 +1,9 @@
 <template>
-  <div class="dropdown-container" :id="id">
+  <div class="dropdown-container" :id="container">
     <v-dropdown
       v-bind="$attrs"
       class="dropdown"
-      container="title-options-dropdown"
+      :container="`#${container}`"
       :class="[size, theme]"
     >
       <slot>
@@ -24,6 +24,10 @@ defineProps({
   id: String,
   label: String,
   size: String,
+  container: {
+    type: String,
+    default: 'body'
+  },
   theme: {
     type: String,
     default: 'default',

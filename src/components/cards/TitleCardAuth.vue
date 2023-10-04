@@ -87,23 +87,23 @@ const props = defineProps({
       <div class="title-card-details-sub">
         <div class="row-middle gap-x-[27px]">
           <div v-if="views" class="statistic-item">
-            <IconVisibility class="w-[12px] h-[12px]" />
+            <IconVisibility class="icon w-[12px] h-[12px]" />
             <span>{{ views }}</span>
           </div>
           <div v-if="likes" class="statistic-item">
-            <IconThumbUp class="w-[12px] h-[12px]" />
+            <IconThumbUp class="icon w-[12px] h-[12px]" />
             <span>{{ likes }}</span>
           </div>
           <div v-if="books" class="statistic-item">
-            <IconBookMenu class="w-[12px] h-[12px]" />
+            <IconBookMenu class="icon w-[12px] h-[12px]" />
             <span>{{ books }}</span>
           </div>
           <div v-if="chapters" class="statistic-item">
-            <IconBook class="w-[12px] h-[12px]" />
+            <IconBook class="icon w-[12px] h-[12px]" />
             <span>{{ chapters }}</span>
           </div>
           <div v-if="pages" class="statistic-item">
-            <IconDescription class="w-[12px] h-[12px]" />
+            <IconDescription class="icon w-[12px] h-[12px]" />
             <span>{{ pages }}</span>
           </div>
         </div>

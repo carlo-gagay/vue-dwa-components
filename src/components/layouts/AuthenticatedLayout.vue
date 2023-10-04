@@ -8,10 +8,10 @@ import { IconAvatar, IconBell, IconBookMenu, IconCommunity, IconDashboard } from
     <template #slot-right>
       <div class="flex justify-end gap-x-[26px] items-center">
         <button>
-          <IconBell />
+          <IconBell class="icon text-[#FFC94B]" />
         </button>
         <button>
-          <IconAvatar />
+          <IconAvatar class="icon text-[#FFC94B]" />
         </button>
       </div>
     </template>
@@ -21,20 +21,20 @@ import { IconAvatar, IconBell, IconBookMenu, IconCommunity, IconDashboard } from
     <div class="aside-inner">
       <ul>
         <li>
-          <a href="#" class="aside-nav-link group" :class="{ active: true }">
-            <IconDashboard />
+          <a href="#" class="aside-nav-link group">
+            <IconDashboard class="icon" />
             <span class="ml-[18px]">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#" class="aside-nav-link group">
-            <IconBookMenu />
+          <a href="#" class="aside-nav-link group" :class="{ active: true }">
+            <IconBookMenu class="icon" />
             <span class="ml-[18px]">Comic Titles</span>
           </a>
         </li>
         <li>
           <a href="#" class="aside-nav-link group">
-            <IconCommunity />
+            <IconCommunity class="icon" />
             <span class="ml-[18px]">Community</span>
           </a>
         </li>

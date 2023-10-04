@@ -40,7 +40,7 @@ const title = {
                 <i class="icon icon-dots-horizontal-triple icon--s20"></i>
               </button>
               <template #popper>
-                <div class="dropdown-popper w--180 size--title-auth">
+                <div class="dropdown-popper">
                   <div class="dropdown-item">
                     <i class="icon icon-visibility icon--s16 text-neutral-500"></i>
                     View Preview

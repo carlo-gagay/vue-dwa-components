@@ -1,7 +1,7 @@
 <script setup>
-import AuthenticatedLayoutDemo from './demo/AuthenticatedLayoutDemo.vue'
+import GuestLayoutDemo from './demo/GuestLayoutDemo.vue'
 </script>
 
 <template>
-  <AuthenticatedLayoutDemo />
+  <GuestLayoutDemo />
 </template>
