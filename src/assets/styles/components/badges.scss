@@ -1,11 +1,24 @@
-.audio-badge {
-  @apply p-1 rounded-[2px] flex items-center gap-x-[2px];
+.badge {
+  @apply px-1 py-0.5 rounded-[2px] flex items-center gap-x-[2px];
 
   &.white {
-    @apply bg-white text-neutral-900;
+    @apply bg-white text-[#000205];
   }
 
-  .text {
-    @apply text-[10px] leading-[14px];
+  &.green {
+    @apply bg-[#4A6163] text-white;
+  }
+
+  &.green-2 {
+    @apply bg-[#869FA1] text-white;
+  }
+
+  &.orange {
+    @apply bg-orange-500 text-neutral-900;
+  }
+
+  &.yellow {
+    @apply bg-[#FFC94B] text-[##0C0B0B];
+    box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
   }
 }

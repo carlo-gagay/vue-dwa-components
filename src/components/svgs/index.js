@@ -7,11 +7,14 @@ import IconDashboard from './Dashboard.vue'
 import IconDelete from './Delete.vue'
 import IconDescription from './Description.vue'
 import IconEdit from './Edit.vue'
+import IconFavorite from './Favorite.vue'
 import IconLogo from './Logo.vue'
 import IconMenu from './Menu.vue'
 import IconSettings from './Settings.vue'
+import IconStar from './Star.vue'
 import IconThumbUp from './ThumbUp.vue'
 import IconVisibility from './Visibility.vue'
+import IconVolumeUp from './VolumeUp.vue'
 
 export {
   IconAvatar,
@@ -23,9 +26,12 @@ export {
   IconDelete,
   IconDescription,
   IconEdit,
+  IconFavorite,
   IconLogo,
   IconMenu,
   IconSettings,
+  IconStar,
   IconThumbUp,
-  IconVisibility
+  IconVisibility,
+  IconVolumeUp
 }

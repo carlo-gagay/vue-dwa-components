@@ -16,7 +16,7 @@ const props = defineProps({
     type: String,
     default: 'default',
     validator: (value) => {
-      return ['stack-sliding'].includes(value)
+      return ['default', 'stack-sliding'].includes(value)
     }
   }
 })

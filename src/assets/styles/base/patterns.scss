@@ -10,4 +10,8 @@
   .row-start {
     @apply flex flex-row items-start gap-x-[11px];
   }
+
+  .column-middle {
+    @apply flex flex-col justify-center;
+  }
 }

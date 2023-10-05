@@ -1,0 +1,8 @@
+.title-banner {
+  @apply w-screen h-[calc(100vh-120px)] relative;
+
+  .opac {
+    @apply absolute inset-0 py-[151px] px-[121px];
+    background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 54.3%);
+  }
+}

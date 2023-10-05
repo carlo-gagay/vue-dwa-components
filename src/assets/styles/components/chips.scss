@@ -1,5 +1,5 @@
 .chip {
-  @apply rounded-[2px] py-0.5 px-1 text-[10px] leading-[14px];
+  @apply rounded-[2px] py-0.5 px-1 text-[10px] leading-[14px] flex gap-x-0.5;
 
   &.green {
     @apply bg-[#4A6163] text-white;
@@ -11,6 +11,11 @@
 
   &.orange {
     @apply bg-orange-500 text-neutral-900;
+  }
+
+  &.yellow {
+    @apply bg-[#FFC94B] text-[##0C0B0B];
+    box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
   }
 
   &.md {
