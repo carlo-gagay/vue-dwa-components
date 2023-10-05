@@ -1,8 +1,9 @@
 <script setup>
-import { GuestLayout } from '@components/layouts'
+import { ReadersLayout } from '@components/layouts'
 import { TitleCardBanner, TitleCardDetailed } from '@components/cards'
 import { Slider } from '@components/sliders'
 import { IconArrowBackIos, IconArrowForwardIos } from '@components/svgs'
+import { AppTab, AppTabItem } from '@components/tabs'
 
 const title = {
   image: 'https://picsum.photos/20',
@@ -15,7 +16,9 @@ const title = {
     arr: ['Supehero', 'Comedy']
   },
   contentRating: 'Young Adult',
-  likes: '100k'
+  likes: '100k',
+  books: 10,
+  chapters: 20
 }
 
 const banner = {
@@ -38,9 +41,9 @@ const banner = {
 </script>
 
 <template>
-  <GuestLayout>
+  <ReadersLayout>
     <div class="container-flex">
-      <Slider :loop="true">
+      <Slider :loop="true" v-once>
         <template #default="{ navigator }">
           <div v-for="n in 5" class="keen-slider__slide" :key="n">
             <TitleCardBanner
@@ -52,9 +55,10 @@ const banner = {
               :description="banner.description"
               :genres="banner.genres"
               :img-src="`${banner.image}${n}`"
+              :id="`banner${n}`"
               :likes="banner.likes"
               :rating="banner.rating"
-              :title="banner.title"
+              :title="`${banner.title}${n}`"
               :url="banner.url"
             />
             <button class="nav-btn backward btn primary-inline" @click="navigator.prev">
@@ -78,7 +82,44 @@ const banner = {
         </template>
       </Slider>
     </div>
-    <div class="container-padded-16">
+    <div class="container-padded-40 pb-0">
+      <div class="heading-1 font-bold">Continue Reading</div>
+      <div class="mt-[20px]">
+        <Slider
+          :drag="true"
+          mode="free"
+          :per-view="4"
+          :spacing="20"
+          :style="{ overflow: 'visible' }"
+          v-once
+        >
+          <div v-for="n in 9" :key="n" class="keen-slider__slide">
+            <TitleCardDetailed
+              :audio="title.audio"
+              :author="title.author"
+              :books="title.books"
+              :chapters="title.chapters"
+              :image="`${title.image}${n}`"
+              :progress="Number(`${5}${n}`)"
+              :title="title.title"
+              v-once
+            >
+              <template #slot-card-body>
+                <button>
+                  <i class="icon icon-dots-horizontal-triple icon--s24"></i>
+                </button>
+              </template>
+            </TitleCardDetailed>
+          </div>
+        </Slider>
+      </div>
+    </div>
+    <div class="container-padded-40">
+      <AppTab size="lg mb-[36px]">
+        <AppTabItem title="All Comics" :active="true" />
+        <AppTabItem title="My Bookshelf (5)" />
+        <AppTabItem title="My Favorites" />
+      </AppTab>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
         <div v-for="n in 12" class="relative" :key="n">
           <TitleCardDetailed
@@ -97,5 +138,5 @@ const banner = {
         </div>
       </div>
     </div>
-  </GuestLayout>
+  </ReadersLayout>
 </template>

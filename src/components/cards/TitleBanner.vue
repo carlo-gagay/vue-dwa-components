@@ -10,6 +10,10 @@ defineProps({
   description: String,
   genres: Object,
   imgSrc: String,
+  id: {
+    type: String,
+    required: true
+  },
   issues: [Number, String],
   likes: [Number, String],
   rating: [Number, String],
@@ -64,8 +68,10 @@ defineProps({
             <div class="small-text">Issues: {{ issues }}</div>
           </div>
         </div>
-        <p v-if="description" class="paragraph mt-[20px] text-white">
-          {{ description }}
+        <p v-if="description" class="paragraph mt-[20px] text-white ellipsable">
+          <input :id="id" type="checkbox">
+          <div class="text">{{ description }}</div>
+          <label :for="id">See More</label>
         </p>
         <div v-if="url" class="mt-6">
           <a :href="url" class="btn md primary"> Start Reading </a>
@@ -76,11 +82,13 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-figure,
-img {
-  @apply m-0 w-full h-full;
-}
-img {
-  @apply object-cover object-center;
+.title-banner {
+  figure,
+  img {
+    @apply m-0 w-full h-full;
+  }
+  img {
+    @apply object-cover object-center;
+  }
 }
 </style>

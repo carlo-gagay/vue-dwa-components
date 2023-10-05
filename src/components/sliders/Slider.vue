@@ -3,27 +3,52 @@ import { ref } from 'vue'
 import { useKeenSlider } from 'keen-slider/vue'
 
 const props = defineProps({
-  loop: {
-    type: Boolean,
-    default: false
-  },
-  drag: {
-    type: Boolean,
-    default: false
-  },
-  class: String,
   animation: {
     type: String,
     default: 'default',
     validator: (value) => {
       return ['default', 'stack-sliding'].includes(value)
     }
-  }
+  },
+  class: String,
+  drag: {
+    type: Boolean,
+    default: false
+  },
+  loop: {
+    type: Boolean,
+    default: false
+  },
+  mode: {
+    type: String,
+    default: 'snap'
+  },
+  origin: {
+    type: String,
+    default: 'auto'
+  },
+  perView: {
+    type: Number,
+    default: 1
+  },
+  range: Object,
+  spacing: {
+    type: Number,
+    default: 0
+  },
+  style: Object
 })
 
 const [container, slider] = useKeenSlider({
   drag: props.drag,
   loop: props.loop,
+  mode: props.mode,
+  slides: {
+    origin: props.origin,
+    perView: props.perView,
+    spacing: props.spacing
+  },
+  range: props.range,
   created: (instance) => updateTracker(instance),
   slideChanged: (instance) => updateTracker(instance),
   detailsChanged: (instance) => onDetailsChanged(instance)
@@ -58,7 +83,7 @@ const stackSlidingAnimation = (instance) => {}
 
 <template>
   <div class="keen-slider-container">
-    <div ref="container" class="keen-slider" :class="class">
+    <div ref="container" class="keen-slider" :class="props.class" :style="props.style">
       <slot :animation-style="animationStyle" :navigator="navigator" />
     </div>
     <div class="keen-slider-nav-container">

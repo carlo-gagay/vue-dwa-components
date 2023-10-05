@@ -1,14 +1,14 @@
 <template>
   <div class="tab-item" :class="{ active: active }">
     <a href="#"> {{ title }} </a>
-    <span class="badge"> {{ count }} </span>
+    <span v-if="badgeContent" class="badge"> {{ badgeContent }} </span>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  title: String,
-  count: Number,
-  active: Boolean
+  active: Boolean,
+  badgeContent: [Number, String],
+  title: String
 })
 </script>

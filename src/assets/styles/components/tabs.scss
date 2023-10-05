@@ -26,4 +26,26 @@
       }
     }
   }
+
+  &.lg {
+    @apply gap-x-[50px];
+
+    .tab-item {
+      @apply p-1;
+
+      a {
+        @apply sub-heading-1 font-medium;
+      }
+
+      &.active {
+        a {
+          @apply heading-1 font-bold;
+
+          &:after {
+            @apply h-[4px] w-full absolute content-[''] bg-[#0C0B0B] mt-1;
+          }
+        }
+      }
+    }
+  }
 }

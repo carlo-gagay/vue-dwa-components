@@ -1,4 +1,4 @@
 import AuthenticatedLayout from './AuthenticatedLayout.vue'
-import GuestLayout from './GuestLayout.vue'
+import ReadersLayout from './ReadersLayout.vue'
 
-export { AuthenticatedLayout, GuestLayout }
+export { AuthenticatedLayout, ReadersLayout }

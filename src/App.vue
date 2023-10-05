@@ -1,7 +1,8 @@
 <script setup>
-import GuestLayoutDemo from './demo/GuestLayoutDemo.vue'
+import { defineAsyncComponent } from 'vue'
+const ReadersLayoutDemo = defineAsyncComponent(() => import('./demo/ReadersLayoutDemo.vue'))
 </script>
 
 <template>
-  <GuestLayoutDemo />
+  <ReadersLayoutDemo />
 </template>

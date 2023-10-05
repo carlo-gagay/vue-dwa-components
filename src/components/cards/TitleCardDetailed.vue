@@ -1,24 +1,24 @@
 <script setup>
 const props = defineProps({
-  image: String,
-  title: String,
   author: String,
-  published: String,
-  description: String,
-  genres: Object,
-  contentRating: String,
-  rating: String,
-  hasAudio: Boolean,
-  likes: [Number, String],
   books: [Number, String],
   chapters: [Number, String],
+  contentRating: String,
+  description: String,
+  hasAudio: Boolean,
+  image: String,
   issues: [Number, String],
+  genres: Object,
+  likes: [Number, String],
   progress: {
     type: Number,
     validator(value) {
       return value >= 0 && value <= 100
     }
-  }
+  },
+  published: String,
+  rating: String,
+  title: String
 })
 
 const emit = defineEmits(['like', 'playAudio'])

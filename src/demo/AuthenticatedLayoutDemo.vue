@@ -23,9 +23,9 @@ const title = {
   <AuthenticatedLayout>
     <div class="hidden sm:row-middle justify-between mb-[33px]">
       <AppTab>
-        <AppTabItem title="Published" :count="5" :active="true" />
-        <AppTabItem title="Draft" :count="8" />
-        <AppTabItem title="Archived" :count="9" />
+        <AppTabItem title="Published" :badge-content="5" :active="true" />
+        <AppTabItem title="Draft" :badge-content="8" />
+        <AppTabItem title="Archived" :badge-content="9" />
       </AppTab>
       <div class="row-middle gap-x-5">
         <button class="btn primary md">Create Title</button>

@@ -1,0 +1,20 @@
+.ellipsable {
+  input[type='checkbox'] {
+    @apply hidden;
+
+    &:checked ~ .text {
+      white-space: inherit;
+      overflow: visible;
+    }
+    &:checked ~ label {
+      @apply hidden;
+    }
+  }
+
+  .text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
