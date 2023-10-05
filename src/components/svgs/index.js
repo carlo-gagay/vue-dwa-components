@@ -1,3 +1,5 @@
+import IconArrowBackIos from './ArrowBackIos.vue'
+import IconArrowForwardIos from './ArrowForwardIos.vue'
 import IconAvatar from './Avatar.vue'
 import IconBell from './Bell.vue'
 import IconBook from './Book.vue'
@@ -17,6 +19,8 @@ import IconVisibility from './Visibility.vue'
 import IconVolumeUp from './VolumeUp.vue'
 
 export {
+  IconArrowBackIos,
+  IconArrowForwardIos,
   IconAvatar,
   IconBell,
   IconBook,

@@ -2,6 +2,7 @@
 import { GuestLayout } from '@components/layouts'
 import { TitleCardBanner, TitleCardDetailed } from '@components/cards'
 import { Slider } from '@components/sliders'
+import { IconArrowBackIos, IconArrowForwardIos } from '@components/svgs'
 
 const title = {
   image: 'https://picsum.photos/20',
@@ -39,23 +40,31 @@ const banner = {
 <template>
   <GuestLayout>
     <div class="container-flex">
-      <Slider :drag="true" :loop="true">
-        <div v-for="n in 5" class="keen-slider__slide" :key="n">
-          <TitleCardBanner
-            :audioSrc="banner.audio"
-            :author="banner.author"
-            :books="banner.books"
-            :chapters="banner.chapters"
-            :content-rating="banner.contentRating"
-            :description="banner.description"
-            :genres="banner.genres"
-            :img-src="`${banner.image}${n}`"
-            :likes="banner.likes"
-            :rating="banner.rating"
-            :title="banner.title"
-            :url="banner.url"
-          />
-        </div>
+      <Slider :loop="true">
+        <template #default="{ navigator }">
+          <div v-for="n in 5" class="keen-slider__slide" :key="n">
+            <TitleCardBanner
+              :audioSrc="banner.audio"
+              :author="banner.author"
+              :books="banner.books"
+              :chapters="banner.chapters"
+              :content-rating="banner.contentRating"
+              :description="banner.description"
+              :genres="banner.genres"
+              :img-src="`${banner.image}${n}`"
+              :likes="banner.likes"
+              :rating="banner.rating"
+              :title="banner.title"
+              :url="banner.url"
+            />
+            <button class="nav-btn backward btn primary-inline" @click="navigator.prev">
+              <IconArrowBackIos class="w-[40px] h-[40px]" />
+            </button>
+            <button class="nav-btn forward btn primary-inline" @click="navigator.next">
+              <IconArrowForwardIos class="w-[40px] h-[40px]" />
+            </button>
+          </div>
+        </template>
       </Slider>
     </div>
     <div class="container-padded-16">

@@ -58,7 +58,7 @@ const stackSlidingAnimation = (instance) => {}
 <template>
   <div class="keen-slider-container">
     <div ref="container" class="keen-slider" :class="class">
-      <slot :animation-style="animationStyle" />
+      <slot :animation-style="animationStyle" :navigator="navigator" />
     </div>
     <div class="keen-slider-nav-container">
       <slot name="navigator" :navigator="navigator" />
