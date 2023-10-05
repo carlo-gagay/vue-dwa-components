@@ -40,7 +40,6 @@ const navigator = ref({
 const animationStyle = ref({})
 
 const updateTracker = (instance) => {
-  console.log(instance)
   const details = instance.track.details
   // Navigator's properties
   navigator.value.index = details.rel
