@@ -48,3 +48,17 @@
     }
   }
 }
+
+.keen-slider-nav-container {
+  .slide-indicator {
+    @apply row-middle absolute gap-x-[25px] bottom-[33px] inset-x-0 flex justify-center;
+
+    .indicator {
+      @apply w-4 h-4 bg-[#FFFCF3] rounded-full opacity-50;
+
+      &.active {
+        @apply opacity-100;
+      }
+    }
+  }
+}

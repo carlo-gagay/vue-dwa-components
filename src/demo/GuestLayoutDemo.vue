@@ -65,6 +65,17 @@ const banner = {
             </button>
           </div>
         </template>
+        <template #navigator="{ navigator }">
+          <div class="slide-indicator">
+            <button
+              v-for="(n, index) in navigator.length"
+              class="indicator"
+              :key="n"
+              :class="{ active: index === navigator.index }"
+              @click="navigator.moveToIdx(index)"
+            ></button>
+          </div>
+        </template>
       </Slider>
     </div>
     <div class="container-padded-16">

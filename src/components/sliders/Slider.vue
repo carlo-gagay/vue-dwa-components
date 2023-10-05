@@ -33,12 +33,14 @@ const navigator = ref({
   index: 0,
   length: 0,
   prev: () => slider.value.prev(),
-  next: () => slider.value.next()
+  next: () => slider.value.next(),
+  moveToIdx: (index) => slider.value.moveToIdx(index)
 })
 
 const animationStyle = ref({})
 
 const updateTracker = (instance) => {
+  console.log(instance)
   const details = instance.track.details
   // Navigator's properties
   navigator.value.index = details.rel
