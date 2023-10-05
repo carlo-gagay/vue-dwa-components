@@ -5,6 +5,16 @@
     &:checked ~ .text {
       white-space: inherit;
       overflow: visible;
+      text-overflow: inherit;  
+  
+      @supports (-webkit-line-clamp: 2) {
+        overflow: inherit;
+        text-overflow: inherit;
+        white-space: inherit;
+        display: block;
+        -webkit-line-clamp: inherit;
+        -webkit-box-orient: inherit;
+      }
     }
     &:checked ~ label {
       @apply hidden;
@@ -12,9 +22,18 @@
   }
 
   .text {
-    display: block;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
+    overflow: hidden;
+
+
+    @supports (-webkit-line-clamp: 2) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
   }
 }
