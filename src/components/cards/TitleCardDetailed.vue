@@ -7,6 +7,11 @@ const props = defineProps({
   description: String,
   hasAudio: Boolean,
   image: String,
+  id: {
+    type: String,
+    required: true
+  },
+  isAudioPlaying: Boolean,
   issues: [Number, String],
   genres: Object,
   likes: [Number, String],
@@ -29,10 +34,10 @@ const emit = defineEmits(['like', 'playAudio'])
     <div class="title-card-image">
       <button v-if="hasAudio" class="slot-card-image badge white" @click="emit('playAudio')">
         <i class="icon icon-volume-up icon--s12"></i>
-        <div class="text">Audio Available</div>
+        <div class="caption">Audio Available</div>
       </button>
-      <figure>
-        <img :src="image" />
+      <figure v-lazyload>
+        <img :data-url="image" />
       </figure>
       <div v-if="progress" class="progress-bar absolute-bottom primary h-sm">
         <div class="progress" :style="{ width: `${progress}%` }"></div>
@@ -77,8 +82,10 @@ const emit = defineEmits(['like', 'playAudio'])
         </div>
       </div>
       <div class="title-card-details-sub">
-        <p v-if="description" class="description hideable-hidden">
-          {{ description }}
+        <p v-if="description" class="description hideable-hidden ellipsable">
+          <input type="checkbox" :name="id" :id="id">
+          <div class="text">{{ description }}</div>
+          <label :for="id"></label>
         </p>
         <div v-if="genres || likes" class="row-end justify-between">
           <div v-if="genres || contentRating" class="row-middle hideable-hidden">

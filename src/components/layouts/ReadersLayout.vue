@@ -24,6 +24,6 @@ import HeaderLayout from './HeaderLayout.vue'
 
 <style>
 body {
-  @apply bg-[#FFFCF3];
+  @apply bg-[#FFFCF3] overflow-x-hidden;
 }
 </style>

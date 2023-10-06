@@ -16,7 +16,7 @@
     }
 
     img {
-      @apply aspect-[306/190] object-cover object-center;
+      @apply aspect-[306/190] object-cover object-center bg-cover bg-center;
     }
 
     .slot-card-image {

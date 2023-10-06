@@ -5,9 +5,9 @@
     &:checked ~ .text {
       white-space: inherit;
       overflow: visible;
-      text-overflow: inherit;  
-  
-      @supports (-webkit-line-clamp: 2) {
+      text-overflow: inherit;
+
+      @supports (-webkit-line-clamp: 3) {
         overflow: inherit;
         text-overflow: inherit;
         white-space: inherit;
@@ -26,14 +26,20 @@
     text-overflow: ellipsis;
     overflow: hidden;
 
-
-    @supports (-webkit-line-clamp: 2) {
+    @supports (-webkit-line-clamp: 3) {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: initial;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+    }
+  }
+
+  label {
+    display: inline;
+    &.primary {
+      @apply text-[16px] leading-[22px] text-[#FFC94B] underline;
     }
   }
 }

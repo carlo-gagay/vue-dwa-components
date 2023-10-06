@@ -1,15 +1,10 @@
 <template>
-  <div class="dropdown-container" :id="container">
-    <v-dropdown
-      v-bind="$attrs"
-      class="dropdown"
-      :container="`#${container}`"
-      :class="[size, theme]"
-    >
+  <div class="dropdown-container" :id="id">
+    <v-dropdown v-bind="$attrs" class="dropdown" :container="container" :class="[size, theme]">
       <slot>
-        <button class="select-button">
+        <button class="select-button" :class="[size, theme]">
           <span>{{ label ?? 'Select Options' }}</span>
-          <i class="icon icon-arrow-drop-down icon--s24"></i>
+          <i class="icon icon-cheveron-down icon--s24"></i>
         </button>
       </slot>
       <template #popper>
@@ -21,18 +16,18 @@
 
 <script setup>
 defineProps({
-  id: String,
+  id: {
+    type: String,
+    required: true
+  },
   label: String,
   size: String,
-  container: {
-    type: String,
-    default: 'body'
-  },
+  container: String,
   theme: {
     type: String,
-    default: 'default',
+    default: 'primary',
     validator(value) {
-      return ['default', 'primary'].includes(value)
+      return ['primary'].includes(value)
     }
   }
 })

@@ -1,31 +1,34 @@
 <script setup>
-import { IconFavorite, IconBookMenu, IconStar, IconVolumeUp } from '@components/svgs'
+import { IconFavorite, IconBook, IconBookMenu, IconStar, IconVolumeUp } from '@components/svgs'
 
 defineProps({
-  audioSrc: String,
   author: String,
   books: [Number, String],
   chapters: [Number, String],
   contentRating: String,
   description: String,
   genres: Object,
+  hasAudio: Boolean,
   imgSrc: String,
   id: {
     type: String,
     required: true
   },
+  isAudioPlaying: Boolean,
   issues: [Number, String],
   likes: [Number, String],
   rating: [Number, String],
   title: String,
   url: String
 })
+
+const emit = defineEmits(['like', 'playAudio'])
 </script>
 
 <template>
   <div class="title-banner">
-    <figure>
-      <img :src="imgSrc" alt="Picsum Image" />
+    <figure v-lazyload>
+      <img :data-url="imgSrc" alt="Picsum Image" />
     </figure>
     <div class="opac column-middle">
       <div class="block max-w-[430px]">
@@ -51,7 +54,7 @@ defineProps({
           <div v-if="contentRating" class="badge orange">
             <div class="caption">{{ contentRating }}</div>
           </div>
-          <div v-if="audioSrc" class="badge white">
+          <div v-if="hasAudio" class="badge white" @click="emit('playAudio')">
             <IconVolumeUp class="w-3 h-3" />
             <div class="caption">Audio Available</div>
           </div>
@@ -71,10 +74,16 @@ defineProps({
         <p v-if="description" class="paragraph mt-[20px] text-white ellipsable">
           <input :id="id" type="checkbox">
           <div class="text">{{ description }}</div>
-          <label :for="id">See More</label>
+          <label :for="id" class="primary">See More</label>
         </p>
-        <div v-if="url" class="mt-6">
-          <a :href="url" class="btn md primary"> Start Reading </a>
+        <div class="mt-6 row-middle gap-x-6">
+          <a v-if="url" :href="url" class="btn md primary"> Start Reading </a>
+          <button class="btn primary-inline">
+            <IconFavorite class="w-10 h-10" />
+          </button>
+          <button class="btn primary-inline">
+            <IconBook class="w-10 h-10" />
+          </button>
         </div>
       </div>
     </div>
@@ -88,7 +97,7 @@ defineProps({
     @apply m-0 w-full h-full;
   }
   img {
-    @apply object-cover object-center;
+    @apply object-cover object-center bg-cover bg-center;
   }
 }
 </style>

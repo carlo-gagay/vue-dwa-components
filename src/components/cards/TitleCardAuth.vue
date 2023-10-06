@@ -15,6 +15,11 @@ const props = defineProps({
   likes: [Number, String],
   books: [Number, String],
   chapters: [Number, String],
+  id: {
+    type: String,
+    required: true
+  },
+  isAudioPlaying: Boolean,
   issues: [Number, String],
   pages: [Number, String],
   firstStep: {
@@ -47,8 +52,8 @@ const props = defineProps({
       <div class="slot-card-image">
         <slot name="slot-card-image"></slot>
       </div>
-      <figure>
-        <img :src="image" />
+      <figure v-lazyload>
+        <img :data-url="image" />
       </figure>
       <div
         v-if="firstStep || secondStep || thirdStep"
