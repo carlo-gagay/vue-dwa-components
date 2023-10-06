@@ -14,4 +14,8 @@
   .column-middle {
     @apply flex flex-col justify-center;
   }
+
+  .column-start {
+    @apply flex flex-col justify-start;
+  }
 }

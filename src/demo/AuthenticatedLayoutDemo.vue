@@ -1,5 +1,4 @@
 <script setup>
-import 'floating-vue/dist/style.css'
 import { AuthenticatedLayout } from '@components/layouts'
 import { TitleCardAuth } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'

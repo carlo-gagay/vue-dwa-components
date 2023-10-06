@@ -71,11 +71,11 @@ const emit = defineEmits(['like', 'playAudio'])
             <div class="small-text">Issues: {{ issues }}</div>
           </div>
         </div>
-        <p v-if="description" class="paragraph mt-[20px] text-white ellipsable">
-          <input :id="id" type="checkbox">
-          <div class="text">{{ description }}</div>
+        <div v-if="description" class="paragraph mt-[20px] text-white ellipsable">
+          <input :id="id" type="checkbox" />
+          <span class="text">{{ description }}</span>
           <label :for="id" class="primary">See More</label>
-        </p>
+        </div>
         <div class="mt-6 row-middle gap-x-6">
           <a v-if="url" :href="url" class="btn md primary"> Start Reading </a>
           <button class="btn primary-inline">

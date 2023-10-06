@@ -1,10 +1,16 @@
 <script setup>
+import { shallowRef } from 'vue'
 import { ReadersLayout } from '@components/layouts'
 import { TitleCardBanner, TitleCardDetailed } from '@components/cards'
 import { Slider } from '@components/sliders'
 import { IconArrowBackIos, IconArrowForwardIos } from '@components/svgs'
 import { AppTab, AppTabItem } from '@components/tabs'
-import { FiltersSection } from '@components/sections'
+import {
+  AudioAvailabilityFilters,
+  CompletionFilters,
+  ContentRatingFilters,
+  GenreFilters
+} from '@features/filters'
 
 const title = {
   image: 'https://picsum.photos/20',
@@ -40,6 +46,19 @@ const banner = {
   chapters: 20,
   url: '/'
 }
+
+const genres = shallowRef([
+  'Action',
+  'Comedy',
+  'Drama',
+  'Fantasy',
+  'Horror',
+  'Mystery',
+  'Romance',
+  'Sci-Fi',
+  'Slice for Life',
+  'Sports'
+])
 </script>
 
 <template>
@@ -120,15 +139,35 @@ const banner = {
         </Slider>
       </div>
     </div>
-    <div class="container-padded-40 pb-0">
+    <div class="container-padded-40 pb-0 row-middle justify-between">
       <AppTab size="lg">
         <AppTabItem title="All Comics" :active="true" />
         <AppTabItem title="My Bookshelf (5)" />
-        <AppTabItem title="My Favorites" />
+        <AppTabItem title="My Favorites (3)" />
       </AppTab>
     </div>
     <div class="container-flex mt-[28px]">
-      <FiltersSection />
+      <div class="filter-container w-full px-10 py-2.5">
+        <div class="inner row-middle justify-between">
+          <div class="dropdowns row-middle gap-x-[20px]">
+            <div class="p-1">
+              <GenreFilters @onDataShow="() => {}" />
+            </div>
+            <div class="p-1">
+              <CompletionFilters @onDataShow="() => {}" />
+            </div>
+            <div class="p-1">
+              <ContentRatingFilters @onDataShow="() => {}" />
+            </div>
+            <div class="p-1">
+              <AudioAvailabilityFilters @onDataShow="() => {}" />
+            </div>
+          </div>
+          <div class="">
+            <button class="btn md-equal trans-black-inline">Clear All Filters</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container-padded-40">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
@@ -153,3 +192,10 @@ const banner = {
     </div>
   </ReadersLayout>
 </template>
+
+<style scoped>
+.filter-container {
+  background: #eae1c5;
+  box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+}
+</style>

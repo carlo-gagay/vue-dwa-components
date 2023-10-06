@@ -1,5 +1,4 @@
 <script setup>
-import 'floating-vue/dist/style.css'
 import { TitleCardAuth } from '@components/cards'
 
 const title = {

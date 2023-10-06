@@ -82,11 +82,11 @@ const emit = defineEmits(['like', 'playAudio'])
         </div>
       </div>
       <div class="title-card-details-sub">
-        <p v-if="description" class="description hideable-hidden ellipsable">
-          <input type="checkbox" :name="id" :id="id">
-          <div class="text">{{ description }}</div>
+        <div v-if="description" class="description hideable-hidden ellipsable">
+          <input type="checkbox" :name="id" :id="id" />
+          <span class="text">{{ description }}</span>
           <label :for="id"></label>
-        </p>
+        </div>
         <div v-if="genres || likes" class="row-end justify-between">
           <div v-if="genres || contentRating" class="row-middle hideable-hidden">
             <div

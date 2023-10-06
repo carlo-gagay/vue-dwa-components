@@ -9,9 +9,12 @@ import IconDashboard from './Dashboard.vue'
 import IconDelete from './Delete.vue'
 import IconDescription from './Description.vue'
 import IconEdit from './Edit.vue'
+import IconEnvelop from './Envelop.vue'
 import IconFavorite from './Favorite.vue'
+import IconLocation from './Location.vue'
 import IconLogo from './Logo.vue'
 import IconMenu from './Menu.vue'
+import IconSearch from './Search.vue'
 import IconSettings from './Settings.vue'
 import IconStar from './Star.vue'
 import IconThumbUp from './ThumbUp.vue'
@@ -30,9 +33,12 @@ export {
   IconDelete,
   IconDescription,
   IconEdit,
+  IconEnvelop,
   IconFavorite,
+  IconLocation,
   IconLogo,
   IconMenu,
+  IconSearch,
   IconSettings,
   IconStar,
   IconThumbUp,

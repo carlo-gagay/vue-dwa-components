@@ -1,10 +1,9 @@
 import lazyloadComposable from '../composables/lazyload'
 
 export default {
-    mounted: el => {
+  mounted: (el) => {
+    const { lazyload } = lazyloadComposable()
 
-        const {lazyload} = lazyloadComposable()
-
-        lazyload(el, '/images/placeholder.png')
-    }
+    lazyload(el, '/images/placeholder.png')
+  }
 }

@@ -35,4 +35,8 @@
   .small-text {
     @apply text-[10px] leading-[14px];
   }
+
+  .text-button {
+    @apply text-sm tracking-[0.56px];
+  }
 }
