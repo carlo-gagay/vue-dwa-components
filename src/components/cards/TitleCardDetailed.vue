@@ -13,7 +13,7 @@ const props = defineProps({
   },
   isAudioPlaying: Boolean,
   issues: [Number, String],
-  genres: Object,
+  genres: Array,
   likes: [Number, String],
   progress: {
     type: Number,
@@ -91,7 +91,7 @@ const emit = defineEmits(['like', 'playAudio'])
           <div v-if="genres || contentRating" class="row-middle hideable-hidden">
             <div
               v-if="genres"
-              v-for="(genre, index) in genres.arr"
+              v-for="(genre, index) in genres"
               class="chip green"
               v-text="genre"
             />

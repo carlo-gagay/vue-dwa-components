@@ -7,13 +7,13 @@ defineProps({
   chapters: [Number, String],
   contentRating: String,
   description: String,
-  genres: Object,
+  genres: Array,
   hasAudio: Boolean,
-  imgSrc: String,
   id: {
     type: String,
     required: true
   },
+  imgSrc: String,
   isAudioPlaying: Boolean,
   issues: [Number, String],
   likes: [Number, String],
@@ -35,7 +35,7 @@ const emit = defineEmits(['like', 'playAudio'])
         <div v-if="title" class="title text-white">{{ title }}</div>
         <div class="row-middle gap-x-4 mt-1">
           <div v-if="author" class="sub-heading-2 text-white">{{ author }}</div>
-          <div v-if="genres?.data.length" class="sub-heading-2 text-white">
+          <div v-if="genres?.length" class="sub-heading-2 text-white">
             <span v-for="(genre, index) in genres.data">
               {{ genre }}
               <span v-if="index < genres.data.length - 1">,&#32;</span>

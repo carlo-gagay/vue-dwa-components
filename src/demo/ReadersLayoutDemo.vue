@@ -1,5 +1,5 @@
 <script setup>
-import { shallowRef } from 'vue'
+import { ref } from 'vue'
 import { ReadersLayout } from '@components/layouts'
 import { TitleCardBanner, TitleCardDetailed } from '@components/cards'
 import { Slider } from '@components/sliders'
@@ -13,41 +13,30 @@ import {
 } from '@features/filters'
 
 const title = {
-  image: 'https://picsum.photos/20',
-  title: 'Never Heroes',
-  author: 'Angela Martin',
-  published: '26 January, 2023',
-  description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-  genres: {
-    arr: ['Supehero', 'Comedy']
-  },
-  contentRating: 'Young Adult',
-  likes: '100k',
-  books: 10,
-  chapters: 20,
-  audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3'
-}
-
-const banner = {
-  image: 'https://picsum.photos/80',
-  title: 'The Glove',
-  description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-  author: 'Paul Graham',
-  genres: {
-    data: ['Action', 'Fantacy']
-  },
-  likes: '10k',
-  rating: '4.5',
-  contentRating: 'Everyone',
   audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3',
+  author: 'Paul Graham',
   books: 5,
   chapters: 20,
+  contentRating: 'Everyone',
+  description:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  image: 'https://picsum.photos/20',
+  genres: ['Action', 'Fantacy'],
+  likes: '10k',
+  published: '26 January, 2023',
+  rating: '4.5',
+  title: 'The Glove',
   url: '/'
 }
 
-const genres = shallowRef([
+const filtersData = ref({
+  genres: [],
+  completions: [],
+  contentRatings: [],
+  audioAvailabilities: []
+})
+
+const genresFromApi = [
   'Action',
   'Comedy',
   'Drama',
@@ -58,7 +47,7 @@ const genres = shallowRef([
   'Sci-Fi',
   'Slice for Life',
   'Sports'
-])
+]
 </script>
 
 <template>
@@ -68,19 +57,19 @@ const genres = shallowRef([
         <template #default="{ navigator }">
           <div v-for="n in 5" class="keen-slider__slide" :key="n">
             <TitleCardBanner
-              :books="banner.books"
-              :chapters="banner.chapters"
-              :content-rating="banner.contentRating"
-              :description="banner.description"
-              :genres="banner.genres"
+              :books="title.books"
+              :chapters="title.chapters"
+              :content-rating="title.contentRating"
+              :description="title.description"
+              :genres="title.genres"
               :hasAudio="true"
               :id="`banner${n}`"
-              :img-src="`${banner.image}${n}`"
+              :img-src="`https://picsum.photos/80${n}`"
               :isAudioPlaying="false"
-              :likes="banner.likes"
-              :rating="banner.rating"
-              :title="`${banner.title} ${n}`"
-              :url="banner.url"
+              :likes="title.likes"
+              :rating="title.rating"
+              :title="`${title.title} ${n}`"
+              :url="title.url"
               @playAudio="() => {}"
               @like="() => {}"
             />
@@ -151,7 +140,12 @@ const genres = shallowRef([
         <div class="inner row-middle justify-between">
           <div class="dropdowns row-middle gap-x-[20px]">
             <div class="p-1">
-              <GenreFilters @onDataShow="() => {}" />
+              <GenreFilters
+                :data="filtersData.genres"
+                @onDataShow="() => {
+                  filtersData.genres = genresFromApi
+                }"
+              />
             </div>
             <div class="p-1">
               <CompletionFilters @onDataShow="() => {}" />

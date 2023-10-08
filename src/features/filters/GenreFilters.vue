@@ -11,7 +11,7 @@ const emit = defineEmits(['onDataShow'])
 
 <template>
   <v-dropdown class="dropdown" placement="bottom-start">
-    <button class="select-button primary">
+    <button class="select-button primary" @click="emit('onDataShow')">
       <span>Genre</span>
       <i class="icon icon-cheveron-down icon--s24"></i>
     </button>
@@ -27,7 +27,7 @@ const emit = defineEmits(['onDataShow'])
           <div class="row-middle justify-between w-full">
             <div class="row-middle gap-x-3">
               <i class="icon icon-box icon--s14"></i>
-              <span class="body-2">Action</span>
+              <span class="body-2">{{ genre }}</span>
             </div>
             <span class="body-2">123</span>
           </div>
