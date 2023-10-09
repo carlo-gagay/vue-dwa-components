@@ -28,7 +28,12 @@ const emit = defineEmits(['like', 'playAudio'])
 <template>
   <div class="title-banner">
     <figure v-lazyload>
-      <img :data-url="imgSrc" alt="Picsum Image" src="/images/placeholder.png" />
+      <img
+        fetchpriority="high"
+        :data-url="imgSrc"
+        alt="Picsum Image"
+        src="/images/placeholder.png"
+      />
     </figure>
     <div class="opac column-middle">
       <div class="block max-w-[430px]">

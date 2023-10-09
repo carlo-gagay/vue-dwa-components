@@ -124,7 +124,7 @@ const genresFromApi = [
               :chapters="title.chapters"
               :hasAudio="true"
               :id="`cr${n}`"
-              :image="`${title.image}${n}`"
+              :image="`https://picsum.photos/19${n}`"
               :isAudioPlaying="false"
               :progress="Number(`${5}${n}`)"
               :title="`${title.title} ${n}`"
@@ -221,7 +221,7 @@ const genresFromApi = [
     </div>
     <div class="container-padded-40">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
-        <div v-for="n in 12" class="relative" :key="n">
+        <div v-for="n in 9" class="relative" :key="n">
           <TitleCardDetailed
             class="expose-details-on-hover"
             :title="`${title.title} ${n}`"
