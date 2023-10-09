@@ -2,7 +2,7 @@
   <div class="dropdown-container" :id="id">
     <v-dropdown v-bind="$attrs" class="dropdown" :container="container" :class="[size, theme]">
       <slot :label="label" :size="size" :theme="theme" :selectButtonClass="selectButtonClass">
-        <button class="select-button" :class="[size, theme, selectButtonClass]">
+        <button class="select-button" :class="[size, theme, selectButtonClass]" role="button">
           <span>{{ label ?? 'Select Options' }}</span>
           <i class="icon icon-cheveron-down icon--s24"></i>
         </button>

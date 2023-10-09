@@ -28,7 +28,7 @@ const emit = defineEmits(['like', 'playAudio'])
 <template>
   <div class="title-banner">
     <figure v-lazyload>
-      <img :data-url="imgSrc" alt="Picsum Image" />
+      <img :data-url="imgSrc" alt="Picsum Image" src="/images/placeholder.png" />
     </figure>
     <div class="opac column-middle">
       <div class="block max-w-[430px]">
@@ -78,10 +78,10 @@ const emit = defineEmits(['like', 'playAudio'])
         </div>
         <div class="mt-6 row-middle gap-x-6">
           <a v-if="url" :href="url" class="btn md primary"> Start Reading </a>
-          <button class="btn primary-inline">
+          <button class="btn primary-inline" role="button">
             <IconFavorite class="w-10 h-10" />
           </button>
-          <button class="btn primary-inline">
+          <button class="btn primary-inline" role="button">
             <IconBook class="w-10 h-10" />
           </button>
         </div>

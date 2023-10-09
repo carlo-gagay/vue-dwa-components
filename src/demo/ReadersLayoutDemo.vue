@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, defineAsyncComponent } from 'vue'
 import { ReadersLayout } from '@components/layouts'
-import { TitleCardBanner, TitleCardDetailed } from '@components/cards'
+import { TitleCardBanner } from '@components/cards'
 import { Slider } from '@components/sliders'
 import {
   IconArrowBackIos,
@@ -11,7 +11,12 @@ import {
   IconQueue
 } from '@components/svgs'
 import { AppTab, AppTabItem } from '@components/tabs'
-import { AudioAvailabilityFilter, CompletionFilter, ContentRatingFilter, GenreFilter } from '@features/filters'
+import {
+  AudioAvailabilityFilter,
+  CompletionFilter,
+  ContentRatingFilter,
+  GenreFilter
+} from '@features/filters'
 
 const title = {
   audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3',
@@ -29,6 +34,10 @@ const title = {
   title: 'The Glove',
   url: '/'
 }
+
+const TitleCardDetailed = defineAsyncComponent(() =>
+  import('@components/cards/TitleCardDetailed.vue')
+)
 
 const filtersShown = ref(false)
 
@@ -144,9 +153,21 @@ const genresFromApi = [
         <button @click="() => (filtersShown = !filtersShown)">
           <IconTune class="w-[30px] h-[30px]" />
         </button>
-        <button>
-          <IconQueue class="w-[30px] h-[30px]" />
-        </button>
+        <v-dropdown class="dropdown" placement="bottom-end">
+          <button>
+            <IconQueue class="w-[30px] h-[30px]" />
+          </button>
+          <template #popper>
+            <div class="dropdown-popper min-w-[166px]">
+              <div class="dropdown-item">
+                <div class="row-middle justify-start">
+                  <i class="icon icon-minus-solid icon--s16"></i>
+                  A to Z
+                </div>
+              </div>
+            </div>
+          </template>
+        </v-dropdown>
       </div>
     </div>
     <div v-if="filtersShown" class="container-flex mt-[28px]">

@@ -53,7 +53,7 @@ const props = defineProps({
         <slot name="slot-card-image"></slot>
       </div>
       <figure v-lazyload>
-        <img :data-url="image" />
+        <img :data-url="image" src="/images/placeholder.png" />
       </figure>
       <div
         v-if="firstStep || secondStep || thirdStep"

@@ -32,12 +32,17 @@ const emit = defineEmits(['like', 'playAudio'])
 <template>
   <div class="title-card">
     <div class="title-card-image">
-      <button v-if="hasAudio" class="slot-card-image badge white" @click="emit('playAudio')">
+      <button
+        v-if="hasAudio"
+        class="slot-card-image badge white"
+        @click="emit('playAudio')"
+        role="button"
+      >
         <i class="icon icon-volume-up icon--s12"></i>
         <div class="caption">Audio Available</div>
       </button>
       <figure v-lazyload>
-        <img :data-url="image" />
+        <img :data-url="image" src="/images/placeholder.png" />
       </figure>
       <div v-if="progress" class="progress-bar absolute-bottom primary h-sm">
         <div class="progress" :style="{ width: `${progress}%` }"></div>

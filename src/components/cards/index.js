@@ -1,7 +1,5 @@
-import { defineAsyncComponent } from 'vue'
-
-const TitleCardBanner = defineAsyncComponent(() => import('./TitleBanner.vue'))
-const TitleCardDetailed = defineAsyncComponent(() => import('./TitleCardDetailed.vue'))
-const TitleCardAuth = defineAsyncComponent(() => import('./TitleCardAuth.vue'))
+import TitleCardBanner from './TitleBanner.vue'
+import TitleCardDetailed from './TitleCardDetailed.vue'
+import TitleCardAuth from './TitleCardAuth.vue'
 
 export { TitleCardBanner, TitleCardDetailed, TitleCardAuth }

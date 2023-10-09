@@ -4,6 +4,6 @@ export default {
   mounted: (el) => {
     const { lazyload } = lazyloadComposable()
 
-    lazyload(el, '/images/placeholder.png')
+    Promise.resolve(lazyload(el))
   }
 }

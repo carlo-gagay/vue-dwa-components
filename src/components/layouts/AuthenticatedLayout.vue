@@ -7,10 +7,10 @@ import { IconAvatar, IconBell, IconBookMenu, IconCommunity, IconDashboard } from
   <HeaderLayout>
     <template #slot-right>
       <div class="flex justify-end gap-x-[26px] items-center">
-        <button>
+        <button role="button">
           <IconBell class="icon text-[#FFC94B]" />
         </button>
-        <button>
+        <button role="button">
           <IconAvatar class="icon text-[#FFC94B]" />
         </button>
       </div>

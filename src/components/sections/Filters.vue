@@ -20,7 +20,7 @@ const emit = defineEmits([
       <div class="dropdowns row-middle gap-x-[20px]">
         <div class="p-1">
           <v-dropdown class="dropdown" placement="bottom-start" :id="1">
-            <button class="select-button primary">
+            <button class="select-button primary" role="button">
               <span>Genre</span>
               <i class="icon icon-cheveron-down icon--s24"></i>
             </button>
@@ -42,7 +42,7 @@ const emit = defineEmits([
         </div>
         <div class="p-1">
           <v-dropdown class="dropdown" placement="bottom-start" :id="2">
-            <button class="select-button primary">
+            <button class="select-button primary" role="button">
               <span>Completion</span>
               <i class="icon icon-cheveron-down icon--s24"></i>
             </button>
@@ -64,7 +64,7 @@ const emit = defineEmits([
         </div>
         <div class="p-1">
           <v-dropdown class="dropdown" placement="bottom-start" :id="3">
-            <button class="select-button primary">
+            <button class="select-button primary" role="button">
               <span>Content Rating</span>
               <i class="icon icon-cheveron-down icon--s24"></i>
             </button>
@@ -86,7 +86,7 @@ const emit = defineEmits([
         </div>
         <div class="p-1">
           <v-dropdown class="dropdown" placement="bottom-start" :id="4">
-            <button class="select-button primary">
+            <button class="select-button primary" role="button">
               <span>Audio Availability</span>
               <i class="icon icon-cheveron-down icon--s24"></i>
             </button>

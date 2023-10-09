@@ -2,13 +2,13 @@
   <HeaderLayout>
     <template #slot-left>
       <div class="row-middle">
-        <button class="btn">About Us</button>
+        <button class="btn" role="button">About Us</button>
       </div>
     </template>
     <template #slot-right>
       <div class="row-middle justify-end gap-x-[26px]">
-        <button class="btn primary-inline md">Sign In</button>
-        <button class="btn primary md">Sign Up</button>
+        <button class="btn primary-inline md" role="button">Sign In</button>
+        <button class="btn primary md" role="button">Sign Up</button>
       </div>
     </template>
   </HeaderLayout>

@@ -1,5 +1,5 @@
 export default function lazyloadComposable() {
-  const lazyload = (imageContainer, defaultImage) => {
+  const lazyload = (imageContainer) => {
     const loadImage = () => {
       const imageElement = Array.from(imageContainer.children).find((imageContainer) => {
         return imageContainer.nodeName === 'IMG'
@@ -62,18 +62,17 @@ export default function lazyloadComposable() {
           // If no image for small screens but has for large screens
           if (!imageElement.dataset.urlSm) size = 'lg'
 
-          switch (size) {
-            case 'sm':
-              return imageElement.dataset.urlSm
-            case 'lg':
-              return imageElement.dataset.url
-            default:
-              return imageElement.dataset.url
+          if (size === 'sm') {
+            return imageElement.dataset.urlSm
           }
+
+          return imageElement.dataset.url
         }
 
-        const img = getImage() ? getImage() : defaultImage
-        imageElement.style.backgroundImage = `url(${img})`
+        const img = getImage()
+        if (img) {
+          imageElement.style.backgroundImage = `url(${img})`
+        }
       }
     }
 
