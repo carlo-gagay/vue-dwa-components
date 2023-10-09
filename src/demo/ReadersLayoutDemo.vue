@@ -142,19 +142,24 @@ const genresFromApi = [
             <div class="p-1">
               <GenreFilters
                 :data="filtersData.genres"
-                @onDataShow="() => {
-                  filtersData.genres = genresFromApi
-                }"
+                @onDataShow="
+                  () => {
+                    filtersData.genres = genresFromApi
+                  }
+                "
               />
             </div>
             <div class="p-1">
-              <CompletionFilters @onDataShow="() => {}" />
+              <CompletionFilters :data="filtersData.completions" @onDataShow="() => {}" />
             </div>
             <div class="p-1">
-              <ContentRatingFilters @onDataShow="() => {}" />
+              <ContentRatingFilters :data="filtersData.contentRatings" @onDataShow="() => {}" />
             </div>
             <div class="p-1">
-              <AudioAvailabilityFilters @onDataShow="() => {}" />
+              <AudioAvailabilityFilters
+                :data="filtersData.audioAvailabilities"
+                @onDataShow="() => {}"
+              />
             </div>
           </div>
           <div class="">
