@@ -11,18 +11,18 @@ const emit = defineEmits(['onDataShow'])
 
 <template>
   <v-dropdown class="dropdown" placement="bottom-start">
-    <button class="select-button primary">
-      <span>Content Rating</span>
+    <button class="select-button primary" @click="emit('onDataShow')">
+      <span>Completion</span>
       <i class="icon icon-cheveron-down icon--s24"></i>
     </button>
     <template #popper>
       <div class="dropdown-popper min-w-[221px]">
-        <div class="body-1 font-bold">Content Rating</div>
-        <div v-if="data.length" v-for="(contentRating, index) in data" class="dropdown-item">
+        <div class="body-1 font-bold">Completion</div>
+        <div v-if="data.length" v-for="(item, index) in data" :key="index" class="dropdown-item">
           <div class="row-middle justify-between w-full">
             <div class="row-middle gap-x-3">
               <i class="icon icon-box icon--s14"></i>
-              <span class="body-2">Action</span>
+              <span class="body-2">{{ item }}</span>
             </div>
             <span class="body-2">123</span>
           </div>

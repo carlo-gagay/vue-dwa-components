@@ -14,10 +14,12 @@ import IconFavorite from './Favorite.vue'
 import IconLocation from './Location.vue'
 import IconLogo from './Logo.vue'
 import IconMenu from './Menu.vue'
+import IconQueue from './Queue.vue'
 import IconSearch from './Search.vue'
 import IconSettings from './Settings.vue'
 import IconStar from './Star.vue'
 import IconThumbUp from './ThumbUp.vue'
+import IconTune from './Tune.vue'
 import IconVisibility from './Visibility.vue'
 import IconVolumeUp from './VolumeUp.vue'
 
@@ -38,10 +40,12 @@ export {
   IconLocation,
   IconLogo,
   IconMenu,
+  IconQueue,
   IconSearch,
   IconSettings,
   IconStar,
   IconThumbUp,
+  IconTune,
   IconVisibility,
   IconVolumeUp
 }

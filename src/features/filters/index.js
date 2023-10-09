@@ -1,10 +1,18 @@
 import { defineAsyncComponent } from 'vue'
 
-const AudioAvailabilityFilters = defineAsyncComponent(() =>
-  import('./AudioAvailabilityFilters.vue')
+const AudioAvailabilityFilter = defineAsyncComponent(() =>
+  import('./AudioAvailabilityFilter.vue')
 )
-const CompletionFilters = defineAsyncComponent(() => import('./CompletionFilters.vue'))
-const ContentRatingFilters = defineAsyncComponent(() => import('./ContentRatingFilters.vue'))
-const GenreFilters = defineAsyncComponent(() => import('./GenreFilters.vue'))
+const CompletionFilter = defineAsyncComponent(() => import('./CompletionFilter.vue'))
+const ContentRatingFilter = defineAsyncComponent(() => import('./ContentRatingFilter.vue'))
+const GenreFilter = defineAsyncComponent(() => import('./GenreFilter.vue'))
 
-export { AudioAvailabilityFilters, CompletionFilters, ContentRatingFilters, GenreFilters }
+const ComicFilters = defineAsyncComponent(() => import('./ComicFilters.vue'))
+
+export {
+  AudioAvailabilityFilter,
+  CompletionFilter,
+  ComicFilters,
+  ContentRatingFilter,
+  GenreFilter
+}

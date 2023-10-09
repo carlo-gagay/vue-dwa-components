@@ -3,14 +3,15 @@ import { ref } from 'vue'
 import { ReadersLayout } from '@components/layouts'
 import { TitleCardBanner, TitleCardDetailed } from '@components/cards'
 import { Slider } from '@components/sliders'
-import { IconArrowBackIos, IconArrowForwardIos } from '@components/svgs'
-import { AppTab, AppTabItem } from '@components/tabs'
 import {
-  AudioAvailabilityFilters,
-  CompletionFilters,
-  ContentRatingFilters,
-  GenreFilters
-} from '@features/filters'
+  IconArrowBackIos,
+  IconArrowForwardIos,
+  IconSearch,
+  IconTune,
+  IconQueue
+} from '@components/svgs'
+import { AppTab, AppTabItem } from '@components/tabs'
+import { AudioAvailabilityFilter, CompletionFilter, ContentRatingFilter, GenreFilter } from '@features/filters'
 
 const title = {
   audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3',
@@ -28,6 +29,8 @@ const title = {
   title: 'The Glove',
   url: '/'
 }
+
+const filtersShown = ref(false)
 
 const filtersData = ref({
   genres: [],
@@ -134,36 +137,63 @@ const genresFromApi = [
         <AppTabItem title="My Bookshelf (5)" />
         <AppTabItem title="My Favorites (3)" />
       </AppTab>
+      <div class="row-middle justify-end gap-x-[22px]">
+        <button>
+          <IconSearch class="w-[30px] h-[30px]" />
+        </button>
+        <button @click="() => (filtersShown = !filtersShown)">
+          <IconTune class="w-[30px] h-[30px]" />
+        </button>
+        <button>
+          <IconQueue class="w-[30px] h-[30px]" />
+        </button>
+      </div>
     </div>
-    <div class="container-flex mt-[28px]">
+    <div v-if="filtersShown" class="container-flex mt-[28px]">
       <div class="filter-container w-full px-10 py-2.5">
         <div class="inner row-middle justify-between">
           <div class="dropdowns row-middle gap-x-[20px]">
-            <div class="p-1">
-              <GenreFilters
-                :data="filtersData.genres"
-                @onDataShow="
-                  () => {
-                    filtersData.genres = genresFromApi
-                  }
-                "
-              />
-            </div>
-            <div class="p-1">
-              <CompletionFilters :data="filtersData.completions" @onDataShow="() => {}" />
-            </div>
-            <div class="p-1">
-              <ContentRatingFilters :data="filtersData.contentRatings" @onDataShow="() => {}" />
-            </div>
-            <div class="p-1">
-              <AudioAvailabilityFilters
-                :data="filtersData.audioAvailabilities"
-                @onDataShow="() => {}"
-              />
-            </div>
+            <GenreFilter
+              class="p-1"
+              :data="filtersData.genres"
+              @onDataShow="
+                () => {
+                  filtersData.genres = genresFromApi
+                }
+              "
+            />
+            <CompletionFilter
+              class="p-1"
+              :data="filtersData.completions"
+              @onDataShow="
+                () => {
+                  filtersData.completions = genresFromApi
+                }
+              "
+            />
+            <ContentRatingFilter
+              class="p-1"
+              :data="filtersData.contentRatings"
+              @onDataShow="
+                () => {
+                  filtersData.contentRatings = genresFromApi
+                }
+              "
+            />
+            <AudioAvailabilityFilter
+              class="p-1"
+              :data="filtersData.audioAvailabilities"
+              @onDataShow="
+                () => {
+                  filtersData.audioAvailabilities = genresFromApi
+                }
+              "
+            />
           </div>
           <div class="">
-            <button class="btn md-equal trans-black-inline">Clear All Filters</button>
+            <button class="btn md-equal trans-black-inline" @click="() => {}">
+              Clear All Filters
+            </button>
           </div>
         </div>
       </div>
