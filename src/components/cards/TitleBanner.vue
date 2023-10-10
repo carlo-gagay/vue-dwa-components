@@ -4,7 +4,9 @@ import { IconFavorite, IconBook, IconBookMenu, IconStar, IconVolumeUp } from '@c
 defineProps({
   author: String,
   books: [Number, String],
+  brandName: String,
   chapters: [Number, String],
+  completion: String,
   contentRating: String,
   description: String,
   genres: Array,
@@ -19,6 +21,10 @@ defineProps({
   likes: [Number, String],
   rating: [Number, String],
   title: String,
+  showGenresInSubtitle: {
+    type: Boolean,
+    default: true
+  },
   url: String
 })
 
@@ -27,7 +33,7 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
 
 <template>
   <div class="title-banner">
-    <figure v-lazyload>
+    <figure v-lazyload class="full-image">
       <img
         fetchpriority="high"
         :data-url="imgSrc"
@@ -35,17 +41,26 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
         src="/images/placeholder.png"
       />
     </figure>
-    <div class="opac column-middle">
+    <div class="opac"></div>
+    <div class="content column-middle">
       <div class="block max-w-[430px]">
         <div v-if="title" class="title text-white">{{ title }}</div>
         <div class="row-middle gap-x-4 mt-1">
           <div v-if="author" class="sub-heading-2 text-white">{{ author }}</div>
-          <div v-if="genres?.length" class="sub-heading-2 text-white">
-            <span v-for="(genre, index) in genres.data">
-              {{ genre }}
-              <span v-if="index < genres.data.length - 1">,&#32;</span>
-            </span>
-          </div>
+          <template v-if="showGenresInSubtitle">
+            <i class="icon icon-minus-solid icon--s4 hideable-hidden text-white"></i>
+            <div class="sub-heading-2 text-white">
+              <span v-for="(genre, index) in genres" v-once>
+                {{ genre }}
+                <span v-if="index < genres.length - 1">,&#32;</span>
+              </span>
+            </div>
+          </template>
+          <template v-if="brandName">
+            <i class="icon icon-minus-solid icon--s4 hideable-hidden text-white"></i>
+            <span class="sub-heading-2 text-white">{{ brandName }}</span>
+            <i class="icon icon-information-outline icon--s20 text-[#857E76]"></i>
+          </template>
         </div>
         <div class="row-middle gap-x-[10px] mt-4">
           <div v-if="likes" class="row-middle gap-x-[4.5px]">
@@ -75,10 +90,19 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             <IconBookMenu class="w-3 h-3" />
             <div class="small-text">Issues: {{ issues }}</div>
           </div>
+          <div v-if="completion" class="badge green">
+            <div v-if="genres" class="row-middle gap-x-1">
+              <div v-for="(genre, index) in genres" :key="index" v-once>
+                <div class="caption">{{ genre }}</div>
+              </div>
+            </div>
+            <span class="caption">| </span>
+            <div class="caption">{{ completion }}</div>
+          </div>
         </div>
-        <div v-if="description" class="paragraph mt-[20px] text-white ellipsable">
+        <div v-if="description" class="mt-[20px] text-white ellipsable">
           <input :id="id" type="checkbox" />
-          <span class="text">{{ description }}</span>
+          <span class="body-2 text">{{ description }}</span>
           <label :for="id" class="primary">See More</label>
         </div>
         <div class="mt-6 row-middle gap-x-6">
@@ -96,15 +120,3 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-.title-banner {
-  figure,
-  img {
-    @apply m-0 w-full h-full;
-  }
-  img {
-    @apply object-cover object-center bg-cover bg-center;
-  }
-}
-</style>

@@ -1,8 +1,22 @@
 .title-banner {
   @apply w-screen h-[calc(100vh-120px)] relative;
 
+  .full-image {
+    &,
+    img {
+      @apply m-0 w-full h-full;
+    }
+    img {
+      @apply object-cover object-center bg-cover bg-center;
+    }
+  }
+
   .opac {
-    @apply absolute inset-0 py-[151px] px-[121px];
+    @apply absolute inset-0;
     background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 54.3%);
+  }
+
+  .content {
+    @apply absolute inset-0 py-[151px] px-[121px];
   }
 }

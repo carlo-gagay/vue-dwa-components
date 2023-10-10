@@ -17,23 +17,7 @@ import {
   ContentRatingFilter,
   GenreFilter
 } from '@features/filters'
-
-const title = {
-  audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3',
-  author: 'Paul Graham',
-  books: 5,
-  chapters: 20,
-  contentRating: 'Everyone',
-  description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
-  image: 'https://picsum.photos/20',
-  genres: ['Action', 'Fantacy'],
-  likes: '10k',
-  published: '26 January, 2023',
-  rating: '4.5',
-  title: 'The Glove',
-  url: '/'
-}
+import { title, genresFromApi } from '@stores/sample'
 
 const TitleCardDetailed = defineAsyncComponent(() =>
   import('@components/cards/TitleCardDetailed.vue')
@@ -48,19 +32,6 @@ const filtersData = ref({
   audioAvailabilities: []
 })
 
-const genresFromApi = [
-  'Action',
-  'Comedy',
-  'Drama',
-  'Fantasy',
-  'Horror',
-  'Mystery',
-  'Romance',
-  'Sci-Fi',
-  'Slice for Life',
-  'Sports'
-]
-
 const breakpoints = {
   '(min-width: 640px)': {
     slides: { perView: 2, spacing: 21 }
@@ -72,12 +43,13 @@ const breakpoints = {
 </script>
 
 <template>
-  <ReadersLayout>
+  <ReadersLayout v-once>
     <div class="container-flex">
       <Slider :loop="true" v-once>
         <template #default="{ navigator }">
-          <div v-for="n in 5" class="keen-slider__slide" :key="n">
+          <div v-for="n in 5" class="keen-slider__slide" :key="n" v-once>
             <TitleCardBanner
+              :author="title.author"
               :books="title.books"
               :chapters="title.chapters"
               :content-rating="title.contentRating"
@@ -133,7 +105,7 @@ const breakpoints = {
           :style="{ overflow: 'visible' }"
           v-once
         >
-          <div v-for="n in 9" :key="n" class="keen-slider__slide">
+          <div v-for="n in 9" :key="n" class="keen-slider__slide" v-once>
             <TitleCardDetailed
               :author="title.author"
               :books="title.books"
@@ -144,7 +116,6 @@ const breakpoints = {
               :isAudioPlaying="false"
               :progress="Number(`${5}${n}`)"
               :title="`${title.title} ${n}`"
-              v-once
             >
               <template #slot-card-body>
                 <button>
@@ -157,7 +128,7 @@ const breakpoints = {
       </div>
     </div>
     <div class="container-padded-40 pb-0 row-middle justify-between">
-      <AppTab size="lg">
+      <AppTab size="lg" v-once>
         <AppTabItem title="All Comics" :active="true" />
         <AppTabItem title="My Bookshelf (5)" />
         <AppTabItem title="My Favorites (3)" />
@@ -198,6 +169,7 @@ const breakpoints = {
                   filtersData.genres = genresFromApi
                 }
               "
+              v-once
             />
             <CompletionFilter
               class="p-1"
@@ -207,6 +179,7 @@ const breakpoints = {
                   filtersData.completions = genresFromApi
                 }
               "
+              v-once
             />
             <ContentRatingFilter
               class="p-1"
@@ -216,6 +189,7 @@ const breakpoints = {
                   filtersData.contentRatings = genresFromApi
                 }
               "
+              v-once
             />
             <AudioAvailabilityFilter
               class="p-1"
@@ -225,6 +199,7 @@ const breakpoints = {
                   filtersData.audioAvailabilities = genresFromApi
                 }
               "
+              v-once
             />
           </div>
           <div class="">
@@ -237,7 +212,7 @@ const breakpoints = {
     </div>
     <div class="container-padded-40">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
-        <div v-for="n in 9" class="relative" :key="n">
+        <div v-for="n in 9" class="relative" :key="n" v-once>
           <TitleCardDetailed
             class="expose-details-on-hover"
             :title="`${title.title} ${n}`"

@@ -26,7 +26,7 @@ const props = defineProps({
   title: String
 })
 
-const emit = defineEmits(['like', 'playAudio'])
+const emit = defineEmits(['onPlayAudio'])
 </script>
 
 <template>
@@ -35,7 +35,7 @@ const emit = defineEmits(['like', 'playAudio'])
       <button
         v-if="hasAudio"
         class="slot-card-image badge white"
-        @click="emit('playAudio')"
+        @click="emit('onPlayAudio')"
         role="button"
       >
         <i class="icon icon-volume-up icon--s12"></i>
