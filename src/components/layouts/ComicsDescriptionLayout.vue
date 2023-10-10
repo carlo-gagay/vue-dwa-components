@@ -4,7 +4,6 @@ import HeaderLayout from './HeaderLayout.vue'
 
 <template>
   <HeaderLayout
-    class="absolute"
     @onLogoClick="
       () => {
         $router.push('/')

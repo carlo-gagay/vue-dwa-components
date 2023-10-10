@@ -5,7 +5,7 @@ const emit = defineEmits(['onLogoClick'])
 </script>
 
 <template>
-  <header aria-label="Header" class="header" :class="$attrs.class">
+  <header aria-label="Header" class="header">
     <div class="header-inner">
       <div class="row-middle">
         <button role="button" @click="emit('onLogoClick')">
