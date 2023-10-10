@@ -47,7 +47,7 @@ const breakpoints = {
     <div class="container-flex">
       <Slider :loop="true" v-once>
         <template #default="{ navigator }">
-          <div v-for="n in 5" class="keen-slider__slide" :key="n" v-once>
+          <div v-for="n in 5" class="keen-slider__slide dark" :key="n" v-once>
             <TitleCardBanner
               :author="title.author"
               :books="title.books"

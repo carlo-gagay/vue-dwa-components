@@ -25,6 +25,18 @@
     }
   }
 
+  &.secondary {
+    @apply bg-[#0C0B0B] text-[#FFC94B] dark:bg-[#FFC94B] dark:text-[#0C0B0B];
+
+    &:hover {
+      @apply bg-white text-[#c79319] dark:bg-[#c79319] dark:text-white;
+    }
+  }
+
+  &.secondary-inline {
+    @apply text-[#0C0B0B] bg-transparent dark:text-[#FFC94B];
+  }
+
   &.trans-black-inline {
     @apply bg-transparent text-[#0C0B0B];
   }

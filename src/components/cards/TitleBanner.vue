@@ -44,12 +44,12 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
     <div class="opac"></div>
     <div class="content column-middle">
       <div class="block max-w-[430px]">
-        <div v-if="title" class="title text-white">{{ title }}</div>
+        <div v-if="title" class="title title-banner-texts">{{ title }}</div>
         <div class="row-middle gap-x-4 mt-1">
-          <div v-if="author" class="sub-heading-2 text-white">{{ author }}</div>
+          <div v-if="author" class="sub-heading-2 title-banner-texts">{{ author }}</div>
           <template v-if="showGenresInSubtitle">
-            <i class="icon icon-minus-solid icon--s4 hideable-hidden text-white"></i>
-            <div class="sub-heading-2 text-white">
+            <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
+            <div class="sub-heading-2 title-banner-texts">
               <span v-for="(genre, index) in genres" v-once>
                 {{ genre }}
                 <span v-if="index < genres.length - 1">,&#32;</span>
@@ -57,15 +57,15 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             </div>
           </template>
           <template v-if="brandName">
-            <i class="icon icon-minus-solid icon--s4 hideable-hidden text-white"></i>
-            <span class="sub-heading-2 text-white">{{ brandName }}</span>
+            <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
+            <span class="sub-heading-2 title-banner-texts">{{ brandName }}</span>
             <i class="icon icon-information-outline icon--s20 text-[#857E76]"></i>
           </template>
         </div>
         <div class="row-middle gap-x-[10px] mt-4">
           <div v-if="likes" class="row-middle gap-x-[4.5px]">
-            <IconFavorite class="w-3 h-3 text-white" />
-            <div class="caption text-white">{{ likes }}</div>
+            <IconFavorite class="w-3 h-3 title-banner-texts" />
+            <div class="caption title-banner-texts">{{ likes }}</div>
           </div>
           <div v-if="rating" class="badge yellow">
             <IconStar class="w-3 h-3" />
@@ -78,15 +78,15 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             <IconVolumeUp class="w-3 h-3" />
             <div class="caption">Audio Available</div>
           </div>
-          <div v-if="books" class="row-middle gap-x-[6px] text-white">
+          <div v-if="books" class="row-middle gap-x-[6px] title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
             <div class="small-text">Books: {{ books }}</div>
           </div>
-          <div v-if="chapters" class="row-middle gap-x-[6px] text-white">
+          <div v-if="chapters" class="row-middle gap-x-[6px] title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
             <div class="small-text">Chapters: {{ chapters }}</div>
           </div>
-          <div v-if="issues" class="row-middle gap-x-[6px] text-white">
+          <div v-if="issues" class="row-middle gap-x-[6px] title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
             <div class="small-text">Issues: {{ issues }}</div>
           </div>
@@ -100,19 +100,19 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             <div class="caption">{{ completion }}</div>
           </div>
         </div>
-        <div v-if="description" class="mt-[20px] text-white ellipsable">
+        <div v-if="description" class="mt-[20px] title-banner-texts ellipsable">
           <input :id="id" type="checkbox" />
           <span class="body-2 text">{{ description }}</span>
           <label :for="id" class="primary">See More</label>
         </div>
         <div class="mt-6 row-middle gap-x-6">
-          <button v-if="url" :href="url" class="btn md primary" @click="emit('onStartReading')">
+          <button v-if="url" :href="url" class="btn md secondary" @click="emit('onStartReading')">
             Start Reading
           </button>
-          <button class="btn primary-inline" role="button" @click="emit('onLike')">
+          <button class="btn secondary-inline" role="button" @click="emit('onLike')">
             <IconFavorite class="w-10 h-10" />
           </button>
-          <button class="btn primary-inline" role="button" @click="emit('onBookmark')">
+          <button class="btn secondary-inline" role="button" @click="emit('onBookmark')">
             <IconBook class="w-10 h-10" />
           </button>
         </div>

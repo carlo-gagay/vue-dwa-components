@@ -1,5 +1,19 @@
+@layer components {
+  .dark-opac {
+    background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 54.3%);
+  }
+  .light-opac {
+    background: linear-gradient(90deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%),
+      linear-gradient(0deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%);
+  }
+}
+
 .title-banner {
   @apply w-screen h-[calc(100vh-120px)] relative;
+
+  .title-banner-texts {
+    @apply text-[#000205] dark:text-white;
+  }
 
   .full-image {
     &,
@@ -12,8 +26,7 @@
   }
 
   .opac {
-    @apply absolute inset-0;
-    background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 54.3%);
+    @apply absolute inset-0 dark:dark-opac light-opac;
   }
 
   .content {
