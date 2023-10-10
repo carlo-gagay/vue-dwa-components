@@ -4,6 +4,6 @@
   }
 
   .container-padded-40 {
-    @apply p-10;
+    @apply py-10 px-4 sm:p-10;
   }
 }

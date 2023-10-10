@@ -10,6 +10,7 @@ const props = defineProps({
       return ['default', 'stack-sliding'].includes(value)
     }
   },
+  breakpoints: Object,
   class: String,
   drag: {
     type: Boolean,
@@ -40,6 +41,7 @@ const props = defineProps({
 })
 
 const [container, slider] = useKeenSlider({
+  breakpoints: props.breakpoints,
   drag: props.drag,
   loop: props.loop,
   mode: props.mode,
@@ -50,8 +52,7 @@ const [container, slider] = useKeenSlider({
   },
   range: props.range,
   created: (instance) => updateTracker(instance),
-  slideChanged: (instance) => updateTracker(instance),
-  detailsChanged: (instance) => onDetailsChanged(instance)
+  slideChanged: (instance) => updateTracker(instance)
 })
 
 const navigator = ref({
@@ -66,19 +67,10 @@ const animationStyle = ref({})
 
 const updateTracker = (instance) => {
   const details = instance.track.details
-  // Navigator's properties
+
   navigator.value.index = details.rel
   navigator.value.length = details.slides.length
 }
-
-const onDetailsChanged = (instance) => {
-  if (props.animation === 'stack-sliding') {
-    stackSlidingAnimation(instance)
-  }
-}
-
-// Animation Handlers
-const stackSlidingAnimation = (instance) => {}
 </script>
 
 <template>

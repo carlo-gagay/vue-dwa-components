@@ -22,7 +22,7 @@ defineProps({
   url: String
 })
 
-const emit = defineEmits(['like', 'playAudio'])
+const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading'])
 </script>
 
 <template>
@@ -59,7 +59,7 @@ const emit = defineEmits(['like', 'playAudio'])
           <div v-if="contentRating" class="badge orange">
             <div class="caption">{{ contentRating }}</div>
           </div>
-          <div v-if="hasAudio" class="badge white" @click="emit('playAudio')">
+          <div v-if="hasAudio" class="badge white" @click="emit('onPlayAudio')">
             <IconVolumeUp class="w-3 h-3" />
             <div class="caption">Audio Available</div>
           </div>
@@ -82,11 +82,13 @@ const emit = defineEmits(['like', 'playAudio'])
           <label :for="id" class="primary">See More</label>
         </div>
         <div class="mt-6 row-middle gap-x-6">
-          <a v-if="url" :href="url" class="btn md primary"> Start Reading </a>
-          <button class="btn primary-inline" role="button">
+          <button v-if="url" :href="url" class="btn md primary" @click="emit('onStartReading')">
+            Start Reading
+          </button>
+          <button class="btn primary-inline" role="button" @click="emit('onLike')">
             <IconFavorite class="w-10 h-10" />
           </button>
-          <button class="btn primary-inline" role="button">
+          <button class="btn primary-inline" role="button" @click="emit('onBookmark')">
             <IconBook class="w-10 h-10" />
           </button>
         </div>

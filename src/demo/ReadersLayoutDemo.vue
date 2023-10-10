@@ -60,6 +60,15 @@ const genresFromApi = [
   'Slice for Life',
   'Sports'
 ]
+
+const breakpoints = {
+  '(min-width: 640px)': {
+    slides: { perView: 2, spacing: 21 }
+  },
+  '(min-width: 1024px)': {
+    slides: { perView: 4, spacing: 21 }
+  }
+}
 </script>
 
 <template>
@@ -82,8 +91,14 @@ const genresFromApi = [
               :rating="title.rating"
               :title="`${title.title} ${n}`"
               :url="title.url"
+              @onBookmark="() => {}"
               @playAudio="() => {}"
               @like="() => {}"
+              @onStartReading="
+                () => {
+                  $router.push('/comics')
+                }
+              "
             />
             <button class="nav-btn backward btn primary-inline" @click="navigator.prev">
               <IconArrowBackIos class="w-[40px] h-[40px]" />
@@ -110,9 +125,10 @@ const genresFromApi = [
       <div class="heading-1 font-bold">Continue Reading</div>
       <div class="mt-[20px]">
         <Slider
-          :drag="true"
           mode="free"
-          :per-view="4"
+          :breakpoints="breakpoints"
+          :drag="true"
+          :per-view="1"
           :spacing="20"
           :style="{ overflow: 'visible' }"
           v-once
@@ -243,7 +259,9 @@ const genresFromApi = [
   </ReadersLayout>
 </template>
 
-<style scoped>
+<style>
+@import 'floating-vue/dist/style.css';
+
 .filter-container {
   background: #eae1c5;
   box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);

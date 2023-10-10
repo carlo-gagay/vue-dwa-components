@@ -1,5 +1,6 @@
 <template>
   <HeaderLayout
+    class="absolute"
     @onLogoClick="
       () => {
         $router.push('/')
