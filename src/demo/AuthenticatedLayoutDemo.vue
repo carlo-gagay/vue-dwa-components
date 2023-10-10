@@ -21,7 +21,7 @@ const title = {
 <template>
   <AuthenticatedLayout>
     <div class="hidden sm:row-middle justify-between mb-[33px]">
-      <AppTab>
+      <AppTab class="gap-x-[30px]">
         <AppTabItem title="Published" :badge-content="5" :active="true" />
         <AppTabItem title="Draft" :badge-content="8" />
         <AppTabItem title="Archived" :badge-content="9" />

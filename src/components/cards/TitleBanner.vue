@@ -9,6 +9,10 @@ defineProps({
   completion: String,
   contentRating: String,
   description: String,
+  descriptionEllipsisEnabled: {
+    type: Boolean,
+    default: true
+  },
   genres: Array,
   hasAudio: Boolean,
   id: {
@@ -100,13 +104,24 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             <div class="caption">{{ completion }}</div>
           </div>
         </div>
-        <div v-if="description" class="mt-[20px] title-banner-texts ellipsable">
+        <div
+          v-if="description"
+          class="mt-[20px] title-banner-texts ellipsable"
+          :class="{ disabled: !descriptionEllipsisEnabled }"
+          v-once
+        >
           <input :id="id" type="checkbox" />
           <span class="body-2 text">{{ description }}</span>
           <label :for="id" class="primary">See More</label>
         </div>
         <div class="mt-6 row-middle gap-x-6">
-          <button v-if="url" :href="url" class="btn md secondary" @click="emit('onStartReading')">
+          <button
+            v-if="url"
+            :href="url"
+            class="btn md secondary"
+            role="button"
+            @click="emit('onStartReading')"
+          >
             Start Reading
           </button>
           <button class="btn secondary-inline" role="button" @click="emit('onLike')">

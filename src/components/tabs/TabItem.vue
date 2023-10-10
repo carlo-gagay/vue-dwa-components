@@ -1,8 +1,8 @@
 <template>
-  <div class="tab-item" :class="{ active: active }">
-    <a href="#"> {{ title }} </a>
+  <button class="tab-item" :class="{ active: active }" role="button" @click="emit('onClick')">
+    <div class="tab-item-title">{{ title }}</div>
     <span v-if="badgeContent" class="badge"> {{ badgeContent }} </span>
-  </div>
+  </button>
 </template>
 
 <script setup>
@@ -11,4 +11,6 @@ defineProps({
   badgeContent: [Number, String],
   title: String
 })
+
+const emit = defineEmits(['onClick'])
 </script>

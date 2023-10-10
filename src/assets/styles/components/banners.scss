@@ -15,16 +15,6 @@
     @apply text-[#000205] dark:text-white;
   }
 
-  .full-image {
-    &,
-    img {
-      @apply m-0 w-full h-full;
-    }
-    img {
-      @apply object-cover object-center bg-cover bg-center;
-    }
-  }
-
   .opac {
     @apply absolute inset-0 dark:dark-opac light-opac;
   }

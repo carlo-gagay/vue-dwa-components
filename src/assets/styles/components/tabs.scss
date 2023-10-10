@@ -1,10 +1,10 @@
 #app-tab {
-  @apply row-middle gap-x-[30px];
+  @apply flex flex-row items-center;
 
   .tab-item {
     @apply row-middle gap-x-1 relative;
 
-    a {
+    .tab-item-title {
       @apply text-[#857E76] text-sm capitalize;
     }
 
@@ -13,7 +13,7 @@
     }
 
     &.active {
-      a {
+      .tab-item-title {
         @apply text-[24px] leading-[32px] text-[#0C0B0B] font-medium;
 
         &:after {
@@ -28,17 +28,15 @@
   }
 
   &.lg {
-    @apply gap-x-[50px];
-
     .tab-item {
       @apply p-1;
 
-      a {
+      .tab-item-title {
         @apply sub-heading-1 font-medium;
       }
 
       &.active {
-        a {
+        .tab-item-title {
           @apply heading-1 font-bold;
 
           &:after {

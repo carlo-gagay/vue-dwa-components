@@ -1,27 +1,20 @@
-.ellipsable {
-  input[type='checkbox'] {
-    @apply hidden;
+@layer components {
+  .default-text-state {
+    white-space: inherit;
+    overflow: visible;
+    text-overflow: inherit;
 
-    &:checked ~ .text {
-      white-space: inherit;
-      overflow: visible;
+    @supports (-webkit-line-clamp: 3) {
+      overflow: inherit;
       text-overflow: inherit;
-
-      @supports (-webkit-line-clamp: 3) {
-        overflow: inherit;
-        text-overflow: inherit;
-        white-space: inherit;
-        display: block;
-        -webkit-line-clamp: inherit;
-        -webkit-box-orient: inherit;
-      }
-    }
-    &:checked ~ label {
-      @apply hidden;
+      white-space: inherit;
+      display: block;
+      -webkit-line-clamp: inherit;
+      -webkit-box-orient: inherit;
     }
   }
 
-  .text {
+  .collapsed-text-state {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -35,11 +28,38 @@
       -webkit-box-orient: vertical;
     }
   }
+}
+
+.ellipsable {
+  input[type='checkbox'] {
+    @apply hidden;
+
+    &:checked ~ .text {
+      @apply default-text-state;
+    }
+    &:checked ~ label {
+      @apply hidden;
+    }
+  }
+
+  .text {
+    @apply collapsed-text-state;
+  }
 
   label {
     display: inline;
     &.primary {
       @apply text-[16px] leading-[22px] text-[#FFC94B] underline;
+    }
+  }
+
+  &.disabled {
+    .text {
+      @apply default-text-state;
+    }
+
+    label {
+      display: none;
     }
   }
 }

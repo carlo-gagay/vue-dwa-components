@@ -128,7 +128,7 @@ const breakpoints = {
       </div>
     </div>
     <div class="container-padded-40 pb-0 row-middle justify-between">
-      <AppTab size="lg" v-once>
+      <AppTab size="lg" class="gap-x-[50px]" v-once>
         <AppTabItem title="All Comics" :active="true" />
         <AppTabItem title="My Bookshelf (5)" />
         <AppTabItem title="My Favorites (3)" />

@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   { path: '/', component: () => import('./demo/ReadersLayoutDemo.vue') },
-  { path: '/comics', component: () => import('./demo/ComicDescriptionDemo.vue') }
+  { path: '/comics', component: () => import('./demo/ComicDescriptionLayoutDemo.vue') }
 ]
 
 const router = createRouter({

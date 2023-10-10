@@ -3,6 +3,8 @@
   @apply relative;
 }
 
+// 1.
+
 // Title Card
 .title-card {
   @apply rounded-[10px] bg-[#FFFCF3];
@@ -131,5 +133,17 @@
 
   span {
     @apply text-[8px] leading-[14px];
+  }
+}
+
+// 2.
+
+.comics-card {
+  .comics-card-image img {
+    @apply aspect-[256/396];
+  }
+
+  .comics-card-info {
+    @apply px-[9px] py-[5px];
   }
 }
