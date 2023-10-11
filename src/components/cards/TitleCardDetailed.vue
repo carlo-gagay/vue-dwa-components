@@ -1,5 +1,6 @@
 <script setup>
 const props = defineProps({
+  alt: String,
   author: String,
   books: [Number, String],
   chapters: [Number, String],
@@ -42,7 +43,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
         <div class="caption">Audio Available</div>
       </button>
       <figure v-lazyload>
-        <img :data-url="image" src="/images/placeholder.png" />
+        <img :alt="alt" :data-url="image" src="/images/placeholder.png" />
       </figure>
       <div v-if="progress" class="progress-bar absolute-bottom primary h-sm">
         <div class="progress" :style="{ width: `${progress}%` }"></div>

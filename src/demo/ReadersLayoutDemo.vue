@@ -49,6 +49,7 @@ const breakpoints = {
         <template #default="{ navigator }">
           <div v-for="n in 5" class="keen-slider__slide dark" :key="n" v-once>
             <TitleCardBanner
+              :alt="`${title.title} ${n}`"
               :author="title.author"
               :books="title.books"
               :chapters="title.chapters"
@@ -107,6 +108,7 @@ const breakpoints = {
         >
           <div v-for="n in 9" :key="n" class="keen-slider__slide" v-once>
             <TitleCardDetailed
+              :alt="`${title.title} ${n}`"
               :author="title.author"
               :books="title.books"
               :chapters="title.chapters"
@@ -217,17 +219,18 @@ const breakpoints = {
         <div v-for="n in 9" class="relative" :key="n" v-once>
           <TitleCardDetailed
             class="expose-details-on-hover"
-            :title="`${title.title} ${n}`"
+            :alt="`${title.title} ${n}`"
             :author="title.author"
-            :published="title.published"
+            :content-rating="title.contentRating"
             :description="title.description"
+            :genres="title.genres"
+            :hasAudio="true"
             :id="`ac${n}`"
             :image="`${title.image}${n}`"
             :isAudioPlaying="false"
-            :genres="title.genres"
             :likes="title.likes"
-            :hasAudio="true"
-            :content-rating="title.contentRating"
+            :published="title.published"
+            :title="`${title.title} ${n}`"
             @onClick="() => $router.push('/comics')"
             @onPlayAudio="() => console.log('audio playing')"
           />

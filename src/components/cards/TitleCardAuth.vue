@@ -8,20 +8,9 @@ import {
 } from '@components/svgs'
 
 const props = defineProps({
-  image: String,
-  title: String,
-  genres: Object,
-  views: [Number, String],
-  likes: [Number, String],
+  alt: String,
   books: [Number, String],
   chapters: [Number, String],
-  id: {
-    type: String,
-    required: true
-  },
-  isAudioPlaying: Boolean,
-  issues: [Number, String],
-  pages: [Number, String],
   firstStep: {
     type: Number,
     default: 0,
@@ -29,6 +18,16 @@ const props = defineProps({
       return value >= 0 && value <= 100
     }
   },
+  genres: Object,
+  id: {
+    type: String,
+    required: true
+  },
+  image: String,
+  isAudioPlaying: Boolean,
+  issues: [Number, String],
+  likes: [Number, String],
+  pages: [Number, String],
   secondStep: {
     type: Number,
     default: 0,
@@ -42,7 +41,9 @@ const props = defineProps({
     validator(value) {
       return value >= 0 && value <= 100
     }
-  }
+  },
+  title: String,
+  views: [Number, String]
 })
 </script>
 
@@ -53,7 +54,7 @@ const props = defineProps({
         <slot name="slot-card-image"></slot>
       </div>
       <figure v-lazyload>
-        <img :data-url="image" src="/images/placeholder.png" />
+        <img :alt="alt" :data-url="image" src="/images/placeholder.png" />
       </figure>
       <div
         v-if="firstStep || secondStep || thirdStep"

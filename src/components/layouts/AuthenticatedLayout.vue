@@ -5,7 +5,7 @@ import { IconAvatar, IconBell, IconBookMenu, IconCommunity, IconDashboard } from
 
 <template>
   <HeaderLayout>
-    <template #slot-right>
+    <template #slot-cta-buttons>
       <div class="flex justify-end gap-x-[26px] items-center">
         <button role="button">
           <IconBell class="icon text-[#FFC94B]" />

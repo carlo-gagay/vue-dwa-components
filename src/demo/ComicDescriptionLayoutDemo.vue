@@ -11,6 +11,7 @@ import { title } from '@stores/sample'
     <div class="container-flex">
       <TitleCardBanner
         id="banner"
+        :alt="title.title"
         :author="title.author"
         :brandName="title.brandName"
         :completion="title.completion"

@@ -2,6 +2,7 @@
 import { IconFavorite, IconBook, IconBookMenu, IconStar, IconVolumeUp } from '@components/svgs'
 
 defineProps({
+  alt: String,
   author: String,
   books: [Number, String],
   brandName: String,
@@ -38,12 +39,7 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
 <template>
   <div class="title-banner">
     <figure v-lazyload class="full-image">
-      <img
-        fetchpriority="high"
-        :data-url="imgSrc"
-        alt="Picsum Image"
-        src="/images/placeholder.png"
-      />
+      <img fetchpriority="high" src="/images/placeholder.png" :alt="alt" :data-url="imgSrc" />
     </figure>
     <div class="opac"></div>
     <div class="content column-middle">

@@ -13,11 +13,12 @@ import { chapter } from '@stores/sample'
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[60px] gap-y-[45px] mt-[66px]">
       <div v-for="n in 8" :key="n" v-once>
         <ChapterCard
+          :alt="`${chapter.title} ${n}`"
           :comments="chapter.comments"
+          :image="`${chapter.image}${n}`"
           :pages="chapter.pages"
           :published="chapter.published"
           :subtitle="chapter.subtitle"
-          :image="`${chapter.image}${n}`"
           :title="`${chapter.title} ${n}`"
           @onClick="() => $router.push('/chapters')"
         />

@@ -11,14 +11,9 @@ const emit = defineEmits(['onLogoClick'])
         <button role="button" @click="emit('onLogoClick')">
           <IconLogo />
         </button>
-        <div class="row-middle">
-          <button class="btn" role="button">About Us</button>
-        </div>
+        <slot name="slot-nav-links"></slot>
       </div>
-      <div class="row-middle justify-end gap-x-[26px]">
-        <button class="btn primary-inline md" role="button">Sign In</button>
-        <button class="btn primary md" role="button">Sign Up</button>
-      </div>
+      <slot name="slot-cta-buttons"></slot>
     </div>
   </header>
 </template>
