@@ -116,6 +116,8 @@ const breakpoints = {
               :isAudioPlaying="false"
               :progress="Number(`${5}${n}`)"
               :title="`${title.title} ${n}`"
+              @onClick="() => $router.push('/comics')"
+              @onPlayAudio="() => console.log('audio playing')"
             >
               <template #slot-card-body>
                 <button>
@@ -226,7 +228,8 @@ const breakpoints = {
             :likes="title.likes"
             :hasAudio="true"
             :content-rating="title.contentRating"
-            @playAudio="() => {}"
+            @onClick="() => $router.push('/comics')"
+            @onPlayAudio="() => console.log('audio playing')"
           />
         </div>
       </div>

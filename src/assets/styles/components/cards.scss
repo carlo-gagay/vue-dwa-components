@@ -7,7 +7,8 @@
 
 // Title Card
 .title-card {
-  @apply rounded-[10px] bg-[#FFFCF3];
+  @apply rounded-[10px] bg-[#FFF];
+  // @apply bg-[#FFFCF3];
 
   .title-card-image {
     @apply relative;
@@ -145,5 +146,33 @@
 
   .comics-card-info {
     @apply px-[9px] py-[5px];
+  }
+}
+
+// 3. 
+
+.chapter-card {
+  .chapter-card-image img {
+    @apply aspect-[292.778/453.519];
+  }
+
+  .chapter-card-info {
+    @apply px-[9px] py-[5px];
+
+    & .sub-heading-1 {
+      @apply text-[16.074px] leading-[22.963px] font-semibold;
+    }
+
+    & .small-text {
+      @apply text-[13.778px] leading-[18.37px] text-[#BDB9B4];
+    }
+
+    & .statistics {
+      @apply mt-3 gap-x-4;
+
+      .texts {
+        @apply text-[11.481px] leading-[16.074px] dark:text-[#FFF];
+      }
+    }
   }
 }

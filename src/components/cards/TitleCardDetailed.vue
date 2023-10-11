@@ -26,16 +26,16 @@ const props = defineProps({
   title: String
 })
 
-const emit = defineEmits(['onPlayAudio'])
+const emits = defineEmits(['onClick', 'onPlayAudio'])
 </script>
 
 <template>
-  <div class="title-card">
+  <div class="title-card" @click.stop="emits('onClick')">
     <div class="title-card-image">
       <button
         v-if="hasAudio"
         class="slot-card-image badge white"
-        @click="emit('onPlayAudio')"
+        @click.stop="emits('onPlayAudio')"
         role="button"
       >
         <i class="icon icon-volume-up icon--s12"></i>

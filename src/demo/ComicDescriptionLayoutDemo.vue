@@ -51,6 +51,7 @@ import { title } from '@stores/sample'
             subtitle="June 9, 2023"
             :image="`https://picsum.photos/20${n}`"
             :title="`Issue ${n}`"
+            @onClick="() => $router.push('/chapters')"
           />
         </div>
       </div>

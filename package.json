@@ -18,7 +18,8 @@
     "floating-vue": "^2.0.0-beta.24",
     "keen-slider": "^6.8.6",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue-virtual-scroll-grid": "^1.10.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.3",

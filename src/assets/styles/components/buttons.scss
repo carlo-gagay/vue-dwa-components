@@ -38,7 +38,7 @@
   }
 
   &.trans-black-inline {
-    @apply bg-transparent text-[#0C0B0B];
+    @apply bg-transparent text-[#0C0B0B] dark:text-[#FFF];
   }
 
   &.trans-outline {

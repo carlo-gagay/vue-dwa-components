@@ -1,3 +1,12 @@
+const chapter = {
+  comments: '234',
+  pages: '239pages',
+  published: 'July 23, 2023',
+  subtitle: 'Title goes here',
+  image: 'https://picsum.photos/20',
+  title: 'Chapter Title'
+}
+
 const genresFromApi = [
   'Action',
   'Comedy',
@@ -30,4 +39,4 @@ const title = {
   url: '/'
 }
 
-export { genresFromApi, title }
+export { chapter, genresFromApi, title }

@@ -7,4 +7,8 @@
     @apply text-neutral-900;
     font-family: 'Roboto', sans-serif;
   }
+
+  body {
+    @apply bg-white dark:bg-[#1A1A1A];
+  }
 }

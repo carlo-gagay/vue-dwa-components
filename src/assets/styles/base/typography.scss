@@ -39,4 +39,17 @@
   .text-button {
     @apply text-sm tracking-[0.56px];
   }
+
+  .title,
+  .heading-1,
+  .heading-2,
+  .sub-heading-1,
+  .sub-heading-2,
+  .body-1,
+  .body-2,
+  .paragraph,
+  .small-text,
+  .text-button {
+    @apply dark:text-[#FFF];
+  }
 }
