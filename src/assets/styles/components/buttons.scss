@@ -41,6 +41,10 @@
     @apply bg-transparent text-[#0C0B0B] dark:text-[#FFF];
   }
 
+  &.trans-white-inline {
+    @apply bg-transparent text-[#FFF];
+  }
+
   &.trans-outline {
     @apply bg-transparent border border-[#0C0B0B] text-[#0C0B0B];
   }

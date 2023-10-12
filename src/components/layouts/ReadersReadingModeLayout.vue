@@ -1,7 +1,11 @@
 <script setup>
 import HeaderLayout from './HeaderLayout.vue'
 
-const emits = defineEmits(['onBackClick'])
+defineProps({
+  asideShown: Boolean
+})
+
+const emits = defineEmits(['onAsideToggle', 'onBackClick'])
 </script>
 
 <template>
@@ -11,11 +15,23 @@ const emits = defineEmits(['onBackClick'])
         <i class="icon icon-arrow-left icon--s24 text-[#fff]"></i>
       </button>
       <div class="content">
-        <slot name="header-title"></slot>
+        <slot name="slot-header-title"></slot>
       </div>
     </div>
   </HeaderLayout>
   <div class="mt-[60px]">
-    <slot></slot>
+    <section class="pane-body" :class="{ 'is-aside-shown': asideShown }">
+      <div class="pane-body-inner">
+        <slot name="slot-content-body"></slot>
+      </div>
+    </section>
+    <aside
+      class="pane-aside"
+      :class="{ 'shown': asideShown }"
+    >
+      <div class="pane-aside-inner">
+        <slot name="slot-content-aside"></slot>
+      </div>
+    </aside>
   </div>
 </template>

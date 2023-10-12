@@ -1,0 +1,23 @@
+.pane-body {
+  @apply relative transition-all;
+
+  &.is-aside-shown {
+    @apply mr-[368px];
+  }
+
+  .pane-body-inner {
+    @apply relative w-full h-full;
+  }
+}
+
+.pane-aside {
+  @apply fixed bottom-0 right-0 z-40 w-[368px] h-[calc(100vh-60px)] transition-transform translate-x-full;
+
+  &.shown {
+    @apply translate-x-0;
+  }
+
+  .pane-aside-inner {
+    @apply relative h-full overflow-y-auto;
+  }
+}

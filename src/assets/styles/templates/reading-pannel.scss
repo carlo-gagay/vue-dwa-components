@@ -1,0 +1,21 @@
+.reading-pannel {
+  @apply relative;
+
+  .visuals-section {
+    @apply overflow-y-auto;
+  }
+
+  .controls-section {
+    @apply absolute bottom-0 flex justify-center w-full;
+
+    .inner {
+      @apply px-[64px] py-[10px] bg-[#0C0B0B] row-middle gap-x-[122px] justify-between;
+      border-radius: 10px 10px 0px 0px;
+      box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+
+      .controls-group {
+        @apply row-middle gap-x-[52px];
+      }
+    }
+  }
+}
