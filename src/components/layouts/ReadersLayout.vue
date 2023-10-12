@@ -1,11 +1,16 @@
+<script setup>
+import HeaderLayout from './HeaderLayout.vue'
+import FooterLayout from './FooterLayout.vue'
+import { IconLogo } from '@components/svgs'
+</script>
+
 <template>
-  <HeaderLayout
-    @onLogoClick="
-      () => {
-        $router.push('/')
-      }
-    "
-  >
+  <HeaderLayout>
+    <template #slot-brand>
+      <button role="button" @click="() => $route.push('/')">
+        <IconLogo />
+      </button>
+    </template>
     <template #slot-nav-links>
       <div class="row-middle">
         <button class="btn primary-inline ml-[35px]" role="button">About Us</button>
@@ -24,11 +29,6 @@
 
   <FooterLayout />
 </template>
-
-<script setup>
-import HeaderLayout from './HeaderLayout.vue'
-import FooterLayout from './FooterLayout.vue'
-</script>
 
 <style>
 body {

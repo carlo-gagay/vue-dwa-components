@@ -1,6 +1,6 @@
 import AuthenticatedLayout from './AuthenticatedLayout.vue'
-import ComicsDescriptionLayout from './ComicsDescriptionLayout.vue'
-import ContentFullLayout from './ContentFullLayout.vue'
+import ReadersComicDescriptionLayout from './ReadersComicDescriptionLayout.vue'
+import ReadersFullContentLayout from './ReadersFullContentLayout.vue'
 import ReadersLayout from './ReadersLayout.vue'
 
-export { AuthenticatedLayout, ComicsDescriptionLayout, ContentFullLayout, ReadersLayout }
+export { AuthenticatedLayout, ReadersComicDescriptionLayout, ReadersFullContentLayout, ReadersLayout }

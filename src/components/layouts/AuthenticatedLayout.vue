@@ -5,6 +5,11 @@ import { IconAvatar, IconBell, IconBookMenu, IconCommunity, IconDashboard } from
 
 <template>
   <HeaderLayout>
+    <template #slot-brand>
+      <button role="button" @click="() => $route.push('/')">
+        <IconLogo />
+      </button>
+    </template>
     <template #slot-cta-buttons>
       <div class="flex justify-end gap-x-[26px] items-center">
         <button role="button">

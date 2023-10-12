@@ -1,5 +1,5 @@
 <script setup>
-import { ComicsDescriptionLayout } from '@components/layouts'
+import { ReadersComicDescriptionLayout } from '@components/layouts'
 import { TitleCardBanner } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { ComicsCard } from '@components/cards'
@@ -7,7 +7,7 @@ import { title } from '@stores/sample'
 </script>
 
 <template>
-  <ComicsDescriptionLayout v-once>
+  <ReadersComicDescriptionLayout v-once>
     <div class="container-flex">
       <TitleCardBanner
         id="banner"
@@ -58,7 +58,7 @@ import { title } from '@stores/sample'
       </div>
     </div>
     <div class="h-[62px]"></div>
-  </ComicsDescriptionLayout>
+  </ReadersComicDescriptionLayout>
 </template>
 
 <style>

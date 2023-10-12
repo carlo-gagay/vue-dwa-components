@@ -1,11 +1,11 @@
 <script setup>
 import { ChapterCard } from '@components/cards'
-import { ContentFullLayout } from '@components/layouts'
+import { ReadersFullContentLayout } from '@components/layouts'
 import { chapter } from '@stores/sample'
 </script>
 
 <template>
-  <ContentFullLayout @onBack="() => $router.push('/comics')">
+  <ReadersFullContentLayout @onBack="() => $router.push('/comics')">
     <div class="column-middle gap-y-[26px] items-center">
       <div class="text-[36.993px] dark:text-white">Comic Title</div>
       <div class="text-[55.681px] dark:text-[#FFF]">Book 01: <strong>Title Goes Here</strong></div>
@@ -24,5 +24,5 @@ import { chapter } from '@stores/sample'
         />
       </div>
     </div>
-  </ContentFullLayout>
+  </ReadersFullContentLayout>
 </template>
