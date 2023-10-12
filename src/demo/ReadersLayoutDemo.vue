@@ -69,7 +69,7 @@ const breakpoints = {
               @like="() => {}"
               @onStartReading="
                 () => {
-                  $router.push('/comics')
+                  $router.push('/comic-page')
                 }
               "
             />

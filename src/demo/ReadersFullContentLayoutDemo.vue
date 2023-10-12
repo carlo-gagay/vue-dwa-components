@@ -20,6 +20,7 @@ import { chapter } from '@stores/sample'
           :published="chapter.published"
           :subtitle="chapter.subtitle"
           :title="`${chapter.title} ${n}`"
+          @onClick="() => $router.push('/comic-page')"
         />
       </div>
     </div>

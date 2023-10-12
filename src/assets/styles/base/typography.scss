@@ -36,6 +36,10 @@
     @apply text-[10px] leading-[14px];
   }
 
+  .small-text-1 {
+    @apply text-[9px] leading-[14px];
+  }
+
   .text-button {
     @apply text-sm tracking-[0.56px];
   }

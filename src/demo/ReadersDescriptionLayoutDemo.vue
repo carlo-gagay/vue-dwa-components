@@ -32,7 +32,7 @@ import { title } from '@stores/sample'
         @like="() => {}"
         @onStartReading="
           () => {
-            $router.push('/comics')
+            $router.push('/comic-page')
           }
         "
         v-once

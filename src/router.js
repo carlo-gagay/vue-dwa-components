@@ -3,7 +3,11 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   { path: '/', component: () => import('./demo/ReadersLayoutDemo.vue') },
   { path: '/comics', component: () => import('./demo/ReadersDescriptionLayoutDemo.vue') },
-  { path: '/chapters', component: () => import('./demo/ReadersFullContentLayoutDemo.vue') }
+  { path: '/chapters', component: () => import('./demo/ReadersFullContentLayoutDemo.vue') },
+  {
+    path: '/comic-page',
+    component: () => import('./demo/ReadersReadingModeLayoutDemo/ReadersReadingModeLayoutDemo.vue')
+  }
 ]
 
 const router = createRouter({

@@ -2,6 +2,14 @@
   @apply fixed top-0 inset-x-0 h-[60px] w-full z-40;
 
   .header-inner {
-    @apply w-full h-full bg-[#0C0B0B] flex justify-between py-[15px] px-4 sm:px-10 items-center;
+    @apply relative w-full h-full bg-[#0C0B0B] flex  py-[15px] px-4 sm:px-10 items-center;
+
+    &.space-between {
+      @apply justify-between;
+    }
+
+    &.centered {
+      @apply justify-center;
+    }
   }
 }
