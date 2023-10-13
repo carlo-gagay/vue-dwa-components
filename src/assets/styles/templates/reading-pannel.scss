@@ -2,7 +2,25 @@
   @apply relative;
 
   .visuals-section {
-    @apply overflow-y-auto;
+    @apply w-full overflow-y-auto;
+
+    .bg-music-toggle {
+      @apply absolute top-[32px] left-[40px];
+    }
+
+    .nav-button {
+      @apply absolute top-[calc(50%-15px)];
+
+      $side-distance: 29px;
+
+      &.left {
+        @apply left-[#{$side-distance}];
+      }
+
+      &.right {
+        @apply right-[#{$side-distance}];
+      }
+    }
   }
 
   .controls-section {

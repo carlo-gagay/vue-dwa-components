@@ -5,7 +5,7 @@ defineProps({
   asideShown: Boolean
 })
 
-const emits = defineEmits(['onAsideToggle', 'onBackClick'])
+const emits = defineEmits(['onBackClick'])
 </script>
 
 <template>

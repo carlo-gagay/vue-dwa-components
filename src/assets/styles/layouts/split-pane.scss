@@ -1,12 +1,12 @@
 .pane-body {
-  @apply relative transition-all;
+  @apply relative transition-all h-[calc(100vh-60px)];
 
   &.is-aside-shown {
     @apply mr-[368px];
   }
 
   .pane-body-inner {
-    @apply relative w-full h-full;
+    @apply relative w-full h-full overflow-y-auto;
   }
 }
 
@@ -19,5 +19,8 @@
 
   .pane-aside-inner {
     @apply relative h-full overflow-y-auto;
+
+    background: var(--neutrals-beige, #FFFCF3);
+    box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.25);
   }
 }

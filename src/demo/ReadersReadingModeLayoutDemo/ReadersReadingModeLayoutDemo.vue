@@ -1,19 +1,20 @@
 <script setup>
 import { ref } from 'vue'
 import { ReadersReadingModeLayout } from '@components/layouts'
+import AsidePanel from './AsidePanel.vue'
 import CommentsSidePane from './CommentsSidePane.vue'
 import SettingsSidePane from './SettingsSidePane.vue'
-import ReadingPannel from './ReadingPannel.vue'
+import ReadingPanel from './ReadingPanel.vue'
 
 const asideShown = ref(false)
 
-const onAsideToggle = () => (asideShown.value = !asideShown.value)
+const onAsideShow = () => (asideShown.value = true)
+const onAsideClose = () => (asideShown.value = false)
 </script>
 
 <template>
   <ReadersReadingModeLayout
     :asideShown="asideShown"
-    @onAsideToggle="onAsideToggle"
     @onBackClick="() => $router.go(-1)"
   >
     <template #slot-header-title>
@@ -22,10 +23,11 @@ const onAsideToggle = () => (asideShown.value = !asideShown.value)
       </div>
     </template>
     <template #slot-content-body>
-      <ReadingPannel @onAsideToggle="onAsideToggle" />
+      <ReadingPanel @onAsideShow="onAsideShow" />
     </template>
     <template #slot-content-aside>
-      <CommentsSidePane />
+      <AsidePanel @onAsideClose="onAsideClose">
+      </AsidePanel>
     </template>
   </ReadersReadingModeLayout>
 </template>
