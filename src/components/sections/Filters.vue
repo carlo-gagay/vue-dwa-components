@@ -108,7 +108,7 @@ const emit = defineEmits([
         </div>
       </div>
       <div class="">
-        <button class="btn md-equal trans-black-inline">Clear All Filters</button>
+        <button class="btn md-equal btn-trans-black-inline">Clear All Filters</button>
       </div>
     </div>
   </div>

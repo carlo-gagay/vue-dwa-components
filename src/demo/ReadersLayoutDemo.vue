@@ -73,10 +73,10 @@ const breakpoints = {
                 }
               "
             />
-            <button class="nav-btn backward btn primary-inline" @click="navigator.prev">
+            <button class="nav-btn backward btn btn-primary-inline" @click="navigator.prev">
               <IconArrowBackIos class="w-[40px] h-[40px]" />
             </button>
-            <button class="nav-btn forward btn primary-inline" @click="navigator.next">
+            <button class="nav-btn forward btn btn-primary-inline" @click="navigator.next">
               <IconArrowForwardIos class="w-[40px] h-[40px]" />
             </button>
           </div>
@@ -207,7 +207,7 @@ const breakpoints = {
             />
           </div>
           <div class="">
-            <button class="btn md-equal trans-black-inline" @click="() => {}">
+            <button class="btn md-equal btn-trans-black-inline" @click="() => {}">
               Clear All Filters
             </button>
           </div>

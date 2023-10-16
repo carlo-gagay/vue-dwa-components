@@ -27,7 +27,7 @@ const title = {
         <AppTabItem title="Archived" :badge-content="9" />
       </AppTab>
       <div class="row-middle gap-x-5">
-        <button class="btn primary md">Create Title</button>
+        <button class="btn btn-primary md">Create Title</button>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]">
@@ -48,7 +48,7 @@ const title = {
       >
         <template #slot-card-image>
           <v-dropdown class="dropdown" placement="bottom-start">
-            <button class="btn opac round">
+            <button class="btn btn-opac round">
               <i class="icon icon-dots-horizontal-triple"></i>
             </button>
             <template #popper>

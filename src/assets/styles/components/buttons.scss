@@ -1,3 +1,50 @@
+@layer components {
+  .btn-primary {
+    @apply bg-[#FFC94B] text-[#0C0B0B];
+
+    &:hover {
+      @apply bg-[#c79319] text-white;
+    }
+  }
+
+  .btn-primary-inline {
+    @apply bg-transparent text-[#FFC94B];
+
+    &:hover {
+      @apply text-[#c79319];
+    }
+  }
+
+  .btn-secondary {
+    @apply bg-[#0C0B0B] text-[#FFC94B] dark:bg-[#FFC94B] dark:text-[#0C0B0B];
+
+    &:hover {
+      @apply bg-white text-[#c79319] dark:bg-[#c79319] dark:text-white;
+    }
+  }
+
+  .btn-secondary-inline {
+    @apply text-[#0C0B0B] bg-transparent dark:text-[#FFC94B];
+  }
+
+  .btn-trans-black-inline {
+    @apply bg-transparent text-[#0C0B0B] dark:text-[#FFF];
+  }
+
+  .btn-trans-white-inline {
+    @apply bg-transparent text-[#FFF];
+  }
+
+  .btn-trans-outline {
+    @apply bg-transparent border border-[#0C0B0B] text-[#0C0B0B];
+  }
+
+  .btn-opac {
+    @apply text-white;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
 .btn {
   @apply rounded-[5px];
 
@@ -9,53 +56,20 @@
     @apply p-2 text-sm;
   }
 
-  &.primary {
-    @apply bg-[#FFC94B] text-[#0C0B0B];
-
-    &:hover {
-      @apply bg-[#c79319] text-white;
-    }
-  }
-
-  &.primary-inline {
-    @apply bg-transparent text-[#FFC94B];
-
-    &:hover {
-      @apply text-[#c79319];
-    }
-  }
-
-  &.secondary {
-    @apply bg-[#0C0B0B] text-[#FFC94B] dark:bg-[#FFC94B] dark:text-[#0C0B0B];
-
-    &:hover {
-      @apply bg-white text-[#c79319] dark:bg-[#c79319] dark:text-white;
-    }
-  }
-
-  &.secondary-inline {
-    @apply text-[#0C0B0B] bg-transparent dark:text-[#FFC94B];
-  }
-
-  &.trans-black-inline {
-    @apply bg-transparent text-[#0C0B0B] dark:text-[#FFF];
-  }
-
-  &.trans-white-inline {
-    @apply bg-transparent text-[#FFF];
-  }
-
-  &.trans-outline {
-    @apply bg-transparent border border-[#0C0B0B] text-[#0C0B0B];
-  }
-
-  &.opac {
-    @apply text-white;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
   &.round {
     @apply p-0.5 rounded-full;
+  }
+
+  &.unround {
+    @apply rounded-none;
+  }
+}
+
+.toggle-btn {
+  @apply p-2;
+
+  &.active {
+    @apply btn-secondary;
   }
 }
 

@@ -1,5 +1,3 @@
 <template>
-  <div class="container-flex relative">
-    
-  </div>
+  <div class="container-flex relative"></div>
 </template>

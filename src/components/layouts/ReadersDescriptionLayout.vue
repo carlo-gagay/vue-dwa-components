@@ -12,13 +12,13 @@ import { IconLogo } from '@components/svgs'
     </template>
     <template #slot-nav-links>
       <div class="row-middle">
-        <button class="btn primary-inline ml-[35px]" role="button">About Us</button>
+        <button class="btn btn-primary-inline ml-[35px]" role="button">About Us</button>
       </div>
     </template>
     <template #slot-cta-buttons>
       <div class="row-middle justify-end gap-x-[26px]">
-        <button class="btn primary-inline md" role="button">Sign In</button>
-        <button class="btn primary md" role="button">Sign Up</button>
+        <button class="btn btn-primary-inline md" role="button">Sign In</button>
+        <button class="btn btn-primary md" role="button">Sign Up</button>
       </div>
     </template>
   </HeaderLayout>

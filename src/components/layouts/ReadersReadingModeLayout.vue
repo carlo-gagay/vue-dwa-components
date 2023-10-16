@@ -25,10 +25,7 @@ const emits = defineEmits(['onBackClick'])
         <slot name="slot-content-body"></slot>
       </div>
     </section>
-    <aside
-      class="pane-aside"
-      :class="{ 'shown': asideShown }"
-    >
+    <aside class="pane-aside" :class="{ shown: asideShown }">
       <div class="pane-aside-inner">
         <slot name="slot-content-aside"></slot>
       </div>

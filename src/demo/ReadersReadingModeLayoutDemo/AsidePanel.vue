@@ -1,21 +1,21 @@
 <script setup>
 defineProps({
-    title: String
+  title: String
 })
 
 const emits = defineEmits(['onAsideClose'])
 </script>
 
 <template>
-    <div class="aside-panel relative container-flex">
-        <!-- header -->
-        <div class="absolute top-0 inset-x-0 px-[15px] pt-[11px] pb-[12px] bg-[#0C0B0B]">
-            <div class="inner row-middle justify-between">
-                <div class="body-2">{{ title }}</div>
-                <button class="btn trans-white-inline" @click="emits('onAsideClose')">
-                    <i class="icon icon-close icon--s22"></i>
-                </button>
-            </div>
-        </div>
+  <div class="aside-panel">
+    <!-- header -->
+    <div class="absolute top-0 inset-x-0 px-[15px] pt-[11px] pb-[12px] bg-[#0C0B0B]">
+      <div class="inner row-middle justify-between">
+        <div class="body-2">{{ title }}</div>
+        <button class="btn btn-trans-white-inline" @click="emits('onAsideClose')">
+          <i class="icon icon-close icon--s22"></i>
+        </button>
+      </div>
     </div>
+  </div>
 </template>

@@ -1,26 +1,21 @@
 .pane-body {
-  @apply relative transition-all h-[calc(100vh-60px)];
+  @apply relative transition-all;
 
   &.is-aside-shown {
     @apply mr-[368px];
   }
 
   .pane-body-inner {
-    @apply relative w-full h-full overflow-y-auto;
   }
 }
 
 .pane-aside {
-  @apply fixed bottom-0 right-0 z-40 w-[368px] h-[calc(100vh-60px)] transition-transform translate-x-full;
+  @apply fixed bottom-0 right-0 z-40 w-[368px] transition-transform translate-x-full;
 
   &.shown {
     @apply translate-x-0;
   }
 
   .pane-aside-inner {
-    @apply relative h-full overflow-y-auto;
-
-    background: var(--neutrals-beige, #FFFCF3);
-    box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.25);
   }
 }

@@ -13,10 +13,7 @@ const onAsideClose = () => (asideShown.value = false)
 </script>
 
 <template>
-  <ReadersReadingModeLayout
-    :asideShown="asideShown"
-    @onBackClick="() => $router.go(-1)"
-  >
+  <ReadersReadingModeLayout :asideShown="asideShown" @onBackClick="() => $router.go(-1)">
     <template #slot-header-title>
       <div class="body-2 text-[#fff]">
         <strong>The Glove</strong> | <strong>Chapter 3:</strong> A Twist of a Knife
@@ -26,8 +23,7 @@ const onAsideClose = () => (asideShown.value = false)
       <ReadingPanel @onAsideShow="onAsideShow" />
     </template>
     <template #slot-content-aside>
-      <AsidePanel @onAsideClose="onAsideClose">
-      </AsidePanel>
+      <AsidePanel @onAsideClose="onAsideClose"> </AsidePanel>
     </template>
   </ReadersReadingModeLayout>
 </template>

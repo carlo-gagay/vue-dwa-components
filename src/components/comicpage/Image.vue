@@ -1,12 +1,12 @@
 <script setup>
 defineProps({
-    alt: String,
-    image: String
+  alt: String,
+  image: String
 })
 </script>
 
 <template>
-    <div class="relative">
-        <img :src="image" :alt="alt" />
-    </div>
+  <div>
+    <img style="height: 100%" :src="image" :alt="alt" />
+  </div>
 </template>

@@ -114,16 +114,16 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
           <button
             v-if="url"
             :href="url"
-            class="btn md secondary"
+            class="btn md btn-secondary"
             role="button"
             @click="emit('onStartReading')"
           >
             Start Reading
           </button>
-          <button class="btn secondary-inline" role="button" @click="emit('onLike')">
+          <button class="btn btn-secondary-inline" role="button" @click="emit('onLike')">
             <IconFavorite class="w-10 h-10" />
           </button>
-          <button class="btn secondary-inline" role="button" @click="emit('onBookmark')">
+          <button class="btn btn-secondary-inline" role="button" @click="emit('onBookmark')">
             <IconBook class="w-10 h-10" />
           </button>
         </div>

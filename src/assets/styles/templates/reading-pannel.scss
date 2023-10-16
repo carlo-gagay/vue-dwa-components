@@ -1,25 +1,45 @@
 .reading-pannel {
-  @apply relative;
+  @apply relative h-[calc(100vh-60px)] overflow-hidden;
 
   .visuals-section {
-    @apply w-full overflow-y-auto;
+    @apply row-middle justify-center overflow-y-auto;
 
-    .bg-music-toggle {
-      @apply absolute top-[32px] left-[40px];
+    &.infinite {
+      @apply overflow-y-auto h-[86vh];
     }
 
-    .nav-button {
-      @apply absolute top-[calc(50%-15px)];
+    .page-layout-image-container {
+      @apply row-middle gap-x-0 pt-4;
 
-      $side-distance: 29px;
-
-      &.left {
-        @apply left-[#{$side-distance}];
+      .page-layout-image {
+        @apply h-[84vh] w-full;
       }
+    }
 
-      &.right {
-        @apply right-[#{$side-distance}];
+    .infinite-scroll-layout-image-container {
+      @apply column-middle gap-y-0 pt-[655px];
+
+      .infinite-scroll-layout-image {
+        @apply h-[84vh] w-full;
       }
+    }
+  }
+
+  .bg-music-toggle {
+    @apply absolute top-[32px] left-[40px];
+  }
+
+  .nav-button {
+    @apply absolute top-[calc(50%-27px)];
+
+    $side-distance: 29px;
+
+    &.left {
+      @apply left-[#{$side-distance}];
+    }
+
+    &.right {
+      @apply right-[#{$side-distance}];
     }
   }
 
@@ -36,4 +56,11 @@
       }
     }
   }
+}
+
+.aside-panel {
+  @apply relative h-[calc(100vh-60px)];
+
+  background: var(--neutrals-beige, #fffcf3);
+  box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.25);
 }
