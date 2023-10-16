@@ -1,6 +1,7 @@
 <script setup>
-import { ref } from 'vue'
-import { ComicImage } from '@components/comicpage'
+import { defineAsyncComponent, ref } from 'vue'
+
+const ComicImage = defineAsyncComponent(() => import('@components/comicpage/Image.vue'))
 
 const infiniteMode = ref(false)
 

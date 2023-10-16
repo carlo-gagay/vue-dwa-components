@@ -2,11 +2,7 @@
   @apply relative h-[calc(100vh-60px)] overflow-hidden;
 
   .visuals-section {
-    @apply row-middle justify-center;
-
-    &.infinite {
-      @apply overflow-y-auto;
-    }
+    @apply row-middle justify-center overflow-y-auto;
 
     .page-layout-image-container {
       @apply row-middle gap-x-0 pt-4;
