@@ -18,7 +18,7 @@ const emits = defineEmits(['onAsideShow'])
         />
         <ComicImage
           class="infinite-scroll-layout-image"
-          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-IfhopNUO9l-full.jpg"
+          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-qzIpix6SeF-full.jpg"
           alt="Page 01"
         />
       </div>
@@ -30,7 +30,7 @@ const emits = defineEmits(['onAsideShow'])
         />
         <ComicImage
           class="page-layout-image"
-          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-IfhopNUO9l-full.jpg"
+          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-qzIpix6SeF-full.jpg"
           alt="Page 01"
         />
       </div>
@@ -40,8 +40,11 @@ const emits = defineEmits(['onAsideShow'])
       <i class="icon icon-music-notes icon--s20"></i>
     </button>
 
-    <div class="row-middle absolute right-10 top-[33px]">
-      <button class="btn btn-secondary border border-[#0C0B0B] p-2 rounded-l-[5px]">
+    <div class="reading-mode-toggle" @click="() => infiniteMode = !infiniteMode">
+      <button class="toggle-btn toggle-btn-start active">
+        <i class="icon icon-menu icon--s24"></i>
+      </button>
+      <button class="toggle-btn toggle-btn-end">
         <i class="icon icon-menu icon--s24"></i>
       </button>
     </div>

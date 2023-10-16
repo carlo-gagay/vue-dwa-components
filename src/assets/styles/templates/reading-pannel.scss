@@ -29,6 +29,10 @@
     @apply absolute top-[32px] left-[40px];
   }
 
+  .reading-mode-toggle {
+    @apply row-middle absolute right-10 top-[33px] gap-x-0;
+  }
+
   .nav-button {
     @apply absolute top-[calc(50%-27px)];
 

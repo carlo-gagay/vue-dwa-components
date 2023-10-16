@@ -66,10 +66,18 @@
 }
 
 .toggle-btn {
-  @apply p-2;
+  @apply p-2 border border-[#0C0B0B] text-[#EDEAE7];
+
+  &.toggle-btn-start {
+    @apply rounded-s-[5px];
+  }
+
+  &.toggle-btn-end {
+    @apply rounded-e-[5px];
+  }
 
   &.active {
-    @apply btn-secondary;
+    @apply bg-[#0C0B0B] text-[#FFC94B];
   }
 }
 
