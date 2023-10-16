@@ -1,11 +1,16 @@
 <script setup>
-import { defineAsyncComponent, ref } from 'vue'
+import { defineAsyncComponent, reactive, ref } from 'vue'
+import { Modal } from '@components/modals'
 
 const ComicImage = defineAsyncComponent(() => import('@components/comicpage/Image.vue'))
 
 const infiniteMode = ref(false)
 
-const emits = defineEmits(['onAsideClose', 'onAsideShow'])
+const modal = reactive({
+  shown: false
+})
+
+const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
 </script>
 
 <template>
@@ -61,7 +66,7 @@ const emits = defineEmits(['onAsideClose', 'onAsideShow'])
     <div class="controls-section">
       <div class="inner">
         <div class="group controls-group">
-          <button class="btn btn-trans-white-inline">
+          <button class="btn btn-trans-white-inline" @click="emits('onModalOpen')">
             <i class="icon icon-menu icon--s24"></i>
           </button>
           <button class="btn btn-trans-white-inline">

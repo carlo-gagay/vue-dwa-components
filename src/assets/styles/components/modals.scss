@@ -1,0 +1,36 @@
+.modal-backdrop {
+  @apply fixed inset-0 z-50;
+
+  .modal-opac {
+    @apply absolute inset-0;
+
+    opacity: 0.9;
+    background: var(--Black, #000);
+    mix-blend-mode: multiply;
+  }
+
+  .modal {
+    @apply absolute top-[50%] left-[50%] m-6;
+    transform: translate(-50%, -50%);
+
+    .dialog {
+      @apply relative overflow-hidden max-h-[606px] rounded-[5px] p-6;
+
+      .close-btn {
+        @apply fixed top-[-38px] right-[-38px];
+      }
+
+      &.md {
+        @apply w-[1100px];
+      }
+
+      &.light {
+        @apply bg-[#fff];
+      }
+
+      &.transparent {
+        @apply bg-transparent;
+      }
+    }
+  }
+}

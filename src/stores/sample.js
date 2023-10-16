@@ -1,5 +1,8 @@
 const chapter = {
+  chapterNumber: 'Chapter 0',
   comments: '234',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labnulla pariatur. Excepteur sint occaecat.',
   pages: '239pages',
   published: 'July 23, 2023',
   subtitle: 'Title goes here',

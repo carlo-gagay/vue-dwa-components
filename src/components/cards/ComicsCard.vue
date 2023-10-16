@@ -13,7 +13,7 @@ const emits = defineEmits(['onClick'])
   <div class="comics-card" @click="emits('onClick')">
     <div class="comics-card-image">
       <figure v-lazyload class="full-image">
-        <img :src="image" :alt="alt" />
+        <img src="/images/placeholder.png" :data-url="image" :alt="alt" />
       </figure>
     </div>
     <div class="comics-card-info">

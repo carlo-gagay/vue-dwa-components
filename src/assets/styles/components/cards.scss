@@ -181,3 +181,25 @@
     }
   }
 }
+
+.chapter-card-inline {
+  @apply p-6 row-start rounded-[5px] bg-white;
+
+  .image-container {
+    figure img {
+      @apply aspect-[283/167] min-w-[283px] rounded-t-[5px];
+    }
+  }
+
+  .text-container {
+    @apply ml-[25px];
+  }
+
+  .statistics-container {
+    @apply column-start gap-y-3 min-w-fit ml-[61px];
+
+    .stat-item {
+      @apply row-middle gap-x-2;
+    }
+  }
+}
