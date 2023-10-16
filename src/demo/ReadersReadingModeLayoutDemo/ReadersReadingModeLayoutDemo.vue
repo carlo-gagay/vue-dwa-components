@@ -20,7 +20,7 @@ const onAsideClose = () => (asideShown.value = false)
       </div>
     </template>
     <template #slot-content-body>
-      <ReadingPanel @onAsideShow="onAsideShow" />
+      <ReadingPanel @onAsideShow="onAsideShow" @onAsideClose="onAsideClose" />
     </template>
     <template #slot-content-aside>
       <AsidePanel @onAsideClose="onAsideClose"> </AsidePanel>

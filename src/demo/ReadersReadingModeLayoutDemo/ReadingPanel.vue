@@ -2,14 +2,14 @@
 import { ref } from 'vue'
 import { ComicImage } from '@components/comicpage'
 
-const infiniteMode = ref(true)
+const infiniteMode = ref(false)
 
-const emits = defineEmits(['onAsideShow'])
+const emits = defineEmits(['onAsideClose', 'onAsideShow'])
 </script>
 
 <template>
   <div class="reading-pannel">
-    <div class="visuals-section" :class="{infinite: infiniteMode}">
+    <div class="visuals-section" :class="{ infinite: infiniteMode }">
       <div v-if="infiniteMode" class="infinite-scroll-layout-image-container">
         <ComicImage
           class="infinite-scroll-layout-image"
@@ -40,7 +40,7 @@ const emits = defineEmits(['onAsideShow'])
       <i class="icon icon-music-notes icon--s20"></i>
     </button>
 
-    <div class="reading-mode-toggle" @click="() => infiniteMode = !infiniteMode">
+    <div class="reading-mode-toggle" @click="() => (infiniteMode = !infiniteMode)">
       <button class="toggle-btn toggle-btn-start active">
         <i class="icon icon-menu icon--s24"></i>
       </button>
@@ -49,11 +49,11 @@ const emits = defineEmits(['onAsideShow'])
       </button>
     </div>
 
-    <button class="nav-button left">
+    <button v-show="!infiniteMode" class="nav-button left">
       <i class="icon icon-cheveron-left icon--s30"></i>
     </button>
 
-    <button class="nav-button right">
+    <button v-show="!infiniteMode" class="nav-button right">
       <i class="icon icon-cheveron-right icon--s30"></i>
     </button>
 

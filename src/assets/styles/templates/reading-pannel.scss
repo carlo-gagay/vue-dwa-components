@@ -2,10 +2,10 @@
   @apply relative h-[calc(100vh-60px)] overflow-hidden;
 
   .visuals-section {
-    @apply row-middle justify-center overflow-y-auto;
+    @apply row-middle justify-center;
 
     &.infinite {
-      @apply overflow-y-auto h-[86vh];
+      @apply overflow-y-auto;
     }
 
     .page-layout-image-container {
@@ -17,10 +17,10 @@
     }
 
     .infinite-scroll-layout-image-container {
-      @apply column-middle gap-y-0 pt-[655px];
+      @apply column-middle gap-y-0 pt-4 pb-10 justify-between items-center overflow-y-auto h-[92vh];
 
       .infinite-scroll-layout-image {
-        @apply h-[84vh] w-full;
+        @apply w-[51%];
       }
     }
   }
