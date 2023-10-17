@@ -94,6 +94,7 @@ const breakpoints = {
         </template>
       </Slider>
     </div>
+    <!-- Continue reading -->
     <div class="container-padded-40 pb-0">
       <div class="heading-1 font-bold">Continue Reading</div>
       <div class="mt-[20px]">
@@ -161,6 +162,7 @@ const breakpoints = {
         </v-dropdown>
       </div>
     </div>
+    <!-- Comic filters -->
     <div v-if="filtersShown" class="container-flex mt-[28px]">
       <div class="filter-container w-full px-10 py-2.5">
         <div class="inner row-middle justify-between">
@@ -214,9 +216,10 @@ const breakpoints = {
         </div>
       </div>
     </div>
+    <!-- First list of comic titles -->
     <div class="container-padded-40">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
-        <div v-for="(n, index) in 10" class="relative" :key="n" v-once>
+        <div v-for="(n, index) in 8" class="relative" :key="n" v-once>
           <TitleCardDetailed
             class="expose-details-on-hover"
             :alt="`${title.title} ${index}`"
@@ -237,14 +240,60 @@ const breakpoints = {
         </div>
       </div>
     </div>
+    <!-- call to action section -->
+    <div class="cta-section-container">
+      <div class="inner row-middle justify-between">
+        <div class="message">Save your progress and your favorite comics...</div>
+        <div class="btn btn-secondary md">Sign Up</div>
+      </div>
+    </div>
+    <!-- Second list of comic titles -->
+    <div class="container-padded-40">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
+        <div v-for="(n, index) in 4" class="relative" :key="`s${n}`" v-once>
+          <TitleCardDetailed
+            class="expose-details-on-hover"
+            :alt="`${title.title} ${index}`"
+            :author="title.author"
+            :content-rating="title.contentRating"
+            :description="title.description"
+            :genres="title.genres"
+            :hasAudio="true"
+            :id="`ac2${index}`"
+            :image="`${title.image}${index}`"
+            :isAudioPlaying="false"
+            :likes="title.likes"
+            :published="title.published"
+            :title="`${title.title} ${index}`"
+            @onClick="() => $router.push('/comics')"
+            @onPlayAudio="() => console.log('audio playing')"
+          />
+        </div>
+      </div>
+    </div>
   </ReadersLayout>
 </template>
 
-<style>
+<style lang="scss">
 @import 'floating-vue/dist/style.css';
 
 .filter-container {
   background: #eae1c5;
   box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+}
+
+.cta-section-container {
+  @apply container-flex;
+
+  .inner {
+    @apply w-full py-[53px] px-[64px] bg-cover bg-center;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) -23.5%, rgba(249, 166, 108, 0.70) 76.28%), url('https://picsum.photos/id/1043/800/600');
+    background-size: cover;
+
+    .message {
+      @apply heading-2 font-bold text-[#fff];
+      text-shadow: 0px 0px 14px rgba(12, 11, 11, 0.16);
+    }
+  }
 }
 </style>
