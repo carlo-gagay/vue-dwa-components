@@ -1,16 +1,12 @@
 export default function lazyloadComposable() {
   const lazyload = (imageContainer) => {
     const loadImage = () => {
-      const imageElement = Array.from(imageContainer.children).find((imageContainer) => {
-        return imageContainer.nodeName === 'IMG'
+      const imageElement = Array.from(imageContainer.children).find((child) => {
+        return child.nodeName === 'IMG'
       })
 
-      const size = window.innerWidth > 768 ? 'lg' : 'sm'
-      transformImage(size)
-
-      if (imageElement.dataset.urlSm) {
-        window.addEventListener('resize', resizeEvent)
-      }
+      imageElement.addEventListener('error', () => console.log('error'))
+      imageElement.style.backgroundImage = `url(${imageElement.dataset.url})`
     }
 
     const handleIntersect = (entries, observer) => {
@@ -35,61 +31,6 @@ export default function lazyloadComposable() {
       createObserver()
     } else {
       loadImage()
-    }
-
-    // Tracks size changes
-    let lastChanged = 0
-
-    const LANDSCAPE = 1024
-    const PORTRAIT = 768
-
-    const isIncreasing = () => lastChanged < window.innerWidth
-    const isDecreasing = () => lastChanged > window.innerWidth
-
-    const transformImage = (size = 'lg') => {
-      const imageElement = Array.from(imageContainer.children).find(
-        (imageContainer) => imageContainer.nodeName === 'IMG'
-      )
-
-      if (imageElement) {
-        imageElement.addEventListener('load', () => {
-          setTimeout(() => imageContainer.classList.add('loaded'), 100)
-        })
-
-        imageElement.addEventListener('error', () => console.log('error'))
-
-        const getImage = () => {
-          // If no image for small screens but has for large screens
-          if (!imageElement.dataset.urlSm) size = 'lg'
-
-          if (size === 'sm') {
-            return imageElement.dataset.urlSm
-          }
-
-          return imageElement.dataset.url
-        }
-
-        const img = getImage()
-        if (img) {
-          imageElement.style.backgroundImage = `url(${img})`
-        }
-      }
-    }
-
-    const resizeEvent = (e) => {
-      if (lastChanged === 0) {
-        lastChanged = window.innerWidth
-      }
-
-      if (isIncreasing() && window.innerWidth > PORTRAIT && lastChanged < LANDSCAPE) {
-        lastChanged = LANDSCAPE
-        transformImage('lg')
-      }
-
-      if (isDecreasing() && window.innerWidth < PORTRAIT && lastChanged > PORTRAIT) {
-        lastChanged = PORTRAIT
-        transformImage('sm')
-      }
     }
   }
 

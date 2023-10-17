@@ -1,9 +1,9 @@
-import lazyloadComposable from '../composables/lazyload'
+import lazyloadComposable from '../composables/lazyload2'
 
 export default {
   mounted: (el) => {
     const { lazyload } = lazyloadComposable()
-
-    Promise.resolve(lazyload(el))
+    
+    lazyload(el)
   }
 }
