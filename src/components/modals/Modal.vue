@@ -26,9 +26,6 @@ const emits = defineEmits(['onClose'])
       <div class="modal-opac" @click.self="emits('onClose')"></div>
       <div class="modal">
         <div class="dialog" :class="[size, theme]">
-          <button class="close-btn btn btn-trans-white-inline" @click="emits('onClose')">
-            <i class="icon icon-close icon--s38"></i>
-          </button>
           <slot></slot>
         </div>
       </div>

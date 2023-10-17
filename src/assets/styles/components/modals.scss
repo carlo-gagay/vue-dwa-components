@@ -14,14 +14,10 @@
     transform: translate(-50%, -50%);
 
     .dialog {
-      @apply relative overflow-hidden max-h-[606px] rounded-[5px] p-6;
+      @apply relative overflow-visible max-h-[606px] rounded-[5px] p-6;
 
-      .close-btn {
-        @apply fixed top-[-38px] right-[-38px];
-      }
-
-      &.md {
-        @apply w-[1100px];
+      &.lg {
+        @apply w-[1068px];
       }
 
       &.light {

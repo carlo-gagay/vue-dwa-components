@@ -1,6 +1,13 @@
 <script setup>
 import HeaderLayout from './HeaderLayout.vue'
-import { IconAvatar, IconBell, IconLogo, IconBookMenu, IconCommunity, IconDashboard } from '@components/svgs'
+import {
+  IconAvatar,
+  IconBell,
+  IconLogo,
+  IconBookMenu,
+  IconCommunity,
+  IconDashboard
+} from '@components/svgs'
 </script>
 
 <template>

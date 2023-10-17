@@ -38,32 +38,38 @@ const onModalClose = () => (modal.shown = false)
         @onAsideClose="onAsideClose"
         @onModalOpen="onModalOpen"
       />
-      <Modal :shown="modal.shown" theme="transparent" @onClose="onModalClose">
-        <div>
+      <Modal :shown="modal.shown" size="lg" theme="transparent" @onClose="onModalClose">
+        <div class="relative">
           <div class="column-center text-center text-[#fff]">
             <div class="heading-2">The Glove</div>
             <div class="sub-heading-2">Chapter 3: A Twist of a Knife</div>
           </div>
-          <div class="column-start gap-y-4 mt-[34px] overflow-y-auto h-[475px] rounded-[5px]">
-            <template v-for="(n, index) in 4" :key="n" v-once>
-              <ChapterCardInline
-                :alt="chapter.title"
-                :chapterNumber="`${chapter.chapterNumber}${n}`"
-                :comments="chapter.comments"
-                :description="chapter.description"
-                :image="`${chapter.image}${index}`"
-                :pages="chapter.pages"
-                :progress="chapter.progress"
-                :published="chapter.published"
-                :title="chapter.title"
-              />
-            </template>
-          </div>
+          <button
+            class="absolute close-btn btn btn-trans-white-inline top-2 -right-12"
+            @click="onModalClose"
+          >
+            <i class="icon icon-close icon--s32"></i>
+          </button>
+        </div>
+        <div class="column-start gap-y-4 mt-[34px] overflow-y-auto h-[475px] rounded-[5px]">
+          <template v-for="(n, index) in 4" :key="n" v-once>
+            <ChapterCardInline
+              :alt="chapter.title"
+              :chapterNumber="`${chapter.chapterNumber}${n}`"
+              :comments="chapter.comments"
+              :description="chapter.description"
+              :image="`${chapter.image}${index}`"
+              :pages="chapter.pages"
+              :progress="chapter.progress"
+              :published="chapter.published"
+              :title="chapter.title"
+            />
+          </template>
         </div>
       </Modal>
     </template>
     <template #slot-content-aside>
-      <AsidePanel @onAsideClose="onAsideClose"> </AsidePanel>
+      <AsidePanel title="Comments (232)" @onAsideClose="onAsideClose"> </AsidePanel>
     </template>
   </ReadersReadingModeLayout>
 </template>
