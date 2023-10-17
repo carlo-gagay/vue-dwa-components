@@ -3,19 +3,7 @@ import { AuthenticatedLayout } from '@components/layouts'
 import { TitleCardAuth } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { IconDelete, IconEdit, IconSettings, IconVisibility } from '@components/svgs'
-
-const title = {
-  image: 'https://picsum.photos/20',
-  title: 'Title name goes right here and in 2nd line too but not more than that okokokokokoko...',
-  genres: {
-    data: ['Comedy', 'Drama']
-  },
-  views: '105k',
-  likes: '100k',
-  books: 20,
-  chapters: 129,
-  pages: 1100
-}
+import { title } from '@stores/sample'
 </script>
 
 <template>
@@ -33,6 +21,7 @@ const title = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]">
       <TitleCardAuth
         v-for="n in 12"
+        :id="`auth${n}`"
         :image="`${title.image}${n}`"
         :title="title.title"
         :genres="n == 2 ? null : title.genres"

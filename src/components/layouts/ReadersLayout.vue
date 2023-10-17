@@ -18,7 +18,7 @@ import { IconLogo } from '@components/svgs'
     </template>
     <template #slot-cta-buttons>
       <div class="row-middle justify-end gap-x-[26px]">
-        <button class="btn btn-primary-inline md" role="button">Sign In</button>
+        <button class="btn btn-primary-inline md" role="button" @click="() => $router.push('/admin')">Sign In</button>
         <button class="btn btn-primary md" role="button">Sign Up</button>
       </div>
     </template>

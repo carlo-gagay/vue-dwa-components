@@ -7,7 +7,8 @@ const routes = [
   {
     path: '/comic-page',
     component: () => import('./demo/ReadersReadingModeLayoutDemo/ReadersReadingModeLayoutDemo.vue')
-  }
+  },
+  { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo.vue') }
 ]
 
 const router = createRouter({

@@ -18,7 +18,7 @@ const props = defineProps({
       return value >= 0 && value <= 100
     }
   },
-  genres: Object,
+  genres: Array,
   id: {
     type: String,
     required: true
@@ -76,7 +76,7 @@ const props = defineProps({
         <div class="title-infos-container">
           <div class="title-infos">
             <div class="row-middle gap-x-[7px]">
-              <div v-if="genres" v-for="(genre, index) in genres.data" class="chip green">
+              <div v-if="genres" v-for="(genre, index) in genres" class="chip green">
                 {{ genre }}
               </div>
               <div v-else class="chip green-2">No Genre</div>
