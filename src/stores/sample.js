@@ -4,6 +4,7 @@ const chapter = {
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labnulla pariatur. Excepteur sint occaecat.',
   pages: '239pages',
+  progress: 50,
   published: 'July 23, 2023',
   subtitle: 'Title goes here',
   image: 'https://picsum.photos/20',
@@ -21,6 +22,17 @@ const genresFromApi = [
   'Sci-Fi',
   'Slice for Life',
   'Sports'
+]
+
+const pages = [
+  {
+    title: 'Page 01',
+    image: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-IfhopNUO9l-full.jpg'
+  },
+  {
+    title: 'Page 02',
+    image: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-qzIpix6SeF-full.jpg'
+  }
 ]
 
 const title = {
@@ -42,4 +54,4 @@ const title = {
   url: '/'
 }
 
-export { chapter, genresFromApi, title }
+export { chapter, genresFromApi, pages, title }

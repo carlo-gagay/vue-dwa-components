@@ -183,9 +183,17 @@
 }
 
 .chapter-card-inline {
-  @apply p-6 row-start rounded-[5px] bg-white;
+  @apply p-6 row-start rounded-t-[5px] bg-white;
 
   .image-container {
+    @apply relative;
+
+    .opac {
+      @apply absolute inset-0;
+      background: lightgrey;
+      opacity: 0.5;
+    }
+
     figure img {
       @apply aspect-[283/167] min-w-[283px] rounded-t-[5px];
     }

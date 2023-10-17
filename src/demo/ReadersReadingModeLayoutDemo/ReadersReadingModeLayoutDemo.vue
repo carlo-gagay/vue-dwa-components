@@ -6,7 +6,7 @@ import CommentsSidePane from './CommentsSidePane.vue'
 import SettingsSidePane from './SettingsSidePane.vue'
 import ReadingPanel from './ReadingPanel.vue'
 import { Modal } from '@components/modals'
-import { chapter } from '@stores/sample'
+import { chapter, pages } from '@stores/sample'
 
 const ChapterCardInline = defineAsyncComponent(() =>
   import('@components/cards/ChapterCardInline.vue')
@@ -26,18 +26,18 @@ const onModalClose = () => (modal.shown = false)
 
 <template>
   <ReadersReadingModeLayout :asideShown="asideShown" @onBackClick="() => $router.go(-1)">
-    <template #slot-header-title>
+    <template #slot-content-header>
       <div class="body-2 text-[#fff]">
         <strong>The Glove</strong> | <strong>Chapter 3:</strong> A Twist of a Knife
       </div>
     </template>
     <template #slot-content-body>
       <ReadingPanel
+        :pages="pages"
         @onAsideShow="onAsideShow"
         @onAsideClose="onAsideClose"
         @onModalOpen="onModalOpen"
       />
-
       <Modal :shown="modal.shown" theme="transparent" @onClose="onModalClose">
         <div>
           <div class="column-center text-center text-[#fff]">
@@ -45,7 +45,7 @@ const onModalClose = () => (modal.shown = false)
             <div class="sub-heading-2">Chapter 3: A Twist of a Knife</div>
           </div>
           <div class="column-start gap-y-4 mt-[34px] overflow-y-auto h-[475px] rounded-[5px]">
-            <template v-for="(n, index) in 4" :key="n">
+            <template v-for="(n, index) in 4" :key="n" v-once>
               <ChapterCardInline
                 :alt="chapter.title"
                 :chapterNumber="`${chapter.chapterNumber}${n}`"
@@ -53,6 +53,7 @@ const onModalClose = () => (modal.shown = false)
                 :description="chapter.description"
                 :image="`${chapter.image}${index}`"
                 :pages="chapter.pages"
+                :progress="chapter.progress"
                 :published="chapter.published"
                 :title="chapter.title"
               />

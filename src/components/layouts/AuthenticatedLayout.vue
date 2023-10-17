@@ -6,7 +6,7 @@ import { IconAvatar, IconBell, IconBookMenu, IconCommunity, IconDashboard } from
 <template>
   <HeaderLayout>
     <template #slot-brand>
-      <button role="button" @click="() => $route.push('/')">
+      <button role="button" @click="() => $router.push('/')">
         <IconLogo />
       </button>
     </template>

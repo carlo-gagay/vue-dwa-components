@@ -1,14 +1,12 @@
 <script setup>
 import { defineAsyncComponent, reactive, ref } from 'vue'
-import { Modal } from '@components/modals'
-
 const ComicImage = defineAsyncComponent(() => import('@components/comicpage/Image.vue'))
 
-const infiniteMode = ref(false)
-
-const modal = reactive({
-  shown: false
+defineProps({
+  pages: Array
 })
+
+const infiniteMode = ref(false)
 
 const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
 </script>
@@ -17,28 +15,14 @@ const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
   <div class="reading-pannel">
     <div class="visuals-section" :class="{ infinite: infiniteMode }">
       <div v-if="infiniteMode" class="infinite-scroll-layout-image-container">
-        <ComicImage
-          class="infinite-scroll-layout-image"
-          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-IfhopNUO9l-full.jpg"
-          alt="Page 01"
-        />
-        <ComicImage
-          class="infinite-scroll-layout-image"
-          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-qzIpix6SeF-full.jpg"
-          alt="Page 01"
-        />
+        <template v-for="(page, index) in pages" :key="index" v-once>
+          <ComicImage class="image-component" :alt="page.title" :image="page.image" />
+        </template>
       </div>
       <div v-else class="page-layout-image-container">
-        <ComicImage
-          class="page-layout-image"
-          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-IfhopNUO9l-full.jpg"
-          alt="Page 01"
-        />
-        <ComicImage
-          class="page-layout-image"
-          image="https://duskwave-prod-bucket.s3.amazonaws.com/public/images/page-qzIpix6SeF-full.jpg"
-          alt="Page 01"
-        />
+        <template v-for="(page, index) in pages" :key="index" v-once>
+          <ComicImage class="image-component" :alt="page.title" :image="page.image" />
+        </template>
       </div>
     </div>
 

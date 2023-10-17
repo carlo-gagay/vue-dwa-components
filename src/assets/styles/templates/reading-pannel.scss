@@ -5,17 +5,17 @@
     @apply row-middle justify-center overflow-y-auto;
 
     .page-layout-image-container {
-      @apply row-middle gap-x-0 pt-4;
+      @apply row-middle gap-x-0 pt-4 h-[84vh];
 
-      .page-layout-image {
-        @apply h-[84vh] w-full;
+      .image-component {
+        @apply h-full;
       }
     }
 
     .infinite-scroll-layout-image-container {
       @apply column-middle gap-y-0 pt-4 pb-10 justify-between items-center overflow-y-auto h-[92vh];
 
-      .infinite-scroll-layout-image {
+      .image-component {
         @apply w-[51%];
       }
     }

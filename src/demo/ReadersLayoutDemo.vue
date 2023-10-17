@@ -216,21 +216,21 @@ const breakpoints = {
     </div>
     <div class="container-padded-40">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
-        <div v-for="n in 9" class="relative" :key="n" v-once>
+        <div v-for="(n, index) in 10" class="relative" :key="n" v-once>
           <TitleCardDetailed
             class="expose-details-on-hover"
-            :alt="`${title.title} ${n}`"
+            :alt="`${title.title} ${index}`"
             :author="title.author"
             :content-rating="title.contentRating"
             :description="title.description"
             :genres="title.genres"
             :hasAudio="true"
-            :id="`ac${n}`"
-            :image="`${title.image}${n}`"
+            :id="`ac${index}`"
+            :image="`${title.image}${index}`"
             :isAudioPlaying="false"
             :likes="title.likes"
             :published="title.published"
-            :title="`${title.title} ${n}`"
+            :title="`${title.title} ${index}`"
             @onClick="() => $router.push('/comics')"
             @onPlayAudio="() => console.log('audio playing')"
           />

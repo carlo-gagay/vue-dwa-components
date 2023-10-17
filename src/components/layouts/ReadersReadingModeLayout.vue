@@ -15,7 +15,7 @@ const emits = defineEmits(['onBackClick'])
         <i class="icon icon-arrow-left icon--s24 text-[#fff]"></i>
       </button>
       <div class="content">
-        <slot name="slot-header-title"></slot>
+        <slot name="slot-content-header"></slot>
       </div>
     </div>
   </HeaderLayout>
