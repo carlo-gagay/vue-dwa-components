@@ -24,6 +24,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 )
 
 const filtersShown = ref(false)
+const isAuth = false
 
 const filtersData = ref({
   genres: [],
@@ -241,14 +242,14 @@ const breakpoints = {
       </div>
     </div>
     <!-- call to action section -->
-    <div class="cta-section-container">
+    <div v-if="!isAuth" class="cta-section-container">
       <div class="inner row-middle justify-between">
         <div class="message">Save your progress and your favorite comics...</div>
-        <div class="btn btn-secondary md">Sign Up</div>
+        <button class="btn btn-secondary md">Sign Up</button>
       </div>
     </div>
     <!-- Second list of comic titles -->
-    <div class="container-padded-40">
+    <div class="container-padded-40" :class="{'pt-0': isAuth}">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
         <div v-for="(n, index) in 4" class="relative" :key="`s${n}`" v-once>
           <TitleCardDetailed
