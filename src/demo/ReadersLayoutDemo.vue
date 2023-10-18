@@ -307,7 +307,7 @@ const pageProvider = async (pageNumber, pageSize) => {
   z-index: 10;
 
   &:hover {
-    z-index: 50;
+    z-index: 20;
   }
 }
 </style>
