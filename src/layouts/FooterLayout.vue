@@ -9,10 +9,13 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
         <div class="brand column-start gap-y-2">
           <IconLogo />
           <div class="brand-name text-[#FFC94B]">
-            <span class="text-body-2">by</span> <span class="text-body-1 font-bold">Dusk Wave Arts</span>
+            <span class="text-body-2">by</span>
+            <span class="text-body-1 font-bold">Dusk Wave Arts</span>
           </div>
         </div>
-        <div class="text-small-text text-[#AFAFAF]">ⓒ Dusk Wave Arts 2023. All rights reserved.</div>
+        <div class="text-small-text text-[#AFAFAF]">
+          ⓒ Dusk Wave Arts 2023. All rights reserved.
+        </div>
       </div>
       <div class="row-start">
         <div class="column-start gap-y-3">
