@@ -1,59 +1,59 @@
 @layer base {
-  .title {
+  .text-title {
     @apply text-[60px] leading-[80px];
   }
 
-  .heading-1 {
+  .text-heading-1 {
     @apply text-[40px] leading-[48px];
   }
 
-  .heading-2 {
+  .text-heading-2 {
     @apply text-[30px] leading-[40px];
   }
 
-  .sub-heading-1 {
+  .text-sub-heading-1 {
     @apply text-[24px] leading-[32px];
   }
 
-  .sub-heading-2 {
+  .text-sub-heading-2 {
     @apply text-[20px] leading-[30px];
   }
 
-  .body-1 {
+  .text-body-1 {
     @apply text-sm tracking-[0.28px];
   }
 
-  .body-2 {
+  .text-body-2 {
     @apply text-sm tracking-[0.14px];
   }
 
-  .caption,
-  .paragraph {
+  .text-caption,
+  .text-paragraph {
     @apply text-xs;
   }
 
-  .small-text {
+  .text-small-text {
     @apply text-[10px] leading-[14px];
   }
 
-  .small-text-1 {
+  .text-small-text-1 {
     @apply text-[9px] leading-[14px];
   }
 
-  .text-button {
+  .text-text-button {
     @apply text-sm tracking-[0.56px];
   }
 
-  .title,
-  .heading-1,
-  .heading-2,
-  .sub-heading-1,
-  .sub-heading-2,
-  .body-1,
-  .body-2,
-  .paragraph,
-  .small-text,
-  .text-button {
+  .text-title,
+  .text-heading-1,
+  .text-heading-2,
+  .text-sub-heading-1,
+  .text-sub-heading-2,
+  .text-body-1,
+  .text-body-2,
+  .text-paragraph,
+  .text-small-text,
+  .text-text-button {
     @apply dark:text-[#FFF];
   }
 }

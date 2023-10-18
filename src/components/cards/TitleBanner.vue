@@ -44,12 +44,12 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
     <div class="opac"></div>
     <div class="content column-middle">
       <div class="block max-w-[430px]">
-        <div v-if="title" class="title title-banner-texts">{{ title }}</div>
+        <div v-if="title" class="text-title title-banner-texts">{{ title }}</div>
         <div class="row-middle gap-x-4 mt-1">
-          <div v-if="author" class="sub-heading-2 title-banner-texts">{{ author }}</div>
+          <div v-if="author" class="text-sub-heading-2 title-banner-texts">{{ author }}</div>
           <template v-if="showGenresInSubtitle">
             <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
-            <div class="sub-heading-2 title-banner-texts">
+            <div class="text-sub-heading-2 title-banner-texts">
               <span v-for="(genre, index) in genres" v-once>
                 {{ genre }}
                 <span v-if="index < genres.length - 1">,&#32;</span>
@@ -58,46 +58,46 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
           </template>
           <template v-if="brandName">
             <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
-            <span class="sub-heading-2 title-banner-texts">{{ brandName }}</span>
+            <span class="text-sub-heading-2 title-banner-texts">{{ brandName }}</span>
             <i class="icon icon-information-outline icon--s20 text-[#857E76]"></i>
           </template>
         </div>
         <div class="row-middle gap-x-[10px] mt-4">
           <div v-if="likes" class="row-middle gap-x-[4.5px]">
             <IconFavorite class="w-3 h-3 title-banner-texts" />
-            <div class="caption title-banner-texts">{{ likes }}</div>
+            <div class="text-caption title-banner-texts">{{ likes }}</div>
           </div>
           <div v-if="rating" class="badge yellow">
             <IconStar class="w-3 h-3" />
-            <div class="caption">{{ rating }}</div>
+            <div class="text-caption">{{ rating }}</div>
           </div>
           <div v-if="contentRating" class="badge orange">
-            <div class="caption">{{ contentRating }}</div>
+            <div class="text-caption">{{ contentRating }}</div>
           </div>
           <div v-if="hasAudio" class="badge white" @click="emit('onPlayAudio')">
             <IconVolumeUp class="w-3 h-3" />
-            <div class="caption">Audio Available</div>
+            <div class="text-caption">Audio Available</div>
           </div>
           <div v-if="books" class="row-middle gap-x-[6px] title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="small-text">Books: {{ books }}</div>
+            <div class="text-small-text">Books: {{ books }}</div>
           </div>
           <div v-if="chapters" class="row-middle gap-x-[6px] title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="small-text">Chapters: {{ chapters }}</div>
+            <div class="text-small-text">Chapters: {{ chapters }}</div>
           </div>
           <div v-if="issues" class="row-middle gap-x-[6px] title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="small-text">Issues: {{ issues }}</div>
+            <div class="text-small-text">Issues: {{ issues }}</div>
           </div>
           <div v-if="completion" class="badge green">
             <div v-if="genres" class="row-middle gap-x-1">
               <div v-for="(genre, index) in genres" :key="index" v-once>
-                <div class="caption">{{ genre }}</div>
+                <div class="text-caption">{{ genre }}</div>
               </div>
             </div>
-            <span class="caption">| </span>
-            <div class="caption">{{ completion }}</div>
+            <span class="text-caption">| </span>
+            <div class="text-caption">{{ completion }}</div>
           </div>
         </div>
         <div
@@ -107,7 +107,7 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
           v-once
         >
           <input :id="id" type="checkbox" />
-          <span class="body-2 text">{{ description }}</span>
+          <span class="text-body-2 text">{{ description }}</span>
           <label :for="id" class="primary">See More</label>
         </div>
         <div class="mt-6 row-middle gap-x-6">

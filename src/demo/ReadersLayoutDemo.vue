@@ -92,7 +92,7 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <!-- Continue reading -->
     <div class="container-padded-40 pb-0">
-      <div class="heading-1 font-bold">Continue Reading</div>
+      <div class="text-heading-1 font-bold">Continue Reading</div>
       <div class="mt-[20px]">
         <Slider
           mode="free"
@@ -178,9 +178,9 @@ const pageProvider = async (pageNumber, pageSize) => {
                   <div class="row-middle justify-between w-full" :key="index">
                     <div class="row-middle gap-x-3">
                       <i class="icon icon-box icon--s14"></i>
-                      <span class="body-2">{{ item }}</span>
+                      <span class="text-body-2">{{ item }}</span>
                     </div>
-                    <span class="body-2">123</span>
+                    <span class="text-body-2">123</span>
                   </div>
                 </template>
               </SelectableFilter>

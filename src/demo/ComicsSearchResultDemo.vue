@@ -16,7 +16,7 @@ const pageProvider = async (pageNumber, pageSize) => {
   <ReadersDescriptionLayout>
     <div class="container-padded-40">
       <div class="row-start justify-between">
-        <div class="title">Search Results</div>
+        <div class="text-title">Search Results</div>
         <div class="row-middle gap-x-[30px] py-[2px]">
           <div class="form">
             <IconSearch class="w-[30px] h-[30px]" />
@@ -30,7 +30,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         </div>
       </div>
       <div class="row-middle mt-[7px]">
-        <div class="body-2">Suggested results:</div>
+        <div class="text-body-2">Suggested results:</div>
         <div class="row-middle gap-x-[14px]">
           <template v-for="genres of relatedGenres">
             <div class="chip md chip-default-inline">{{ genres }}</div>

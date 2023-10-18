@@ -40,7 +40,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
         role="button"
       >
         <i class="icon icon-volume-up icon--s12"></i>
-        <div class="caption">Audio Available</div>
+        <div class="text-caption">Audio Available</div>
       </button>
       <figure v-lazyload>
         <img :alt="alt" :data-url="image" src="/images/placeholder.png" />

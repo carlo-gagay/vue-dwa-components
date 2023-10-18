@@ -40,13 +40,13 @@
           @apply flex flex-col;
 
           .title {
-            @apply body-1 font-bold;
+            @apply text-body-1 font-bold;
           }
           .subtitle {
             @apply flex flex-row gap-x-[10px] items-center;
 
             & .text {
-              @apply caption;
+              @apply text-caption;
             }
           }
         }
@@ -95,16 +95,16 @@
 
       .title-card-details-main .title-infos {
         .title {
-          @apply sub-heading-1 font-medium;
+          @apply text-sub-heading-1 font-medium;
         }
 
         .subtitle .text {
-          @apply small-text text-neutral-500;
+          @apply text-small-text text-neutral-500;
         }
       }
 
       .title-card-details-sub .description {
-        @apply small-text;
+        @apply text-small-text;
       }
     }
 
@@ -164,11 +164,11 @@
   .chapter-card-info {
     @apply px-[9px] py-[5px];
 
-    & .sub-heading-1 {
+    & .text-sub-heading-1 {
       @apply text-[16.074px] leading-[22.963px] font-semibold;
     }
 
-    & .small-text {
+    & .text-small-text {
       @apply text-[13.778px] leading-[18.37px] text-[#BDB9B4];
     }
 

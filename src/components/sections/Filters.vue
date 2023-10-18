@@ -26,14 +26,14 @@ const emit = defineEmits([
             </button>
             <template #popper>
               <div class="dropdown-popper min-w-[221px]">
-                <div class="body-1 font-bold">Genre</div>
+                <div class="text-body-1 font-bold">Genre</div>
                 <div class="dropdown-item">
                   <div class="row-middle justify-between w-full">
                     <div class="row-middle gap-x-3">
                       <i class="icon icon-box icon--s14"></i>
-                      <span class="body-2">Action</span>
+                      <span class="text-body-2">Action</span>
                     </div>
-                    <span class="body-2">123</span>
+                    <span class="text-body-2">123</span>
                   </div>
                 </div>
               </div>
@@ -48,14 +48,14 @@ const emit = defineEmits([
             </button>
             <template #popper>
               <div class="dropdown-popper min-w-[221px]">
-                <div class="body-1 font-bold">Completion</div>
+                <div class="text-body-1 font-bold">Completion</div>
                 <div class="dropdown-item">
                   <div class="row-middle justify-between w-full">
                     <div class="row-middle gap-x-3">
                       <i class="icon icon-box icon--s14"></i>
-                      <span class="body-2">All</span>
+                      <span class="text-body-2">All</span>
                     </div>
-                    <span class="body-2">123</span>
+                    <span class="text-body-2">123</span>
                   </div>
                 </div>
               </div>
@@ -70,14 +70,14 @@ const emit = defineEmits([
             </button>
             <template #popper>
               <div class="dropdown-popper min-w-[221px]">
-                <div class="body-1 font-bold">Content Rating</div>
+                <div class="text-body-1 font-bold">Content Rating</div>
                 <div class="dropdown-item">
                   <div class="row-middle justify-between w-full">
                     <div class="row-middle gap-x-3">
                       <i class="icon icon-box icon--s14"></i>
-                      <span class="body-2">Everyone</span>
+                      <span class="text-body-2">Everyone</span>
                     </div>
-                    <span class="body-2">123</span>
+                    <span class="text-body-2">123</span>
                   </div>
                 </div>
               </div>
@@ -92,14 +92,14 @@ const emit = defineEmits([
             </button>
             <template #popper>
               <div class="dropdown-popper min-w-[221px]">
-                <div class="body-1 font-bold">Audio Availability</div>
+                <div class="text-body-1 font-bold">Audio Availability</div>
                 <div class="dropdown-item">
                   <div class="row-middle justify-between w-full">
                     <div class="row-middle gap-x-3">
                       <i class="icon icon-box icon--s14"></i>
-                      <span class="body-2">All</span>
+                      <span class="text-body-2">All</span>
                     </div>
-                    <span class="body-2">123</span>
+                    <span class="text-body-2">123</span>
                   </div>
                 </div>
               </div>

@@ -22,8 +22,8 @@ const emits = defineEmits(['onClick'])
       </figure>
     </div>
     <div class="chapter-card-info">
-      <div class="sub-heading-1">{{ title }}</div>
-      <div class="small-text">{{ subtitle }}</div>
+      <div class="text-sub-heading-1">{{ title }}</div>
+      <div class="text-small-text">{{ subtitle }}</div>
 
       <div class="statistics row-middle">
         <div v-if="published" class="group row-end">

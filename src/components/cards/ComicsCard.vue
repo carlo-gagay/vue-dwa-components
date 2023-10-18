@@ -17,8 +17,8 @@ const emits = defineEmits(['onClick'])
       </figure>
     </div>
     <div class="comics-card-info">
-      <div class="sub-heading-1">{{ title }}</div>
-      <div class="small-text text-[#BDB9B4]">{{ subtitle }}</div>
+      <div class="text-sub-heading-1">{{ title }}</div>
+      <div class="text-small-text text-[#BDB9B4]">{{ subtitle }}</div>
     </div>
   </div>
 </template>

@@ -29,21 +29,21 @@ defineProps({
       </div>
     </div>
     <div class="text-container column-start">
-      <div class="sub-heading-1">{{ chapterNumber }}: {{ title }}</div>
+      <div class="text-sub-heading-1">{{ chapterNumber }}: {{ title }}</div>
       <div class="body2">{{ description }}</div>
     </div>
     <div class="statistics-container">
       <div class="stat-item">
         <i class="icon icon-calendar icon--s16"></i>
-        <div class="body-2">{{ published }}</div>
+        <div class="text-body-2">{{ published }}</div>
       </div>
       <div class="stat-item">
         <i class="icon icon-calendar icon--s16"></i>
-        <div class="body-2">{{ pages }}</div>
+        <div class="text-body-2">{{ pages }}</div>
       </div>
       <div class="stat-item">
         <i class="icon icon-calendar icon--s16"></i>
-        <div class="body-2">{{ comments }}</div>
+        <div class="text-body-2">{{ comments }}</div>
       </div>
     </div>
   </div>
