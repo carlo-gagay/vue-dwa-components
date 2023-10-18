@@ -62,7 +62,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                 @onPlayAudio="() => console.log('audio playing')"
               >
                 <template #slot-card-body>
-                  <button>
+                  <button @click.self="() => {}">
                     <i class="icon icon-dots-horizontal-triple icon--s24"></i>
                   </button>
                 </template>
