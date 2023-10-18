@@ -28,7 +28,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         <template #probe="{ style, index }">
           <div class="w-[292.778px] h-[453.519px]" :style="style"></div>
         </template>
-        <template #default="{item, style, index}">
+        <template #default="{ item, style, index }">
           <ChapterCard
             :alt="`${item.title} ${index}`"
             :comments="item.comments"

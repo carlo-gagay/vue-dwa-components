@@ -233,8 +233,8 @@ const pageProvider = async (pageNumber, pageSize) => {
         :pageProvider="pageProvider"
         v-once
       >
-        <template #default="{item, style, index}">
-          <div class="test" :style="[style, 'z-index: 0;']">
+        <template #default="{ item, style, index }">
+          <div class="title-card-wrapper" :style="style">
             <TitleCardDetailed
               v-once
               class="expose-details-on-hover"
@@ -265,16 +265,16 @@ const pageProvider = async (pageNumber, pageSize) => {
       </div>
     </div>
     <!-- Second list of comic titles -->
-    <div class="container-padded-40" :class="{'pt-0': isAuth}">
+    <div class="container-padded-40" :class="{ 'pt-0': isAuth }">
       <Grid
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10"
-        :length="8"
+        :length="4"
         :pageSize="4"
         :pageProvider="pageProvider"
         v-once
       >
-        <template #default="{item, style, index}" v-once>
-          <div class="relative" :style="style">
+        <template #default="{ item, style, index }" v-once>
+          <div class="title-card-wrapper" :style="style">
             <TitleCardDetailed
               v-once
               class="expose-details-on-hover"
@@ -313,7 +313,8 @@ const pageProvider = async (pageNumber, pageSize) => {
 
   .inner {
     @apply w-full py-[53px] px-[64px] bg-cover bg-center;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) -23.5%, rgba(249, 166, 108, 0.70) 76.28%), url('https://picsum.photos/id/1043/800/600');
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) -23.5%, rgba(249, 166, 108, 0.7) 76.28%),
+      url('https://picsum.photos/id/1043/800/600');
     background-size: cover;
 
     .message {
@@ -323,7 +324,9 @@ const pageProvider = async (pageNumber, pageSize) => {
   }
 }
 
-.test {
+.title-card-wrapper {
+  z-index: 10;
+
   &:hover {
     z-index: 50;
   }

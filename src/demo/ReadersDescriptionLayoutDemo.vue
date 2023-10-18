@@ -60,10 +60,10 @@ const pageProvider = async (pageNumber, pageSize) => {
         :pageProvider="pageProvider"
         v-once
       >
-        <template #probe="{style, index}">
+        <template #probe="{ style, index }">
           <div class="w-[255px] h-[395px]" :style="style"></div>
         </template>
-        <template #default="{item, style, index}">
+        <template #default="{ item, style, index }">
           <ComicsCard
             v-once
             subtitle="June 9, 2023"
