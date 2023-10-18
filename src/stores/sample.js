@@ -1,3 +1,5 @@
+import { ref } from 'vue'
+
 const chapter = {
   chapterNumber: 'Chapter 0',
   comments: '234',
@@ -10,6 +12,13 @@ const chapter = {
   image: 'https://picsum.photos/20',
   title: 'Chapter Title'
 }
+
+const filterOptions = ref([
+  { data: [], label: 'Genre', type: 'checkbox' },
+  { data: [], label: 'Completion', type: 'radio' },
+  { data: [], label: 'Content Rating', type: 'radio' },
+  { data: [], label: 'Audio Availability', type: 'checkbox' }
+])
 
 const genresFromApi = [
   'Action',
@@ -56,4 +65,4 @@ const title = {
   views: '105k'
 }
 
-export { chapter, genresFromApi, pages, title }
+export { chapter, filterOptions, genresFromApi, pages, title }

@@ -1,5 +1,5 @@
 #app-tab {
-  @apply flex flex-row items-center;
+  @apply flex flex-col sm:flex-row items-start sm:items-center gap-y-4;
 
   .tab-item {
     @apply row-middle gap-x-1 relative;

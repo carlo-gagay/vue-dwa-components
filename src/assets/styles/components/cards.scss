@@ -83,7 +83,7 @@
 
   &:hover {
     // @apply sm:absolute z-20 sm:w-[140%] sm:-ml-[20%] sm:-mt-[10%];
-    @apply z-20 absolute scale-125;
+    @apply z-20 absolute scale-105 lg:scale-125;
     box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 
     .title-card-image img {

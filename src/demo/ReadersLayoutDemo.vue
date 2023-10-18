@@ -12,13 +12,8 @@ import {
   IconQueue
 } from '@components/svgs'
 import { AppTab, AppTabItem } from '@components/tabs'
-import {
-  AudioAvailabilityFilter,
-  CompletionFilter,
-  ContentRatingFilter,
-  GenreFilter
-} from '@features/filters'
-import { title, genresFromApi } from '@stores/sample'
+import { SelectableFilter } from '@features/filters'
+import { filterOptions, title, genresFromApi } from '@stores/sample'
 
 const TitleCardDetailed = defineAsyncComponent(() =>
   import('@components/cards/TitleCardDetailed.vue')
@@ -26,13 +21,6 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 
 const filtersShown = ref(false)
 const isAuth = false
-
-const filtersData = ref({
-  genres: [],
-  completions: [],
-  contentRatings: [],
-  audioAvailabilities: []
-})
 
 const breakpoints = {
   '(min-width: 640px)': {
@@ -140,8 +128,8 @@ const pageProvider = async (pageNumber, pageSize) => {
         </Slider>
       </div>
     </div>
-    <div class="container-padded-40 pb-0 row-middle justify-between">
-      <AppTab size="lg" class="gap-x-[50px]" v-once>
+    <div class="container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10">
+      <AppTab size="lg" class="gap-x-4 md:gap-x-[50px]" v-once>
         <AppTabItem title="All Comics" :active="true" />
         <AppTabItem title="My Bookshelf (5)" />
         <AppTabItem title="My Favorites (3)" />
@@ -172,49 +160,31 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <!-- Comic filters -->
     <div v-if="filtersShown" class="container-flex mt-[28px]">
-      <div class="filter-container w-full px-10 py-2.5">
-        <div class="inner row-middle justify-between">
-          <div class="dropdowns row-middle gap-x-[20px]">
-            <GenreFilter
-              class="p-1"
-              :data="filtersData.genres"
-              @onDataShow="
-                () => {
-                  filtersData.genres = genresFromApi
-                }
-              "
-              v-once
-            />
-            <CompletionFilter
-              class="p-1"
-              :data="filtersData.completions"
-              @onDataShow="
-                () => {
-                  filtersData.completions = genresFromApi
-                }
-              "
-              v-once
-            />
-            <ContentRatingFilter
-              class="p-1"
-              :data="filtersData.contentRatings"
-              @onDataShow="
-                () => {
-                  filtersData.contentRatings = genresFromApi
-                }
-              "
-              v-once
-            />
-            <AudioAvailabilityFilter
-              class="p-1"
-              :data="filtersData.audioAvailabilities"
-              @onDataShow="
-                () => {
-                  filtersData.audioAvailabilities = genresFromApi
-                }
-              "
-              v-once
-            />
+      <div class="filter-container w-full px-4 sm:px-10 py-2.5">
+        <div class="inner column-start sm:row-middle justify-between gap-y-2">
+          <div class="dropdowns column-start sm:row-middle gap-x-[20px] gap-y-2">
+            <template v-for="(option, indx) in filterOptions" :key="indx" v-once>
+              <SelectableFilter
+                :data="option.data"
+                :dropdownTitle="option.label"
+                :label="option.label"
+                @onShow="
+                  () => {
+                    option.data = genresFromApi
+                  }
+                "
+              >
+                <template #default="{ item, index }">
+                  <div class="row-middle justify-between w-full" :key="index">
+                    <div class="row-middle gap-x-3">
+                      <i class="icon icon-box icon--s14"></i>
+                      <span class="body-2">{{ item }}</span>
+                    </div>
+                    <span class="body-2">123</span>
+                  </div>
+                </template>
+              </SelectableFilter>
+            </template>
           </div>
           <div class="">
             <button class="btn md-equal btn-trans-black-inline" @click="() => {}">
@@ -259,7 +229,7 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <!-- call to action section -->
     <div v-if="!isAuth" class="cta-section-container">
-      <div class="inner row-middle justify-between">
+      <div class="inner column-start sm:row-middle justify-between gap-y-4">
         <div class="message">Save your progress and your favorite comics...</div>
         <button class="btn btn-secondary md">Sign Up</button>
       </div>
