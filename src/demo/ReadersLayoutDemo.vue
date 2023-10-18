@@ -303,27 +303,6 @@ const pageProvider = async (pageNumber, pageSize) => {
 <style lang="scss">
 @import 'floating-vue/dist/style.css';
 
-.filter-container {
-  background: #eae1c5;
-  box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
-}
-
-.cta-section-container {
-  @apply container-flex;
-
-  .inner {
-    @apply w-full py-[53px] px-[64px] bg-cover bg-center;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) -23.5%, rgba(249, 166, 108, 0.7) 76.28%),
-      url('https://picsum.photos/id/1043/800/600');
-    background-size: cover;
-
-    .message {
-      @apply heading-2 font-bold text-[#fff];
-      text-shadow: 0px 0px 14px rgba(12, 11, 11, 0.16);
-    }
-  }
-}
-
 .title-card-wrapper {
   z-index: 10;
 
