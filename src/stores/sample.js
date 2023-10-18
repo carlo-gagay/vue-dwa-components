@@ -44,6 +44,8 @@ const pages = [
   }
 ]
 
+const relatedGenres = ['Sci-Fi', 'Scientist', 'Sci-Fi Thrillers', 'Science']
+
 const title = {
   audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3',
   author: 'Paul Graham',
@@ -65,4 +67,4 @@ const title = {
   views: '105k'
 }
 
-export { chapter, filterOptions, genresFromApi, pages, title }
+export { chapter, filterOptions, genresFromApi, pages, relatedGenres, title }

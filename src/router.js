@@ -8,7 +8,8 @@ const routes = [
     path: '/comic-page',
     component: () => import('./demo/ReadersReadingModeLayoutDemo/ReadersReadingModeLayoutDemo.vue')
   },
-  { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo.vue') }
+  { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo.vue') },
+  { path: '/search', component: () => import('./demo/ComicsSearchResultDemo.vue') }
 ]
 
 const router = createRouter({

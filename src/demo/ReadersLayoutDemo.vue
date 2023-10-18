@@ -135,7 +135,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         <AppTabItem title="My Favorites (3)" />
       </AppTab>
       <div class="row-middle justify-end gap-x-[22px]">
-        <button>
+        <button @click="() => $router.push('/search')">
           <IconSearch class="w-[30px] h-[30px]" />
         </button>
         <button @click="() => (filtersShown = !filtersShown)">
@@ -163,7 +163,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       <div class="filter-container w-full px-4 sm:px-10 py-2.5">
         <div class="inner column-start sm:row-middle justify-between gap-y-2">
           <div class="dropdowns column-start sm:row-middle gap-x-[20px] gap-y-2">
-            <template v-for="(option, indx) in filterOptions" :key="indx" v-once>
+            <template v-for="(option, indx) in filterOptions" v-once>
               <SelectableFilter
                 :data="option.data"
                 :dropdownTitle="option.label"

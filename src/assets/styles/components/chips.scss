@@ -1,24 +1,29 @@
 .chip {
-  @apply rounded-[2px] py-0.5 px-1 text-[10px] leading-[14px] flex gap-x-0.5;
+  @apply rounded-[2px] py-2 px-[10px] flex gap-x-0.5;
 
-  &.green {
+  &.chip-default-inline {
+    @apply bg-[#fff] text-[#0C0B0B];
+    box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
+  }
+
+  &.chip-green {
     @apply bg-[#4A6163] text-white;
   }
 
-  &.green-2 {
+  &.chip-green-2 {
     @apply bg-[#869FA1] text-white;
   }
 
-  &.orange {
+  &.chip-orange {
     @apply bg-orange-500 text-neutral-900;
   }
 
-  &.yellow {
+  &.chip-yellow {
     @apply bg-[#FFC94B] text-[##0C0B0B];
     box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
   }
 
-  &.md {
-    @apply py-0.5 px-1 text-[10px] leading-[14px];
+  &.chip-md {
+    @apply py-0.5 px-1 body-2;
   }
 }

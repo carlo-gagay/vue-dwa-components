@@ -95,8 +95,13 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
         </div>
         <div v-if="genres || likes" class="row-end justify-between">
           <div v-if="genres || contentRating" class="row-middle hideable-hidden">
-            <div v-if="genres" v-for="(genre, index) in genres" class="chip green" v-text="genre" />
-            <div v-if="contentRating" class="chip orange" v-text="contentRating" />
+            <div
+              v-if="genres"
+              v-for="(genre, index) in genres"
+              class="badge green"
+              v-text="genre"
+            />
+            <div v-if="contentRating" class="badge orange" v-text="contentRating" />
           </div>
           <div class="row-middle">
             <div v-if="likes" class="row-middle gap-x-1">
