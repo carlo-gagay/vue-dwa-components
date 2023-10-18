@@ -4,7 +4,7 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
 
 <template>
   <footer class="pt-[31px] px-[40px] pb-[17px] bg-[#000205]">
-    <div class="row-start justify-between">
+    <div class="columnt-start sm:row-start justify-between gap-y-[30px]">
       <div class="column-start gap-y-[30px]">
         <div class="brand column-start gap-y-2">
           <IconLogo />
