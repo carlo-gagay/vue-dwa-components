@@ -1,5 +1,5 @@
 <script setup>
-import { AuthenticatedLayout } from '@components/layouts'
+import { AuthenticatedLayout } from '@layouts'
 import { TitleCardAuth } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { IconDelete, IconEdit, IconSettings, IconVisibility } from '@components/svgs'

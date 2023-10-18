@@ -1,6 +1,6 @@
 <script setup>
 import Grid from 'vue-virtual-scroll-grid'
-import { ReadersDescriptionLayout } from '@components/layouts'
+import { ReadersDescriptionLayout } from '@layouts'
 import { TitleCardBanner } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { ComicsCard } from '@components/cards'

@@ -1,7 +1,7 @@
 <script setup>
 import Grid from 'vue-virtual-scroll-grid'
 import { ChapterCard } from '@components/cards'
-import { ReadersFullContentLayout } from '@components/layouts'
+import { ReadersFullContentLayout } from '@layouts'
 import { chapter } from '@stores/sample'
 
 const pageProvider = async (pageNumber, pageSize) => {

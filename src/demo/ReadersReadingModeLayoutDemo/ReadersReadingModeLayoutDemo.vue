@@ -1,6 +1,6 @@
 <script setup>
 import { defineAsyncComponent, reactive, ref } from 'vue'
-import { ReadersReadingModeLayout } from '@components/layouts'
+import { ReadersReadingModeLayout } from '@layouts'
 import AsidePanel from './AsidePanel.vue'
 import CommentsSidePane from './CommentsSidePane.vue'
 import SettingsSidePane from './SettingsSidePane.vue'

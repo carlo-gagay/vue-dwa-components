@@ -1,7 +1,7 @@
 <script setup>
 import Grid from 'vue-virtual-scroll-grid'
 import { ref, defineAsyncComponent } from 'vue'
-import { ReadersLayout } from '@components/layouts'
+import { ReadersLayout } from '@layouts'
 import { TitleCardBanner } from '@components/cards'
 import { Slider } from '@components/sliders'
 import {
