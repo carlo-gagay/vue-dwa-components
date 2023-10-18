@@ -1,9 +1,16 @@
 <script setup>
+import Grid from 'vue-virtual-scroll-grid'
 import { ReadersDescriptionLayout } from '@components/layouts'
 import { TitleCardBanner } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { ComicsCard } from '@components/cards'
 import { title } from '@stores/sample'
+
+const pageProvider = async (pageNumber, pageSize) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(new Array(pageSize).fill('')), 1000)
+  })
+}
 </script>
 
 <template>
@@ -46,16 +53,27 @@ import { title } from '@stores/sample'
       </AppTab>
     </div>
     <div class="container-flex mt-10 px-4 sm:px-[121px]">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-[58px]">
-        <div v-for="n in 8" :key="n" v-once>
+      <Grid
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-[58px]"
+        :length="8"
+        :pageSize="4"
+        :pageProvider="pageProvider"
+        v-once
+      >
+        <template #probe="{style, index}">
+          <div class="w-[255px] h-[395px]" :style="style"></div>
+        </template>
+        <template #default="{item, style, index}">
           <ComicsCard
+            v-once
             subtitle="June 9, 2023"
-            :image="`https://picsum.photos/20${n}`"
-            :title="`Issue ${n}`"
+            :image="`https://picsum.photos/20${index}`"
+            :style="style"
+            :title="`Issue ${index}`"
             @onClick="() => $router.push('/chapters')"
           />
-        </div>
-      </div>
+        </template>
+      </Grid>
     </div>
     <div class="h-[62px]"></div>
   </ReadersDescriptionLayout>

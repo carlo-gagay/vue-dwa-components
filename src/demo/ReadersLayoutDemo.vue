@@ -1,4 +1,5 @@
 <script setup>
+import Grid from 'vue-virtual-scroll-grid'
 import { ref, defineAsyncComponent } from 'vue'
 import { ReadersLayout } from '@components/layouts'
 import { TitleCardBanner } from '@components/cards'
@@ -40,6 +41,12 @@ const breakpoints = {
   '(min-width: 1024px)': {
     slides: { perView: 4, spacing: 21 }
   }
+}
+
+const pageProvider = async (pageNumber, pageSize) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(new Array(pageSize).fill(title)), 1000)
+  })
 }
 </script>
 
@@ -219,27 +226,36 @@ const breakpoints = {
     </div>
     <!-- First list of comic titles -->
     <div class="container-padded-40">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
-        <div v-for="(n, index) in 8" class="relative" :key="n" v-once>
-          <TitleCardDetailed
-            class="expose-details-on-hover"
-            :alt="`${title.title} ${index}`"
-            :author="title.author"
-            :content-rating="title.contentRating"
-            :description="title.description"
-            :genres="title.genres"
-            :hasAudio="true"
-            :id="`ac${index}`"
-            :image="`${title.image}${index}`"
-            :isAudioPlaying="false"
-            :likes="title.likes"
-            :published="title.published"
-            :title="`${title.title} ${index}`"
-            @onClick="() => $router.push('/comics')"
-            @onPlayAudio="() => console.log('audio playing')"
-          />
-        </div>
-      </div>
+      <Grid
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10"
+        :length="8"
+        :pageSize="4"
+        :pageProvider="pageProvider"
+        v-once
+      >
+        <template #default="{item, style, index}">
+          <div class="test" :style="[style, 'z-index: 0;']">
+            <TitleCardDetailed
+              v-once
+              class="expose-details-on-hover"
+              :alt="`${item.title} ${index}`"
+              :author="item.author"
+              :content-rating="item.contentRating"
+              :description="item.description"
+              :genres="item.genres"
+              :hasAudio="true"
+              :id="`ac${index}`"
+              :image="`${item.image}${index}`"
+              :isAudioPlaying="false"
+              :likes="item.likes"
+              :published="item.published"
+              :title="`${item.title} ${index}`"
+              @onClick="() => $router.push('/comics')"
+              @onPlayAudio="() => console.log('audio playing')"
+            />
+          </div>
+        </template>
+      </Grid>
     </div>
     <!-- call to action section -->
     <div v-if="!isAuth" class="cta-section-container">
@@ -250,27 +266,36 @@ const breakpoints = {
     </div>
     <!-- Second list of comic titles -->
     <div class="container-padded-40" :class="{'pt-0': isAuth}">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10">
-        <div v-for="(n, index) in 4" class="relative" :key="`s${n}`" v-once>
-          <TitleCardDetailed
-            class="expose-details-on-hover"
-            :alt="`${title.title} ${index}`"
-            :author="title.author"
-            :content-rating="title.contentRating"
-            :description="title.description"
-            :genres="title.genres"
-            :hasAudio="true"
-            :id="`ac2${index}`"
-            :image="`${title.image}${index}`"
-            :isAudioPlaying="false"
-            :likes="title.likes"
-            :published="title.published"
-            :title="`${title.title} ${index}`"
-            @onClick="() => $router.push('/comics')"
-            @onPlayAudio="() => console.log('audio playing')"
-          />
-        </div>
-      </div>
+      <Grid
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10"
+        :length="8"
+        :pageSize="4"
+        :pageProvider="pageProvider"
+        v-once
+      >
+        <template #default="{item, style, index}" v-once>
+          <div class="relative" :style="style">
+            <TitleCardDetailed
+              v-once
+              class="expose-details-on-hover"
+              :alt="`${item.title} ${index}`"
+              :author="item.author"
+              :content-rating="item.contentRating"
+              :description="item.description"
+              :genres="item.genres"
+              :hasAudio="true"
+              :id="`acc${index}`"
+              :image="`${item.image}${index}`"
+              :isAudioPlaying="false"
+              :likes="item.likes"
+              :published="item.published"
+              :title="`${item.title} ${index}`"
+              @onClick="() => $router.push('/comics')"
+              @onPlayAudio="() => console.log('audio playing')"
+            />
+          </div>
+        </template>
+      </Grid>
     </div>
   </ReadersLayout>
 </template>
@@ -295,6 +320,12 @@ const breakpoints = {
       @apply heading-2 font-bold text-[#fff];
       text-shadow: 0px 0px 14px rgba(12, 11, 11, 0.16);
     }
+  }
+}
+
+.test {
+  &:hover {
+    z-index: 50;
   }
 }
 </style>
