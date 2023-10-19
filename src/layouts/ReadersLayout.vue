@@ -38,6 +38,6 @@ import { IconLogo } from '@components/svgs'
 
 <style>
 body {
-  @apply bg-[#FFFCF3] overflow-x-hidden;
+  @apply bg-neutrals-beige overflow-x-hidden;
 }
 </style>

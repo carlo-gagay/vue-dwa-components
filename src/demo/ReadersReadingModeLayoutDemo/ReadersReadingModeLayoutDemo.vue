@@ -27,7 +27,7 @@ const onModalClose = () => (modal.shown = false)
 <template>
   <ReadersReadingModeLayout :asideShown="asideShown" @onBackClick="() => $router.go(-1)">
     <template #slot-content-header>
-      <div class="text-body-2 text-[#fff]">
+      <div class="text-body-2 text-neutrals-white">
         <strong>The Glove</strong> | <strong>Chapter 3:</strong> A Twist of a Knife
       </div>
     </template>
@@ -40,7 +40,7 @@ const onModalClose = () => (modal.shown = false)
       />
       <Modal :shown="modal.shown" size="lg" theme="transparent" @onClose="onModalClose">
         <div class="relative">
-          <div class="column-center text-center text-[#fff]">
+          <div class="column-center text-center text-neutrals-white">
             <div class="text-heading-2">The Glove</div>
             <div class="text-sub-heading-2">Chapter 3: A Twist of a Knife</div>
           </div>

@@ -43,20 +43,20 @@ import { title } from '@stores/sample'
             <template #popper>
               <div class="dropdown-popper">
                 <div class="dropdown-item">
-                  <IconVisibility class="text-[#BDB9B4] w-4 h-4" />
+                  <IconVisibility class="text-neutrals-03 w-4 h-4" />
                   View Preview
                 </div>
                 <div class="dropdown-item">
-                  <IconEdit class="text-[#BDB9B4] w-4 h-4" />
+                  <IconEdit class="text-neutrals-03 w-4 h-4" />
                   Edit Title
                 </div>
                 <div class="dropdown-item">
-                  <IconSettings class="text-[#BDB9B4] w-4 h-4" />
+                  <IconSettings class="text-neutrals-03 w-4 h-4" />
                   Manage Episodes
                 </div>
                 <div class="divider"></div>
                 <div class="dropdown-item">
-                  <IconDelete class="text-[#BDB9B4] w-4 h-4" />
+                  <IconDelete class="text-neutrals-03 w-4 h-4" />
                   Archive
                 </div>
               </div>

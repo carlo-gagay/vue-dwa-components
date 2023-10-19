@@ -15,7 +15,9 @@ const pageProvider = async (pageNumber, pageSize) => {
   <ReadersFullContentLayout @onBack="() => $router.push('/comics')">
     <div class="column-middle gap-y-[26px] items-center">
       <div class="text-[36.993px] dark:text-white">Comic Title</div>
-      <div class="text-[55.681px] dark:text-[#FFF]">Book 01: <strong>Title Goes Here</strong></div>
+      <div class="text-[55.681px] dark:text-neutrals-white">
+        Book 01: <strong>Title Goes Here</strong>
+      </div>
     </div>
     <div class="mt-[66px]">
       <Grid

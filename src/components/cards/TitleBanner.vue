@@ -59,7 +59,7 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
           <template v-if="brandName">
             <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
             <span class="text-sub-heading-2 title-banner-texts">{{ brandName }}</span>
-            <i class="icon icon-information-outline icon--s20 text-[#857E76]"></i>
+            <i class="icon icon-information-outline icon--s20 text-neutrals-02"></i>
           </template>
         </div>
         <div class="row-middle gap-x-[10px] mt-4">

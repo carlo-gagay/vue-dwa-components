@@ -1,42 +1,42 @@
 @layer components {
   .btn-primary {
-    @apply bg-[#FFC94B] text-[#0C0B0B];
+    @apply bg-yellow-yellow text-neutrals-black;
 
     &:hover {
-      @apply bg-[#c79319] text-white;
+      @apply bg-orange-orange text-white;
     }
   }
 
   .btn-primary-inline {
-    @apply bg-transparent text-[#FFC94B];
+    @apply bg-transparent text-yellow-yellow;
 
     &:hover {
-      @apply text-[#c79319];
+      @apply text-orange-orange;
     }
   }
 
   .btn-secondary {
-    @apply bg-[#0C0B0B] text-[#FFC94B] dark:bg-[#FFC94B] dark:text-[#0C0B0B];
+    @apply bg-neutrals-black text-yellow-yellow dark:bg-yellow-yellow dark:text-neutrals-black;
 
     &:hover {
-      @apply bg-white text-[#c79319] dark:bg-[#c79319] dark:text-white;
+      @apply bg-white text-orange-orange dark:bg-orange-orange dark:text-white;
     }
   }
 
   .btn-secondary-inline {
-    @apply text-[#0C0B0B] bg-transparent dark:text-[#FFC94B];
+    @apply text-neutrals-black bg-transparent dark:text-yellow-yellow;
   }
 
   .btn-trans-black-inline {
-    @apply bg-transparent text-[#0C0B0B] dark:text-[#FFF];
+    @apply bg-transparent text-neutrals-black dark:text-white;
   }
 
   .btn-trans-white-inline {
-    @apply bg-transparent text-[#FFF];
+    @apply bg-transparent text-white;
   }
 
   .btn-trans-outline {
-    @apply bg-transparent border border-[#0C0B0B] text-[#0C0B0B];
+    @apply bg-transparent border border-neutrals-black text-neutrals-black;
   }
 
   .btn-opac {
@@ -66,7 +66,7 @@
 }
 
 .toggle-btn {
-  @apply p-2 border border-[#0C0B0B] text-[#EDEAE7];
+  @apply p-2 border border-neutrals-black text-neutrals-04;
 
   &.toggle-btn-start {
     @apply rounded-s-[5px];
@@ -77,7 +77,7 @@
   }
 
   &.active {
-    @apply bg-[#0C0B0B] text-[#FFC94B];
+    @apply bg-neutrals-black text-yellow-yellow;
   }
 }
 
@@ -100,7 +100,7 @@
     @apply row-middle absolute gap-x-[25px] bottom-[33px] inset-x-0 flex justify-center;
 
     .indicator {
-      @apply w-4 h-4 bg-[#FFFCF3] rounded-full opacity-50;
+      @apply w-4 h-4 bg-neutrals-beige rounded-full opacity-50;
 
       &.active {
         @apply opacity-100;
