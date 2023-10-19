@@ -11,6 +11,7 @@ module.exports = {
         currentColor: 'currentColor',
         beige: '#FFFCF3',
         black: '#000205',
+        white: '#FFFFFF',
         green: {
           DEFAULT: '#4A6163',
           '02': '#869FA1'
@@ -29,7 +30,6 @@ module.exports = {
         orange: {
           DEFAULT: '#F9A66C'
         },
-        white: '#FFFFFF',
         yellow: {
           DEFAULT: '#FFC94B'
         }
