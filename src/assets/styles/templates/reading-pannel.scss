@@ -47,7 +47,7 @@
     @apply absolute bottom-0 flex justify-center w-full;
 
     .inner {
-      @apply px-[64px] py-[10px] bg-neutrals-black row-middle gap-x-[122px] justify-between;
+      @apply px-[64px] py-[10px] bg-neutral-black row-middle gap-x-[122px] justify-between;
       border-radius: 10px 10px 0px 0px;
       box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 
@@ -59,8 +59,6 @@
 }
 
 .aside-panel {
-  @apply relative h-[calc(100vh-60px)];
-
-  background: var(--neutrals-beige, #fffcf3);
+  @apply relative bg-beige h-[calc(100vh-60px)];
   box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.25);
 }

@@ -2,7 +2,7 @@
   @apply fixed top-0 inset-x-0 h-[60px] w-full z-40;
 
   .header-inner {
-    @apply relative w-full h-full bg-neutrals-black flex  py-[15px] px-4 sm:px-10 items-center;
+    @apply relative w-full h-full bg-neutral-black flex  py-[15px] px-4 sm:px-10 items-center;
 
     &.space-between {
       @apply justify-between;

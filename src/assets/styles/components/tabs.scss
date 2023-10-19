@@ -5,24 +5,24 @@
     @apply row-middle gap-x-1 relative;
 
     .tab-item-title {
-      @apply text-neutrals-02 text-sm capitalize;
+      @apply text-neutral-02 text-sm capitalize;
     }
 
     .badge {
-      @apply rounded-[2px] text-white bg-neutrals-03 px-1 text-[10px] leading-[14px] w-fit;
+      @apply rounded-[2px] text-white bg-neutral-03 px-1 text-[10px] leading-[14px] w-fit;
     }
 
     &.active {
       .tab-item-title {
-        @apply text-[24px] leading-[32px] text-neutrals-black font-medium;
+        @apply text-[24px] leading-[32px] text-neutral-black font-medium;
 
         &:after {
-          @apply h-[2px] w-full absolute content-[''] bg-neutrals-black left-0 bottom-[-4px];
+          @apply h-[2px] w-full absolute content-[''] bg-neutral-black left-0 bottom-[-4px];
         }
       }
 
       .badge {
-        @apply px-[5px] bg-yellow-yellow text-neutrals-black text-[14px] leading-[20px] font-bold;
+        @apply px-[5px] bg-yellow text-neutral-black text-[14px] leading-[20px] font-bold;
       }
     }
   }
@@ -40,7 +40,7 @@
           @apply text-heading-1 font-bold;
 
           &:after {
-            @apply h-[4px] w-full absolute content-[''] bg-neutrals-black mt-1;
+            @apply h-[4px] w-full absolute content-[''] bg-neutral-black mt-1;
           }
         }
       }

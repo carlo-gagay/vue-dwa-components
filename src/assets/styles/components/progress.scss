@@ -2,18 +2,18 @@
   @apply w-full;
 
   &.primary {
-    @apply bg-neutrals-black;
+    @apply bg-neutral-black;
 
     & .progress {
-      @apply bg-yellow-yellow;
+      @apply bg-yellow;
     }
   }
 
   &.black {
-    @apply bg-neutrals-03;
+    @apply bg-neutral-03;
 
     & .progress {
-      @apply bg-neutrals-black;
+      @apply bg-neutral-black;
     }
   }
 

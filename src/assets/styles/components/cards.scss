@@ -7,8 +7,8 @@
 
 // Title Card
 .title-card {
-  @apply rounded-[10px] bg-neutrals-white;
-  // @apply bg-neutrals-beige;
+  @apply rounded-[10px] bg-neutral-white;
+  // @apply bg-beige;
 
   .title-card-image {
     @apply relative;
@@ -121,7 +121,7 @@
 
 // Additional card modification for TitleCardAuth
 .title-card.auth {
-  @apply bg-neutrals-beige;
+  @apply bg-beige;
   box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 
   .title-card-image figure img {
@@ -135,7 +135,7 @@
 
 // Card's statistics item
 .statistic-item {
-  @apply flex flex-row gap-x-1 items-center text-neutrals-03;
+  @apply flex flex-row gap-x-1 items-center text-neutral-03;
 
   span {
     @apply text-[8px] leading-[14px];
@@ -165,18 +165,18 @@
     @apply px-[9px] py-[5px];
 
     & .text-sub-heading-1 {
-      @apply text-[16.074px] leading-[22.963px] font-semibold text-neutrals-05;
+      @apply text-[16.074px] leading-[22.963px] font-semibold text-neutral-05;
     }
 
     & .text-small-text {
-      @apply text-[13.778px] leading-[18.37px] text-neutrals-05;
+      @apply text-[13.778px] leading-[18.37px] text-neutral-05;
     }
 
     & .statistics {
       @apply mt-3 gap-x-4;
 
       .texts {
-        @apply text-[11.481px] leading-[16.074px] dark:text-neutrals-05;
+        @apply text-[11.481px] leading-[16.074px] dark:text-neutral-05;
       }
     }
   }
@@ -200,7 +200,7 @@
   }
 
   .text-container {
-    @apply ml-[25px] text-neutrals-black;
+    @apply ml-[25px] text-neutral-black;
   }
 
   .statistics-container {
@@ -210,11 +210,11 @@
       @apply row-middle gap-x-2;
 
       .icon {
-        @apply text-neutrals-03;
+        @apply text-neutral-03;
       }
 
       .text-body-2 {
-        @apply text-neutrals-black;
+        @apply text-neutral-black;
       }
     }
   }

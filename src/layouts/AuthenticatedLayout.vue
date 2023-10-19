@@ -20,10 +20,10 @@ import {
     <template #slot-cta-buttons>
       <div class="flex justify-end gap-x-[26px] items-center">
         <button role="button">
-          <IconBell class="icon text-yellow-yellow" />
+          <IconBell class="icon text-yellow" />
         </button>
         <button role="button">
-          <IconAvatar class="icon text-yellow-yellow" />
+          <IconAvatar class="icon text-yellow" />
         </button>
       </div>
     </template>

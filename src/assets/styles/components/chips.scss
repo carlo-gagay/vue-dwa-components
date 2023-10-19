@@ -2,12 +2,12 @@
   @apply rounded-[2px] py-2 px-[10px] flex gap-x-0.5;
 
   &.chip-default-inline {
-    @apply bg-neutrals-white text-neutrals-black;
+    @apply bg-neutral-white text-neutral-black;
     box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
   }
 
   &.chip-green {
-    @apply bg-green-green text-white;
+    @apply bg-green text-white;
   }
 
   &.chip-green-2 {
@@ -15,11 +15,11 @@
   }
 
   &.chip-orange {
-    @apply bg-orange-500 text-neutral-900;
+    @apply bg-orange text-neutral-900;
   }
 
   &.chip-yellow {
-    @apply bg-yellow-yellow text-neutrals-black;
+    @apply bg-yellow text-neutral-black;
     box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
   }
 
