@@ -138,6 +138,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         </div>
       </div>
     </div>
+    <!-- App tab -->
     <div class="container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10">
       <AppTab size="lg" class="gap-x-4 md:gap-x-[50px]" v-once>
         <AppTabItem title="All Comics" :active="true" />
