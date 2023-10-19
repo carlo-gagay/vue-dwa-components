@@ -12,6 +12,9 @@ module.exports = {
         beige: '#FFFCF3',
         black: '#000205',
         white: '#FFFFFF',
+        error: {
+          'red': '#F13838'
+        },
         green: {
           DEFAULT: '#4A6163',
           '02': '#869FA1'
@@ -20,6 +23,7 @@ module.exports = {
           '03': '#AFAFAF',
         },
         neutral: {
+          '01': '#524B43',
           '02': '#857E76',
           '03': '#BDB9B4',
           '04': '#EDEAE7',

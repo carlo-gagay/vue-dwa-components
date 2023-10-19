@@ -23,6 +23,7 @@
 @import './styles/components/ellipsable.scss';
 @import './styles/components/modals.scss';
 @import './styles/components/empty-section.scss';
+@import './styles/components/forms.scss';
 
 // Layouts
 @import './styles/layouts/header.scss';
@@ -30,4 +31,5 @@
 @import './styles/layouts/split-pane.scss';
 
 // Templates
-@import './styles//templates/reading-pannel.scss';
+@import './styles/templates/reading-pannel.scss';
+@import './styles/templates/auth-form.scss';

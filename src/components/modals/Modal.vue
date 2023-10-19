@@ -1,20 +1,6 @@
 <script setup>
 defineProps({
-  shown: Boolean,
-  size: {
-    type: String,
-    default: 'md',
-    validator(value) {
-      return ['sm', 'md', 'lg'].includes(value)
-    }
-  },
-  theme: {
-    type: String,
-    default: 'light',
-    validator(value) {
-      return ['dark', 'light', 'transparent']
-    }
-  }
+  shown: Boolean
 })
 
 const emits = defineEmits(['onClose'])
@@ -25,7 +11,7 @@ const emits = defineEmits(['onClose'])
     <div v-if="shown" class="modal-backdrop">
       <div class="modal-opac" @click.self="emits('onClose')"></div>
       <div class="modal">
-        <div class="dialog" :class="[size, theme]">
+        <div class="dialog">
           <slot></slot>
         </div>
       </div>

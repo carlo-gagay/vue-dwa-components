@@ -14,19 +14,7 @@
     transform: translate(-50%, -50%);
 
     .dialog {
-      @apply relative overflow-visible max-h-[606px] rounded-[5px] p-6;
-
-      &.lg {
-        @apply w-[1068px];
-      }
-
-      &.light {
-        @apply bg-neutral-white;
-      }
-
-      &.transparent {
-        @apply bg-transparent;
-      }
+      @apply relative overflow-visible;
     }
   }
 }

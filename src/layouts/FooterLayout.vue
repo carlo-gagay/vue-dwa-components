@@ -25,9 +25,7 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
           <div class="text-text-button text-neutral-02 font-semibold">Contact</div>
           <div class="row-start">
             <IconEnvelop class="w-4 h-4 text-yellow" />
-            <span class="text-caption text-beige max-w-[133px]">
-              info@duskwavearts.com
-            </span>
+            <span class="text-caption text-beige max-w-[133px]"> info@duskwavearts.com </span>
           </div>
           <div class="row-start">
             <IconLocation class="w-4 h-4 text-yellow" />
