@@ -32,7 +32,7 @@
       @apply p-1;
 
       .tab-item-title {
-        @apply text-sub-heading-1 font-medium;
+        @apply text-sub-heading-1 font-medium transition;
       }
 
       &.active {

@@ -1,0 +1,31 @@
+.empty-section {
+  &.v-padding-37-209 {
+    @apply pt-[37px] pb-[109px];
+
+    .inner {
+      .title {
+        @apply mt-5;
+      }
+
+      .sub-title {
+        @apply mt-1.5;
+      }
+    }
+  }
+
+  .inner {
+    @apply w-fit m-auto text-center;
+
+    .icon-wrapper {
+      @apply row-middle justify-center text-neutrals-03;
+    }
+
+    .title {
+      @apply text-heading-2 font-bold;
+    }
+
+    .sub-title {
+      @apply text-body-2;
+    }
+  }
+}

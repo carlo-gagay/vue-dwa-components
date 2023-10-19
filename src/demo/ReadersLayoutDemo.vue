@@ -20,7 +20,8 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 )
 
 const filtersShown = ref(false)
-const isAuth = false
+const hasInQueue = ref(false)
+const isAuth = ref(false)
 
 const breakpoints = {
   '(min-width: 640px)': {
@@ -84,7 +85,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               class="indicator"
               :key="n"
               :class="{ active: index === navigator.index }"
-              @click="navigator.moveToIdx(index)"
+              @click="() => navigator.moveToIdx(index)"
             ></button>
           </div>
         </template>
@@ -93,7 +94,7 @@ const pageProvider = async (pageNumber, pageSize) => {
     <!-- Continue reading -->
     <div class="container-padded-40 pb-0">
       <div class="text-heading-1 font-bold">Continue Reading</div>
-      <div class="mt-[20px]">
+      <div v-if="hasInQueue" class="mt-[20px]">
         <Slider
           mode="free"
           :breakpoints="breakpoints"
@@ -127,6 +128,15 @@ const pageProvider = async (pageNumber, pageSize) => {
           </div>
         </Slider>
       </div>
+      <div v-else class="empty-section v-padding-37-209">
+        <div class="inner">
+          <div class="icon-wrapper">
+            <i class="icon icon-news-paper icon--s100"></i>
+          </div>
+          <div class="title">No Comics In Queue</div>
+          <div class="subtitle">The comics you are currently reading will appear here</div>
+        </div>
+      </div>
     </div>
     <div class="container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10">
       <AppTab size="lg" class="gap-x-4 md:gap-x-[50px]" v-once>
@@ -159,7 +169,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       </div>
     </div>
     <!-- Comic filters -->
-    <div v-if="filtersShown" class="container-flex mt-[28px]">
+    <div v-if="filtersShown" class="container-flex mt-[28px] transition">
       <div class="filter-container w-full px-4 sm:px-10 py-2.5">
         <div class="inner column-start sm:row-middle justify-between gap-y-2">
           <div class="dropdowns column-start sm:row-middle gap-x-[20px] gap-y-2">

@@ -61,7 +61,8 @@
     's32': '32px',
     's38': '38px',
     's40': '40px',
-    's56': '56px'
+    's56': '56px',
+    's100': '100px'
   );
 
   @each $name, $size in $sizes {
