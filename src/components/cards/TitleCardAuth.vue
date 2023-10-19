@@ -76,10 +76,10 @@ const props = defineProps({
         <div class="title-infos-container">
           <div class="title-infos">
             <div class="row-middle gap-x-[7px]">
-              <div v-if="genres" v-for="(genre, index) in genres" class="badge green">
+              <div v-if="genres" v-for="(genre, index) in genres" class="badge md green">
                 {{ genre }}
               </div>
-              <div v-else class="badge green-2">No Genre</div>
+              <div v-else class="badge md green-2">No Genre</div>
             </div>
             <div v-if="title" class="title mt-[11px]">
               {{ title }}

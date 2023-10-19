@@ -22,5 +22,9 @@
       @apply bg-yellow text-neutral-black;
       box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
     }
+
+    &.md {
+      @apply px-1 py-0.5 text-small-text;
+    }
   }
 }
