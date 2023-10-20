@@ -24,7 +24,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 )
 
 const filtersShown = ref(false)
-const hasInQueue = ref(true)
+const hasInQueue = ref(false)
 const isAuth = ref(false)
 
 const breakpoints = {
