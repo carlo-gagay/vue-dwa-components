@@ -2,7 +2,7 @@
 import Grid from 'vue-virtual-scroll-grid'
 import { ref, defineAsyncComponent } from 'vue'
 import { ReadersLayout } from '@layouts'
-import { TitleCardBanner, TitleCardBasic } from '@components/cards'
+import { TitleCardBanner } from '@components/cards'
 import { Slider } from '@components/sliders'
 import {
   IconArrowBackIos,
@@ -14,6 +14,10 @@ import {
 import { AppTab, AppTabItem } from '@components/tabs'
 import { SelectableFilter } from '@features/filters'
 import { filterOptions, title, genresFromApi } from '@stores/sample'
+
+const TitleCardBasic = defineAsyncComponent(() => 
+  import('@components/cards/TitleCardBasic.vue')
+)
 
 const TitleCardDetailed = defineAsyncComponent(() =>
   import('@components/cards/TitleCardDetailed.vue')
