@@ -2,7 +2,7 @@
 import Grid from 'vue-virtual-scroll-grid'
 import { ref, defineAsyncComponent } from 'vue'
 import { ReadersLayout } from '@layouts'
-import { TitleCardBanner } from '@components/cards'
+import { TitleCardBanner, TitleCardBasic } from '@components/cards'
 import { Slider } from '@components/sliders'
 import {
   IconArrowBackIos,
@@ -20,7 +20,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 )
 
 const filtersShown = ref(false)
-const hasInQueue = ref(false)
+const hasInQueue = ref(true)
 const isAuth = ref(false)
 
 const breakpoints = {
@@ -105,7 +105,7 @@ const pageProvider = async (pageNumber, pageSize) => {
           v-once
         >
           <div v-for="n in 9" :key="n" class="keen-slider__slide" v-once>
-            <TitleCardDetailed
+            <TitleCardBasic
               :alt="`${title.title} ${n}`"
               :author="title.author"
               :books="title.books"
@@ -124,7 +124,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                   <i class="icon icon-dots-horizontal-triple icon--s24"></i>
                 </button>
               </template>
-            </TitleCardDetailed>
+            </TitleCardBasic>
           </div>
         </Slider>
       </div>
