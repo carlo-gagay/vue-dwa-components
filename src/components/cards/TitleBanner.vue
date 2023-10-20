@@ -67,14 +67,14 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             <IconFavorite class="w-3 h-3 title-banner-texts" />
             <div class="text-caption title-banner-texts">{{ likes }}</div>
           </div>
-          <div v-if="rating" class="badge yellow">
+          <div v-if="rating" class="badge badge-yellow">
             <IconStar class="w-3 h-3" />
             <div class="text-caption">{{ rating }}</div>
           </div>
-          <div v-if="contentRating" class="badge orange">
+          <div v-if="contentRating" class="badge badge-orange">
             <div class="text-caption">{{ contentRating }}</div>
           </div>
-          <div v-if="hasAudio" class="badge white" @click="emit('onPlayAudio')">
+          <div v-if="hasAudio" class="badge badge-white" @click="emit('onPlayAudio')">
             <IconVolumeUp class="w-3 h-3" />
             <div class="text-caption">Audio Available</div>
           </div>
@@ -90,7 +90,7 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
             <IconBookMenu class="w-3 h-3" />
             <div class="text-small-text">Issues: {{ issues }}</div>
           </div>
-          <div v-if="completion" class="badge green">
+          <div v-if="completion" class="badge badge-green">
             <div v-if="genres" class="row-middle gap-x-1">
               <div v-for="(genre, index) in genres" :key="index" v-once>
                 <div class="text-caption">{{ genre }}</div>

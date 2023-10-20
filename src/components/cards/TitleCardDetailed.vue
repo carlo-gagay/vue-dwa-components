@@ -35,7 +35,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
     <div class="title-card-image" @click.stop="emits('onClick')">
       <button
         v-if="hasAudio"
-        class="slot-card-image badge white"
+        class="slot-card-image badge badge-white"
         @click.stop="emits('onPlayAudio')"
         role="button"
       >
@@ -98,10 +98,10 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
             <div
               v-if="genres"
               v-for="(genre, index) in genres"
-              class="badge md green"
+              class="badge badge-md badge-green"
               v-text="genre"
             />
-            <div v-if="contentRating" class="badge md orange" v-text="contentRating" />
+            <div v-if="contentRating" class="badge badge-md badge-orange" v-text="contentRating" />
           </div>
           <div class="row-middle">
             <div v-if="likes" class="row-middle gap-x-1">
