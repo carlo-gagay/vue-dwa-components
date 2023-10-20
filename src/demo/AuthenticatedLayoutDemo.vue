@@ -15,7 +15,7 @@ import { title } from '@stores/sample'
         <AppTabItem title="Archived" :badge-content="9" />
       </AppTab>
       <div class="row-middle gap-x-5">
-        <button class="btn btn-primary md">Create Title</button>
+        <button class="btn btn-md btn-primary">Create Title</button>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]">

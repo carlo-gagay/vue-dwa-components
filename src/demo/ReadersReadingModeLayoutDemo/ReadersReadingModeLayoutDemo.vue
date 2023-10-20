@@ -53,7 +53,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               <div class="text-sub-heading-2">Chapter 3: A Twist of a Knife</div>
             </div>
             <button
-              class="absolute close-btn btn btn-trans-white-inline top-7 -right-8"
+              class="absolute close-btn btn btn-trans-white-inline top-[2.75rem] -right-8"
               @click="onModalClose"
             >
               <i class="icon icon-close icon--s32"></i>

@@ -48,19 +48,19 @@
 .btn {
   @apply rounded-[5px];
 
-  &.md {
+  &.btn-md {
     @apply py-2 px-4 text-sm;
   }
 
-  &.md-equal {
+  &.btn-md-equal {
     @apply p-2 text-sm;
   }
 
-  &.round {
+  &.btn-round {
     @apply p-0.5 rounded-full;
   }
 
-  &.unround {
+  &.btn-unround {
     @apply rounded-none;
   }
 }

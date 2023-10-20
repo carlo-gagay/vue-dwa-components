@@ -33,6 +33,7 @@ const onFormSubmit = () => {
   if (isSignIn.value) {
     router.push('/admin')
   } else {
+    router.push('/admin')
   }
 }
 </script>
@@ -51,10 +52,10 @@ const onFormSubmit = () => {
     </template>
     <template #slot-cta-buttons>
       <div class="row-middle justify-end gap-x-[26px]">
-        <button class="btn btn-primary-inline md" role="button" @click="onSignInClick">
+        <button class="btn btn-primary-inline btn-md" role="button" @click="onSignInClick">
           Sign In
         </button>
-        <button class="btn btn-primary md" role="button" @click="onSignUpClick">Sign Up</button>
+        <button class="btn btn-primary btn-md" role="button" @click="onSignUpClick">Sign Up</button>
       </div>
     </template>
   </HeaderLayout>
@@ -97,7 +98,7 @@ const onFormSubmit = () => {
         </FormInput>
       </div>
       <div class="submit-button flex justify-end mt-[37px]">
-        <button class="btn md btn-primary" @click="onFormSubmit">
+        <button class="btn btn-md btn-primary" @click="onFormSubmit">
           {{ isSignIn ? 'Sign In' : 'Create Account' }}
         </button>
       </div>

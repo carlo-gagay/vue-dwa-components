@@ -198,7 +198,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             </template>
           </div>
           <div class="">
-            <button class="btn md-equal btn-trans-black-inline" @click="() => {}">
+            <button class="btn btn-md-equal btn-trans-black-inline" @click="() => {}">
               Clear All Filters
             </button>
           </div>
@@ -242,7 +242,7 @@ const pageProvider = async (pageNumber, pageSize) => {
     <div v-if="!isAuth" class="cta-section-container">
       <div class="inner column-start sm:row-middle justify-between gap-y-4">
         <div class="message">Save your progress and your favorite comics...</div>
-        <button class="btn btn-secondary md">Sign Up</button>
+        <button class="btn btn-md btn-secondary">Sign Up</button>
       </div>
     </div>
     <!-- Second list of comic titles -->
