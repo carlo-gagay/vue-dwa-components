@@ -59,7 +59,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               <i class="icon icon-close icon--s32"></i>
             </button>
           </div>
-          <div class="mt-[34px] overflow-y-auto h-[475px] rounded-[5px]">
+          <div class="mt-[34px] overflow-y-auto h-[475px] rounded-[5px] px-[26px]">
             <Grid
               class="grid grid-cols-1 gap-y-4"
               :length="8"
