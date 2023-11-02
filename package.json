@@ -11,7 +11,10 @@
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "generateIcons": "fantasticon src/assets/svg -o src/assets/font-icons"
+    "generateIcons": "fantasticon src/assets/svg -o src/assets/font-icons",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "fantasticon": "^2.0.0",
