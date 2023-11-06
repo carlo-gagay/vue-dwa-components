@@ -1,6 +1,6 @@
 @layer components {
   .badge {
-    @apply px-1 py-0.5 rounded-[2px] flex items-center gap-x-[2px];
+    @apply px-1 py-0.5 rounded-[2px] flex items-center gap-x-[2px] min-w-fit;
 
     &.badge-white {
       @apply bg-white text-black;

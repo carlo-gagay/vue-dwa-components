@@ -1,0 +1,9 @@
+@layer components {
+    .stat-item {
+        @apply row-middle gap-x-[6px];
+
+        span {
+            @apply hidden sm:inline-block;
+        }
+    }
+}

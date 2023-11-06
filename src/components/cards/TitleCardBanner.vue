@@ -44,18 +44,18 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
     <div class="opac"></div>
     <div class="content column-middle">
       <div class="block max-w-[430px]">
-        <div v-if="title" class="text-title title-banner-texts">{{ title }}</div>
+        <div v-if="title" class="card-title title-banner-texts">{{ title }}</div>
         <div class="row-middle gap-x-4 mt-1">
           <button
             v-if="author"
-            class="text-sub-heading-2 title-banner-texts"
+            class="card-sub-titles title-banner-texts"
             @click="emit('onAuthorClick')"
           >
             {{ author }}
           </button>
           <template v-if="showGenresInSubtitle">
             <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
-            <div class="text-sub-heading-2 title-banner-texts">
+            <div class="card-sub-titles title-banner-texts">
               <span v-for="(genre, index) in genres" :key="index">
                 {{ genre }}
                 <span v-if="index < genres.length - 1">,&#32;</span>
@@ -64,11 +64,11 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
           </template>
           <template v-if="brandName">
             <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
-            <span class="text-sub-heading-2 title-banner-texts">{{ brandName }}</span>
+            <span class="card-sub-titles title-banner-texts">{{ brandName }}</span>
             <i class="icon icon-information-outline icon--s20 text-neutral-02"></i>
           </template>
         </div>
-        <div class="row-middle gap-x-[10px] mt-4">
+        <div class="badges row-middle gap-x-[10px] mt-4">
           <div v-if="likes" class="row-middle gap-x-[4.5px]">
             <IconFavorite class="w-3 h-3 title-banner-texts" />
             <div class="text-caption title-banner-texts">{{ likes }}</div>
@@ -84,17 +84,17 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
             <IconVolumeUp class="w-3 h-3" />
             <div class="text-caption">Audio Available</div>
           </div>
-          <div v-if="books" class="row-middle gap-x-[6px] title-banner-texts">
+          <div v-if="books" class="stat-item title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="text-small-text">Books: {{ books }}</div>
+            <div class="text-small-text"><span>Books:</span> {{ books }}</div>
           </div>
-          <div v-if="chapters" class="row-middle gap-x-[6px] title-banner-texts">
+          <div v-if="chapters" class="stat-item title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="text-small-text">Chapters: {{ chapters }}</div>
+            <div class="text-small-text"><span>Chapters:</span> {{ chapters }}</div>
           </div>
-          <div v-if="issues" class="row-middle gap-x-[6px] title-banner-texts">
+          <div v-if="issues" class="stat-item title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="text-small-text">Issues: {{ issues }}</div>
+            <div class="text-small-text"><span>Issues:</span> {{ issues }}</div>
           </div>
           <div v-if="completion" class="badge badge-green">
             <div v-if="genres" class="row-middle gap-x-1">

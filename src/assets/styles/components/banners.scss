@@ -21,5 +21,13 @@
 
   .content {
     @apply absolute inset-0 py-[151px] px-[121px];
+
+    .card-title {
+      @apply text-title;
+    }
+
+    .card-sub-titles {
+      @apply text-sub-heading-2;
+    }
   }
 }
