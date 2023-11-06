@@ -63,6 +63,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               :rating="title.rating"
               :title="`${title.title} ${n}`"
               :url="title.url"
+              @onAuthorClick="() => $router.push('/author')"
               @onBookmark="() => {}"
               @playAudio="() => {}"
               @like="() => {}"

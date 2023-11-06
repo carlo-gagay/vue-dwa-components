@@ -108,7 +108,7 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
         </div>
         <div
           v-if="description"
-          class="mt-[20px] title-banner-texts ellipsable"
+          class="description title-banner-texts ellipsable"
           :class="{ disabled: !descriptionEllipsisEnabled }"
         >
           <input :id="id" type="checkbox" />

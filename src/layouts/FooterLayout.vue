@@ -3,7 +3,7 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
 </script>
 
 <template>
-  <footer class="pt-[31px] px-[40px] pb-[17px] bg-black">
+  <footer class="footer">
     <div class="columnt-start sm:row-start justify-between gap-y-[30px]">
       <div class="column-start gap-y-[30px]">
         <div class="brand column-start gap-y-2">
@@ -15,13 +15,13 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
         </div>
         <div class="text-small-text text-grey-03">ⓒ Dusk Wave Arts 2023. All rights reserved.</div>
       </div>
-      <div class="row-start">
+      <div class="column-start sm:row-start">
         <div class="column-start gap-y-3">
           <div class="text-text-button text-neutral-02 font-semibold">Navigation</div>
           <div class="text-body-2 text-yellow">Homepage</div>
           <div class="text-body-2 text-yellow">About Us</div>
         </div>
-        <div class="column-start gap-y-3 ml-[148px]">
+        <div class="column-start gap-y-3 mt-[30px] sm:mt-0 sm:ml-[148px]">
           <div class="text-text-button text-neutral-02 font-semibold">Contact</div>
           <div class="row-start">
             <IconEnvelop class="w-4 h-4 text-yellow" />
@@ -38,3 +38,9 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
     </div>
   </footer>
 </template>
+
+<style lang="scss">
+.footer {
+  @apply pt-[31px] px-4 sm:px-[40px] pb-[17px] bg-black;
+}
+</style>

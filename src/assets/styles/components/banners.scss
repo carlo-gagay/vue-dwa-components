@@ -9,7 +9,7 @@
 }
 
 .title-banner {
-  @apply w-screen h-[calc(100vh-120px)] relative;
+  @apply w-screen h-[70vh] sm:h-[calc(100vh-120px)] relative;
 
   .title-banner-texts {
     @apply text-black dark:text-white;
@@ -20,14 +20,22 @@
   }
 
   .content {
-    @apply absolute inset-0 py-[151px] px-[121px];
+    @apply absolute inset-0 py-16 px-8 sm:py-[151px] sm:px-[121px] justify-end sm:justify-center;
 
     .card-title {
-      @apply text-title;
+      @apply text-heading-1 sm:text-title;
     }
 
     .card-sub-titles {
-      @apply text-sub-heading-2;
+      @apply text-body-1 sm:text-sub-heading-2;
+    }
+
+    .badges {
+      @apply hidden sm:flex;
+    }
+
+    .description {
+      @apply mt-[20px] hidden sm:inline-block;
     }
   }
 }
