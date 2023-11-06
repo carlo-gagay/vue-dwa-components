@@ -74,7 +74,7 @@ const title = {
   pages: 1100,
   published: '26 January, 2023',
   rating: '4.5',
-  title: 'The Glove',
+  title: 'The Glove and the Boots',
   url: '/',
   views: '105k'
 }

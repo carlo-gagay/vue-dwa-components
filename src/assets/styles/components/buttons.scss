@@ -90,11 +90,11 @@
     @apply absolute top-[calc(50%-20px)];
 
     &.backward {
-      @apply left-4 sm:left-[46px];
+      @apply hidden sm:inline-block left-[46px];
     }
 
     &.forward {
-      @apply right-4 sm:right-[46px];
+      @apply hidden sm:inline-block right-[46px];
     }
   }
 }
