@@ -1,6 +1,6 @@
 <script setup>
 import { defineAsyncComponent, ref } from 'vue'
-const ComicImage = defineAsyncComponent(() => import('@components/comicpage/Image.vue'))
+const ComicImage = defineAsyncComponent(() => import('@components/comicpage/ComicImage.vue'))
 
 defineProps({
   pages: Array
