@@ -1,3 +1,3 @@
-import Modal from './Modal.vue'
+import AppModal from './AppModal.vue'
 
-export { Modal }
+export { AppModal }

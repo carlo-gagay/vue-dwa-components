@@ -7,7 +7,7 @@ import {
   IconThumbUp
 } from '@components/svgs'
 
-const props = defineProps({
+defineProps({
   alt: String,
   books: [Number, String],
   chapters: [Number, String],
@@ -76,13 +76,15 @@ const props = defineProps({
         <div class="title-infos-container">
           <div class="title-infos">
             <div class="row-middle gap-x-[7px]">
-              <div
-                v-if="genres"
-                v-for="(genre, index) in genres"
-                class="badge badge-md badge-green"
-              >
-                {{ genre }}
-              </div>
+              <template v-if="genres">
+                <div
+                  v-for="(genre, index) in genres"
+                  class="badge badge-md badge-green"
+                  :key="index"
+                >
+                  {{ genre }}
+                </div>
+              </template>
               <div v-else class="badge badge-md badge-green-2">No Genre</div>
             </div>
             <div v-if="title" class="title mt-[11px]">

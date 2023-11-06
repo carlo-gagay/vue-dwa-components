@@ -2,7 +2,7 @@
 defineProps({
   data: {
     type: Array,
-    default: []
+    default: () => []
   },
   label: String,
   dropdownTitle: String
@@ -20,15 +20,16 @@ const emits = defineEmits(['onShow', 'onSelect'])
     <template #popper>
       <div class="dropdown-popper min-w-[221px]">
         <div class="text-body-1 font-bold">{{ dropdownTitle }}</div>
-        <div
-          v-if="data.length > 0"
-          v-for="(item, index) in data"
-          :key="index"
-          class="dropdown-item"
-          @click="emits('onSelect')"
-        >
-          <slot :item="item" :index="index"></slot>
-        </div>
+        <template v-if="data.length > 0">
+          <div
+            v-for="(item, index) in data"
+            :key="index"
+            class="dropdown-item"
+            @click="emits('onSelect')"
+          >
+            <slot :item="item" :index="index"></slot>
+          </div>
+        </template>
       </div>
     </template>
   </v-dropdown>

@@ -6,7 +6,7 @@ import AsidePanel from './AsidePanel.vue'
 import CommentsSidePane from './CommentsSidePane.vue'
 import SettingsSidePane from './SettingsSidePane.vue'
 import ReadingPanel from './ReadingPanel.vue'
-import { Modal } from '@components/modals'
+import { AppModal } from '@components/modals'
 import { chapter, pages } from '@stores/sample'
 
 const ChapterCardInline = defineAsyncComponent(() =>
@@ -45,7 +45,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         @onAsideClose="onAsideClose"
         @onModalOpen="onModalOpen"
       />
-      <Modal :shown="modal.shown" @onClose="onModalClose">
+      <AppModal :shown="modal.shown" @onClose="onModalClose">
         <div class="relative p-[27px] w-[1124px]">
           <div class="heading">
             <div class="column-center text-center text-neutral-white">
@@ -89,7 +89,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             </Grid>
           </div>
         </div>
-      </Modal>
+      </AppModal>
     </template>
     <template #slot-content-aside>
       <AsidePanel title="Comments (232)" @onAsideClose="onAsideClose"> </AsidePanel>

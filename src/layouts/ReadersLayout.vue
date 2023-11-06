@@ -3,7 +3,7 @@ import { reactive, ref } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
 import FooterLayout from './FooterLayout.vue'
 import { IconLogo } from '@components/svgs'
-import { Modal } from '@components/modals'
+import { AppModal } from '@components/modals'
 import { FormInput } from '@components/forms'
 
 import { useRouter } from 'vue-router'
@@ -62,7 +62,7 @@ const onFormSubmit = () => {
   <div class="container-flex mt-[60px]">
     <slot></slot>
   </div>
-  <Modal :shown="authModal.shown" @onClose="onAuthModalClose">
+  <AppModal :shown="authModal.shown" @onClose="onAuthModalClose">
     <div class="auth-form">
       <div class="heading">
         <div class="text-heading-1 font-bold">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</div>
@@ -116,7 +116,7 @@ const onFormSubmit = () => {
         </div>
       </div>
     </div>
-  </Modal>
+  </AppModal>
   <FooterLayout />
 </template>
 

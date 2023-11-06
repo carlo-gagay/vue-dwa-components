@@ -3,7 +3,7 @@ import Grid from 'vue-virtual-scroll-grid'
 import { ref, defineAsyncComponent } from 'vue'
 import { ReadersLayout } from '@layouts'
 import { TitleCardBanner } from '@components/cards'
-import { Slider } from '@components/sliders'
+import { ContentSlider } from '@components/sliders'
 import {
   IconArrowBackIos,
   IconArrowForwardIos,
@@ -22,7 +22,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 )
 
 const filtersShown = ref(false)
-const hasInQueue = ref(false)
+const hasInQueue = ref(true)
 const isAuth = ref(false)
 
 const breakpoints = {
@@ -44,7 +44,7 @@ const pageProvider = async (pageNumber, pageSize) => {
 <template>
   <ReadersLayout v-once>
     <div class="container-flex">
-      <Slider :loop="true" v-once>
+      <ContentSlider :loop="true" v-once>
         <template #default="{ navigator }">
           <div v-for="n in 5" class="keen-slider__slide dark" :key="n" v-once>
             <TitleCardBanner
@@ -91,13 +91,13 @@ const pageProvider = async (pageNumber, pageSize) => {
             ></button>
           </div>
         </template>
-      </Slider>
+      </ContentSlider>
     </div>
     <!-- Continue reading -->
     <div class="container-padded-40 pb-0">
       <div class="text-heading-1 font-bold">Continue Reading</div>
       <div v-if="hasInQueue" class="mt-[20px]">
-        <Slider
+        <ContentSlider
           mode="free"
           :breakpoints="breakpoints"
           :drag="true"
@@ -122,13 +122,28 @@ const pageProvider = async (pageNumber, pageSize) => {
               @onPlayAudio="() => console.log('audio playing')"
             >
               <template #slot-card-body>
-                <button>
-                  <i class="icon icon-dots-horizontal-triple icon--s24"></i>
-                </button>
+                <VDropdown class="dropdown" placement="bottom-start">
+                  <button>
+                    <i class="icon icon-dots-horizontal-triple icon--s24"></i>
+                  </button>
+                  <template #popper>
+                    <div class="dropdown-popper">
+                      <div class="dropdown-item">
+                        <div class="text-body-2">Remove from Continue Reading</div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="text-body-2">Add to My Favorites</div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="text-body-2">Add to My Bookshelf</div>
+                      </div>
+                    </div>
+                  </template>
+                </VDropdown>
               </template>
             </TitleCardBasic>
           </div>
-        </Slider>
+        </ContentSlider>
       </div>
       <div v-else class="empty-section v-padding-37-209">
         <div class="inner">

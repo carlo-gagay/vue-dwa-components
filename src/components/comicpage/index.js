@@ -1,3 +1,3 @@
-import ComicImage from './Image.vue'
+import ComicImage from './ComicImage.vue'
 
 export { ComicImage }

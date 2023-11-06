@@ -1,4 +1,3 @@
-import Slide from './Slide.vue'
-import Slider from './Slider.vue'
+import ContentSlider from './ContentSlider.vue'
 
-export { Slide, Slider }
+export { ContentSlider }
