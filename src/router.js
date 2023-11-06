@@ -1,16 +1,16 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
-  { path: '/', component: () => import('./demo/ReadersLayoutDemo.vue') },
-  { path: '/comics', component: () => import('./demo/ReadersDescriptionLayoutDemo.vue') },
-  { path: '/chapters', component: () => import('./demo/ReadersFullContentLayoutDemo.vue') },
+  { path: '/', component: () => import('./demo/ReadersLayoutDemo/Index.vue') },
+  { path: '/comics', component: () => import('./demo/ReadersDescriptionLayoutDemo/Index.vue') },
+  { path: '/chapters', component: () => import('./demo/ReadersFullContentLayoutDemo/Index.vue') },
   {
     path: '/comic-page',
-    component: () => import('./demo/ReadersReadingModeLayoutDemo/ReadersReadingModeLayoutDemo.vue')
+    component: () => import('./demo/ReadersReadingModeLayoutDemo/Index.vue')
   },
-  { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo.vue') },
-  { path: '/search', component: () => import('./demo/ComicsSearchResultDemo.vue') },
-  { path: '/author', component: () => import('./demo/AuthorDetialsDemo.vue') }
+  { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo/Index.vue') },
+  { path: '/search', component: () => import('./demo/ComicsSearchResultDemo/Index.vue') },
+  { path: '/author', component: () => import('./demo/AuthorDetailsDemo/Index.vue') }
 ]
 
 const router = createRouter({
