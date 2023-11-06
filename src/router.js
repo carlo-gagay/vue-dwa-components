@@ -9,13 +9,14 @@ const routes = [
     component: () => import('./demo/ReadersReadingModeLayoutDemo/ReadersReadingModeLayoutDemo.vue')
   },
   { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo.vue') },
-  { path: '/search', component: () => import('./demo/ComicsSearchResultDemo.vue') }
+  { path: '/search', component: () => import('./demo/ComicsSearchResultDemo.vue') },
+  { path: '/author', component: () => import('./demo/AuthorDetialsDemo.vue') }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return { top: 0 }
   }
 })

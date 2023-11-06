@@ -32,7 +32,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       <div class="row-middle mt-[7px]">
         <div class="text-body-2">Suggested results:</div>
         <div class="row-middle gap-x-[14px]">
-          <template v-for="genres of relatedGenres">
+          <template v-for="(genres, index) in relatedGenres" :key="index">
             <div class="chip md chip-default-inline">{{ genres }}</div>
           </template>
         </div>
@@ -46,7 +46,7 @@ const pageProvider = async (pageNumber, pageSize) => {
           v-once
         >
           <template #default="{ item, style, index }">
-            <div :style="style" :key="index" v-once>
+            <div :style="style" :key="index">
               <TitleCardDetailed
                 :alt="`${item.title} ${index}`"
                 :author="item.author"
@@ -60,6 +60,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                 :title="`${item.title} ${index}`"
                 @onClick="() => $router.push('/comics')"
                 @onPlayAudio="() => console.log('audio playing')"
+                v-once
               >
                 <template #slot-card-body>
                   <button @click.self="() => {}">

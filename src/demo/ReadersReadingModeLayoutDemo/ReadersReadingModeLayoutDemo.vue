@@ -67,7 +67,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               :pageProvider="pageProvider"
               v-once
             >
-              <template #probe="{ style, index }">
+              <template #probe="{ style }">
                 <div class="h-[216px]" :style="style"></div>
               </template>
               <template #default="{ item, style, index }">
@@ -82,6 +82,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                     :progress="item.progress"
                     :published="item.published"
                     :title="item.title"
+                    v-once
                   />
                 </div>
               </template>

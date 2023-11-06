@@ -1,5 +1,5 @@
 <script setup>
-import { defineAsyncComponent, reactive, ref } from 'vue'
+import { defineAsyncComponent, ref } from 'vue'
 const ComicImage = defineAsyncComponent(() => import('@components/comicpage/Image.vue'))
 
 defineProps({
@@ -15,12 +15,12 @@ const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
   <div class="reading-pannel">
     <div class="visuals-section" :class="{ infinite: infiniteMode }">
       <div v-if="infiniteMode" class="infinite-scroll-layout-image-container">
-        <template v-for="(page, index) in pages" :key="index" v-once>
+        <template v-for="(page, index) in pages" :key="index">
           <ComicImage class="image-component" :alt="page.title" :image="page.image" />
         </template>
       </div>
       <div v-else class="page-layout-image-container">
-        <template v-for="(page, index) in pages" :key="index" v-once>
+        <template v-for="(page, index) in pages" :key="index">
           <ComicImage class="image-component" :alt="page.title" :image="page.image" />
         </template>
       </div>

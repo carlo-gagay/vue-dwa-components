@@ -27,6 +27,10 @@
     @apply text-neutral-black bg-transparent dark:text-yellow;
   }
 
+  .btn-tertiary {
+    @apply bg-beige text-black;
+  }
+
   .btn-trans-black-inline {
     @apply bg-transparent text-neutral-black dark:text-white;
   }

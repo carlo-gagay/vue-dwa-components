@@ -1,5 +1,17 @@
 import { ref } from 'vue'
 
+const author = {
+  address: 'Manchester, United Kingdom',
+  description:
+    'I create ideas and write for games and comics. I get lost in my imagination and use it to make worlds. My learning disabilities make it challenging... ',
+  followers: '232',
+  image: 'https://picsum.photos/400',
+  likes: '4.5k',
+  name: 'Paul C.A. Graham',
+  readers: '10.5k',
+  website: 'https://autorswebsitwebsit/'
+}
+
 const chapter = {
   chapterNumber: 'Chapter 0',
   comments: '234',
@@ -67,4 +79,4 @@ const title = {
   views: '105k'
 }
 
-export { chapter, filterOptions, genresFromApi, pages, relatedGenres, title }
+export { author, chapter, filterOptions, genresFromApi, pages, relatedGenres, title }

@@ -34,14 +34,11 @@ const pageProvider = async (pageNumber, pageSize) => {
         :showGenresInSubtitle="false"
         :title="title.title"
         :url="title.url"
+        @onAuthorClick="() => $router.push('/author')"
         @onBookmark="() => {}"
         @playAudio="() => {}"
         @like="() => {}"
-        @onStartReading="
-          () => {
-            $router.push('/comic-page')
-          }
-        "
+        @onStartReading="() => $router.push('/comic-page')"
         v-once
       />
     </div>
@@ -60,10 +57,10 @@ const pageProvider = async (pageNumber, pageSize) => {
         :pageProvider="pageProvider"
         v-once
       >
-        <template #probe="{ style, index }">
+        <template #probe="{ style }">
           <div class="w-[255px] h-[395px]" :style="style"></div>
         </template>
-        <template #default="{ item, style, index }">
+        <template #default="{ style, index }">
           <ComicsCard
             v-once
             subtitle="June 9, 2023"

@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   alt: String,
   author: String,
   books: [Number, String],
@@ -95,12 +95,14 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
         </div>
         <div v-if="genres || likes" class="row-end justify-between">
           <div v-if="genres || contentRating" class="row-middle hideable-hidden">
-            <div
-              v-if="genres"
-              v-for="(genre, index) in genres"
-              class="badge badge-md badge-green"
-              v-text="genre"
-            />
+            <template v-if="genres">
+              <div
+                v-for="(genre, index) in genres"
+                class="badge badge-md badge-green"
+                v-text="genre"
+                :key="index"
+              />
+            </template>
             <div v-if="contentRating" class="badge badge-md badge-orange" v-text="contentRating" />
           </div>
           <div class="row-middle">

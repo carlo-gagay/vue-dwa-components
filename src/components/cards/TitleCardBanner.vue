@@ -33,7 +33,7 @@ defineProps({
   url: String
 })
 
-const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading'])
+const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio', 'onStartReading'])
 </script>
 
 <template>
@@ -46,11 +46,17 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
       <div class="block max-w-[430px]">
         <div v-if="title" class="text-title title-banner-texts">{{ title }}</div>
         <div class="row-middle gap-x-4 mt-1">
-          <div v-if="author" class="text-sub-heading-2 title-banner-texts">{{ author }}</div>
+          <button
+            v-if="author"
+            class="text-sub-heading-2 title-banner-texts"
+            @click="emit('onAuthorClick')"
+          >
+            {{ author }}
+          </button>
           <template v-if="showGenresInSubtitle">
             <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
             <div class="text-sub-heading-2 title-banner-texts">
-              <span v-for="(genre, index) in genres" v-once>
+              <span v-for="(genre, index) in genres" :key="index">
                 {{ genre }}
                 <span v-if="index < genres.length - 1">,&#32;</span>
               </span>
@@ -92,7 +98,7 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
           </div>
           <div v-if="completion" class="badge badge-green">
             <div v-if="genres" class="row-middle gap-x-1">
-              <div v-for="(genre, index) in genres" :key="index" v-once>
+              <div v-for="(genre, index) in genres" :key="index">
                 <div class="text-caption">{{ genre }}</div>
               </div>
             </div>
@@ -104,7 +110,6 @@ const emit = defineEmits(['onBookmark', 'onLike', 'onPlayAudio', 'onStartReading
           v-if="description"
           class="mt-[20px] title-banner-texts ellipsable"
           :class="{ disabled: !descriptionEllipsisEnabled }"
-          v-once
         >
           <input :id="id" type="checkbox" />
           <span class="text-body-2 text">{{ description }}</span>

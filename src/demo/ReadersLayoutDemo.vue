@@ -15,9 +15,7 @@ import { AppTab, AppTabItem } from '@components/tabs'
 import { SelectableFilter } from '@features/filters'
 import { filterOptions, title, genresFromApi } from '@stores/sample'
 
-const TitleCardBasic = defineAsyncComponent(() => 
-  import('@components/cards/TitleCardBasic.vue')
-)
+const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/TitleCardBasic.vue'))
 
 const TitleCardDetailed = defineAsyncComponent(() =>
   import('@components/cards/TitleCardDetailed.vue')
@@ -178,7 +176,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       <div class="filter-container w-full px-4 sm:px-10 py-2.5">
         <div class="inner column-start sm:row-middle justify-between gap-y-2">
           <div class="dropdowns column-start sm:row-middle gap-x-[20px] gap-y-2">
-            <template v-for="(option, indx) in filterOptions" v-once>
+            <template v-for="(option, index) in filterOptions" :key="index">
               <SelectableFilter
                 :data="option.data"
                 :dropdownTitle="option.label"
@@ -188,6 +186,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                     option.data = genresFromApi
                   }
                 "
+                v-once
               >
                 <template #default="{ item, index }">
                   <div class="row-middle justify-between w-full" :key="index">
@@ -258,10 +257,9 @@ const pageProvider = async (pageNumber, pageSize) => {
         :pageProvider="pageProvider"
         v-once
       >
-        <template #default="{ item, style, index }" v-once>
+        <template #default="{ item, style, index }">
           <div class="title-card-wrapper" :style="style">
             <TitleCardDetailed
-              v-once
               class="expose-details-on-hover"
               :alt="`${item.title} ${index}`"
               :author="item.author"
@@ -277,6 +275,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               :title="`${item.title} ${index}`"
               @onClick="() => $router.push('/comics')"
               @onPlayAudio="() => console.log('audio playing')"
+              v-once
             />
           </div>
         </template>

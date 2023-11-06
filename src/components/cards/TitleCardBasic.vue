@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   alt: String,
   author: String,
   books: [Number, String],
@@ -12,13 +12,18 @@ const props = defineProps({
   },
   isAudioPlaying: Boolean,
   issues: [Number, String],
+  likes: [Number, String],
   progress: {
     type: Number,
     validator(value) {
       return value >= 0 && value <= 100
     }
   },
-  title: String
+  title: String,
+  titleClasses: {
+    type: String,
+    default: 'title'
+  }
 })
 
 const emits = defineEmits(['onClick', 'onPlayAudio'])
@@ -47,7 +52,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
       <div class="title-card-details-main">
         <div class="title-infos-container">
           <div class="title-infos">
-            <div v-if="title" class="title">
+            <div v-if="title" :class="[titleClasses]">
               {{ title }}
             </div>
             <div v-if="author" class="subtitle">
@@ -73,6 +78,11 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
         </div>
         <div class="slot-card-body">
           <slot name="slot-card-body"></slot>
+          <template v-if="likes">
+            <div class="row-middle">
+              <div class="text-caption">{{ likes }}</div>
+            </div>
+          </template>
         </div>
       </div>
       <div class="title-card-details-sub">

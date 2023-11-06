@@ -1,3 +1,4 @@
+import AuthorCard from './AuthorCard.vue'
 import ChapterCard from './ChapterCard.vue'
 import ChapterCardInline from './ChapterCardInline.vue'
 import ComicsCard from './ComicsCard.vue'
@@ -7,6 +8,7 @@ import TitleCardBasic from './TitleCardBasic.vue'
 import TitleCardDetailed from './TitleCardDetailed.vue'
 
 export {
+  AuthorCard,
   ChapterCard,
   ChapterCardInline,
   ComicsCard,
