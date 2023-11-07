@@ -15,7 +15,7 @@ const emits = defineEmits(['onBack'])
 <template>
   <div class="content-full py-[121px] px-4 sm:px-[185px] dark:bg-[#1A1A1A]">
     <button
-      class="back-button absolute top-[121px] left-[98px] btn btn-trans-black-inline"
+      class="back-button absolute top-[121px] left-[98px] text-neutral-05"
       @click="emits('onBack')"
     >
       <i class="icon icon-cheveron-left icon--s32"></i>

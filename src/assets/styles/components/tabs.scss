@@ -1,49 +1,72 @@
-#app-tab {
-  @apply flex flex-col sm:flex-row items-start sm:items-center gap-y-4;
+@layer components {
+  .tab {
+    @apply p-1 relative;
 
-  .tab-item {
-    @apply row-middle gap-x-1 relative;
+    &.tab-type-1 {
+      @apply text-body-2 text-neutral-02;
 
-    .tab-item-title {
-      @apply text-neutral-02 text-sm capitalize;
-    }
-
-    .badge {
-      @apply rounded-[2px] text-white bg-neutral-03 px-1 text-[10px] leading-[14px] w-fit;
-    }
-
-    &.active {
-      .tab-item-title {
-        @apply text-[24px] leading-[32px] text-neutral-black font-medium;
-
-        &:after {
-          @apply h-[2px] w-full absolute content-[''] bg-neutral-black left-0 bottom-[-4px];
-        }
+      .tab-inner {
+        @apply flex items-center;
       }
 
       .badge {
-        @apply px-[5px] bg-yellow text-neutral-black text-[14px] leading-[20px] font-bold;
-      }
-    }
-  }
-
-  &.lg {
-    .tab-item {
-      @apply p-1;
-
-      .tab-item-title {
-        @apply text-sub-heading-1 transition;
+        @apply ml-1 rounded-[2px] p-1 text-small-text text-beige bg-neutral-03;
       }
 
-      &.active {
-        .tab-item-title {
-          @apply text-heading-1;
+      &.selected {
+        @apply text-[24px] leading-[32px] text-neutral-black font-medium;
+
+        .badge {
+          @apply text-button bg-yellow text-black p-[5px];
+        }
+
+        &:after {
+          width: calc(100% - 8px);
+          @apply h-[3px] absolute content-[''] bg-neutral-black left-1 bottom-[-4px];
+        }
+      }
+
+      &.md {
+        @apply text-sub-heading-1;
+
+        &.selected {
+          @apply text-neutral-black;
+        }
+      }
+
+      &.lg {
+        @apply text-sub-heading-1;
+
+        &.selected {
+          @apply text-heading-1 text-neutral-black;
 
           &:after {
-            @apply h-[4px] w-full absolute content-[''] bg-neutral-black mt-1;
+            @apply h-[4px] w-full absolute content-[''] bg-neutral-black left-0 bottom-[-4px];
           }
         }
       }
     }
+
+    &.tab-type-2 {
+      @apply px-[14px] py-2 rounded-[35px] text-sub-heading-1 text-black border border-neutral-03 text-black bg-beige;
+
+      &.selected {
+        @apply text-black border-black bg-yellow;
+      }
+    }
+
+    &.tab-type-3 {
+      @apply text-sub-heading-2 text-yellow;
+
+      &.selected {
+        &:after {
+          @apply h-[2px] w-full absolute content-[''] bg-yellow left-0 bottom-[-2px];
+        }
+      }
+    }
   }
+}
+
+#app-tab {
+  @apply flex flex-col sm:flex-row items-start sm:items-center gap-y-4;
 }

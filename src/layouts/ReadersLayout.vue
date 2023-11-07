@@ -5,8 +5,8 @@ import FooterLayout from './FooterLayout.vue'
 import { IconLogo } from '@components/svgs'
 import { AppModal } from '@components/modals'
 import { FormInput } from '@components/forms'
-
 import { useRouter } from 'vue-router'
+
 const router = useRouter()
 
 const authModal = reactive({
@@ -47,12 +47,12 @@ const onFormSubmit = () => {
     </template>
     <template #slot-nav-links>
       <div class="row-middle">
-        <button class="btn btn-primary-inline ml-[35px]" role="button">About Us</button>
+        <button class="tab tab-type-3 ml-[35px]" role="button">About Us</button>
       </div>
     </template>
     <template #slot-cta-buttons>
       <div class="row-middle justify-end gap-x-[26px]">
-        <button class="btn btn-primary-inline btn-md" role="button" @click="onSignInClick">
+        <button class="btn btn-secondary btn-md" role="button" @click="onSignInClick">
           Sign In
         </button>
         <button class="btn btn-primary btn-md" role="button" @click="onSignUpClick">Sign Up</button>

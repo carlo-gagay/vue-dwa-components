@@ -15,6 +15,9 @@ const pageProvider = async (pageNumber, pageSize) => {
 
 <template>
   <ReadersDescriptionLayout v-once>
+    <button class="hidden sm:block absolute top-[38px] left-[26px] text-black z-10">
+      <i class="icon icon-cheveron-left icon--s40"></i>
+    </button>
     <div class="container-flex">
       <TitleCardBanner
         id="banner"
@@ -43,10 +46,10 @@ const pageProvider = async (pageNumber, pageSize) => {
       />
     </div>
     <div class="container-flex px-4 sm:px-[121px]">
-      <AppTab size="lg" class="gap-x-[36px]">
-        <AppTabItem title="Issues" :active="true" />
-        <AppTabItem title="Community" />
-        <AppTabItem title="Casts" />
+      <AppTab class="gap-x-[36px]">
+        <AppTabItem size="md" title="Issues" :active="true" />
+        <AppTabItem size="md" title="Community" />
+        <AppTabItem size="md" title="Casts" />
       </AppTab>
     </div>
     <div class="container-flex mt-10 px-4 sm:px-[121px]">

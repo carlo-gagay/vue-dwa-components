@@ -3,7 +3,81 @@
     @apply bg-yellow text-neutral-black;
 
     &:hover {
-      @apply bg-orange text-white;
+      @apply bg-yellow-01 text-beige;
+    }
+
+    &:focus {
+      @apply bg-yellow-02 text-beige;
+    }
+
+    &:disabled {
+      @apply bg-yellow-03 text-yellow;
+    }
+  }
+
+  .btn-secondary {
+    @apply bg-black text-yellow;
+
+    &:hover {
+      @apply bg-transparent text-yellow-02;
+    }
+
+    &:focus {
+      @apply bg-green-01 text-white;
+    }
+
+    &:disabled {
+      @apply bg-neutral-03 text-yellow-04;
+    }
+  }
+
+  .btn-tertiary {
+    @apply bg-beige border border-black text-black;
+
+    &:hover {
+      background: rgba(12, 11, 11, 0.05);
+    }
+
+    &:focus {
+      @apply bg-yellow text-black border border-black;
+    }
+
+    &:disabled {
+      @apply bg-neutral-05 border border-neutral-03 text-neutral-03;
+    }
+  }
+
+  .btn-yellow-text {
+    @apply bg-transparent text-yellow;
+
+    &:hover {
+      @apply text-yellow-02;
+      background: rgba(255, 201, 75, 0.05);
+    }
+
+    &:focus {
+      @apply bg-yellow-04 text-yellow-02;
+    }
+
+    &:disabled {
+      @apply bg-transparent text-yellow-03;
+    }
+  }
+
+  .btn-black-text {
+    @apply bg-transparent text-black;
+
+    &:hover {
+      @apply text-black;
+      background: rgba(12, 11, 11, 0.05);
+    }
+
+    &:focus {
+      @apply bg-yellow text-black;
+    }
+
+    &:disabled {
+      @apply bg-transparent text-neutral-03;
     }
   }
 
@@ -15,32 +89,58 @@
     }
   }
 
-  .btn-secondary {
-    @apply bg-neutral-black text-yellow dark:bg-yellow dark:text-neutral-black;
+  .btn-icon {
+    @apply bg-transparent text-black;
 
     &:hover {
-      @apply bg-white text-orange dark:bg-orange dark:text-white;
+      background: rgba(12, 11, 11, 0.05);
+    }
+
+    &:focus {
+      @apply bg-yellow;
+    }
+
+    &:disabled {
+      @apply bg-neutral-05 text-neutral-03;
     }
   }
 
-  .btn-secondary-inline {
-    @apply text-neutral-black bg-transparent dark:text-yellow;
+  .btn-link {
+    @apply bg-transparent text-link;
+
+    &:hover {
+      @apply text-black;
+      background: rgba(12, 11, 11, 0.05);
+    }
+
+    &:focus {
+      @apply bg-yellow text-black;
+    }
+
+    &:disabled {
+      @apply text-neutral-03;
+    }
   }
 
-  .btn-tertiary {
-    @apply bg-beige text-black;
-  }
+  .btn-text-icon {
+    @apply bg-transparent text-black;
 
-  .btn-trans-black-inline {
-    @apply bg-transparent text-neutral-black dark:text-white;
+    &:hover {
+      @apply text-black;
+      background: rgba(12, 11, 11, 0.05);
+    }
+
+    &:focus {
+      @apply bg-yellow text-black;
+    }
+
+    &:disabled {
+      @apply bg-transparent text-neutral-03;
+    }
   }
 
   .btn-trans-white-inline {
     @apply bg-transparent text-white;
-  }
-
-  .btn-trans-outline {
-    @apply bg-transparent border border-neutral-black text-neutral-black;
   }
 
   .btn-opac {
@@ -50,18 +150,26 @@
 }
 
 .btn {
-  @apply rounded-[5px];
+  @apply rounded-[5px] text-button transition;
 
   &.btn-md {
-    @apply py-2 px-4 text-sm;
+    @apply py-2 px-4;
   }
 
   &.btn-md-equal {
-    @apply p-2 text-sm;
+    @apply p-2;
   }
 
   &.btn-round {
     @apply p-0.5 rounded-full;
+  }
+
+  &.btn-icon {
+    @apply p-2 rounded-full;
+  }
+
+  &.btn-text-icon {
+    @apply flex flex-row items-center gap-x-1;
   }
 
   &.btn-unround {

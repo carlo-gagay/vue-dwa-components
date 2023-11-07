@@ -23,11 +23,11 @@
     @apply absolute inset-0 py-16 px-8 sm:py-[151px] sm:px-[121px] justify-end sm:justify-center;
 
     .card-title {
-      @apply text-heading-1 sm:text-title;
+      @apply text-heading-1 sm:text-title sm:font-normal;
     }
 
     .card-sub-titles {
-      @apply text-body-1 sm:text-sub-heading-2;
+      @apply text-body-1 sm:text-sub-heading-2 sm:font-medium;
     }
 
     .badges {
@@ -37,5 +37,13 @@
     .description {
       @apply mt-[20px];
     }
+  }
+
+  .btn.action-buttons {
+    @apply btn-secondary dark:btn-primary;
+  }
+
+  .icon-only.action-buttons {
+    @apply text-black dark:text-yellow;
   }
 }

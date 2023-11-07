@@ -158,10 +158,10 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <!-- App tab -->
     <div class="container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10">
-      <AppTab size="lg" class="gap-x-4 md:gap-x-[50px]" v-once>
-        <AppTabItem title="All Comics" :active="true" />
-        <AppTabItem title="My Bookshelf (5)" />
-        <AppTabItem title="My Favorites (3)" />
+      <AppTab class="gap-x-4 md:gap-x-[50px]" v-once>
+        <AppTabItem size="lg" title="All Comics" :active="true" />
+        <AppTabItem size="lg" title="My Bookshelf (5)" />
+        <AppTabItem size="lg" title="My Favorites (3)" />
       </AppTab>
       <div class="row-middle justify-end gap-x-[22px]">
         <button @click="() => $router.push('/search')">
@@ -217,7 +217,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             </template>
           </div>
           <div class="">
-            <button class="btn btn-md-equal btn-trans-black-inline" @click="() => {}">
+            <button class="btn btn-md-equal btn-black-text" @click="() => {}">
               Clear All Filters
             </button>
           </div>
