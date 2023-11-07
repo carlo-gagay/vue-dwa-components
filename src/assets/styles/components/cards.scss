@@ -136,11 +136,7 @@
 
 // Card's statistics item
 .statistic-item {
-  @apply flex flex-row gap-x-1 items-center text-neutral-03;
-
-  span {
-    @apply text-[8px] leading-[14px];
-  }
+  @apply text-neutral-03;
 }
 
 // 2.
@@ -176,8 +172,8 @@
     & .statistics {
       @apply mt-3 gap-x-4;
 
-      .texts {
-        @apply text-[11.481px] leading-[16.074px] dark:text-neutral-05;
+      .stat-item span {
+        @apply dark:text-neutral-05;
       }
     }
   }
@@ -208,13 +204,11 @@
     @apply column-start gap-y-3 min-w-fit ml-[61px];
 
     .stat-item {
-      @apply row-middle gap-x-2;
-
       .icon {
         @apply text-neutral-03;
       }
 
-      .text-body-2 {
+      span {
         @apply text-neutral-black;
       }
     }

@@ -84,17 +84,17 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
             <IconVolumeUp class="w-3 h-3" />
             <div class="text-caption">Audio Available</div>
           </div>
-          <div v-if="books" class="stat-item title-banner-texts">
+          <div v-if="books" class="stat-item stat-item-xs title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="text-small-text"><span>Books:</span> {{ books }}</div>
+            <span>Books: {{ books }}</span>
           </div>
-          <div v-if="chapters" class="stat-item title-banner-texts">
+          <div v-if="chapters" class="stat-item stat-item-xs title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="text-small-text"><span>Chapters:</span> {{ chapters }}</div>
+            <span>Chapters: {{ chapters }}</span>
           </div>
-          <div v-if="issues" class="stat-item title-banner-texts">
+          <div v-if="issues" class="stat-item stat-item-xs title-banner-texts">
             <IconBookMenu class="w-3 h-3" />
-            <div class="text-small-text"><span>Issues:</span> {{ issues }}</div>
+            <span>Issues: {{ issues }}</span>
           </div>
           <div v-if="completion" class="badge badge-green">
             <div v-if="genres" class="row-middle gap-x-1">

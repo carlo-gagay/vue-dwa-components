@@ -101,7 +101,7 @@
 
 .keen-slider-nav-container {
   .slide-indicator {
-    @apply row-middle absolute gap-x-[25px] bottom-[33px] inset-x-0 flex justify-center;
+    @apply row-middle absolute gap-x-4 sm:gap-x-[25px] bottom-6 sm:bottom-[33px] inset-x-0 flex justify-center;
 
     .indicator {
       @apply w-4 h-4 bg-beige rounded-full opacity-50;

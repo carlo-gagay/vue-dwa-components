@@ -26,17 +26,17 @@ const emits = defineEmits(['onClick'])
       <div class="text-small-text">{{ subtitle }}</div>
 
       <div class="statistics row-middle">
-        <div v-if="published" class="group row-end">
+        <div v-if="published" class="stat-item stat-item-sm">
           <IconBookMenu class="w-[18px] h-[18px] dark:text-neutral-white" />
-          <div class="texts">{{ published }}</div>
+          <span>{{ published }}</span>
         </div>
-        <div v-if="pages" class="group row-end">
+        <div v-if="pages" class="stat-item stat-item-sm">
           <IconBookMenu class="w-[18px] h-[18px] dark:text-neutral-white" />
-          <div class="texts">{{ pages }}</div>
+          <span>{{ pages }}</span>
         </div>
-        <div v-if="comments" class="group row-end">
+        <div v-if="comments" class="stat-item stat-item-sm">
           <IconBookMenu class="w-[18px] h-[18px] dark:text-neutral-white" />
-          <div class="texts">{{ comments }}</div>
+          <span>{{ comments }}</span>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ import { title } from '@stores/sample'
       >
         <template #slot-card-image>
           <v-dropdown class="dropdown" placement="bottom-start">
-            <button class="btn btn-opac round">
+            <button class="btn btn-opac btn-round">
               <i class="icon icon-dots-horizontal-triple"></i>
             </button>
             <template #popper>

@@ -1,9 +1,45 @@
 @layer components {
   .stat-item {
-    @apply row-middle gap-x-[6px];
+    @apply flex items-center justify-start;
 
-    span {
-      @apply hidden sm:inline-block;
+    &.stat-item-sxs {
+      @apply gap-x-1;
+
+      span {
+        @apply text-[8px] leading-[14px] font-medium;
+      }
+    }
+
+    &.stat-item-xs {
+      @apply gap-x-1.5;
+
+      span {
+        @apply text-small-text font-medium;
+      }
+    }
+
+    &.stat-item-sm {
+      @apply gap-x-[2.3px];
+
+      span {
+        @apply text-[11.481px] leading-[16.074px];
+      }
+    }
+
+    &.stat-item-md {
+      @apply gap-x-1;
+
+      span {
+        @apply text-caption;
+      }
+    }
+
+    &.stat-item-lg {
+      @apply gap-x-1;
+
+      span {
+        @apply text-body-2;
+      }
     }
   }
 }

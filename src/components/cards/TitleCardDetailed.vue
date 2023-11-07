@@ -69,15 +69,15 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
             </div>
           </div>
           <div v-if="books || chapters || issues" class="row-middle statistics">
-            <div v-if="books" class="statistic-item books">
+            <div v-if="books" class="stat-item stat-item-sm statistic-item books">
               <i class="icon icon-news-paper icon--s10"></i>
               <span>Books: {{ books }}</span>
             </div>
-            <div v-if="chapters" class="statistic-item chapters">
+            <div v-if="chapters" class="stat-item stat-item-sm statistic-item chapters">
               <i class="icon icon-news-paper icon--s10"></i>
               <span>Chapers: {{ chapters }}</span>
             </div>
-            <div v-if="issues" class="statistic-item issues">
+            <div v-if="issues" class="stat-item stat-item-sm statistic-item issues">
               <i class="icon icon-news-paper icon--s10"></i>
               <span>Issues: {{ issues }}</span>
             </div>
@@ -106,9 +106,9 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
             <div v-if="contentRating" class="badge badge-md badge-orange" v-text="contentRating" />
           </div>
           <div class="row-middle">
-            <div v-if="likes" class="row-middle gap-x-1">
+            <div v-if="likes" class="stat-item stat-item-md">
               <i class="icon icon-heart icon--s12"></i>
-              <span class="text-xs">
+              <span>
                 {{ likes }}
               </span>
             </div>

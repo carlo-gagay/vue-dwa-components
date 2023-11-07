@@ -50,8 +50,6 @@ const pageProvider = async (pageNumber, pageSize) => {
               <TitleCardDetailed
                 :alt="`${item.title} ${index}`"
                 :author="item.author"
-                :books="item.books"
-                :chapters="item.chapters"
                 :hasAudio="true"
                 :id="`cr${index}`"
                 :image="`https://picsum.photos/19${index}`"

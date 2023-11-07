@@ -98,23 +98,23 @@ defineProps({
       </div>
       <div class="title-card-details-sub">
         <div class="row-middle gap-x-[27px]">
-          <div v-if="views" class="statistic-item">
+          <div v-if="views" class="stat-item stat-item-xs statistic-item">
             <IconVisibility class="icon w-[12px] h-[12px]" />
             <span>{{ views }}</span>
           </div>
-          <div v-if="likes" class="statistic-item">
+          <div v-if="likes" class="stat-item stat-item-xs statistic-item">
             <IconThumbUp class="icon w-[12px] h-[12px]" />
             <span>{{ likes }}</span>
           </div>
-          <div v-if="books" class="statistic-item">
+          <div v-if="books" class="stat-item stat-item-xs statistic-item">
             <IconBookMenu class="icon w-[12px] h-[12px]" />
             <span>{{ books }}</span>
           </div>
-          <div v-if="chapters" class="statistic-item">
+          <div v-if="chapters" class="stat-item stat-item-xs statistic-item">
             <IconBook class="icon w-[12px] h-[12px]" />
             <span>{{ chapters }}</span>
           </div>
-          <div v-if="pages" class="statistic-item">
+          <div v-if="pages" class="stat-item stat-item-xs statistic-item">
             <IconDescription class="icon w-[12px] h-[12px]" />
             <span>{{ pages }}</span>
           </div>

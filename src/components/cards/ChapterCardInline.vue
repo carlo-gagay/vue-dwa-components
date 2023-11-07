@@ -33,17 +33,17 @@ defineProps({
       <div class="body2">{{ description }}</div>
     </div>
     <div class="statistics-container">
-      <div class="stat-item">
+      <div class="stat-item stat-item-lg">
         <i class="icon icon-calendar icon--s16"></i>
-        <div class="text-body-2">{{ published }}</div>
+        <span>{{ published }}</span>
       </div>
-      <div class="stat-item">
+      <div class="stat-item stat-item-lg">
         <i class="icon icon-calendar icon--s16"></i>
-        <div class="text-body-2">{{ pages }}</div>
+        <span>{{ pages }}</span>
       </div>
-      <div class="stat-item">
+      <div class="stat-item stat-item-lg">
         <i class="icon icon-calendar icon--s16"></i>
-        <div class="text-body-2">{{ comments }}</div>
+        <span>{{ comments }}</span>
       </div>
     </div>
   </div>
