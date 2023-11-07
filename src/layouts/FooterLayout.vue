@@ -10,19 +10,19 @@ import { IconEnvelop, IconLocation, IconLogo } from '@components/svgs'
           <IconLogo />
           <div class="brand-name text-yellow">
             <span class="text-body-2">by</span>
-            <span class="text-body-1 font-bold">Dusk Wave Arts</span>
+            <span class="text-body-1">Dusk Wave Arts</span>
           </div>
         </div>
         <div class="text-small-text text-grey-03">ⓒ Dusk Wave Arts 2023. All rights reserved.</div>
       </div>
       <div class="column-start sm:row-start">
         <div class="column-start gap-y-3">
-          <div class="text-text-button text-neutral-02 font-semibold">Navigation</div>
+          <div class="text-button text-neutral-02 font-semibold">Navigation</div>
           <div class="text-body-2 text-yellow">Homepage</div>
           <div class="text-body-2 text-yellow">About Us</div>
         </div>
         <div class="column-start gap-y-3 mt-[30px] sm:mt-0 sm:ml-[148px]">
-          <div class="text-text-button text-neutral-02 font-semibold">Contact</div>
+          <div class="text-button text-neutral-02 font-semibold">Contact</div>
           <div class="row-start">
             <IconEnvelop class="w-4 h-4 text-yellow" />
             <span class="text-caption text-beige max-w-[133px]"> info@duskwavearts.com </span>

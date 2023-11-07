@@ -29,7 +29,7 @@ defineProps({
       </div>
     </div>
     <div class="text-container column-start">
-      <div class="text-sub-heading-1 font-medium">{{ chapterNumber }}: {{ title }}</div>
+      <div class="text-sub-heading-1">{{ chapterNumber }}: {{ title }}</div>
       <div class="body2">{{ description }}</div>
     </div>
     <div class="statistics-container">

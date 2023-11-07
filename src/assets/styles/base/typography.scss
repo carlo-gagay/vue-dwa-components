@@ -4,15 +4,15 @@
   }
 
   .text-heading-1 {
-    @apply text-[40px] leading-[48px];
+    @apply text-[40px] leading-[48px] font-bold;
   }
 
   .text-heading-2 {
-    @apply text-[30px] leading-[40px];
+    @apply text-[30px] leading-[40px] font-bold;
   }
 
   .text-sub-heading-1 {
-    @apply text-[24px] leading-[32px];
+    @apply text-[24px] leading-[32px] font-medium;
   }
 
   .text-sub-heading-2 {
@@ -20,11 +20,19 @@
   }
 
   .text-body-1 {
-    @apply text-sm tracking-[0.28px];
+    @apply text-sm tracking-[0.28px] font-bold;
   }
 
   .text-body-2 {
     @apply text-sm tracking-[0.14px];
+  }
+
+  .text-link {
+    @apply text-sm underline;
+  }
+
+  .text-button {
+    @apply text-sm font-semibold;
   }
 
   .text-caption,
@@ -33,15 +41,7 @@
   }
 
   .text-small-text {
-    @apply text-[10px] leading-[14px];
-  }
-
-  .text-small-text-1 {
-    @apply text-[9px] leading-[14px];
-  }
-
-  .text-text-button {
-    @apply text-sm tracking-[0.56px];
+    @apply text-[10px] leading-[14px] font-medium;
   }
 
   .text-title,
@@ -52,8 +52,7 @@
   .text-body-1,
   .text-body-2,
   .text-paragraph,
-  .text-small-text,
-  .text-text-button {
+  .text-small-text {
     @apply dark:text-neutral-white;
   }
 }

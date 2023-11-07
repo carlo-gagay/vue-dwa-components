@@ -19,7 +19,7 @@ defineProps({
           <img src="/images/placeholder.png" :data-url="image" />
         </figure>
       </div>
-      <div class="text-heading-2 font-bold name">{{ name }}</div>
+      <div class="text-heading-2 name">{{ name }}</div>
       <div class="column-middle addresses">
         <div class="address">
           <div class="text-caption">{{ address }}</div>
@@ -84,7 +84,7 @@ defineProps({
     }
 
     .statistics {
-      @apply row-middle gap-x-[48px] items-center bg-white py-[17px] px-[31px] mt-[31px];
+      @apply flex flex-row gap-x-[48px] items-center bg-white py-[17px] px-[31px] mt-[31px];
       box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
 
       .item {
@@ -95,7 +95,7 @@ defineProps({
     }
 
     .cta {
-      @apply row-middle gap-x-6 mt-8;
+      @apply flex flex-row gap-x-6 mt-8;
     }
   }
 }

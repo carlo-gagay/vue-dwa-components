@@ -65,7 +65,7 @@ const onFormSubmit = () => {
   <AppModal :shown="authModal.shown" @onClose="onAuthModalClose">
     <div class="auth-form">
       <div class="heading">
-        <div class="text-heading-1 font-bold">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</div>
+        <div class="text-heading-1">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</div>
         <button class="close-btn" @click="onAuthModalClose">
           <i class="icon icon-close icon--s40"></i>
         </button>

@@ -19,7 +19,7 @@ const emits = defineEmits(['onShow', 'onSelect'])
     </button>
     <template #popper>
       <div class="dropdown-popper min-w-[221px]">
-        <div class="text-body-1 font-bold">{{ dropdownTitle }}</div>
+        <div class="text-body-1">{{ dropdownTitle }}</div>
         <template v-if="data.length > 0">
           <div
             v-for="(item, index) in data"

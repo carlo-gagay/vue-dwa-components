@@ -25,7 +25,7 @@ const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/Titl
             />
           </div>
           <div class="container-flex">
-            <div class="text-heading-2 font-bold">Comic Series</div>
+            <div class="text-heading-2">Comic Series</div>
             <div class="grid grid-cols-2 gap-6 mt-5">
               <template v-for="n of 9" :key="n">
                 <TitleCardBasic

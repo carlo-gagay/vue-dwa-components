@@ -40,7 +40,7 @@
           @apply flex flex-col;
 
           .title {
-            @apply text-body-1 font-bold;
+            @apply text-body-1;
           }
 
           .subtitle {
@@ -67,7 +67,7 @@
 
 // Title Card Minimal Default Theme
 .title-card.expose-details-on-hover {
-  @apply z-10 w-full bg-white;
+  @apply z-10 w-full bg-transparent;
   @apply transition-all duration-150 ease-in-out;
 
   .title-card-details {
@@ -84,7 +84,7 @@
 
   &:hover {
     // @apply sm:absolute z-20 sm:w-[140%] sm:-ml-[20%] sm:-mt-[10%];
-    @apply z-20 absolute scale-105 lg:scale-125;
+    @apply z-20 absolute scale-105 lg:scale-125 bg-white;
     box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 
     .title-card-image img {
@@ -96,7 +96,7 @@
 
       .title-card-details-main .title-infos {
         .title {
-          @apply text-sub-heading-1 font-medium;
+          @apply text-sub-heading-1;
         }
 
         .subtitle .text {
