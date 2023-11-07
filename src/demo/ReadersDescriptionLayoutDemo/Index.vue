@@ -15,7 +15,7 @@ const pageProvider = async (pageNumber, pageSize) => {
 
 <template>
   <ReadersDescriptionLayout v-once>
-    <button class="hidden sm:block absolute top-[38px] left-[26px] text-black z-10">
+    <button class="comic-description-back-arrow" @click="() => $router.push('/')">
       <i class="icon icon-cheveron-left icon--s40"></i>
     </button>
     <div class="container-flex">
