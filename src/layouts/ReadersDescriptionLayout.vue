@@ -20,7 +20,7 @@ import { IconLogo } from '@components/svgs'
         <button
           class="btn btn-primary-inline btn-md"
           role="button"
-          @click="() => $router.push('/admin')"
+          @click="() => $router.push('/dashboard')"
         >
           Sign In
         </button>

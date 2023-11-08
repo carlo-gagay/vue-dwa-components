@@ -33,9 +33,9 @@ const onSignUpClick = () => {
 
 const onFormSubmit = () => {
   if (isSignIn.value) {
-    router.push('/admin')
+    router.push('/dashboard')
   } else {
-    router.push('/admin')
+    router.push('/dashboard')
   }
 }
 </script>

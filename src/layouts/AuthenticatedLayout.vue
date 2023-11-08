@@ -26,34 +26,42 @@ import { IconAvatar, IconLogo } from '@components/svgs'
     <div class="aside-inner">
       <ul>
         <li>
-          <a href="#" class="aside-nav-link group">
+          <button
+            class="aside-nav-link group"
+            :class="{ active: $route.path == '/dashboard' }"
+            @click="() => $router.push('/dashboard')"
+          >
             <i class="icon icon-dashboard icon--s20" />
             <span class="ml-[18px]">Dashboard</span>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" class="aside-nav-link group" :class="{ active: true }">
+          <button
+            class="aside-nav-link group"
+            :class="{ active: $route.path == '/titles' }"
+            @click="() => $router.push('/titles')"
+          >
             <i class="icon icon-menu-book icon--s20" />
             <span class="ml-[18px]">Comic Titles</span>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" class="aside-nav-link group">
+          <button class="aside-nav-link group">
             <i class="icon icon-groups icon--s20" />
             <span class="ml-[18px]">Community</span>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" class="aside-nav-link group">
+          <button class="aside-nav-link group">
             <i class="icon icon-monetization icon--s20" />
             <span class="ml-[18px]">Subscribers</span>
-          </a>
+          </button>
         </li>
         <li>
-          <a href="#" class="aside-nav-link group">
+          <button class="aside-nav-link group">
             <i class="icon icon-analytics icon--s20" />
             <span class="ml-[18px]">Analytics</span>
-          </a>
+          </button>
         </li>
       </ul>
     </div>

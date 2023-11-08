@@ -8,9 +8,10 @@ const routes = [
     path: '/comic-page',
     component: () => import('./demo/ReadersReadingModeLayoutDemo/Index.vue')
   },
-  { path: '/admin', component: () => import('./demo/AuthenticatedLayoutDemo/Index.vue') },
+  { path: '/titles', component: () => import('./demo/AuthenticatedLayoutDemo/Index.vue') },
   { path: '/search', component: () => import('./demo/ComicsSearchResultDemo/Index.vue') },
-  { path: '/author', component: () => import('./demo/AuthorDetailsDemo/Index.vue') }
+  { path: '/author', component: () => import('./demo/AuthorDetailsDemo/Index.vue') },
+  { path: '/dashboard', component: () => import('./demo/DashboardLayoutDemo/Index.vue') }
 ]
 
 const router = createRouter({
