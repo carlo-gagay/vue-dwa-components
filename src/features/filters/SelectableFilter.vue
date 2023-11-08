@@ -15,7 +15,7 @@ const emits = defineEmits(['onShow', 'onSelect'])
   <v-dropdown class="dropdown" placement="bottom-start">
     <button class="select-button primary w-full sm:w-fit" @click="emits('onShow')">
       <span>{{ label }}</span>
-      <i class="icon icon-cheveron-down icon--s24"></i>
+      <i class="icon icon-keyboard-arrow-down icon--s24"></i>
     </button>
     <template #popper>
       <div class="dropdown-popper min-w-[221px]">

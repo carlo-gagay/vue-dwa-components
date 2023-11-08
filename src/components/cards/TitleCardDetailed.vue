@@ -61,7 +61,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
                 {{ author }}
               </div>
               <template v-if="published">
-                <i class="icon icon-minus-solid icon--s4 hideable-hidden"></i>
+                <i class="icon icon-ellipse-33 icon--s4 hideable-hidden"></i>
                 <div class="text date hideable-hidden">
                   {{ published }}
                 </div>
@@ -70,15 +70,15 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
           </div>
           <div v-if="books || chapters || issues" class="row-middle statistics">
             <div v-if="books" class="stat-item stat-item-sm statistic-item books">
-              <i class="icon icon-news-paper icon--s10"></i>
+              <i class="icon icon-menu-book icon--s10"></i>
               <span>Books: {{ books }}</span>
             </div>
             <div v-if="chapters" class="stat-item stat-item-sm statistic-item chapters">
-              <i class="icon icon-news-paper icon--s10"></i>
+              <i class="icon icon-auto-stories icon--s10"></i>
               <span>Chapers: {{ chapters }}</span>
             </div>
             <div v-if="issues" class="stat-item stat-item-sm statistic-item issues">
-              <i class="icon icon-news-paper icon--s10"></i>
+              <i class="icon icon-description icon--s10"></i>
               <span>Issues: {{ issues }}</span>
             </div>
           </div>
@@ -107,7 +107,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
           </div>
           <div class="row-middle">
             <div v-if="likes" class="stat-item stat-item-md">
-              <i class="icon icon-heart icon--s12"></i>
+              <i class="icon icon-favorite icon--s12"></i>
               <span>
                 {{ likes }}
               </span>

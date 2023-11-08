@@ -4,11 +4,6 @@ import { ref, defineAsyncComponent } from 'vue'
 import { ReadersLayout } from '@layouts'
 import { TitleCardBanner } from '@components/cards'
 import { ContentSlider } from '@components/sliders'
-import {
-  IconSearch,
-  IconTune,
-  IconQueue
-} from '@components/svgs'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { SelectableFilter } from '@features/filters'
 import { filterOptions, title, genresFromApi } from '@stores/sample'
@@ -123,17 +118,20 @@ const pageProvider = async (pageNumber, pageSize) => {
               <template #slot-card-body>
                 <VDropdown class="dropdown" placement="bottom-start">
                   <button>
-                    <i class="icon icon-dots-horizontal-triple icon--s24"></i>
+                    <i class="icon icon-more-vert icon--s24"></i>
                   </button>
                   <template #popper>
                     <div class="dropdown-popper">
                       <div class="dropdown-item">
+                        <i class="icon icon-remove-circle-outline icon--s20"></i>
                         <div class="text-body-2">Remove from Continue Reading</div>
                       </div>
                       <div class="dropdown-item">
+                        <i class="icon icon-favorite-border icon--s20"></i>
                         <div class="text-body-2">Add to My Favorites</div>
                       </div>
                       <div class="dropdown-item">
+                        <i class="icon icon-bookmark-border icon--s20"></i>
                         <div class="text-body-2">Add to My Bookshelf</div>
                       </div>
                     </div>
@@ -163,20 +161,20 @@ const pageProvider = async (pageNumber, pageSize) => {
       </AppTab>
       <div class="row-middle justify-end gap-x-[22px]">
         <button @click="() => $router.push('/search')">
-          <IconSearch class="w-[30px] h-[30px]" />
+          <i class="icon icon-search icon--s30"></i>
         </button>
         <button @click="() => (filtersShown = !filtersShown)">
-          <IconTune class="w-[30px] h-[30px]" />
+          <i class="icon icon-tune icon--s30"></i>
         </button>
         <v-dropdown class="dropdown" placement="bottom-end">
           <button>
-            <IconQueue class="w-[30px] h-[30px]" />
+            <i class="icon icon-sort icon--s30"></i>
           </button>
           <template #popper>
             <div class="dropdown-popper min-w-[166px]">
               <div class="dropdown-item">
                 <div class="row-middle justify-start">
-                  <i class="icon icon-minus-solid icon--s16"></i>
+                  <i class="icon icon-radio-button-checked icon--s16"></i>
                   A to Z
                 </div>
               </div>
@@ -205,7 +203,14 @@ const pageProvider = async (pageNumber, pageSize) => {
                 <template #default="{ item, index }">
                   <div class="row-middle justify-between w-full" :key="index">
                     <div class="row-middle gap-x-3">
-                      <i class="icon icon-box icon--s14"></i>
+                      <i
+                        v-if="option.type == 'checkbox'"
+                        class="icon icon-check-box-outline-blank icon--s14"
+                      ></i>
+                      <i
+                        v-if="option.type == 'radio'"
+                        class="icon icon-radio-button-unchecked icon--s14"
+                      ></i>
                       <span class="text-body-2">{{ item }}</span>
                     </div>
                     <span class="text-body-2">123</span>
