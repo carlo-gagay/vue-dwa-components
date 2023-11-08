@@ -1,34 +1,26 @@
 .form-group {
-  @apply relative w-full;
+  @apply relative flex flex-col gap-y-1;
 
-  .label {
-    @apply text-caption text-neutral-01;
+  label.form-label {
+    @apply text-caption text-beige text-neutral-01;
 
-    .required {
-      @apply text-error-red;
+    &.required {
+      &::after {
+        @apply content-['*'] text-error-red ml-1;
+      }
     }
   }
 
-  .form-input {
-    @apply mt-1;
-  }
-}
-
-.form-input {
-  @apply relative;
-
-  input {
-    @apply py-2 px-2.5 rounded-[5px] text-body-2 bg-transparent w-full outline-0;
+  .form-control {
+    @apply bg-beige py-2 px-2.5 rounded-[5px] text-neutral-01 text-body-2 focus:outline-0;
     box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
   }
 
-  .icon {
-    @apply absolute right-[10px] top-[calc(50%-10px)];
-  }
-}
+  .eye-span {
+    @apply absolute right-4 bottom-[9px] text-neutral-02;
 
-.form-input {
-  &.form-input-w-436 {
-    @apply min-w-[436px];
+    .icon {
+      @apply transition;
+    }
   }
 }

@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('./icons.eot?96469a22c564a45d73942daa982d5910#iefix') format('embedded-opentype'),
-    url('./icons.woff2?96469a22c564a45d73942daa982d5910') format('woff2'),
-    url('./icons.woff?96469a22c564a45d73942daa982d5910') format('woff');
+    url('./icons.eot?ba883bad76a93b1cb571f9810e216d73#iefix') format('embedded-opentype'),
+    url('./icons.woff2?ba883bad76a93b1cb571f9810e216d73') format('woff2'),
+    url('./icons.woff?ba883bad76a93b1cb571f9810e216d73') format('woff');
 }
 
 i[class^='icon-']:before,
@@ -39,57 +39,63 @@ i[class*=' icon-']:before {
 .icon-check-box:before {
   content: '\f107';
 }
-.icon-description:before {
+.icon-close:before {
   content: '\f108';
 }
-.icon-ellipse-33:before {
+.icon-description:before {
   content: '\f109';
 }
-.icon-favorite-border:before {
+.icon-ellipse-33:before {
   content: '\f10a';
 }
-.icon-favorite:before {
+.icon-favorite-border:before {
   content: '\f10b';
 }
-.icon-keyboard-arrow-down:before {
+.icon-favorite:before {
   content: '\f10c';
 }
-.icon-keyboard-arrow-up:before {
+.icon-keyboard-arrow-down:before {
   content: '\f10d';
 }
-.icon-mail:before {
+.icon-keyboard-arrow-up:before {
   content: '\f10e';
 }
-.icon-menu-book:before {
+.icon-mail:before {
   content: '\f10f';
 }
-.icon-more-vert:before {
+.icon-menu-book:before {
   content: '\f110';
 }
-.icon-pin-drop:before {
+.icon-more-vert:before {
   content: '\f111';
 }
-.icon-radio-button-checked:before {
+.icon-pin-drop:before {
   content: '\f112';
 }
-.icon-radio-button-unchecked:before {
+.icon-radio-button-checked:before {
   content: '\f113';
 }
-.icon-remove-circle-outline:before {
+.icon-radio-button-unchecked:before {
   content: '\f114';
 }
-.icon-search:before {
+.icon-remove-circle-outline:before {
   content: '\f115';
 }
-.icon-sort:before {
+.icon-remove-red-eye:before {
   content: '\f116';
 }
-.icon-star:before {
+.icon-search:before {
   content: '\f117';
 }
-.icon-tune:before {
+.icon-sort:before {
   content: '\f118';
 }
-.icon-volume-up:before {
+.icon-star:before {
   content: '\f119';
+}
+.icon-tune:before {
+  content: '\f11a';
+}
+.icon-volume-up:before {
+  content: '\f11b';
 }

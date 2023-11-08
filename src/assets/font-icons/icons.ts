@@ -6,6 +6,7 @@ export type IconsId =
   | 'bookmark'
   | 'check-box-outline-blank'
   | 'check-box'
+  | 'close'
   | 'description'
   | 'ellipse-33'
   | 'favorite-border'
@@ -19,6 +20,7 @@ export type IconsId =
   | 'radio-button-checked'
   | 'radio-button-unchecked'
   | 'remove-circle-outline'
+  | 'remove-red-eye'
   | 'search'
   | 'sort'
   | 'star'
@@ -33,6 +35,7 @@ export type IconsKey =
   | 'Bookmark'
   | 'CheckBoxOutlineBlank'
   | 'CheckBox'
+  | 'Close'
   | 'Description'
   | 'Ellipse_33'
   | 'FavoriteBorder'
@@ -46,6 +49,7 @@ export type IconsKey =
   | 'RadioButtonChecked'
   | 'RadioButtonUnchecked'
   | 'RemoveCircleOutline'
+  | 'RemoveRedEye'
   | 'Search'
   | 'Sort'
   | 'Star'
@@ -60,6 +64,7 @@ export enum Icons {
   Bookmark = 'bookmark',
   CheckBoxOutlineBlank = 'check-box-outline-blank',
   CheckBox = 'check-box',
+  Close = 'close',
   Description = 'description',
   Ellipse_33 = 'ellipse-33',
   FavoriteBorder = 'favorite-border',
@@ -73,6 +78,7 @@ export enum Icons {
   RadioButtonChecked = 'radio-button-checked',
   RadioButtonUnchecked = 'radio-button-unchecked',
   RemoveCircleOutline = 'remove-circle-outline',
+  RemoveRedEye = 'remove-red-eye',
   Search = 'search',
   Sort = 'sort',
   Star = 'star',
@@ -88,22 +94,24 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Bookmark]: '61701',
   [Icons.CheckBoxOutlineBlank]: '61702',
   [Icons.CheckBox]: '61703',
-  [Icons.Description]: '61704',
-  [Icons.Ellipse_33]: '61705',
-  [Icons.FavoriteBorder]: '61706',
-  [Icons.Favorite]: '61707',
-  [Icons.KeyboardArrowDown]: '61708',
-  [Icons.KeyboardArrowUp]: '61709',
-  [Icons.Mail]: '61710',
-  [Icons.MenuBook]: '61711',
-  [Icons.MoreVert]: '61712',
-  [Icons.PinDrop]: '61713',
-  [Icons.RadioButtonChecked]: '61714',
-  [Icons.RadioButtonUnchecked]: '61715',
-  [Icons.RemoveCircleOutline]: '61716',
-  [Icons.Search]: '61717',
-  [Icons.Sort]: '61718',
-  [Icons.Star]: '61719',
-  [Icons.Tune]: '61720',
-  [Icons.VolumeUp]: '61721'
+  [Icons.Close]: '61704',
+  [Icons.Description]: '61705',
+  [Icons.Ellipse_33]: '61706',
+  [Icons.FavoriteBorder]: '61707',
+  [Icons.Favorite]: '61708',
+  [Icons.KeyboardArrowDown]: '61709',
+  [Icons.KeyboardArrowUp]: '61710',
+  [Icons.Mail]: '61711',
+  [Icons.MenuBook]: '61712',
+  [Icons.MoreVert]: '61713',
+  [Icons.PinDrop]: '61714',
+  [Icons.RadioButtonChecked]: '61715',
+  [Icons.RadioButtonUnchecked]: '61716',
+  [Icons.RemoveCircleOutline]: '61717',
+  [Icons.RemoveRedEye]: '61718',
+  [Icons.Search]: '61719',
+  [Icons.Sort]: '61720',
+  [Icons.Star]: '61721',
+  [Icons.Tune]: '61722',
+  [Icons.VolumeUp]: '61723'
 }

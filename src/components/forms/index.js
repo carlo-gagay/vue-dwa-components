@@ -1,3 +1,5 @@
 import FormInput from './FormInput.vue'
+import InputPasswordField from './InputPasswordField.vue'
+import InputTextField from './InputTextField.vue'
 
-export { FormInput }
+export { FormInput, InputPasswordField, InputTextField }
