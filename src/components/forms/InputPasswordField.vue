@@ -32,10 +32,10 @@ const show = ref(false)
       :placeholder="placeholder"
       :type="show ? 'text' : 'password'"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.evalue)"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
     <span class="eye-span" role="button" @click="() => (show = !show)">
-      <i class="icon icon-remove-red-eye icon--s20"></i>
+      <i class="icon icon--s20" :class="show ? 'icon-visibility' : 'icon-visibility-off'"></i>
     </span>
   </div>
 </template>

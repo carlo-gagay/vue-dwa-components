@@ -6,6 +6,8 @@ defineProps({
   pages: Array
 })
 
+const isAudioPlaying = ref(false)
+
 const infiniteMode = ref(false)
 
 const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
@@ -26,8 +28,12 @@ const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
       </div>
     </div>
 
-    <button class="bg-music-toggle btn-bgm">
-      <i class="icon icon-music-off icon--s20"></i>
+    <button
+      class="bg-music-toggle btn-bgm"
+      :class="{ active: isAudioPlaying }"
+      @click="() => (isAudioPlaying = !isAudioPlaying)"
+    >
+      <i class="icon icon--s20" :class="isAudioPlaying ? 'icon-music-note' : 'icon-music-off'"></i>
     </button>
 
     <div class="reading-mode-toggle" @click="() => (infiniteMode = !infiniteMode)">

@@ -16,7 +16,7 @@ const pageProvider = async (pageNumber, pageSize) => {
 <template>
   <ReadersDescriptionLayout v-once>
     <button class="comic-description-back-arrow" @click="() => $router.push('/')">
-      <i class="icon icon-cheveron-left icon--s40"></i>
+      <i class="icon icon-arrow-back-ios icon--s40"></i>
     </button>
     <div class="container-flex">
       <TitleCardBanner

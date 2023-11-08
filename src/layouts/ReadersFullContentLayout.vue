@@ -18,7 +18,7 @@ const emits = defineEmits(['onBack'])
       class="back-button absolute top-[121px] left-[98px] text-neutral-05"
       @click="emits('onBack')"
     >
-      <i class="icon icon-cheveron-left icon--s32"></i>
+      <i class="icon icon-arrow-back-ios icon--s32"></i>
     </button>
     <slot></slot>
   </div>
