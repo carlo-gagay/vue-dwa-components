@@ -1,6 +1,4 @@
 <script setup>
-import { IconFavorite, IconBook, IconBookMenu, IconStar, IconVolumeUp } from '@components/svgs'
-
 defineProps({
   alt: String,
   author: String,
@@ -54,7 +52,7 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
             {{ author }}
           </button>
           <template v-if="showGenresInSubtitle">
-            <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
+            <i class="icon icon-ellipse-33 icon--s8 hideable-hidden title-banner-texts"></i>
             <div class="card-sub-titles title-banner-texts">
               <span v-for="(genre, index) in genres" :key="index">
                 {{ genre }}
@@ -63,37 +61,37 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
             </div>
           </template>
           <template v-if="brandName">
-            <i class="icon icon-minus-solid icon--s4 hideable-hidden title-banner-texts"></i>
+            <i class="icon icon-ellipse-33 icon--s8 hideable-hidden title-banner-texts"></i>
             <span class="card-sub-titles title-banner-texts">{{ brandName }}</span>
             <i class="icon icon-information-outline icon--s20 text-neutral-02"></i>
           </template>
         </div>
         <div class="badges row-middle gap-x-[10px] mt-4">
           <div v-if="likes" class="row-middle gap-x-[4.5px]">
-            <IconFavorite class="w-3 h-3 title-banner-texts" />
+            <i class="icon icon-favorite icon--s12 title-banner-texts" />
             <div class="text-caption title-banner-texts">{{ likes }}</div>
           </div>
           <div v-if="rating" class="badge badge-rate">
-            <IconStar class="w-3 h-3" />
+            <i class="icon icon-star icon--s12" />
             <div class="text-caption">{{ rating }}</div>
           </div>
           <div v-if="contentRating" class="badge badge-content-rating">
             <div class="text-caption">{{ contentRating }}</div>
           </div>
           <div v-if="hasAudio" class="badge badge-audio" @click="emit('onPlayAudio')">
-            <IconVolumeUp class="w-3 h-3" />
+            <i class="icon icon-volume-up icon--s12" />
             <div class="text-caption">Audio Available</div>
           </div>
           <div v-if="books" class="stat-item stat-item-xs title-banner-texts">
-            <IconBookMenu class="w-3 h-3" />
+            <i class="icon icon-menu-book icon--s12" />
             <span>Books: {{ books }}</span>
           </div>
           <div v-if="chapters" class="stat-item stat-item-xs title-banner-texts">
-            <IconBookMenu class="w-3 h-3" />
+            <i class="icon icon-auto-stories icon--s12" />
             <span>Chapters: {{ chapters }}</span>
           </div>
           <div v-if="issues" class="stat-item stat-item-xs title-banner-texts">
-            <IconBookMenu class="w-3 h-3" />
+            <i class="icon icon-description icon--s12" />
             <span>Issues: {{ issues }}</span>
           </div>
           <div v-if="completion" class="badge badge-genre">
@@ -126,10 +124,10 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
             Start Reading
           </button>
           <button class="icon-only action-buttons" role="button" @click="emit('onLike')">
-            <IconFavorite class="w-10 h-10" />
+            <i class="icon icon-favorite-border icon--s40"></i>
           </button>
           <button class="icon-only action-buttons" role="button" @click="emit('onBookmark')">
-            <IconBook class="w-10 h-10" />
+            <i class="icon icon-bookmark-border icon--s40"></i>
           </button>
         </div>
       </div>

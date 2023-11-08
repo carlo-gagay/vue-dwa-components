@@ -5,8 +5,6 @@ import { ReadersLayout } from '@layouts'
 import { TitleCardBanner } from '@components/cards'
 import { ContentSlider } from '@components/sliders'
 import {
-  IconArrowBackIos,
-  IconArrowForwardIos,
   IconSearch,
   IconTune,
   IconQueue
@@ -74,10 +72,10 @@ const pageProvider = async (pageNumber, pageSize) => {
               "
             />
             <button class="nav-btn backward btn btn-primary-inline" @click="navigator.prev">
-              <IconArrowBackIos class="w-[40px] h-[40px]" />
+              <i class="icon icon-arrow-back-ios icon--s40"></i>
             </button>
             <button class="nav-btn forward btn btn-primary-inline" @click="navigator.next">
-              <IconArrowForwardIos class="w-[40px] h-[40px]" />
+              <i class="icon icon-arrow-forward-ios icon--s40"></i>
             </button>
           </div>
         </template>
