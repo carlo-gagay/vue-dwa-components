@@ -30,6 +30,10 @@ import { title } from '@stores/sample'
 </template>
 
 <style lang="scss">
+body {
+  @apply bg-[#F5F1E5] #{!important};
+}
+
 .analytics-sum-section {
   & .section-header {
     @apply text-[12px] leading-[20px] uppercase mb-[11px] text-neutral-02;
