@@ -76,6 +76,6 @@ import { IconAvatar, IconLogo } from '@components/svgs'
 
 <style lang="scss">
 body {
-  @apply bg-[#F5F1E5];
+  @apply bg-[#F5F1E5] #{!important};
 }
 </style>

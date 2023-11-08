@@ -225,3 +225,15 @@
   @apply rounded-[10px] bg-neutral-white;
   box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 }
+
+.total-quantity-card {
+  @apply flex items-center justify-between py-[11px] pl-[26px] pr-[13px] rounded-[10px] bg-white border border-neutral-04;
+
+  .contents {
+    @apply flex flex-col gap-y-0.5;
+  }
+
+  .cta {
+    @apply text-neutral-02;
+  }
+}

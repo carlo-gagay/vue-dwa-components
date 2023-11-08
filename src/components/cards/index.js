@@ -6,6 +6,7 @@ import TitleCardAuth from './TitleCardAuth.vue'
 import TitleCardBanner from './TitleCardBanner.vue'
 import TitleCardBasic from './TitleCardBasic.vue'
 import TitleCardDetailed from './TitleCardDetailed.vue'
+import TotalQuantityCard from './TotalQuantityCard.vue'
 
 export {
   AuthorCard,
@@ -15,5 +16,6 @@ export {
   TitleCardAuth,
   TitleCardBanner,
   TitleCardBasic,
-  TitleCardDetailed
+  TitleCardDetailed,
+  TotalQuantityCard
 }
