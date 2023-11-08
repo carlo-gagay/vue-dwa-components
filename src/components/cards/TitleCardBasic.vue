@@ -34,7 +34,7 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
     <div class="title-card-image" @click.stop="emits('onClick')">
       <button
         v-if="hasAudio"
-        class="slot-card-image badge badge-white"
+        class="slot-card-image badge badge-audio"
         @click.stop="emits('onPlayAudio')"
         role="button"
       >

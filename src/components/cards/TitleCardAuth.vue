@@ -77,15 +77,11 @@ defineProps({
           <div class="title-infos">
             <div class="row-middle gap-x-[7px]">
               <template v-if="genres">
-                <div
-                  v-for="(genre, index) in genres"
-                  class="badge badge-md badge-green"
-                  :key="index"
-                >
+                <div v-for="(genre, index) in genres" class="badge badge-genre" :key="index">
                   {{ genre }}
                 </div>
               </template>
-              <div v-else class="badge badge-md badge-green-2">No Genre</div>
+              <div v-else class="badge badge-genre disabled">No Genre</div>
             </div>
             <div v-if="title" class="title mt-[11px]">
               {{ title }}
