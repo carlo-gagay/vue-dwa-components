@@ -121,7 +121,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                     <i class="icon icon-more-vert icon--s24"></i>
                   </button>
                   <template #popper>
-                    <div class="dropdown-popper">
+                    <div class="dropdown-popper type-1">
                       <div class="dropdown-item">
                         <i class="icon icon-remove-circle-outline icon--s20"></i>
                         <div class="text-body-2">Remove from Continue Reading</div>

@@ -26,7 +26,7 @@ const emits = defineEmits(['onAsideClose', 'onAsideShow', 'onModalOpen'])
       </div>
     </div>
 
-    <button class="bg-music-toggle">
+    <button class="bg-music-toggle btn-bgm">
       <i class="icon icon-music-off icon--s20"></i>
     </button>
 

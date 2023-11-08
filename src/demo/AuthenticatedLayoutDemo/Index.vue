@@ -40,26 +40,26 @@ import { title } from '@stores/sample'
               <i class="icon icon-more-vert icon--s20"></i>
             </button>
             <template #popper>
-              <div class="dropdown-popper">
+              <div class="dropdown-popper type-2">
                 <div class="dropdown-item">
-                  <i class="icon icon-visibility icon--s16 text-neutral-03"></i>
+                  <i class="icon icon-visibility icon--s16"></i>
                   View Preview
                 </div>
                 <div class="dropdown-item">
-                  <i class="icon icon-edit icon--s16 text-neutral-03"></i>
+                  <i class="icon icon-edit icon--s16"></i>
                   Edit Title
                 </div>
                 <div class="dropdown-item">
-                  <i class="icon icon-settings icon--s16 text-neutral-03"></i>
+                  <i class="icon icon-settings icon--s16"></i>
                   Manage Episodes
                 </div>
                 <div class="divider"></div>
                 <div class="dropdown-item">
-                  <i class="icon icon-block icon--s16 text-neutral-03"></i>
+                  <i class="icon icon-block icon--s16"></i>
                   Unpublish
                 </div>
                 <div class="dropdown-item">
-                  <i class="icon icon-delete icon--s16 text-neutral-03"></i>
+                  <i class="icon icon-delete icon--s16"></i>
                   Archive
                 </div>
               </div>

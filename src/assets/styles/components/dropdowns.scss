@@ -31,8 +31,28 @@
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0px 0px 14px 2px rgba(12, 11, 11, 0.16);
 
+  &.type-1 .dropdown-item {
+    @apply text-black;
+
+    .icon {
+      @apply text-neutral-02;
+    }
+  }
+
+  &.type-2 .dropdown-item {
+    @apply text-black;
+
+    .icon {
+      @apply text-neutral-03;
+    }
+  }
+
   .dropdown-item {
-    @apply row-middle gap-x-[13px] text-[16px];
+    @apply row-middle gap-x-[13px] text-[16px] cursor-pointer;
+
+    &.disabled {
+      @apply cursor-auto;
+    }
   }
 
   .divider {
