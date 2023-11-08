@@ -12,7 +12,7 @@ const emits = defineEmits(['onBackClick'])
   <HeaderLayout>
     <div class="header-inner centered">
       <button class="absolute left-[42px]" @click="emits('onBackClick')">
-        <i class="icon icon-arrow-left icon--s24 text-neutral-white"></i>
+        <i class="icon icon-arrow-back icon--s24 text-white"></i>
       </button>
       <div class="content">
         <slot name="slot-content-header"></slot>

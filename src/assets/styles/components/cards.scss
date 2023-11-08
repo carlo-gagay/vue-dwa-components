@@ -172,8 +172,14 @@
     & .statistics {
       @apply mt-3 gap-x-4;
 
-      .stat-item span {
-        @apply dark:text-neutral-05;
+      .stat-item {
+        .icon {
+          @apply dark:text-neutral-white;
+        }
+
+        span {
+          @apply dark:text-neutral-05;
+        }
       }
     }
   }

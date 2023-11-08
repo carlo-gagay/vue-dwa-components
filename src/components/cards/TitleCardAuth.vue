@@ -1,12 +1,4 @@
 <script setup>
-import {
-  IconVisibility,
-  IconBook,
-  IconDescription,
-  IconBookMenu,
-  IconThumbUp
-} from '@components/svgs'
-
 defineProps({
   alt: String,
   books: [Number, String],
@@ -95,23 +87,23 @@ defineProps({
       <div class="title-card-details-sub">
         <div class="row-middle gap-x-[27px]">
           <div v-if="views" class="stat-item stat-item-xs statistic-item">
-            <IconVisibility class="icon w-[12px] h-[12px]" />
+            <i class="icon icon-visibility icon--s12"></i>
             <span>{{ views }}</span>
           </div>
           <div v-if="likes" class="stat-item stat-item-xs statistic-item">
-            <IconThumbUp class="icon w-[12px] h-[12px]" />
+            <i class="icon icon-thumb-up icon--s12"></i>
             <span>{{ likes }}</span>
           </div>
           <div v-if="books" class="stat-item stat-item-xs statistic-item">
-            <IconBookMenu class="icon w-[12px] h-[12px]" />
+            <i class="icon icon-menu-book icon--s12"></i>
             <span>{{ books }}</span>
           </div>
           <div v-if="chapters" class="stat-item stat-item-xs statistic-item">
-            <IconBook class="icon w-[12px] h-[12px]" />
+            <i class="icon icon-book icon--s12"></i>
             <span>{{ chapters }}</span>
           </div>
           <div v-if="pages" class="stat-item stat-item-xs statistic-item">
-            <IconDescription class="icon w-[12px] h-[12px]" />
+            <i class="icon icon-description icon--s12"></i>
             <span>{{ pages }}</span>
           </div>
         </div>

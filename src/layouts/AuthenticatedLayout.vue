@@ -20,7 +20,7 @@ import {
     <template #slot-cta-buttons>
       <div class="flex justify-end gap-x-[26px] items-center">
         <button role="button">
-          <IconBell class="icon text-yellow" />
+          <i class="icon icon-notifications icon--s24 text-yellow"></i>
         </button>
         <button role="button">
           <IconAvatar class="icon text-yellow" />
@@ -34,20 +34,32 @@ import {
       <ul>
         <li>
           <a href="#" class="aside-nav-link group">
-            <IconDashboard class="icon" />
+            <i class="icon icon-dashboard icon--s20" />
             <span class="ml-[18px]">Dashboard</span>
           </a>
         </li>
         <li>
           <a href="#" class="aside-nav-link group" :class="{ active: true }">
-            <IconBookMenu class="icon" />
+            <i class="icon icon-menu-book icon--s20" />
             <span class="ml-[18px]">Comic Titles</span>
           </a>
         </li>
         <li>
           <a href="#" class="aside-nav-link group">
-            <IconCommunity class="icon" />
+            <i class="icon icon-groups icon--s20" />
             <span class="ml-[18px]">Community</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="aside-nav-link group">
+            <i class="icon icon-monetization icon--s20" />
+            <span class="ml-[18px]">Subscribers</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="aside-nav-link group">
+            <i class="icon icon-analytics icon--s20" />
+            <span class="ml-[18px]">Analytics</span>
           </a>
         </li>
       </ul>

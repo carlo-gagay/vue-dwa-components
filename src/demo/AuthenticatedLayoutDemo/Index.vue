@@ -2,7 +2,6 @@
 import { AuthenticatedLayout } from '@layouts'
 import { TitleCardAuth } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
-import { IconDelete, IconEdit, IconSettings, IconVisibility } from '@components/svgs'
 import { title } from '@stores/sample'
 </script>
 
@@ -38,25 +37,29 @@ import { title } from '@stores/sample'
         <template #slot-card-image>
           <v-dropdown class="dropdown" placement="bottom-start">
             <button class="btn btn-opac btn-round">
-              <i class="icon icon-dots-horizontal-triple"></i>
+              <i class="icon icon-more-vert icon--s20"></i>
             </button>
             <template #popper>
               <div class="dropdown-popper">
                 <div class="dropdown-item">
-                  <IconVisibility class="text-neutral-03 w-4 h-4" />
+                  <i class="icon icon-visibility icon--s16 text-neutral-03"></i>
                   View Preview
                 </div>
                 <div class="dropdown-item">
-                  <IconEdit class="text-neutral-03 w-4 h-4" />
+                  <i class="icon icon-edit icon--s16 text-neutral-03"></i>
                   Edit Title
                 </div>
                 <div class="dropdown-item">
-                  <IconSettings class="text-neutral-03 w-4 h-4" />
+                  <i class="icon icon-settings icon--s16 text-neutral-03"></i>
                   Manage Episodes
                 </div>
                 <div class="divider"></div>
                 <div class="dropdown-item">
-                  <IconDelete class="text-neutral-03 w-4 h-4" />
+                  <i class="icon icon-block icon--s16 text-neutral-03"></i>
+                  Unpublish
+                </div>
+                <div class="dropdown-item">
+                  <i class="icon icon-delete icon--s16 text-neutral-03"></i>
                   Archive
                 </div>
               </div>

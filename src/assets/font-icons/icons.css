@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('./icons.eot?ba883bad76a93b1cb571f9810e216d73#iefix') format('embedded-opentype'),
-    url('./icons.woff2?ba883bad76a93b1cb571f9810e216d73') format('woff2'),
-    url('./icons.woff?ba883bad76a93b1cb571f9810e216d73') format('woff');
+    url('./icons.eot?a7138b4d90893d6a6202fbe0e5fe3ebe#iefix') format('embedded-opentype'),
+    url('./icons.woff2?a7138b4d90893d6a6202fbe0e5fe3ebe') format('woff2'),
+    url('./icons.woff?a7138b4d90893d6a6202fbe0e5fe3ebe') format('woff');
 }
 
 i[class^='icon-']:before,
@@ -18,84 +18,162 @@ i[class*=' icon-']:before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-back-ios:before {
+.icon-all-inclusive:before {
   content: '\f101';
 }
-.icon-arrow-forward-ios:before {
+.icon-analytics:before {
   content: '\f102';
 }
-.icon-auto-stories:before {
+.icon-arrow-back-ios:before {
   content: '\f103';
 }
-.icon-bookmark-border:before {
+.icon-arrow-back:before {
   content: '\f104';
 }
-.icon-bookmark:before {
+.icon-arrow-forward-ios:before {
   content: '\f105';
 }
-.icon-check-box-outline-blank:before {
+.icon-arrow-forward:before {
   content: '\f106';
 }
-.icon-check-box:before {
+.icon-auto-stories:before {
   content: '\f107';
 }
-.icon-close:before {
+.icon-block:before {
   content: '\f108';
 }
-.icon-description:before {
+.icon-book:before {
   content: '\f109';
 }
-.icon-ellipse-33:before {
+.icon-bookmark-border:before {
   content: '\f10a';
 }
-.icon-favorite-border:before {
+.icon-bookmark:before {
   content: '\f10b';
 }
-.icon-favorite:before {
+.icon-calendar-today:before {
   content: '\f10c';
 }
-.icon-keyboard-arrow-down:before {
+.icon-check-box-outline-blank:before {
   content: '\f10d';
 }
-.icon-keyboard-arrow-up:before {
+.icon-check-box:before {
   content: '\f10e';
 }
-.icon-mail:before {
+.icon-chevron-double-left:before {
   content: '\f10f';
 }
-.icon-menu-book:before {
+.icon-chevron-double-right:before {
   content: '\f110';
 }
-.icon-more-vert:before {
+.icon-close:before {
   content: '\f111';
 }
-.icon-pin-drop:before {
+.icon-dashboard:before {
   content: '\f112';
 }
-.icon-radio-button-checked:before {
+.icon-delete:before {
   content: '\f113';
 }
-.icon-radio-button-unchecked:before {
+.icon-description:before {
   content: '\f114';
 }
-.icon-remove-circle-outline:before {
+.icon-edit:before {
   content: '\f115';
 }
-.icon-remove-red-eye:before {
+.icon-ellipse-33:before {
   content: '\f116';
 }
-.icon-search:before {
+.icon-favorite-border:before {
   content: '\f117';
 }
-.icon-sort:before {
+.icon-favorite:before {
   content: '\f118';
 }
-.icon-star:before {
+.icon-groups:before {
   content: '\f119';
 }
-.icon-tune:before {
+.icon-insert-comment:before {
   content: '\f11a';
 }
-.icon-volume-up:before {
+.icon-keyboard-arrow-down:before {
   content: '\f11b';
+}
+.icon-keyboard-arrow-up:before {
+  content: '\f11c';
+}
+.icon-mail:before {
+  content: '\f11d';
+}
+.icon-menu-book:before {
+  content: '\f11e';
+}
+.icon-menu:before {
+  content: '\f11f';
+}
+.icon-monetization:before {
+  content: '\f120';
+}
+.icon-more-vert:before {
+  content: '\f121';
+}
+.icon-music-note:before {
+  content: '\f122';
+}
+.icon-music-off:before {
+  content: '\f123';
+}
+.icon-notifications:before {
+  content: '\f124';
+}
+.icon-pin-drop:before {
+  content: '\f125';
+}
+.icon-play-circle-filled:before {
+  content: '\f126';
+}
+.icon-radio-button-checked:before {
+  content: '\f127';
+}
+.icon-radio-button-unchecked:before {
+  content: '\f128';
+}
+.icon-remove-circle-outline:before {
+  content: '\f129';
+}
+.icon-remove-red-eye:before {
+  content: '\f12a';
+}
+.icon-search-plus:before {
+  content: '\f12b';
+}
+.icon-search:before {
+  content: '\f12c';
+}
+.icon-settings:before {
+  content: '\f12d';
+}
+.icon-sort:before {
+  content: '\f12e';
+}
+.icon-star:before {
+  content: '\f12f';
+}
+.icon-textsms:before {
+  content: '\f130';
+}
+.icon-thumb-up:before {
+  content: '\f131';
+}
+.icon-tune:before {
+  content: '\f132';
+}
+.icon-visibility-off:before {
+  content: '\f133';
+}
+.icon-visibility:before {
+  content: '\f134';
+}
+.icon-volume-up:before {
+  content: '\f135';
 }

@@ -1,6 +1,4 @@
 <script setup>
-import { IconBookMenu } from '@components/svgs'
-
 defineProps({
   alt: String,
   comments: [Number, String],
@@ -27,15 +25,15 @@ const emits = defineEmits(['onClick'])
 
       <div class="statistics row-middle">
         <div v-if="published" class="stat-item stat-item-sm">
-          <IconBookMenu class="w-[18px] h-[18px] dark:text-neutral-white" />
+          <i class="icon icon-calendar-today icon--s18" />
           <span>{{ published }}</span>
         </div>
         <div v-if="pages" class="stat-item stat-item-sm">
-          <IconBookMenu class="w-[18px] h-[18px] dark:text-neutral-white" />
+          <i class="icon icon-menu-book icon--s18" />
           <span>{{ pages }}</span>
         </div>
         <div v-if="comments" class="stat-item stat-item-sm">
-          <IconBookMenu class="w-[18px] h-[18px] dark:text-neutral-white" />
+          <i class="icon icon-insert-comment icon--s18" />
           <span>{{ comments }}</span>
         </div>
       </div>
