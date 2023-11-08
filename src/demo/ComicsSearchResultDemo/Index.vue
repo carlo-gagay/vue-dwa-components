@@ -2,7 +2,6 @@
 import Grid from 'vue-virtual-scroll-grid'
 import { ReadersDescriptionLayout } from '@layouts'
 import { TitleCardDetailed } from '@components/cards'
-import { IconSearch, IconTune, IconQueue } from '@components/svgs'
 import { relatedGenres, title } from '@stores/sample'
 
 const pageProvider = async (pageNumber, pageSize) => {
@@ -19,13 +18,13 @@ const pageProvider = async (pageNumber, pageSize) => {
         <div class="text-title">Search Results</div>
         <div class="row-middle gap-x-[30px] py-[2px]">
           <div class="form">
-            <IconSearch class="w-[30px] h-[30px]" />
+            <i class="icon icon-search icon--s30"></i>
           </div>
           <button>
-            <IconTune class="w-[30px] h-[30px]" />
+            <i class="icon icon-tune icon--s30"></i>
           </button>
           <button>
-            <IconQueue class="w-[30px] h-[30px]" />
+            <i class="icon icon-sort icon--s30"></i>
           </button>
         </div>
       </div>
