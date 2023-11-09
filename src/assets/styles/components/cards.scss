@@ -169,11 +169,11 @@
   .chapter-card-info {
     @apply px-[9px] py-[5px];
 
-    & .text-sub-heading-1 {
+    & .info-title {
       @apply text-[16.074px] leading-[22.963px] font-semibold text-neutral-05;
     }
 
-    & .text-small-text {
+    & .info-subtitle {
       @apply text-[13.778px] leading-[18.37px] text-neutral-05;
     }
 
