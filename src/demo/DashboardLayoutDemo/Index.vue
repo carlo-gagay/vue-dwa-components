@@ -30,9 +30,3 @@ import { title } from '@stores/sample'
     </div>
   </AuthenticatedLayout>
 </template>
-
-<style lang="scss">
-body {
-  @apply bg-[#F5F1E5] #{!important};
-}
-</style>

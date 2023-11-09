@@ -78,9 +78,3 @@ const pageProvider = async (pageNumber, pageSize) => {
     <div class="h-[62px]"></div>
   </ReadersDescriptionLayout>
 </template>
-
-<style>
-body {
-  @apply bg-white;
-}
-</style>

@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref, onMounted, onUnmounted } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
 import FooterLayout from './FooterLayout.vue'
 import { AppModal } from '@components/modals'
@@ -37,6 +37,9 @@ const onFormSubmit = () => {
     router.push('/dashboard')
   }
 }
+
+onMounted(() => document.querySelector('body').classList.add('readersLayout'))
+onUnmounted(() => document.querySelector('body').classList.remove('readersLayout'))
 </script>
 
 <template>
@@ -161,9 +164,3 @@ const onFormSubmit = () => {
   </AppModal>
   <FooterLayout />
 </template>
-
-<style lang="scss">
-body {
-  @apply bg-beige overflow-x-hidden;
-}
-</style>

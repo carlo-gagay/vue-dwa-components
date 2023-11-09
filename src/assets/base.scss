@@ -7,8 +7,20 @@
     @apply text-neutral-900;
     font-family: 'Roboto', sans-serif;
   }
+}
 
-  body {
-    @apply bg-white dark:bg-[#1A1A1A];
-  }
+body {
+  @apply bg-white dark:bg-[#1A1A1A];
+}
+
+body.authenticatedLayout {
+  background-color: #f5f1e5;
+}
+
+body.readersDescriptionLayout {
+  background-color: #fff;
+}
+
+body.readersLayout {
+  background-color: #fffcf3;
 }

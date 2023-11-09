@@ -43,24 +43,24 @@ import { title } from '@stores/sample'
               <div class="dropdown-popper type-2">
                 <div class="dropdown-item">
                   <i class="icon icon-visibility icon--s16"></i>
-                  View Preview
+                  <div class="text-body-2">View Preview</div>
                 </div>
                 <div class="dropdown-item">
                   <i class="icon icon-edit icon--s16"></i>
-                  Edit Title
+                  <div class="text-body-2">Edit Title</div>
                 </div>
                 <div class="dropdown-item">
                   <i class="icon icon-settings icon--s16"></i>
-                  Manage Episodes
+                  <div class="text-body-2">Manage Episodes</div>
                 </div>
                 <div class="divider"></div>
                 <div class="dropdown-item">
                   <i class="icon icon-block icon--s16"></i>
-                  Unpublish
+                  <div class="text-body-2">Unpublish</div>
                 </div>
                 <div class="dropdown-item">
                   <i class="icon icon-delete icon--s16"></i>
-                  Archive
+                  <div class="text-body-2">Archive</div>
                 </div>
               </div>
             </template>
@@ -70,9 +70,3 @@ import { title } from '@stores/sample'
     </div>
   </AuthenticatedLayout>
 </template>
-
-<style lang="scss">
-body {
-  @apply bg-[#F5F1E5] #{!important};
-}
-</style>

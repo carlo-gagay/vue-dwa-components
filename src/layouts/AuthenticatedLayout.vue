@@ -1,6 +1,10 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
 import { IconAvatar, IconLogo } from '@components/svgs'
+
+onMounted(() => document.querySelector('body').classList.add('authenticatedLayout'))
+onUnmounted(() => document.querySelector('body').classList.remove('authenticatedLayout'))
 </script>
 
 <template>

@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
 
 defineProps({
@@ -6,6 +7,9 @@ defineProps({
 })
 
 const emits = defineEmits(['onBackClick'])
+
+onMounted(() => document.querySelector('body').classList.add('readersReadingModeLayout'))
+onUnmounted(() => document.querySelector('body').classList.remove('readersReadingModeLayout'))
 </script>
 
 <template>
