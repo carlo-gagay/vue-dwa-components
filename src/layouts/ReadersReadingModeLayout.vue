@@ -14,7 +14,7 @@ const emits = defineEmits(['onBackClick'])
       <button class="absolute left-[42px]" @click="emits('onBackClick')">
         <i class="icon icon-arrow-back icon--s24 text-white"></i>
       </button>
-      <div class="content">
+      <div class="centered-single-content">
         <slot name="slot-content-header"></slot>
       </div>
     </div>
