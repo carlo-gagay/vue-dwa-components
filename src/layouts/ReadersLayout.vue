@@ -2,7 +2,6 @@
 import { reactive, ref } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
 import FooterLayout from './FooterLayout.vue'
-import { IconLogo } from '@components/svgs'
 import { AppModal } from '@components/modals'
 import { InputPasswordField, InputTextField } from '@components/forms'
 import { useRouter } from 'vue-router'
@@ -41,12 +40,7 @@ const onFormSubmit = () => {
 </script>
 
 <template>
-  <HeaderLayout>
-    <template #slot-brand>
-      <button role="button" @click="() => $router.push('/')">
-        <IconLogo />
-      </button>
-    </template>
+  <HeaderLayout @onLogoClick="() => $router.push('/')">
     <template #slot-nav-links>
       <div class="row-middle">
         <button class="tab tab-type-3" role="button">About Us</button>

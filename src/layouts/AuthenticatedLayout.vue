@@ -4,7 +4,7 @@ import { IconAvatar, IconLogo } from '@components/svgs'
 </script>
 
 <template>
-  <HeaderLayout>
+  <HeaderLayout navAlignment="end" @onLogoClick="() => $router.push('/')">
     <template #slot-brand>
       <button role="button" @click="() => $router.push('/')">
         <IconLogo />

@@ -13,23 +13,33 @@
     }
 
     .main-nav-wrap {
-      @apply hidden sm:block sm:flex justify-between items-center sm:ml-[35px] w-full mt-4 sm:mt-0;
+      @apply hidden sm:flex sm:items-center sm:ml-[35px] w-full mt-4 sm:mt-0;
 
       &.show {
-        @apply block #{!important};
+        @apply flex flex-col sm:flex-row justify-start #{!important};
       }
-    }
 
-    @media (min-width: 640px) {
-      .main-nav-wrap.show {
-        display: none !important;
+      &.between {
+        @apply justify-between #{!important};
+      }
+
+      &.end {
+        @apply justify-end #{!important};
+      }
+
+      &.center {
+        @apply justify-center #{!important};
+      }
+
+      &.start {
+        @apply justify-start #{!important};
       }
     }
   }
 }
 
 .header-cta {
-  @apply flex items-center flex-col sm:flex-row sm:justify-end gap-x-[26px] gap-y-2 mt-4 sm:mt-0;
+  @apply flex items-center flex-col sm:flex-row sm:justify-end gap-x-[26px] gap-y-2 mt-4 sm:mt-0 w-full sm:w-fit;
 
   .btn {
     @apply w-full sm:w-fit;

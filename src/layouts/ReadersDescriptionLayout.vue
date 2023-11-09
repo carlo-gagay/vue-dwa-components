@@ -1,15 +1,9 @@
 <script setup>
 import HeaderLayout from './HeaderLayout.vue'
-import { IconLogo } from '@components/svgs'
 </script>
 
 <template>
-  <HeaderLayout>
-    <template #slot-brand>
-      <button role="button" @click="() => $router.push('/')">
-        <IconLogo />
-      </button>
-    </template>
+  <HeaderLayout @onLogoClick="() => $router.push('/')">
     <template #slot-nav-links>
       <div class="row-middle">
         <button class="tab tab-type-3" role="button">About Us</button>
