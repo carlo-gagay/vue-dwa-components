@@ -28,7 +28,7 @@ const pageProvider = async (pageNumber, pageSize) => {
           </button>
         </div>
       </div>
-      <div class="row-middle mt-[7px]">
+      <div class="row-middle mt-[7px] gap-x-[14px]">
         <div class="text-body-2">Suggested results:</div>
         <div class="row-middle gap-x-[14px]">
           <template v-for="(genres, index) in relatedGenres" :key="index">

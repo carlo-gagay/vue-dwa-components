@@ -1,14 +1,14 @@
 @layer components {
   .row-middle {
-    @apply flex flex-row items-center gap-x-[11px];
+    @apply flex flex-row items-center;
   }
 
   .row-end {
-    @apply flex flex-row items-end gap-x-[11px];
+    @apply flex flex-row items-end;
   }
 
   .row-start {
-    @apply flex flex-row items-start gap-x-[11px];
+    @apply flex flex-row items-start;
   }
 
   .column-middle {

@@ -173,10 +173,8 @@ const pageProvider = async (pageNumber, pageSize) => {
           <template #popper>
             <div class="dropdown-popper min-w-[166px]">
               <div class="dropdown-item">
-                <div class="row-middle justify-start">
-                  <i class="icon icon-radio-button-checked icon--s16"></i>
-                  A to Z
-                </div>
+                <i class="icon icon-radio-button-checked icon--s16"></i>
+                <div class="text-body-1">A to Z</div>
               </div>
             </div>
           </template>

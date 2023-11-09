@@ -23,11 +23,11 @@ import { IconLogo } from '@components/svgs'
         </div>
         <div class="column-start gap-y-3 mt-[30px] sm:mt-0 sm:ml-[148px]">
           <div class="text-button text-neutral-02 font-semibold">Contact</div>
-          <div class="row-start">
+          <div class="row-start gap-x-3">
             <i class="icon icon-mail icon--s16 text-yellow"></i>
             <span class="text-caption text-beige max-w-[133px]"> info@duskwavearts.com </span>
           </div>
-          <div class="row-start">
+          <div class="row-start gap-x-3">
             <i class="icon icon-pin-drop icon--s16 text-yellow"></i>
             <span class="text-caption text-beige max-w-[133px]">
               10877 Wilshire Blvd, Los Angeles, CA 90024 United States

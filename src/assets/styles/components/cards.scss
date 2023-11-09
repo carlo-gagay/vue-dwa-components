@@ -51,6 +51,10 @@
             }
           }
         }
+
+        .statistics {
+          @apply gap-x-5;
+        }
       }
     }
 
@@ -59,6 +63,10 @@
 
       .description {
         @apply text-xs;
+      }
+
+      .genres-list {
+        @apply gap-x-[11px];
       }
     }
   }
