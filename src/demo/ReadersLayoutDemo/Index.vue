@@ -93,11 +93,11 @@ const pageProvider = async (pageNumber, pageSize) => {
       <div v-if="hasInQueue" class="mt-[20px]">
         <ContentSlider
           mode="free"
+          sliderClasses="banner-slider-responsive"
           :breakpoints="breakpoints"
           :drag="true"
           :per-view="1"
           :spacing="20"
-          :style="{ overflow: 'visible' }"
           v-once
         >
           <div v-for="n in 9" :key="n" class="keen-slider__slide" v-once>

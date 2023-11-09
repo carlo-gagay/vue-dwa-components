@@ -12,19 +12,25 @@ import { IconLogo } from '@components/svgs'
     </template>
     <template #slot-nav-links>
       <div class="row-middle">
-        <button class="btn btn-primary-inline ml-[35px]" role="button">About Us</button>
+        <button class="tab tab-type-3" role="button">About Us</button>
       </div>
     </template>
     <template #slot-cta-buttons>
-      <div class="row-middle justify-end gap-x-[26px]">
+      <div class="header-cta">
         <button
-          class="btn btn-primary-inline btn-md"
+          class="btn btn-secondary btn-md"
           role="button"
           @click="() => $router.push('/dashboard')"
         >
           Sign In
         </button>
-        <button class="btn btn-primary btn-md" role="button">Sign Up</button>
+        <button
+          class="btn btn-primary btn-md"
+          role="button"
+          @click="() => $router.push('/dashboard')"
+        >
+          Sign Up
+        </button>
       </div>
     </template>
   </HeaderLayout>

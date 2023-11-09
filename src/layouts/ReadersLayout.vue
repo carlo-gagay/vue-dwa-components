@@ -49,11 +49,11 @@ const onFormSubmit = () => {
     </template>
     <template #slot-nav-links>
       <div class="row-middle">
-        <button class="tab tab-type-3 ml-[35px]" role="button">About Us</button>
+        <button class="tab tab-type-3" role="button">About Us</button>
       </div>
     </template>
     <template #slot-cta-buttons>
-      <div class="row-middle justify-end gap-x-[26px]">
+      <div class="header-cta">
         <button class="btn btn-secondary btn-md" role="button" @click="onSignInClick">
           Sign In
         </button>

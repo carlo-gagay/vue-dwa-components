@@ -11,7 +11,6 @@ const props = defineProps({
     }
   },
   breakpoints: Object,
-  class: String,
   drag: {
     type: Boolean,
     default: false
@@ -33,11 +32,12 @@ const props = defineProps({
     default: 1
   },
   range: Object,
+  sliderClasses: String,
   spacing: {
     type: Number,
     default: 0
   },
-  style: Object
+  sliderStyles: Object
 })
 
 const [container, slider] = useKeenSlider({
@@ -75,7 +75,7 @@ const updateTracker = (instance) => {
 
 <template>
   <div class="keen-slider-container">
-    <div ref="container" class="keen-slider" :class="props.class" :style="props.style">
+    <div ref="container" class="keen-slider" :class="sliderClasses" :style="sliderStyles">
       <slot :animation-style="animationStyle" :navigator="navigator" />
     </div>
     <div class="keen-slider-nav-container">
