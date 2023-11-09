@@ -237,3 +237,23 @@
     @apply text-neutral-02;
   }
 }
+
+.analytics-card-simple {
+  @apply pt-[14px] pl-[14px] pr-[17px] pb-[16px] bg-neutral-white rounded-[10px];
+
+  .card-header-wrap {
+    @apply flex flex-row items-center justify-between;
+
+    .card-header {
+      @apply text-[12px] leading-[20px] uppercase text-neutral-02;
+    }
+
+    .cta {
+      @apply text-neutral-02;
+    }
+  }
+
+  .card-contents {
+    @apply flex justify-center items-center;
+  }
+}

@@ -1,3 +1,13 @@
 .comic-description-back-arrow {
   @apply hidden sm:block absolute top-[38px] left-[26px] text-black z-10;
 }
+
+.analytics-sum-section {
+  & .section-header {
+    @apply text-[12px] leading-[20px] uppercase mb-[11px] text-neutral-02;
+  }
+
+  .summary-section {
+    @apply flex flex-col gap-y-5;
+  }
+}

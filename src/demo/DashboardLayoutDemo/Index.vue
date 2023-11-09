@@ -1,6 +1,6 @@
 <script setup>
 import { AuthenticatedLayout } from '@layouts'
-import { TotalQuantityCard } from '@components/cards'
+import { DemographicsCard, TopComicsCard, TotalQuantityCard } from '@components/cards'
 import { AppTab, AppTabItem } from '@components/tabs'
 import { title } from '@stores/sample'
 </script>
@@ -16,7 +16,7 @@ import { title } from '@stores/sample'
       </div>
     </div>
     <div class="container-flex">
-      <div class="flex flex-row gap-x-8">
+      <div class="flex flex-col lg:flex-row gap-x-8 gap-y-5 overflow-x-auto">
         <div class="analytics-sum-section">
           <div class="section-header">ANALYTICS</div>
           <div class="summary-section">
@@ -24,6 +24,8 @@ import { title } from '@stores/sample'
             <TotalQuantityCard header="Total Subscribers" value="0" width="306" />
           </div>
         </div>
+        <DemographicsCard width="296" />
+        <TopComicsCard width="296" />
       </div>
     </div>
   </AuthenticatedLayout>
@@ -32,15 +34,5 @@ import { title } from '@stores/sample'
 <style lang="scss">
 body {
   @apply bg-[#F5F1E5] #{!important};
-}
-
-.analytics-sum-section {
-  & .section-header {
-    @apply text-[12px] leading-[20px] uppercase mb-[11px] text-neutral-02;
-  }
-
-  .summary-section {
-    @apply flex flex-col gap-y-5;
-  }
 }
 </style>
