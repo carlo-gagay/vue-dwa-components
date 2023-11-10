@@ -249,11 +249,47 @@
 .analytics-card-simple {
   @apply pt-[14px] pl-[14px] pr-[17px] pb-[16px] bg-neutral-white rounded-[10px];
 
+  &.demographic {
+    @apply sm:min-w-[296px];
+  }
+
+  &.top-comics {
+    @apply sm:min-w-[405px];
+
+    .no-content-base {
+      @apply mt-[26px] mb-[28px];
+    }
+  }
+
+  &.my-comics {
+    @apply lg:min-w-[633px];
+
+    .no-content-base {
+      @apply mt-[70px] mb-[107px];
+    }
+  }
+
+  &.finish-setup {
+    @apply pt-[14px] px-[14px] pb-[30px] rounded-[10px] bg-yellow-03 border border-yellow;
+
+    .card-header {
+      @apply text-[12px] leading-[20px] uppercase text-neutral-01 font-medium;
+    }
+
+    .progress-bars {
+      @apply mt-6 mb-[30px];
+    }
+
+    .setup-items {
+      @apply flex flex-col gap-y-[18px];
+    }
+  }
+
   .card-header-wrap {
     @apply flex flex-row items-center justify-between;
 
     .card-header {
-      @apply text-[12px] leading-[20px] uppercase text-neutral-02;
+      @apply text-[12px] leading-[20px] uppercase text-neutral-02 font-medium;
     }
 
     .cta {

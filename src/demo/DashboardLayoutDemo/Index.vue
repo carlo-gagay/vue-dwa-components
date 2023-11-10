@@ -1,7 +1,12 @@
 <script setup>
 import { AuthenticatedLayout } from '@layouts'
-import { DemographicsCard, TopComicsCard, TotalQuantityCard } from '@components/cards'
-import { AppTab, AppTabItem } from '@components/tabs'
+import {
+  DemographicsCard,
+  FinishSetupCard,
+  MyComicsCard,
+  TopComicsCard,
+  TotalQuantityCard
+} from '@components/cards'
 import { title } from '@stores/sample'
 </script>
 
@@ -24,8 +29,14 @@ import { title } from '@stores/sample'
             <TotalQuantityCard header="Total Subscribers" value="0" width="306" />
           </div>
         </div>
-        <DemographicsCard width="296" />
-        <TopComicsCard width="296" />
+        <DemographicsCard header="DEMOGRAPHIC" />
+        <TopComicsCard class="grow" header="TOP COMICS" />
+      </div>
+    </div>
+    <div class="container-flex mt-[31px]">
+      <div class="flex flex-col lg:flex-row gap-x-[30px] gap-y-5">
+        <MyComicsCard header="MY COMICS" />
+        <FinishSetupCard class="grow" header="FINISH SET UP" />
       </div>
     </div>
   </AuthenticatedLayout>

@@ -3,21 +3,17 @@ import AnalyticsCardBase from './base/AnalyticsCardBase.vue'
 import NoContentBase from './base/NoContentBase.vue'
 
 defineProps({
-  header: String,
-  width: [Number, String]
+  header: String
 })
 </script>
 
 <template>
-  <AnalyticsCardBase wrapperClasses="top-comics" :header="header" :width="width">
+  <AnalyticsCardBase wrapperClasses="my-comics" :header="header">
     <template #slot-expand>
       <button class="cta">
         <i class="icon icon-arrow-forward icon--s24"></i>
       </button>
     </template>
-    <NoContentBase
-      title="No Comics Yet"
-      subtitle="Create a new title and publish it to see the top titles, books, chapters, and issues."
-    />
+    <NoContentBase title="No Published Comics Yet" />
   </AnalyticsCardBase>
 </template>

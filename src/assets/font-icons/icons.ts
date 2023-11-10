@@ -13,6 +13,7 @@ export type IconsId =
   | 'calendar-today'
   | 'check-box-outline-blank'
   | 'check-box'
+  | 'check-circle'
   | 'chevron-double-left'
   | 'chevron-double-right'
   | 'close'
@@ -26,6 +27,8 @@ export type IconsId =
   | 'groups'
   | 'insert-comment'
   | 'keyboard-arrow-down'
+  | 'keyboard-arrow-left'
+  | 'keyboard-arrow-right'
   | 'keyboard-arrow-up'
   | 'mail'
   | 'menu-book'
@@ -68,6 +71,7 @@ export type IconsKey =
   | 'CalendarToday'
   | 'CheckBoxOutlineBlank'
   | 'CheckBox'
+  | 'CheckCircle'
   | 'ChevronDoubleLeft'
   | 'ChevronDoubleRight'
   | 'Close'
@@ -81,6 +85,8 @@ export type IconsKey =
   | 'Groups'
   | 'InsertComment'
   | 'KeyboardArrowDown'
+  | 'KeyboardArrowLeft'
+  | 'KeyboardArrowRight'
   | 'KeyboardArrowUp'
   | 'Mail'
   | 'MenuBook'
@@ -123,6 +129,7 @@ export enum Icons {
   CalendarToday = 'calendar-today',
   CheckBoxOutlineBlank = 'check-box-outline-blank',
   CheckBox = 'check-box',
+  CheckCircle = 'check-circle',
   ChevronDoubleLeft = 'chevron-double-left',
   ChevronDoubleRight = 'chevron-double-right',
   Close = 'close',
@@ -136,6 +143,8 @@ export enum Icons {
   Groups = 'groups',
   InsertComment = 'insert-comment',
   KeyboardArrowDown = 'keyboard-arrow-down',
+  KeyboardArrowLeft = 'keyboard-arrow-left',
+  KeyboardArrowRight = 'keyboard-arrow-right',
   KeyboardArrowUp = 'keyboard-arrow-up',
   Mail = 'mail',
   MenuBook = 'menu-book',
@@ -179,43 +188,46 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.CalendarToday]: '61708',
   [Icons.CheckBoxOutlineBlank]: '61709',
   [Icons.CheckBox]: '61710',
-  [Icons.ChevronDoubleLeft]: '61711',
-  [Icons.ChevronDoubleRight]: '61712',
-  [Icons.Close]: '61713',
-  [Icons.Dashboard]: '61714',
-  [Icons.Delete]: '61715',
-  [Icons.Description]: '61716',
-  [Icons.Edit]: '61717',
-  [Icons.Ellipse_33]: '61718',
-  [Icons.FavoriteBorder]: '61719',
-  [Icons.Favorite]: '61720',
-  [Icons.Groups]: '61721',
-  [Icons.InsertComment]: '61722',
-  [Icons.KeyboardArrowDown]: '61723',
-  [Icons.KeyboardArrowUp]: '61724',
-  [Icons.Mail]: '61725',
-  [Icons.MenuBook]: '61726',
-  [Icons.Menu]: '61727',
-  [Icons.Monetization]: '61728',
-  [Icons.MoreVert]: '61729',
-  [Icons.MusicNote]: '61730',
-  [Icons.MusicOff]: '61731',
-  [Icons.Notifications]: '61732',
-  [Icons.PinDrop]: '61733',
-  [Icons.PlayCircleFilled]: '61734',
-  [Icons.RadioButtonChecked]: '61735',
-  [Icons.RadioButtonUnchecked]: '61736',
-  [Icons.RemoveCircleOutline]: '61737',
-  [Icons.RemoveRedEye]: '61738',
-  [Icons.SearchPlus]: '61739',
-  [Icons.Search]: '61740',
-  [Icons.Settings]: '61741',
-  [Icons.Sort]: '61742',
-  [Icons.Star]: '61743',
-  [Icons.Textsms]: '61744',
-  [Icons.ThumbUp]: '61745',
-  [Icons.Tune]: '61746',
-  [Icons.VisibilityOff]: '61747',
-  [Icons.Visibility]: '61748',
-  [Icons.VolumeUp]: '61749'
+  [Icons.CheckCircle]: '61711',
+  [Icons.ChevronDoubleLeft]: '61712',
+  [Icons.ChevronDoubleRight]: '61713',
+  [Icons.Close]: '61714',
+  [Icons.Dashboard]: '61715',
+  [Icons.Delete]: '61716',
+  [Icons.Description]: '61717',
+  [Icons.Edit]: '61718',
+  [Icons.Ellipse_33]: '61719',
+  [Icons.FavoriteBorder]: '61720',
+  [Icons.Favorite]: '61721',
+  [Icons.Groups]: '61722',
+  [Icons.InsertComment]: '61723',
+  [Icons.KeyboardArrowDown]: '61724',
+  [Icons.KeyboardArrowLeft]: '61725',
+  [Icons.KeyboardArrowRight]: '61726',
+  [Icons.KeyboardArrowUp]: '61727',
+  [Icons.Mail]: '61728',
+  [Icons.MenuBook]: '61729',
+  [Icons.Menu]: '61730',
+  [Icons.Monetization]: '61731',
+  [Icons.MoreVert]: '61732',
+  [Icons.MusicNote]: '61733',
+  [Icons.MusicOff]: '61734',
+  [Icons.Notifications]: '61735',
+  [Icons.PinDrop]: '61736',
+  [Icons.PlayCircleFilled]: '61737',
+  [Icons.RadioButtonChecked]: '61738',
+  [Icons.RadioButtonUnchecked]: '61739',
+  [Icons.RemoveCircleOutline]: '61740',
+  [Icons.RemoveRedEye]: '61741',
+  [Icons.SearchPlus]: '61742',
+  [Icons.Search]: '61743',
+  [Icons.Settings]: '61744',
+  [Icons.Sort]: '61745',
+  [Icons.Star]: '61746',
+  [Icons.Textsms]: '61747',
+  [Icons.ThumbUp]: '61748',
+  [Icons.Tune]: '61749',
+  [Icons.VisibilityOff]: '61750',
+  [Icons.Visibility]: '61751',
+  [Icons.VolumeUp]: '61752'
 }

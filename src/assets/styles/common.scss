@@ -11,3 +11,55 @@
     @apply flex flex-col gap-y-5;
   }
 }
+
+.progress-bars {
+  @apply flex items-center gap-x-1.5;
+
+  .bar {
+    @apply bg-beige rounded-[30px] h-[10px] w-full;
+
+    &.active {
+      @apply bg-black;
+    }
+  }
+}
+
+.no-content-base {
+  @apply flex flex-col justify-center items-center;
+
+  .icon {
+    @apply text-neutral-03;
+  }
+
+  .text-body-1 {
+    @apply text-neutral-01 mt-[14px];
+  }
+
+  .text-small-text {
+    @apply text-neutral-02 mt-1 max-w-[196px] text-center;
+  }
+}
+
+.setup-item {
+  @apply flex flex-row justify-between items-center;
+
+  &.active {
+    .content .text-sub-heading-2 {
+      @apply font-semibold;
+    }
+  }
+
+  .content {
+    @apply flex gap-x-[13px] items-center;
+
+    .icon:after {
+      @apply text-[24px];
+    }
+  }
+
+  .action {
+    .icon:after {
+      @apply text-[24px];
+    }
+  }
+}

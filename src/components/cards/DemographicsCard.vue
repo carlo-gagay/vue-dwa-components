@@ -1,23 +1,17 @@
 <script setup>
-import { computed } from 'vue'
+import AnalyticsCardBase from './base/AnalyticsCardBase.vue'
 
-const props = defineProps({
-  width: [Number, String]
-})
-
-const cardWidth = computed(() => {
-  return props.width ? props.width.toString().concat('px') : 'auto'
+defineProps({
+  header: String
 })
 </script>
 
 <template>
-  <div class="analytics-card-simple" :style="{ 'min-width': cardWidth }">
-    <div class="card-header-wrap">
-      <div class="card-header">DEMOGRAPHIC</div>
+  <AnalyticsCardBase wrapperClasses="demographic" :header="header">
+    <template #slot-expand>
       <button class="cta">
         <i class="icon icon-arrow-forward icon--s24"></i>
       </button>
-    </div>
-    <div class="card-contents"></div>
-  </div>
+    </template>
+  </AnalyticsCardBase>
 </template>
