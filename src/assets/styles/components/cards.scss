@@ -235,7 +235,7 @@
 }
 
 .total-quantity-card {
-  @apply flex items-center justify-between py-[11px] pl-[26px] pr-[13px] rounded-[10px] bg-white border border-neutral-04;
+  @apply flex items-center justify-between py-[11px] pl-[26px] pr-[13px] rounded-[10px] bg-white border border-neutral-04 w-full;
 
   .contents {
     @apply flex flex-col gap-y-0.5;
@@ -247,23 +247,15 @@
 }
 
 .analytics-card-simple {
-  @apply pt-[14px] pl-[14px] pr-[17px] pb-[16px] bg-neutral-white rounded-[10px];
-
-  &.demographic {
-    @apply sm:min-w-[296px];
-  }
+  @apply pt-[14px] pl-[14px] pr-[17px] pb-[16px] bg-neutral-white rounded-[10px] w-full;
 
   &.top-comics {
-    @apply sm:min-w-[405px];
-
     .no-content-base {
       @apply mt-[26px] mb-[28px];
     }
   }
 
   &.my-comics {
-    @apply lg:min-w-[633px];
-
     .no-content-base {
       @apply mt-[70px] mb-[107px];
     }

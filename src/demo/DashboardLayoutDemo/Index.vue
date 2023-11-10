@@ -21,12 +21,14 @@ import { title } from '@stores/sample'
       </div>
     </div>
     <div class="container-flex">
-      <div class="flex flex-col lg:flex-row gap-x-8 gap-y-5 overflow-x-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[166px_auto_auto] xl:grid-cols-[306px_296px_auto] gap-x-8 gap-y-5 overflow-x-auto"
+      >
         <div class="analytics-sum-section">
           <div class="section-header">ANALYTICS</div>
           <div class="summary-section">
-            <TotalQuantityCard header="Total Viewers" value="0" width="306" />
-            <TotalQuantityCard header="Total Subscribers" value="0" width="306" />
+            <TotalQuantityCard header="Total Viewers" value="0" />
+            <TotalQuantityCard header="Total Subscribers" value="0" />
           </div>
         </div>
         <DemographicsCard header="DEMOGRAPHIC" />
@@ -34,7 +36,7 @@ import { title } from '@stores/sample'
       </div>
     </div>
     <div class="container-flex mt-[31px]">
-      <div class="flex flex-col lg:flex-row gap-x-[30px] gap-y-5">
+      <div class="grid grid-cols-1 lg:grid-cols-[auto_405px] gap-x-[30px] gap-y-5">
         <MyComicsCard header="MY COMICS" />
         <FinishSetupCard class="grow" header="FINISH SET UP" />
       </div>
