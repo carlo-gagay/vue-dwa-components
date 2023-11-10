@@ -249,6 +249,12 @@
 .analytics-card-simple {
   @apply pt-[14px] pl-[14px] pr-[17px] pb-[30px] sm:pb-[16px] bg-neutral-white rounded-[10px] w-full;
 
+  &.demographic {
+    .card-contents {
+      @apply mt-[26px];
+    }
+  }
+
   &.top-comics {
     .contents {
       @apply grid grid-cols-1 sm:grid-cols-2 xl:gap-x-[62px] gap-y-4 sm:gap-y-[41px] mt-[26px];

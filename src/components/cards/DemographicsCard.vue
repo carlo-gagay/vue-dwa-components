@@ -1,9 +1,41 @@
 <script setup>
+import { onBeforeMount } from 'vue'
 import AnalyticsCardBase from './base/AnalyticsCardBase.vue'
+import { Chart as ChartJS, ArcElement, Colors, Tooltip, Legend } from 'chart.js'
+import { Doughnut } from 'vue-chartjs'
 
 defineProps({
   header: String
 })
+
+onBeforeMount(() => ChartJS.register(ArcElement, Colors, Tooltip, Legend))
+
+const data = {
+  labels: ['Male', 'Female', 'Other'],
+  datasets: [
+    {
+      label: 'Demographic',
+      data: [300, 100, 50],
+      backgroundColor: ['#FFDA56', '#4BB7F4', '#AE6FFF'],
+      hoverOffset: 4
+    }
+  ]
+}
+
+const options = {
+  aspectRatio: 1,
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'bottom',
+      labels: {
+        boxWidth: 6,
+        boxHeight: 6,
+        borderRadius: 3
+      }
+    }
+  }
+}
 </script>
 
 <template>
@@ -13,5 +45,8 @@ defineProps({
         <i class="icon icon-arrow-forward icon--s24"></i>
       </button>
     </template>
+    <div class="card-contents">
+      <Doughnut :data="data" :options="options" style="width: 180px; height: 180px" />
+    </div>
   </AnalyticsCardBase>
 </template>
