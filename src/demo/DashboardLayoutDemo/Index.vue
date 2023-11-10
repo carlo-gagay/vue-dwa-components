@@ -7,7 +7,7 @@ import {
   TopComicsCard,
   TotalQuantityCard
 } from '@components/cards'
-import { myTitles, summary, topComics } from '@stores/sample'
+import { demographic, myTitles, summary, topComics } from '@stores/sample'
 </script>
 
 <template>
@@ -31,7 +31,7 @@ import { myTitles, summary, topComics } from '@stores/sample'
             <TotalQuantityCard header="Total Subscribers" :value="summary.totalSubscribers" />
           </div>
         </div>
-        <DemographicsCard header="DEMOGRAPHIC" />
+        <DemographicsCard header="DEMOGRAPHIC" :data="demographic" />
         <TopComicsCard class="grow" header="TOP COMICS" :data="topComics" />
       </div>
     </div>

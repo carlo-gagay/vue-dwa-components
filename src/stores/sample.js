@@ -25,6 +25,12 @@ const chapter = {
   title: 'Chapter Title'
 }
 
+const demographic = [
+  { name: 'Male', value: 300, color: '#FFDA56' },
+  { name: 'Female', value: 100, color: '#4BB7F4' },
+  { name: 'Other', value: 50, color: '#AE6FFF' }
+]
+
 const filterOptions = ref([
   { data: [], label: 'Genre', type: 'checkbox' },
   { data: [], label: 'Completion', type: 'radio' },
@@ -104,6 +110,7 @@ const topComics = [
 export {
   author,
   chapter,
+  demographic,
   filterOptions,
   genresFromApi,
   myTitles,

@@ -4,19 +4,23 @@ import AnalyticsCardBase from './base/AnalyticsCardBase.vue'
 import { Chart as ChartJS, ArcElement, Colors, Tooltip, Legend } from 'chart.js'
 import { Doughnut } from 'vue-chartjs'
 
-defineProps({
+const props = defineProps({
+  data: {
+    type: Array,
+    default: () => []
+  },
   header: String
 })
 
 onBeforeMount(() => ChartJS.register(ArcElement, Colors, Tooltip, Legend))
 
 const data = {
-  labels: ['Male', 'Female', 'Other'],
+  labels: props.data.map((item) => item.name),
   datasets: [
     {
       label: 'Demographic',
-      data: [300, 100, 50],
-      backgroundColor: ['#FFDA56', '#4BB7F4', '#AE6FFF'],
+      data: props.data.map((item) => item.value),
+      backgroundColor: props.data.map((item) => item.color),
       hoverOffset: 4
     }
   ]
