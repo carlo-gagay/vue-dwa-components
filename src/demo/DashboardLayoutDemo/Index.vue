@@ -7,7 +7,7 @@ import {
   TopComicsCard,
   TotalQuantityCard
 } from '@components/cards'
-import { title } from '@stores/sample'
+import { myTitles, summary, topComics } from '@stores/sample'
 </script>
 
 <template>
@@ -27,18 +27,21 @@ import { title } from '@stores/sample'
         <div class="analytics-sum-section">
           <div class="section-header">ANALYTICS</div>
           <div class="summary-section">
-            <TotalQuantityCard header="Total Viewers" value="0" />
-            <TotalQuantityCard header="Total Subscribers" value="0" />
+            <TotalQuantityCard header="Total Viewers" :value="summary.totalViewers" />
+            <TotalQuantityCard header="Total Subscribers" :value="summary.totalSubscribers" />
           </div>
         </div>
         <DemographicsCard header="DEMOGRAPHIC" />
-        <TopComicsCard class="grow" header="TOP COMICS" />
+        <TopComicsCard class="grow" header="TOP COMICS" :data="topComics" />
       </div>
     </div>
     <div class="container-flex mt-[31px]">
-      <div class="grid grid-cols-1 lg:grid-cols-[auto_405px] gap-x-[30px] gap-y-5">
-        <MyComicsCard header="MY COMICS" />
-        <FinishSetupCard class="grow" header="FINISH SET UP" />
+      <div
+        class="grid grid-cols-1 gap-y-5"
+        :class="{ 'lg:grid-cols-[auto_405px] gap-x-[30px]': !myTitles.length }"
+      >
+        <MyComicsCard header="MY COMICS" :data="myTitles" />
+        <FinishSetupCard v-if="!myTitles.length" class="grow" header="FINISH SET UP" />
       </div>
     </div>
   </AuthenticatedLayout>

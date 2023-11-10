@@ -1,4 +1,4 @@
 import AppTab from './AppTab.vue'
-import AppTabItem from './TabItem.vue'
+import TabItem from './TabItem.vue'
 
-export { AppTab, AppTabItem }
+export { AppTab, TabItem }

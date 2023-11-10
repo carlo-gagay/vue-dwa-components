@@ -8,6 +8,13 @@ defineProps({
       return ['md', 'lg'].includes(value)
     }
   },
+  type: {
+    type: Number,
+    default: 1,
+    validator(value) {
+      return [1, 2, 3, 4].includes(value)
+    }
+  },
   title: String
 })
 
@@ -16,9 +23,9 @@ const emit = defineEmits(['onClick'])
 
 <template>
   <button
-    class="tab tab-type-1"
-    :class="[{ selected: active }, size]"
+    class="tab"
     role="button"
+    :class="[{ selected: active }, size, `tab-type-${type}`]"
     @click="emit('onClick')"
   >
     <div class="tab-inner">

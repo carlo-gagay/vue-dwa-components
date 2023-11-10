@@ -45,6 +45,8 @@ const genresFromApi = [
   'Sports'
 ]
 
+const myTitles = []
+
 const pages = [
   {
     title: 'Page 01',
@@ -65,6 +67,11 @@ const setupItems = [
   { active: false, title: 'Save as a Draft' },
   { active: false, title: 'Invite a Member' }
 ]
+
+const summary = {
+  totalViewers: '73.2k',
+  totalSubscribers: 0
+}
 
 const title = {
   audio: 'https://duskwave-prod-bucket.s3.amazonaws.com/public/audios/audio-bm-SIq7PNBA0H.mp3',
@@ -87,4 +94,23 @@ const title = {
   views: '105k'
 }
 
-export { author, chapter, filterOptions, genresFromApi, pages, relatedGenres, setupItems, title }
+const topComics = [
+  { type: 'Title', name: 'The Glove' },
+  { type: 'Chapter', name: 'Chapter Name' },
+  { type: 'Issue', name: 'Revolt' },
+  { type: 'Book', name: 'Book Name' }
+]
+
+export {
+  author,
+  chapter,
+  filterOptions,
+  genresFromApi,
+  myTitles,
+  pages,
+  relatedGenres,
+  setupItems,
+  summary,
+  title,
+  topComics
+}

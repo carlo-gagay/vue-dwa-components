@@ -60,7 +60,19 @@
 
       &.selected {
         &:after {
-          @apply h-[2px] w-full absolute content-[''] bg-yellow left-0 bottom-[-2px];
+          @apply h-[2px] w-full absolute content-[''] bg-yellow left-0 bottom-[2px];
+        }
+      }
+    }
+
+    &.tab-type-4 {
+      @apply text-body-2 text-neutral-02;
+
+      &.selected {
+        @apply text-body-1 text-black;
+
+        &:after {
+          @apply h-[2px] w-full absolute content-[''] bg-black left-0;
         }
       }
     }

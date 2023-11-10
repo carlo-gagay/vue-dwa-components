@@ -2,7 +2,7 @@
 import Grid from 'vue-virtual-scroll-grid'
 import { ReadersDescriptionLayout } from '@layouts'
 import { TitleCardBanner } from '@components/cards'
-import { AppTab, AppTabItem } from '@components/tabs'
+import { AppTab, TabItem } from '@components/tabs'
 import { ComicsCard } from '@components/cards'
 import { title } from '@stores/sample'
 
@@ -47,9 +47,9 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <div class="container-flex px-4 sm:px-[121px]">
       <AppTab class="gap-x-[36px]">
-        <AppTabItem size="md" title="Issues" :active="true" />
-        <AppTabItem size="md" title="Community" />
-        <AppTabItem size="md" title="Casts" />
+        <TabItem size="md" title="Issues" :active="true" />
+        <TabItem size="md" title="Community" />
+        <TabItem size="md" title="Casts" />
       </AppTab>
     </div>
     <div class="container-flex mt-10 px-4 sm:px-[121px]">

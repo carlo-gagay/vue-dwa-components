@@ -250,12 +250,26 @@
   @apply pt-[14px] pl-[14px] pr-[17px] pb-[16px] bg-neutral-white rounded-[10px] w-full;
 
   &.top-comics {
+    .contents {
+      @apply grid grid-cols-2 gap-x-[62px] gap-y-[41px] mt-[26px];
+    }
+
     .no-content-base {
       @apply mt-[26px] mb-[28px];
     }
   }
 
   &.my-comics {
+    @apply pb-[23px];
+
+    .card-contents {
+      @apply block mt-[18px];
+
+      .title-list {
+        @apply flex flex-col sm:flex-row gap-[26px] mt-[18px] sm:overflow-x-auto p-1;
+      }
+    }
+
     .no-content-base {
       @apply mt-[70px] mb-[107px];
     }
@@ -291,5 +305,25 @@
 
   .card-contents {
     @apply flex justify-center items-center;
+  }
+}
+
+.comics-card-simple {
+  @apply flex flex-row items-center gap-x-3;
+
+  .icon {
+    @apply bg-orange h-10 w-10 rounded-full min-w-max;
+  }
+
+  & .card-contents {
+    @apply flex flex-col gap-y-0.5 justify-start items-start;
+
+    .text-small-text {
+      @apply text-neutral-02;
+    }
+
+    .text-body-1 {
+      @apply text-neutral-01;
+    }
   }
 }

@@ -1,7 +1,7 @@
 <script setup>
 import { AuthenticatedLayout } from '@layouts'
 import { TitleCardAuth } from '@components/cards'
-import { AppTab, AppTabItem } from '@components/tabs'
+import { AppTab, TabItem } from '@components/tabs'
 import { title } from '@stores/sample'
 </script>
 
@@ -9,9 +9,9 @@ import { title } from '@stores/sample'
   <AuthenticatedLayout>
     <div class="hidden sm:row-middle justify-between mb-[33px]">
       <AppTab class="gap-x-[30px]">
-        <AppTabItem title="Published" :badge-content="5" :active="true" />
-        <AppTabItem title="Draft" :badge-content="8" />
-        <AppTabItem title="Archived" :badge-content="9" />
+        <TabItem title="Published" :badge-content="5" :active="true" />
+        <TabItem title="Draft" :badge-content="8" />
+        <TabItem title="Archived" :badge-content="9" />
       </AppTab>
       <div class="row-middle gap-x-5">
         <button class="btn btn-md btn-primary">Create Title</button>
