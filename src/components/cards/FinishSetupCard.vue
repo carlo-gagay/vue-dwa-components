@@ -1,17 +1,10 @@
 <script setup>
 import AnalyticsCardBase from './base/AnalyticsCardBase.vue'
+import { setupItems } from '@/stores/sample'
 
 defineProps({
   header: String
 })
-
-const setupItems = [
-  { active: true, title: 'Set up you profile' },
-  { active: false, title: 'Create a Title' },
-  { active: false, title: 'Upload Page and Audio' },
-  { active: false, title: 'Save as a Draft' },
-  { active: false, title: 'Invite a Member' }
-]
 </script>
 
 <template>
