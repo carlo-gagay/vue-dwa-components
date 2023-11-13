@@ -39,7 +39,8 @@ const options = {
         borderRadius: 6
       }
     }
-  }
+  },
+  borderWidth: 0
 }
 </script>
 
