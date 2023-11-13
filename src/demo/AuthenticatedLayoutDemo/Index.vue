@@ -1,8 +1,15 @@
 <script setup>
+import Grid from 'vue-virtual-scroll-grid'
 import { AuthenticatedLayout } from '@layouts'
 import { TitleCardAuth } from '@components/cards'
 import { AppTab, TabItem } from '@components/tabs'
 import { title } from '@stores/sample'
+
+const pageProvider = async (pageNumber, pageSize) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(new Array(pageSize).fill(title)), 1000)
+  })
+}
 </script>
 
 <template>
@@ -17,56 +24,63 @@ import { title } from '@stores/sample'
         <button class="btn btn-md btn-primary">Create Title</button>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]">
-      <TitleCardAuth
-        v-for="n in 12"
-        :id="`auth${n}`"
-        :image="`${title.image}${n}`"
-        :title="title.title"
-        :genres="n == 2 ? null : title.genres"
-        :views="title.views"
-        :likes="title.likes"
-        :books="title.books"
-        :chapters="title.chapters"
-        :pages="title.pages"
-        :firstStep="100"
-        :secondStep="60"
-        :thirdStep="20"
-        :key="n"
-      >
-        <template #slot-card-image>
-          <v-dropdown class="dropdown" placement="bottom-start">
-            <button class="btn btn-opac btn-round">
-              <i class="icon icon-more-vert icon--s20"></i>
-            </button>
-            <template #popper>
-              <div class="dropdown-popper type-2">
-                <div class="dropdown-item">
-                  <i class="icon icon-visibility icon--s16"></i>
-                  <div class="text-body-2">View Preview</div>
+    <Grid
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]"
+      :length="9"
+      :pageProvider="pageProvider"
+      :pageSize="6"
+    >
+      <template #default="{ item, style, index }">
+        <TitleCardAuth
+          :id="`auth${index}`"
+          :image="`${item.image}${index}`"
+          :title="item.title"
+          :genres="index == 2 ? null : item.genres"
+          :views="item.views"
+          :likes="item.likes"
+          :books="item.books"
+          :chapters="item.chapters"
+          :pages="item.pages"
+          :firstStep="100"
+          :secondStep="60"
+          :style="style"
+          :thirdStep="20"
+          :key="index"
+        >
+          <template #slot-card-image>
+            <v-dropdown class="dropdown" placement="bottom-start">
+              <button class="btn btn-opac btn-round">
+                <i class="icon icon-more-vert icon--s20"></i>
+              </button>
+              <template #popper>
+                <div class="dropdown-popper type-2">
+                  <div class="dropdown-item">
+                    <i class="icon icon-visibility icon--s16"></i>
+                    <div class="text-body-2">View Preview</div>
+                  </div>
+                  <div class="dropdown-item">
+                    <i class="icon icon-edit icon--s16"></i>
+                    <div class="text-body-2">Edit Title</div>
+                  </div>
+                  <div class="dropdown-item">
+                    <i class="icon icon-settings icon--s16"></i>
+                    <div class="text-body-2">Manage Episodes</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="dropdown-item">
+                    <i class="icon icon-block icon--s16"></i>
+                    <div class="text-body-2">Unpublish</div>
+                  </div>
+                  <div class="dropdown-item">
+                    <i class="icon icon-delete icon--s16"></i>
+                    <div class="text-body-2">Archive</div>
+                  </div>
                 </div>
-                <div class="dropdown-item">
-                  <i class="icon icon-edit icon--s16"></i>
-                  <div class="text-body-2">Edit Title</div>
-                </div>
-                <div class="dropdown-item">
-                  <i class="icon icon-settings icon--s16"></i>
-                  <div class="text-body-2">Manage Episodes</div>
-                </div>
-                <div class="divider"></div>
-                <div class="dropdown-item">
-                  <i class="icon icon-block icon--s16"></i>
-                  <div class="text-body-2">Unpublish</div>
-                </div>
-                <div class="dropdown-item">
-                  <i class="icon icon-delete icon--s16"></i>
-                  <div class="text-body-2">Archive</div>
-                </div>
-              </div>
-            </template>
-          </v-dropdown>
-        </template>
-      </TitleCardAuth>
-    </div>
+              </template>
+            </v-dropdown>
+          </template>
+        </TitleCardAuth>
+      </template>
+    </Grid>
   </AuthenticatedLayout>
 </template>

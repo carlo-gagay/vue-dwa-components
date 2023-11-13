@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('./icons.eot?ffbf943efefafee9edf770296ef0f027#iefix') format('embedded-opentype'),
-    url('./icons.woff2?ffbf943efefafee9edf770296ef0f027') format('woff2'),
-    url('./icons.woff?ffbf943efefafee9edf770296ef0f027') format('woff');
+    url('./icons.eot?b4182e54f12477ce39454c27d819484c#iefix') format('embedded-opentype'),
+    url('./icons.woff2?b4182e54f12477ce39454c27d819484c') format('woff2'),
+    url('./icons.woff?b4182e54f12477ce39454c27d819484c') format('woff');
 }
 
 i[class^='icon-']:before,
@@ -111,78 +111,90 @@ i[class*=' icon-']:before {
 .icon-keyboard-arrow-up:before {
   content: '\f11f';
 }
-.icon-mail:before {
+.icon-link:before {
   content: '\f120';
 }
-.icon-menu-book:before {
+.icon-location-on:before {
   content: '\f121';
 }
-.icon-menu:before {
+.icon-mail:before {
   content: '\f122';
 }
-.icon-monetization:before {
+.icon-menu-book:before {
   content: '\f123';
 }
-.icon-more-vert:before {
+.icon-menu:before {
   content: '\f124';
 }
-.icon-music-note:before {
+.icon-monetization:before {
   content: '\f125';
 }
-.icon-music-off:before {
+.icon-more-vert:before {
   content: '\f126';
 }
-.icon-notifications:before {
+.icon-music-note:before {
   content: '\f127';
 }
-.icon-pin-drop:before {
+.icon-music-off:before {
   content: '\f128';
 }
-.icon-play-circle-filled:before {
+.icon-notifications:before {
   content: '\f129';
 }
-.icon-radio-button-checked:before {
+.icon-person-add-alt:before {
   content: '\f12a';
 }
-.icon-radio-button-unchecked:before {
+.icon-pin-drop:before {
   content: '\f12b';
 }
-.icon-remove-circle-outline:before {
+.icon-play-circle-filled:before {
   content: '\f12c';
 }
-.icon-remove-red-eye:before {
+.icon-preview:before {
   content: '\f12d';
 }
-.icon-search-plus:before {
+.icon-radio-button-checked:before {
   content: '\f12e';
 }
-.icon-search:before {
+.icon-radio-button-unchecked:before {
   content: '\f12f';
 }
-.icon-settings:before {
+.icon-remove-circle-outline:before {
   content: '\f130';
 }
-.icon-sort:before {
+.icon-remove-red-eye:before {
   content: '\f131';
 }
-.icon-star:before {
+.icon-search-plus:before {
   content: '\f132';
 }
-.icon-textsms:before {
+.icon-search:before {
   content: '\f133';
 }
-.icon-thumb-up:before {
+.icon-settings:before {
   content: '\f134';
 }
-.icon-tune:before {
+.icon-sort:before {
   content: '\f135';
 }
-.icon-visibility-off:before {
+.icon-star:before {
   content: '\f136';
 }
-.icon-visibility:before {
+.icon-textsms:before {
   content: '\f137';
 }
-.icon-volume-up:before {
+.icon-thumb-up:before {
   content: '\f138';
+}
+.icon-tune:before {
+  content: '\f139';
+}
+.icon-visibility-off:before {
+  content: '\f13a';
+}
+.icon-visibility:before {
+  content: '\f13b';
+}
+.icon-volume-up:before {
+  content: '\f13c';
 }

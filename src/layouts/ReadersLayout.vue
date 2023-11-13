@@ -69,7 +69,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
           <i class="icon icon-close icon--s40"></i>
         </button>
       </div>
-      <div class="form mt-[47px] column-start gap-y-10">
+      <div class="form-wrap form">
         <InputTextField
           v-model="form.email"
           id="email"
@@ -91,15 +91,15 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
           :width="436"
         />
       </div>
-      <div class="submit-button flex justify-end mt-[37px]">
+      <div class="submit-button">
         <button class="btn btn-md btn-primary" @click="onFormSubmit">
           {{ isSignIn ? 'Sign In' : 'Create Account' }}
         </button>
       </div>
-      <hr class="bg-neutral-03 mt-[38px] mb-[30px]" />
+      <hr class="divider" />
       <div class="column-middle items-center">
         <div class="text-body-2">{{ isSignIn ? 'Or sign in using' : 'Or sign up using' }}</div>
-        <div class="row-middle mt-5 gap-x-[50px]">
+        <div class="other-auth-options">
           <button>
             <svg
               width="40"
@@ -151,7 +151,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
             </svg>
           </button>
         </div>
-        <div class="row-middle mt-5">
+        <div class="portal-switcher">
           <div class="text-body-2">
             {{ isSignIn ? 'Don’t have an account?' : 'Already have an account?' }}
           </div>

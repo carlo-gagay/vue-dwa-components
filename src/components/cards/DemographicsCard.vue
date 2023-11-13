@@ -40,7 +40,8 @@ const options = {
       }
     }
   },
-  borderWidth: 0
+  borderWidth: 0,
+  radius: '80%'
 }
 </script>
 

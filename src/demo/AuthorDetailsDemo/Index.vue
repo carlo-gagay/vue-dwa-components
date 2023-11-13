@@ -32,6 +32,7 @@ const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/Titl
                   titleClasses="text-body-2"
                   :id="`title-${n}`"
                   :image="`${title.image}${n}`"
+                  :liked="n == 1"
                   :likes="title.likes"
                   :title="`${title.title} #${n}`"
                   @onClick="() => $router.push('/comics')"

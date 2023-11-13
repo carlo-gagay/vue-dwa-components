@@ -12,6 +12,10 @@ defineProps({
   },
   isAudioPlaying: Boolean,
   issues: [Number, String],
+  liked: {
+    type: Boolean,
+    default: false
+  },
   likes: [Number, String],
   progress: {
     type: Number,
@@ -79,7 +83,11 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
         <div class="slot-card-body">
           <slot name="slot-card-body"></slot>
           <template v-if="likes">
-            <div class="row-middle">
+            <div class="stat-likes">
+              <i
+                class="icon icon--s16"
+                :class="liked ? 'icon-favorite' : 'icon-favorite-border'"
+              ></i>
               <div class="text-caption">{{ likes }}</div>
             </div>
           </template>

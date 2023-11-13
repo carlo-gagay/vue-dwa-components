@@ -30,6 +30,8 @@ export type IconsId =
   | 'keyboard-arrow-left'
   | 'keyboard-arrow-right'
   | 'keyboard-arrow-up'
+  | 'link'
+  | 'location-on'
   | 'mail'
   | 'menu-book'
   | 'menu'
@@ -38,8 +40,10 @@ export type IconsId =
   | 'music-note'
   | 'music-off'
   | 'notifications'
+  | 'person-add-alt'
   | 'pin-drop'
   | 'play-circle-filled'
+  | 'preview'
   | 'radio-button-checked'
   | 'radio-button-unchecked'
   | 'remove-circle-outline'
@@ -88,6 +92,8 @@ export type IconsKey =
   | 'KeyboardArrowLeft'
   | 'KeyboardArrowRight'
   | 'KeyboardArrowUp'
+  | 'Link'
+  | 'LocationOn'
   | 'Mail'
   | 'MenuBook'
   | 'Menu'
@@ -96,8 +102,10 @@ export type IconsKey =
   | 'MusicNote'
   | 'MusicOff'
   | 'Notifications'
+  | 'PersonAddAlt'
   | 'PinDrop'
   | 'PlayCircleFilled'
+  | 'Preview'
   | 'RadioButtonChecked'
   | 'RadioButtonUnchecked'
   | 'RemoveCircleOutline'
@@ -146,6 +154,8 @@ export enum Icons {
   KeyboardArrowLeft = 'keyboard-arrow-left',
   KeyboardArrowRight = 'keyboard-arrow-right',
   KeyboardArrowUp = 'keyboard-arrow-up',
+  Link = 'link',
+  LocationOn = 'location-on',
   Mail = 'mail',
   MenuBook = 'menu-book',
   Menu = 'menu',
@@ -154,8 +164,10 @@ export enum Icons {
   MusicNote = 'music-note',
   MusicOff = 'music-off',
   Notifications = 'notifications',
+  PersonAddAlt = 'person-add-alt',
   PinDrop = 'pin-drop',
   PlayCircleFilled = 'play-circle-filled',
+  Preview = 'preview',
   RadioButtonChecked = 'radio-button-checked',
   RadioButtonUnchecked = 'radio-button-unchecked',
   RemoveCircleOutline = 'remove-circle-outline',
@@ -205,29 +217,33 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.KeyboardArrowLeft]: '61725',
   [Icons.KeyboardArrowRight]: '61726',
   [Icons.KeyboardArrowUp]: '61727',
-  [Icons.Mail]: '61728',
-  [Icons.MenuBook]: '61729',
-  [Icons.Menu]: '61730',
-  [Icons.Monetization]: '61731',
-  [Icons.MoreVert]: '61732',
-  [Icons.MusicNote]: '61733',
-  [Icons.MusicOff]: '61734',
-  [Icons.Notifications]: '61735',
-  [Icons.PinDrop]: '61736',
-  [Icons.PlayCircleFilled]: '61737',
-  [Icons.RadioButtonChecked]: '61738',
-  [Icons.RadioButtonUnchecked]: '61739',
-  [Icons.RemoveCircleOutline]: '61740',
-  [Icons.RemoveRedEye]: '61741',
-  [Icons.SearchPlus]: '61742',
-  [Icons.Search]: '61743',
-  [Icons.Settings]: '61744',
-  [Icons.Sort]: '61745',
-  [Icons.Star]: '61746',
-  [Icons.Textsms]: '61747',
-  [Icons.ThumbUp]: '61748',
-  [Icons.Tune]: '61749',
-  [Icons.VisibilityOff]: '61750',
-  [Icons.Visibility]: '61751',
-  [Icons.VolumeUp]: '61752'
+  [Icons.Link]: '61728',
+  [Icons.LocationOn]: '61729',
+  [Icons.Mail]: '61730',
+  [Icons.MenuBook]: '61731',
+  [Icons.Menu]: '61732',
+  [Icons.Monetization]: '61733',
+  [Icons.MoreVert]: '61734',
+  [Icons.MusicNote]: '61735',
+  [Icons.MusicOff]: '61736',
+  [Icons.Notifications]: '61737',
+  [Icons.PersonAddAlt]: '61738',
+  [Icons.PinDrop]: '61739',
+  [Icons.PlayCircleFilled]: '61740',
+  [Icons.Preview]: '61741',
+  [Icons.RadioButtonChecked]: '61742',
+  [Icons.RadioButtonUnchecked]: '61743',
+  [Icons.RemoveCircleOutline]: '61744',
+  [Icons.RemoveRedEye]: '61745',
+  [Icons.SearchPlus]: '61746',
+  [Icons.Search]: '61747',
+  [Icons.Settings]: '61748',
+  [Icons.Sort]: '61749',
+  [Icons.Star]: '61750',
+  [Icons.Textsms]: '61751',
+  [Icons.ThumbUp]: '61752',
+  [Icons.Tune]: '61753',
+  [Icons.VisibilityOff]: '61754',
+  [Icons.Visibility]: '61755',
+  [Icons.VolumeUp]: '61756'
 }

@@ -22,10 +22,12 @@ defineProps({
       <div class="text-heading-2 name">{{ name }}</div>
       <div class="column-middle addresses">
         <div class="address">
+          <i class="icon icon-location-on icon--s16"></i>
           <div class="text-caption">{{ address }}</div>
         </div>
         <div class="website">
-          <a href="#" class="link">{{ website }}</a>
+          <i class="icon icon-link icon--s16"></i>
+          <a href="#" class="text-link">{{ website }}</a>
         </div>
       </div>
       <div class="description text-body-2">
@@ -33,14 +35,17 @@ defineProps({
       </div>
       <div class="statistics">
         <div class="item">
+          <i class="icon icon-preview icon--s24"></i>
           <div class="text-sub-heading-1">{{ readers }}</div>
           <div class="text-caption">Comic Readers</div>
         </div>
         <div class="item">
+          <i class="icon icon-favorite-border icon--s24"></i>
           <div class="text-sub-heading-1">{{ likes }}</div>
           <div class="text-caption">Likes</div>
         </div>
         <div class="item">
+          <i class="icon icon-person-add-alt icon--s24"></i>
           <div class="text-sub-heading-1">{{ followers }}</div>
           <div class="text-caption">Followers</div>
         </div>
@@ -52,51 +57,3 @@ defineProps({
     </div>
   </div>
 </template>
-
-<style lang="scss">
-#author-card {
-  @apply w-fit max-w-[448px];
-
-  .container {
-    @apply flex flex-col justify-center items-center py-[67px] px-[49px];
-
-    .card-image figure img {
-      @apply bg-cover bg-center rounded-[375px] w-[179px] h-[176px];
-    }
-
-    .name {
-      @apply mt-9;
-    }
-
-    .addresses,
-    .description {
-      @apply mt-3;
-    }
-
-    .addresses {
-      .address {
-        @apply text-neutral-02;
-      }
-
-      .link {
-        @apply text-sm text-yellow;
-      }
-    }
-
-    .statistics {
-      @apply flex flex-row gap-x-[48px] items-center bg-white py-[17px] px-[31px] mt-[31px];
-      box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
-
-      .item {
-        .text-sub-heading-1 {
-          @apply text-orange;
-        }
-      }
-    }
-
-    .cta {
-      @apply flex flex-row gap-x-6 mt-8;
-    }
-  }
-}
-</style>

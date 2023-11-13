@@ -56,6 +56,12 @@
           @apply gap-x-5;
         }
       }
+
+      .slot-card-body {
+        .stat-likes {
+          @apply flex items-center gap-x-1;
+        }
+      }
     }
 
     .title-card-details-sub {
@@ -229,11 +235,6 @@
   }
 }
 
-#author-card {
-  @apply rounded-[10px] bg-neutral-white;
-  box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
-}
-
 .total-quantity-card {
   @apply flex items-center justify-between py-[11px] pl-[26px] pr-[13px] rounded-[10px] bg-white border border-neutral-04 w-full;
 
@@ -330,6 +331,109 @@
 
     .text-body-1 {
       @apply text-neutral-01;
+    }
+  }
+}
+
+#author-card {
+  @apply w-fit max-w-[448px];
+  @apply rounded-[10px] bg-neutral-white;
+  box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+
+  .container {
+    @apply flex flex-col justify-center items-center py-[67px] px-[49px];
+
+    .card-image figure img {
+      @apply bg-cover bg-center rounded-[375px] w-[179px] h-[176px];
+    }
+
+    .name {
+      @apply mt-9;
+    }
+
+    .addresses,
+    .description {
+      @apply mt-3;
+    }
+
+    .addresses {
+      .address {
+        @apply flex items-center gap-x-[5px];
+
+        .icon {
+          @apply text-black;
+        }
+
+        .text-caption {
+          @apply text-neutral-02;
+        }
+      }
+
+      .website {
+        @apply flex items-center gap-x-[5px];
+
+        .icon {
+          @apply text-black;
+        }
+
+        .text-link {
+          @apply text-yellow;
+        }
+      }
+    }
+
+    .statistics {
+      @apply flex flex-row gap-x-[48px] items-center bg-white py-[17px] px-[31px] mt-[31px];
+      box-shadow: 0px 0px 4px 0px rgba(12, 11, 11, 0.2);
+
+      .item {
+        @apply flex flex-col items-center;
+
+        .icon {
+          @apply text-neutral-03;
+        }
+
+        .text-sub-heading-1 {
+          @apply text-orange;
+        }
+
+        .text-caption {
+          @apply whitespace-nowrap;
+        }
+      }
+    }
+
+    .cta {
+      @apply flex flex-row gap-x-6 mt-8;
+    }
+  }
+}
+
+.auth-form {
+  @apply bg-beige rounded-[10px];
+  box-shadow: 0px 0px 14px 2px rgba(12, 11, 11, 0.16);
+
+  .form-wrap {
+    @apply mt-[47px] column-start gap-y-10;
+  }
+
+  .submit-button {
+    @apply flex justify-end mt-[37px];
+  }
+
+  .divider {
+    @apply bg-neutral-03 mt-[38px] mb-[30px];
+  }
+
+  .other-auth-options {
+    @apply row-middle mt-5 gap-x-[50px];
+  }
+
+  .portal-switcher {
+    @apply row-middle mt-5;
+
+    .text-body-2.underline {
+      @apply ml-1;
     }
   }
 }
