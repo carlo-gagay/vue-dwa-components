@@ -37,42 +37,46 @@ const pageProvider = async (pageNumber, pageSize) => {
 <template>
   <ReadersLayout v-once>
     <div class="container-flex">
-      <ContentSlider :loop="true" v-once>
-        <template #default="{ navigator }">
-          <div v-for="n in 5" class="keen-slider__slide dark" :key="n" v-once>
-            <TitleCardBanner
-              :alt="`${title.title} ${n}`"
-              :author="title.author"
-              :books="title.books"
-              :chapters="title.chapters"
-              :content-rating="title.contentRating"
-              :description="title.description"
-              :genres="title.genres"
-              :hasAudio="true"
-              :id="`banner${n}`"
-              :img-src="`https://picsum.photos/80${n}`"
-              :isAudioPlaying="false"
-              :likes="title.likes"
-              :rating="title.rating"
-              :title="`${title.title} ${n}`"
-              :url="title.url"
-              @onAuthorClick="() => $router.push('/author')"
-              @onBookmark="() => {}"
-              @playAudio="() => {}"
-              @like="() => {}"
-              @onStartReading="
-                () => {
-                  $router.push('/comic-page')
-                }
-              "
-            />
-            <button class="nav-btn backward btn btn-primary-inline" @click="navigator.prev">
-              <i class="icon icon-arrow-back-ios icon--s40"></i>
-            </button>
-            <button class="nav-btn forward btn btn-primary-inline" @click="navigator.next">
-              <i class="icon icon-arrow-forward-ios icon--s40"></i>
-            </button>
-          </div>
+      <ContentSlider
+        sliderItemClasses="dark"
+        :data="[title, title, title, title, title]"
+        :loop="true"
+        v-once
+      >
+        <template #default="{ item, index, navigator }">
+          <TitleCardBanner
+            :alt="`${item.title} ${index}`"
+            :author="item.author"
+            :books="item.books"
+            :chapters="item.chapters"
+            :content-rating="item.contentRating"
+            :description="item.description"
+            :genres="item.genres"
+            :hasAudio="true"
+            :id="`banner${index}`"
+            :img-src="`https://picsum.photos/80${index}`"
+            :isAudioPlaying="false"
+            :likes="item.likes"
+            :rating="item.rating"
+            :title="`${item.title} ${index}`"
+            :url="item.url"
+            @onAuthorClick="() => $router.push('/author')"
+            @onBookmark="() => {}"
+            @playAudio="() => {}"
+            @like="() => {}"
+            @onStartReading="
+              () => {
+                $router.push('/comic-page')
+              }
+            "
+            v-once
+          />
+          <button class="nav-btn backward btn btn-primary-inline" @click="navigator.prev">
+            <i class="icon icon-arrow-back-ios icon--s40"></i>
+          </button>
+          <button class="nav-btn forward btn btn-primary-inline" @click="navigator.next">
+            <i class="icon icon-arrow-forward-ios icon--s40"></i>
+          </button>
         </template>
         <template #navigator="{ navigator }">
           <div class="slide-indicator">
@@ -95,25 +99,27 @@ const pageProvider = async (pageNumber, pageSize) => {
           mode="free"
           sliderClasses="banner-slider-responsive"
           :breakpoints="breakpoints"
+          :data="[title, title, title, title, title, title, title, title]"
           :drag="true"
           :per-view="1"
           :spacing="20"
           v-once
         >
-          <div v-for="n in 9" :key="n" class="keen-slider__slide" v-once>
+          <template #default="{ item, index }">
             <TitleCardBasic
-              :alt="`${title.title} ${n}`"
-              :author="title.author"
-              :books="title.books"
-              :chapters="title.chapters"
+              :alt="`${item.title} ${index}`"
+              :author="item.author"
+              :books="item.books"
+              :chapters="item.chapters"
               :hasAudio="true"
-              :id="`cr${n}`"
-              :image="`https://picsum.photos/19${n}`"
+              :id="`cr${index}`"
+              :image="`https://picsum.photos/19${index}`"
               :isAudioPlaying="false"
-              :progress="Number(`${5}${n}`)"
-              :title="`${title.title} ${n}`"
+              :progress="Number(`${5}${index}`)"
+              :title="`${item.title} ${index}`"
               @onClick="() => $router.push('/comics')"
               @onPlayAudio="() => console.log('audio playing')"
+              v-once
             >
               <template #slot-card-body>
                 <VDropdown class="dropdown" placement="bottom-start">
@@ -139,7 +145,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                 </VDropdown>
               </template>
             </TitleCardBasic>
-          </div>
+          </template>
         </ContentSlider>
       </div>
       <div v-else class="empty-section v-padding-37-209">

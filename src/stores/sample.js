@@ -51,8 +51,6 @@ const genresFromApi = [
   'Sports'
 ]
 
-const myTitles = []
-
 const pages = [
   {
     title: 'Page 01',
@@ -99,6 +97,8 @@ const title = {
   url: '/',
   views: '105k'
 }
+
+const myTitles = [title, title, title]
 
 const topComics = [
   { type: 'Title', name: 'The Glove' },

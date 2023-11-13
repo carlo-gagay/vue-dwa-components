@@ -11,6 +11,10 @@ const props = defineProps({
     }
   },
   breakpoints: Object,
+  data: {
+    type: [Array],
+    required: true
+  },
   drag: {
     type: Boolean,
     default: false
@@ -33,6 +37,7 @@ const props = defineProps({
   },
   range: Object,
   sliderClasses: String,
+  sliderItemClasses: String,
   spacing: {
     type: Number,
     default: 0
@@ -76,7 +81,19 @@ const updateTracker = (instance) => {
 <template>
   <div class="keen-slider-container">
     <div ref="container" class="keen-slider" :class="sliderClasses" :style="sliderStyles">
-      <slot :animation-style="animationStyle" :navigator="navigator" />
+      <div
+        v-for="(item, index) in data"
+        class="keen-slider__slide"
+        :class="sliderItemClasses"
+        :key="index"
+      >
+        <slot
+          :animation-style="animationStyle"
+          :index="index"
+          :item="item"
+          :navigator="navigator"
+        />
+      </div>
     </div>
     <div class="keen-slider-nav-container">
       <slot name="navigator" :navigator="navigator" />
