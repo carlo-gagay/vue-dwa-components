@@ -46,7 +46,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       />
     </div>
     <div class="container-flex px-4 sm:px-[121px]">
-      <AppTab size="md" class="gap-x-[36px]">
+      <AppTab gap="lg" size="md">
         <TabItem title="Issues" :active="true" />
         <TabItem title="Community" />
         <TabItem title="Casts" />

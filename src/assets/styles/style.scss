@@ -1,0 +1,71 @@
+.landing-tab-and-filtering-section {
+  @apply container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10;
+}
+
+.footer {
+  @apply pt-[31px] px-4 sm:px-[40px] pb-[17px] bg-black;
+
+  .inner {
+    @apply flex flex-col justify-start items-start sm:flex-row justify-between gap-y-[30px];
+
+    .branding-section {
+      @apply flex flex-col justify-start items-start gap-y-[30px];
+
+      .brand {
+        @apply flex flex-col justify-start items-start gap-y-2;
+
+        .brand-name {
+          @apply flex flex-row gap-x-[3px];
+
+          & > span:first-child {
+            @apply text-body-2;
+          }
+
+          .brand-text {
+            @apply text-body-1;
+          }
+        }
+      }
+
+      .copy-rights {
+        @apply text-small-text text-grey-03;
+      }
+    }
+
+    .navigations {
+      @apply flex flex-col justify-start items-start sm:flex-row;
+
+      .quick-links {
+        @apply flex flex-col justify-start items-start gap-y-3;
+
+        .section-header {
+          @apply text-button text-neutral-02 font-semibold;
+        }
+
+        .quick-link-item {
+          @apply text-body-2 text-yellow;
+        }
+      }
+    }
+
+    .contact-informations {
+      @apply flex flex-col justify-start items-start gap-y-3 mt-[30px] sm:mt-0 sm:ml-[148px];
+
+      .section-header {
+        @apply text-button text-neutral-02 font-semibold;
+      }
+
+      .contact-item {
+        @apply flex flex-row gap-x-3;
+
+        .icon {
+          @apply text-yellow;
+        }
+
+        .text-caption {
+          @apply text-beige max-w-[133px];
+        }
+      }
+    }
+  }
+}

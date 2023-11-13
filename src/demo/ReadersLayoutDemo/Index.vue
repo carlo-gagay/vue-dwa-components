@@ -15,7 +15,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 )
 
 const filtersShown = ref(false)
-const hasInQueue = ref(true)
+const hasInQueue = ref(false)
 const isAuth = ref(false)
 
 const breakpoints = {
@@ -151,7 +151,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       <div v-else class="empty-section v-padding-37-209">
         <div class="inner">
           <div class="icon-wrapper">
-            <i class="icon icon-news-paper icon--s100"></i>
+            <i class="icon icon-menu-book icon--s100"></i>
           </div>
           <div class="title">No Comics In Queue</div>
           <div class="subtitle">The comics you are currently reading will appear here</div>
@@ -159,8 +159,8 @@ const pageProvider = async (pageNumber, pageSize) => {
       </div>
     </div>
     <!-- App tab -->
-    <div class="container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10">
-      <AppTab class="gap-x-4 md:gap-x-[50px]" size="lg" v-once>
+    <div class="landing-tab-and-filtering-section">
+      <AppTab gap="xl" size="lg" v-once>
         <TabItem title="All Comics" :active="true" />
         <TabItem title="My Bookshelf (5)" />
         <TabItem title="My Favorites (3)" />

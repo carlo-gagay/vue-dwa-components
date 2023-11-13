@@ -15,7 +15,7 @@ const pageProvider = async (pageNumber, pageSize) => {
 <template>
   <AuthenticatedLayout>
     <div class="hidden sm:row-middle justify-between mb-[33px]">
-      <AppTab class="gap-x-[30px]">
+      <AppTab>
         <TabItem title="Published" :badge-content="5" :active="true" />
         <TabItem title="Draft" :badge-content="8" />
         <TabItem title="Archived" :badge-content="9" />

@@ -62,6 +62,7 @@
 #app-tab {
   @apply flex flex-row items-start sm:items-center;
 
+  // Tab types
   &.type-1 {
     .tab {
       @apply tab-type-1;
@@ -109,4 +110,19 @@
       @apply tab-type-4;
     }
   }
+  // .. Tab types
+
+  // Gaps
+  &.gap-xl {
+    @apply gap-x-4 sm:gap-x-[50px];
+  }
+
+  &.gap-lg {
+    @apply gap-x-2 sm:gap-x-[36px];
+  }
+
+  &.gap-md {
+    @apply gap-x-2 sm:gap-x-[30px];
+  }
+  // .. Gaps
 }

@@ -1,9 +1,13 @@
 <script setup>
-import { computed } from 'vue'
-
 const props = defineProps({
   size: String,
-  gap: [Number, String],
+  gap: {
+    type: String,
+    default: 'md',
+    validator(value) {
+      return ['xl', 'lg', 'md', 'sm'].includes(value)
+    }
+  },
   type: {
     type: Number,
     default: 1,
@@ -12,14 +16,10 @@ const props = defineProps({
     }
   }
 })
-
-const tabGap = computed(() => {
-  return props.gap ? { 'column-gap': props.gap.toString().concat('px') } : 'auto'
-})
 </script>
 
 <template>
-  <div id="app-tab" :class="[size, `type-${type}`]" :style="tabGap">
+  <div id="app-tab" :class="[`gap-${gap}`, size, `type-${type}`]">
     <slot />
   </div>
 </template>

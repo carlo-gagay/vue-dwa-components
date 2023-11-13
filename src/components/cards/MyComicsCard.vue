@@ -31,7 +31,7 @@ const breakpoints = {
       </button>
     </template>
     <div v-if="data.length > 0" class="card-contents">
-      <AppTab :type="4" gap="30">
+      <AppTab :type="4">
         <TabItem title="Published" :active="true" />
         <TabItem title="Drafts" />
       </AppTab>

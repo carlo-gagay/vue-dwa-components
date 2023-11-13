@@ -36,7 +36,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
             @click="() => $router.push('/dashboard')"
           >
             <i class="icon icon-dashboard icon--s20" />
-            <span class="ml-[18px]">Dashboard</span>
+            <span class="text-body-1">Dashboard</span>
           </button>
         </li>
         <li>
@@ -46,25 +46,25 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
             @click="() => $router.push('/titles')"
           >
             <i class="icon icon-menu-book icon--s20" />
-            <span class="ml-[18px]">Comic Titles</span>
+            <span class="text-body-1">Comic Titles</span>
           </button>
         </li>
         <li>
           <button class="aside-nav-link group">
             <i class="icon icon-groups icon--s20" />
-            <span class="ml-[18px]">Community</span>
+            <span class="text-body-1">Community</span>
           </button>
         </li>
         <li>
           <button class="aside-nav-link group">
             <i class="icon icon-monetization icon--s20" />
-            <span class="ml-[18px]">Subscribers</span>
+            <span class="text-body-1">Subscribers</span>
           </button>
         </li>
         <li>
           <button class="aside-nav-link group">
             <i class="icon icon-analytics icon--s20" />
-            <span class="ml-[18px]">Analytics</span>
+            <span class="text-body-1">Analytics</span>
           </button>
         </li>
       </ul>
