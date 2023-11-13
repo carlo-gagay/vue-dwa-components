@@ -61,7 +61,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         v-once
       >
         <template #probe="{ style }">
-          <div class="w-[255px] h-[395px]" :style="style"></div>
+          <div :style="[style, { width: '255px', height: '395px' }]"></div>
         </template>
         <template #default="{ style, index }">
           <ComicsCard

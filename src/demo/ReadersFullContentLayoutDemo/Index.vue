@@ -28,7 +28,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         v-once
       >
         <template #probe="{ style }">
-          <div class="w-[292.778px] h-[453.519px]" :style="style"></div>
+          <div :style="[style, { width: '292.778px', height: '453.519px' }]"></div>
         </template>
         <template #default="{ item, style, index }">
           <ChapterCard

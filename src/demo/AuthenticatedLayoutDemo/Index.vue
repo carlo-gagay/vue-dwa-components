@@ -30,6 +30,9 @@ const pageProvider = async (pageNumber, pageSize) => {
       :pageProvider="pageProvider"
       :pageSize="6"
     >
+      <template #probe="{ style }">
+        <div :style="[style, { width: '326px', height: '234px' }]"></div>
+      </template>
       <template #default="{ item, style, index }">
         <TitleCardAuth
           :id="`auth${index}`"

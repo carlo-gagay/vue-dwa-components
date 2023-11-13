@@ -68,7 +68,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               v-once
             >
               <template #probe="{ style }">
-                <div class="h-[216px]" :style="style"></div>
+                <div :style="[style, { height: '216px' }]"></div>
               </template>
               <template #default="{ item, style, index }">
                 <div :style="style" :key="index">

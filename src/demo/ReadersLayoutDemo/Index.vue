@@ -240,6 +240,9 @@ const pageProvider = async (pageNumber, pageSize) => {
         :pageProvider="pageProvider"
         v-once
       >
+        <template #probe="{ style }">
+          <div :style="[style, { width: '306px', height: '234px' }]"></div>
+        </template>
         <template #default="{ item, style, index }">
           <div class="title-card-wrapper" :style="style">
             <TitleCardDetailed
@@ -280,6 +283,9 @@ const pageProvider = async (pageNumber, pageSize) => {
         :pageProvider="pageProvider"
         v-once
       >
+        <template #probe="{ style }">
+          <div :style="[style, { width: '306px', height: '234px' }]"></div>
+        </template>
         <template #default="{ item, style, index }">
           <div class="title-card-wrapper" :style="style">
             <TitleCardDetailed
