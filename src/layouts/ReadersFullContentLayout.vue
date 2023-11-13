@@ -13,11 +13,8 @@ const emits = defineEmits(['onBack'])
 </script>
 
 <template>
-  <div class="content-full py-[121px] px-4 sm:px-[185px] dark:bg-[#1A1A1A]">
-    <button
-      class="back-button absolute top-[121px] left-[98px] text-neutral-05"
-      @click="emits('onBack')"
-    >
+  <div class="readers-full-content-layout content-full">
+    <button class="back-button" @click="emits('onBack')">
       <i class="icon icon-arrow-back-ios icon--s32"></i>
     </button>
     <slot></slot>

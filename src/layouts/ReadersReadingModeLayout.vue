@@ -14,8 +14,8 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersReadin
 
 <template>
   <HeaderLayout>
-    <div class="header-inner centered">
-      <button class="absolute left-[42px]" @click="emits('onBackClick')">
+    <div class="readers-reading-mode-layout header-inner centered">
+      <button class="back-button" @click="emits('onBackClick')">
         <i class="icon icon-arrow-back icon--s24 text-white"></i>
       </button>
       <div class="centered-single-content">
