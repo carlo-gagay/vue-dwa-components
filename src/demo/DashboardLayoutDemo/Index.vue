@@ -12,7 +12,7 @@ import { demographic, myTitles, summary, topComics } from '@stores/sample'
 
 <template>
   <AuthenticatedLayout>
-    <div class="hidden sm:row-middle justify-between mb-[19px]">
+    <div class="row-middle justify-between mb-[19px]">
       <div class="title-wrap">
         <div class="text-sub-heading-1">Welcome, Sasha!</div>
       </div>

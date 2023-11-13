@@ -160,10 +160,10 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <!-- App tab -->
     <div class="container-padded-40 pb-0 column-start lg:row-middle justify-between gap-y-10">
-      <AppTab class="gap-x-4 md:gap-x-[50px]" v-once>
-        <TabItem size="lg" title="All Comics" :active="true" />
-        <TabItem size="lg" title="My Bookshelf (5)" />
-        <TabItem size="lg" title="My Favorites (3)" />
+      <AppTab class="gap-x-4 md:gap-x-[50px]" size="lg" v-once>
+        <TabItem title="All Comics" :active="true" />
+        <TabItem title="My Bookshelf (5)" />
+        <TabItem title="My Favorites (3)" />
       </AppTab>
       <div class="row-middle justify-end gap-x-[22px]">
         <button @click="() => $router.push('/search')">

@@ -31,13 +31,12 @@ const breakpoints = {
       </button>
     </template>
     <div v-if="data.length > 0" class="card-contents">
-      <AppTab gap="30">
-        <TabItem title="Published" :active="true" :type="4" />
-        <TabItem title="Drafts" :type="4" />
+      <AppTab :type="4" gap="30">
+        <TabItem title="Published" :active="true" />
+        <TabItem title="Drafts" />
       </AppTab>
       <div class="title-list">
         <ContentSlider
-          mode="free"
           sliderItemClasses="padded-4"
           :breakpoints="breakpoints"
           :data="data"

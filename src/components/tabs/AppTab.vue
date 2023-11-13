@@ -3,7 +3,14 @@ import { computed } from 'vue'
 
 const props = defineProps({
   size: String,
-  gap: [Number, String]
+  gap: [Number, String],
+  type: {
+    type: Number,
+    default: 1,
+    validator(value) {
+      return [1, 2, 3, 4].includes(value)
+    }
+  }
 })
 
 const tabGap = computed(() => {
@@ -12,7 +19,7 @@ const tabGap = computed(() => {
 </script>
 
 <template>
-  <div id="app-tab" :class="size" :style="tabGap">
+  <div id="app-tab" :class="[size, `type-${type}`]" :style="tabGap">
     <slot />
   </div>
 </template>
