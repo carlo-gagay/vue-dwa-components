@@ -63,15 +63,15 @@ const emits = defineEmits(['onClick', 'onPlayAudio'])
           </div>
           <div v-if="books || chapters || issues" class="row-middle statistics">
             <div v-if="books" class="stat-item stat-item-sxs statistic-item books">
-              <i class="icon icon-news-paper icon--s10"></i>
+              <i class="icon icon-menu-book icon--s10"></i>
               <span>Books: {{ books }}</span>
             </div>
             <div v-if="chapters" class="stat-item stat-item-sxs statistic-item chapters">
-              <i class="icon icon-news-paper icon--s10"></i>
+              <i class="icon icon-auto-stories icon--s10"></i>
               <span>Chapers: {{ chapters }}</span>
             </div>
             <div v-if="issues" class="stat-item stat-item-sxs statistic-item issues">
-              <i class="icon icon-news-paper icon--s10"></i>
+              <i class="icon icon-description icon--s10"></i>
               <span>Issues: {{ issues }}</span>
             </div>
           </div>
