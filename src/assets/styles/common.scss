@@ -40,26 +40,6 @@
   }
 }
 
-.doughnut-no-data {
-  @apply flex flex-col justify-center items-center gap-y-5;
-
-  .doughnut {
-    @apply border border-[25px] border-[#EDEAE7] rounded-[90px] w-[90px] h-[90px];
-  }
-
-  .label {
-    @apply flex items-center gap-x-[6px];
-
-    .ellipse {
-      @apply w-[6px] h-[6px] rounded-[6px] bg-neutral-03;
-    }
-
-    .text-small-text {
-      @apply text-neutral-02;
-    }
-  }
-}
-
 .setup-item {
   @apply flex flex-row justify-between items-center;
 

@@ -14,16 +14,15 @@ const props = defineProps({
 
 onBeforeMount(() => ChartJS.register(ArcElement, Colors, Tooltip, Legend))
 
-const hasData = computed(() => props.data || props.data?.length > 0)
+const hasData = computed(() => props.data && props.data?.length > 0)
 
 const data = {
-  labels: props.data?.map((item) => item.name) ?? [],
+  labels: hasData.value ? props.data.map((item) => item.name) : ['No Data'],
   datasets: [
     {
       label: 'Demographic',
-      data: props.data?.map((item) => item.value) ?? [],
-      backgroundColor: props.data?.map((item) => item.color) ?? [],
-      hoverOffset: 4
+      data: hasData.value ? props.data.map((item) => item.value) : [1],
+      backgroundColor: hasData.value ? props.data.map((item) => item.color) : ['#EDEAE7']
     }
   ]
 }
@@ -37,7 +36,7 @@ const options = {
       labels: {
         boxWidth: 6,
         boxHeight: 6,
-        borderRadius: 3
+        borderRadius: 6
       }
     }
   }
@@ -52,19 +51,7 @@ const options = {
       </button>
     </template>
     <div class="card-contents">
-      <Doughnut
-        v-if="hasData"
-        :data="data"
-        :options="options"
-        style="width: 180px; height: 180px"
-      />
-      <div v-else class="doughnut-no-data">
-        <div class="doughnut"></div>
-        <div class="label">
-          <div class="ellipse"></div>
-          <div class="text-small-text">No Data</div>
-        </div>
-      </div>
+      <Doughnut :data="data" :options="options" style="width: 180px; height: 180px" />
     </div>
   </AnalyticsCardBase>
 </template>
