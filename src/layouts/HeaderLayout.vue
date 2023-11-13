@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { IconLogo } from '@components/svgs'
 
 defineProps({
+  headerClasses: String,
   navAlignment: {
     type: String,
     default: 'between',
@@ -18,12 +19,12 @@ const showMobileNavs = ref(false)
 </script>
 
 <template>
-  <header aria-label="Header" class="header">
+  <header aria-label="Header" class="header" :class="headerClasses">
     <slot>
       <div class="header-inner">
         <div class="nav-brand">
           <slot name="slot-brand">
-            <button role="button" @click="() => emit('onLogoClick')">
+            <button class="logo" role="button" @click="() => emit('onLogoClick')">
               <IconLogo />
             </button>
           </slot>

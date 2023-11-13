@@ -8,9 +8,13 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
 </script>
 
 <template>
-  <HeaderLayout nav-alignment="end" @on-logo-click="() => $router.push('/')">
+  <HeaderLayout
+    header-classes="paneled"
+    nav-alignment="end"
+    @on-logo-click="() => $router.push('/')"
+  >
     <template #slot-brand>
-      <button role="button" @click="() => $router.push('/')">
+      <button class="logo" role="button" @click="() => $router.push('/')">
         <IconLogo />
       </button>
     </template>
