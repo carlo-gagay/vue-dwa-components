@@ -23,8 +23,8 @@ const pageProvider = async (pageNumber, pageSize) => {
       <Grid
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[60px] gap-y-[45px]"
         :length="9"
-        :pageSize="3"
-        :pageProvider="pageProvider"
+        :page-size="3"
+        :page-provider="pageProvider"
         v-once
       >
         <template #probe="{ style }">
@@ -40,7 +40,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             :style="style"
             :subtitle="item.subtitle"
             :title="`${item.title} ${index}`"
-            @onClick="() => $router.push('/comic-page')"
+            @on-click="() => $router.push('/comic-page')"
             v-once
           />
         </template>

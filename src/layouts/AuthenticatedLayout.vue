@@ -8,7 +8,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
 </script>
 
 <template>
-  <HeaderLayout navAlignment="end" @onLogoClick="() => $router.push('/')">
+  <HeaderLayout nav-alignment="end" @on-logo-click="() => $router.push('/')">
     <template #slot-brand>
       <button role="button" @click="() => $router.push('/')">
         <IconLogo />

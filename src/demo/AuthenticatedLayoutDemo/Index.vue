@@ -27,8 +27,8 @@ const pageProvider = async (pageNumber, pageSize) => {
     <Grid
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[30px]"
       :length="9"
-      :pageProvider="pageProvider"
-      :pageSize="6"
+      :page-provider="pageProvider"
+      :page-size="6"
     >
       <template #probe="{ style }">
         <div :style="[style, { width: '326px', height: '234px' }]"></div>
@@ -44,10 +44,10 @@ const pageProvider = async (pageNumber, pageSize) => {
           :books="item.books"
           :chapters="item.chapters"
           :pages="item.pages"
-          :firstStep="100"
-          :secondStep="60"
+          :first-step="100"
+          :second-step="60"
           :style="style"
-          :thirdStep="20"
+          :third-step="20"
           :key="index"
         >
           <template #slot-card-image>

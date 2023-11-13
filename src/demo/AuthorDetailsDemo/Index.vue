@@ -35,7 +35,7 @@ const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/Titl
                   :liked="n == 1"
                   :likes="title.likes"
                   :title="`${title.title} #${n}`"
-                  @onClick="() => $router.push('/comics')"
+                  @on-click="() => $router.push('/comics')"
                 />
               </template>
             </div>

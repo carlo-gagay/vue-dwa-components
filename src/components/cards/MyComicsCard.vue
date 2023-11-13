@@ -24,7 +24,7 @@ const breakpoints = {
 </script>
 
 <template>
-  <AnalyticsCardBase wrapperClasses="my-comics" :header="header">
+  <AnalyticsCardBase wrapper-classes="my-comics" :header="header">
     <template #slot-expand>
       <button class="cta">
         <i class="icon icon-arrow-forward icon--s24"></i>
@@ -37,7 +37,7 @@ const breakpoints = {
       </AppTab>
       <div class="title-list">
         <ContentSlider
-          sliderItemClasses="padded-4"
+          slider-item-classes="padded-4"
           :breakpoints="breakpoints"
           :data="data"
           :drag="true"

@@ -29,7 +29,7 @@ defineProps({
         </button>
       </slot>
       <template #popper>
-        <slot name="dropdown" :size="size" :theme="theme" :popperClass="popperClass" />
+        <slot name="dropdown" :size="size" :theme="theme" :popper-class="popperClass" />
       </template>
     </v-dropdown>
   </div>

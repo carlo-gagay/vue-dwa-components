@@ -46,7 +46,7 @@ const options = {
 </script>
 
 <template>
-  <AnalyticsCardBase wrapperClasses="demographic" :header="header">
+  <AnalyticsCardBase wrapper-classes="demographic" :header="header">
     <template #slot-expand>
       <button class="cta">
         <i class="icon icon-arrow-forward icon--s24"></i>

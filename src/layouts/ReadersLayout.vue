@@ -43,7 +43,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
 </script>
 
 <template>
-  <HeaderLayout @onLogoClick="() => $router.push('/')">
+  <HeaderLayout @on-logo-click="() => $router.push('/')">
     <template #slot-nav-links>
       <div class="row-middle">
         <button class="tab tab-type-3" role="button">About Us</button>
@@ -61,7 +61,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
   <div class="container-flex mt-[60px]">
     <slot></slot>
   </div>
-  <AppModal :shown="authModal.shown" @onClose="onAuthModalClose">
+  <AppModal :shown="authModal.shown" @on-close="onAuthModalClose">
     <div class="auth-form">
       <div class="heading">
         <div class="text-heading-1">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</div>

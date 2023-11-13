@@ -7,7 +7,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersDescri
 </script>
 
 <template>
-  <HeaderLayout @onLogoClick="() => $router.push('/')">
+  <HeaderLayout @on-logo-click="() => $router.push('/')">
     <template #slot-nav-links>
       <div class="row-middle">
         <button class="tab tab-type-3" role="button">About Us</button>

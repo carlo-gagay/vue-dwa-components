@@ -279,8 +279,8 @@ const pageProvider = async (pageNumber, pageSize) => {
       <Grid
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10"
         :length="4"
-        :pageSize="4"
-        :pageProvider="pageProvider"
+        :page-size="4"
+        :page-provider="pageProvider"
         v-once
       >
         <template #probe="{ style }">
@@ -295,15 +295,15 @@ const pageProvider = async (pageNumber, pageSize) => {
               :content-rating="item.contentRating"
               :description="item.description"
               :genres="item.genres"
-              :hasAudio="true"
+              :has-audio="true"
               :id="`acc${index}`"
               :image="`${item.image}${index}`"
-              :isAudioPlaying="false"
+              :is-audio-playing="false"
               :likes="item.likes"
               :published="item.published"
               :title="`${item.title} ${index}`"
-              @onClick="() => $router.push('/comics')"
-              @onPlayAudio="() => console.log('audio playing')"
+              @on-click="() => $router.push('/comics')"
+              @on-play-audio="() => console.log('audio playing')"
               v-once
             />
           </div>

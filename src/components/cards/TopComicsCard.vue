@@ -13,14 +13,14 @@ defineProps({
 </script>
 
 <template>
-  <AnalyticsCardBase wrapperClasses="top-comics" :header="header" :width="width">
+  <AnalyticsCardBase wrapper-classes="top-comics" :header="header" :width="width">
     <template #slot-expand>
       <button class="cta">
         <i class="icon icon-arrow-forward icon--s24"></i>
       </button>
     </template>
     <div v-if="data.length > 0" class="contents">
-      <div v-for="(item, index) in data" class="comics-card-simple">
+      <div v-for="(item, index) in data" class="comics-card-simple" :key="index">
         <div class="icon"></div>
         <div class="card-contents">
           <div class="text-small-text">{{ item.type }}</div>

@@ -40,8 +40,8 @@ const pageProvider = async (pageNumber, pageSize) => {
         <Grid
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-[21px] gap-y-10"
           :length="8"
-          :pageSize="4"
-          :pageProvider="pageProvider"
+          :page-size="4"
+          :page-provider="pageProvider"
           v-once
         >
           <template #default="{ item, style, index }">
@@ -49,14 +49,14 @@ const pageProvider = async (pageNumber, pageSize) => {
               <TitleCardDetailed
                 :alt="`${item.title} ${index}`"
                 :author="item.author"
-                :hasAudio="true"
+                :has-audio="true"
                 :id="`cr${index}`"
                 :image="`https://picsum.photos/19${index}`"
-                :isAudioPlaying="false"
+                :is-audio-playing="false"
                 :progress="Number(`${5}${index}`)"
                 :title="`${item.title} ${index}`"
-                @onClick="() => $router.push('/comics')"
-                @onPlayAudio="() => console.log('audio playing')"
+                @on-click="() => $router.push('/comics')"
+                @on-play-audio="() => console.log('audio playing')"
                 v-once
               >
                 <template #slot-card-body>

@@ -23,25 +23,25 @@ const pageProvider = async (pageNumber, pageSize) => {
         id="banner"
         :alt="title.title"
         :author="title.author"
-        :brandName="title.brandName"
+        :brand-name="title.brandName"
         :completion="title.completion"
         :content-rating="title.contentRating"
         :description="title.description"
-        :descriptionEllipsisEnabled="false"
+        :description-ellipsis-enabled="false"
         :genres="title.genres"
-        :hasAudio="true"
+        :has-audio="true"
         :img-src="`https://picsum.photos/80${0}`"
-        :isAudioPlaying="false"
+        :is-audio-playing="false"
         :likes="title.likes"
         :rating="title.rating"
-        :showGenresInSubtitle="false"
+        :show-genres-in-subtitle="false"
         :title="title.title"
         :url="title.url"
-        @onAuthorClick="() => $router.push('/author')"
-        @onBookmark="() => {}"
-        @playAudio="() => {}"
+        @on-author-click="() => $router.push('/author')"
+        @on-bookmark="() => {}"
+        @play-audio="() => {}"
         @like="() => {}"
-        @onStartReading="() => $router.push('/comic-page')"
+        @on-start-reading="() => $router.push('/comic-page')"
         v-once
       />
     </div>
@@ -56,8 +56,8 @@ const pageProvider = async (pageNumber, pageSize) => {
       <Grid
         class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-[58px]"
         :length="8"
-        :pageSize="4"
-        :pageProvider="pageProvider"
+        :page-size="4"
+        :page-provider="pageProvider"
         v-once
       >
         <template #probe="{ style }">
@@ -70,7 +70,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             :image="`https://picsum.photos/20${index}`"
             :style="style"
             :title="`Issue ${index}`"
-            @onClick="() => $router.push('/chapters')"
+            @on-click="() => $router.push('/chapters')"
           />
         </template>
       </Grid>

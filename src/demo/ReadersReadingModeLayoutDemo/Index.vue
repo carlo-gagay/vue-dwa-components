@@ -32,7 +32,7 @@ const pageProvider = async (pageNumber, pageSize) => {
 </script>
 
 <template>
-  <ReadersReadingModeLayout :asideShown="asideShown" @onBackClick="() => $router.go(-1)">
+  <ReadersReadingModeLayout :aside-shown="asideShown" @on-back-click="() => $router.go(-1)">
     <template #slot-content-header>
       <div class="text-body-2 text-neutral-white">
         <strong>The Glove</strong> | <strong>Chapter 3:</strong> A Twist of a Knife
@@ -41,9 +41,9 @@ const pageProvider = async (pageNumber, pageSize) => {
     <template #slot-content-body>
       <ReadingPanel
         :pages="pages"
-        @onAsideShow="onAsideShow"
-        @onAsideClose="onAsideClose"
-        @onModalOpen="onModalOpen"
+        @on-aside-show="onAsideShow"
+        @on-aside-close="onAsideClose"
+        @on-modal-open="onModalOpen"
       />
       <AppModal :shown="modal.shown" @onClose="onModalClose">
         <div class="relative p-[27px] w-[1124px]">
@@ -63,8 +63,8 @@ const pageProvider = async (pageNumber, pageSize) => {
             <Grid
               class="grid grid-cols-1 gap-y-4"
               :length="8"
-              :pageSize="3"
-              :pageProvider="pageProvider"
+              :page-size="3"
+              :page-provider="pageProvider"
               v-once
             >
               <template #probe="{ style }">
@@ -74,7 +74,7 @@ const pageProvider = async (pageNumber, pageSize) => {
                 <div :style="style" :key="index">
                   <ChapterCardInline
                     :alt="item.title"
-                    :chapterNumber="`${item.chapterNumber}${index}`"
+                    :chapter-number="`${item.chapterNumber}${index}`"
                     :comments="item.comments"
                     :description="item.description"
                     :image="`${item.image}${index}`"
@@ -92,7 +92,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       </AppModal>
     </template>
     <template #slot-content-aside>
-      <AsidePanel title="Comments (232)" @onAsideClose="onAsideClose"> </AsidePanel>
+      <AsidePanel title="Comments (232)" @on-aside-close="onAsideClose"> </AsidePanel>
     </template>
   </ReadersReadingModeLayout>
 </template>

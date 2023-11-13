@@ -8,12 +8,22 @@ defineProps({
 </script>
 
 <template>
-  <AnalyticsCardBase wrapperClasses="finish-setup" :header="header">
+  <AnalyticsCardBase wrapper-classes="finish-setup" :header="header">
     <div class="progress-bars">
-      <div v-for="(item, index) in setupItems" class="bar" :class="{ active: item.active }"></div>
+      <div
+        v-for="(item, index) in setupItems"
+        class="bar"
+        :class="{ active: item.active }"
+        :key="index"
+      ></div>
     </div>
     <div class="setup-items">
-      <div v-for="(item, index) in setupItems" class="setup-item" :class="{ active: item.active }">
+      <div
+        v-for="(item, index) in setupItems"
+        class="setup-item"
+        :class="{ active: item.active }"
+        :key="index"
+      >
         <div class="content">
           <i
             class="icon icon--s24"
