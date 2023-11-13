@@ -31,7 +31,7 @@
     @apply text-neutral-03;
   }
 
-  .text-body-1 {
+  & > .text-body-1 {
     @apply text-neutral-01 mt-[14px];
   }
 

@@ -25,11 +25,11 @@ import { IconLogo } from '@components/svgs'
           <div class="section-header">Contact</div>
           <div class="contact-item">
             <i class="icon icon-mail icon--s16"></i>
-            <span class="text-caption"> info@duskwavearts.com </span>
+            <span class="contact-item-text"> info@duskwavearts.com </span>
           </div>
           <div class="contact-item">
             <i class="icon icon-pin-drop icon--s16"></i>
-            <span class="text-caption">
+            <span class="contact-item-text">
               10877 Wilshire Blvd, Los Angeles, CA 90024 United States
             </span>
           </div>

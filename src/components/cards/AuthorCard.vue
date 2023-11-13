@@ -23,7 +23,7 @@ defineProps({
       <div class="column-middle addresses">
         <div class="address">
           <i class="icon icon-location-on icon--s16"></i>
-          <div class="text-caption">{{ address }}</div>
+          <div class="address-text">{{ address }}</div>
         </div>
         <div class="website">
           <i class="icon icon-link icon--s16"></i>
@@ -36,18 +36,18 @@ defineProps({
       <div class="statistics">
         <div class="item">
           <i class="icon icon-preview icon--s24"></i>
-          <div class="text-sub-heading-1">{{ readers }}</div>
-          <div class="text-caption">Comic Readers</div>
+          <div class="stat-header">{{ readers }}</div>
+          <div class="stat-text">Comic Readers</div>
         </div>
         <div class="item">
           <i class="icon icon-favorite-border icon--s24"></i>
-          <div class="text-sub-heading-1">{{ likes }}</div>
-          <div class="text-caption">Likes</div>
+          <div class="stat-header">{{ likes }}</div>
+          <div class="stat-text">Likes</div>
         </div>
         <div class="item">
           <i class="icon icon-person-add-alt icon--s24"></i>
-          <div class="text-sub-heading-1">{{ followers }}</div>
-          <div class="text-caption">Followers</div>
+          <div class="stat-header">{{ followers }}</div>
+          <div class="stat-text">Followers</div>
         </div>
       </div>
       <div class="cta">

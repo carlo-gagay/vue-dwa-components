@@ -93,7 +93,7 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <!-- Continue reading -->
     <div class="container-padded-40 pb-0">
-      <div class="text-heading-1">Continue Reading</div>
+      <div class="text-heading-2 sm:text-heading-1">Continue Reading</div>
       <div v-if="hasInQueue" class="mt-[20px]">
         <ContentSlider
           mode="free"

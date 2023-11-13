@@ -18,7 +18,7 @@
           }
         }
 
-        .text-body-1 {
+        & > .text-body-1 {
           @apply ml-[18px];
         }
       }

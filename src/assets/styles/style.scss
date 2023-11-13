@@ -62,8 +62,8 @@
           @apply text-yellow;
         }
 
-        .text-caption {
-          @apply text-beige max-w-[133px];
+        .contact-item-text {
+          @apply text-beige max-w-[133px] text-caption;
         }
       }
     }

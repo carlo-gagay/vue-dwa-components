@@ -329,7 +329,7 @@
       @apply text-neutral-02;
     }
 
-    .text-body-1 {
+    & > .text-body-1 {
       @apply text-neutral-01;
     }
   }
@@ -364,8 +364,8 @@
           @apply text-black;
         }
 
-        .text-caption {
-          @apply text-neutral-02;
+        .address-text {
+          @apply text-neutral-02 text-caption;
         }
       }
 
@@ -393,12 +393,12 @@
           @apply text-neutral-03;
         }
 
-        .text-sub-heading-1 {
-          @apply text-orange;
+        .stat-header {
+          @apply text-sub-heading-1 text-orange;
         }
 
-        .text-caption {
-          @apply whitespace-nowrap;
+        .stat-text {
+          @apply whitespace-nowrap text-caption;
         }
       }
     }
