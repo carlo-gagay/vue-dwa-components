@@ -8,6 +8,8 @@ import { AppTab, TabItem } from '@components/tabs'
 import { SelectableFilter } from '@features/filters'
 import { filterOptions, title, genresFromApi } from '@stores/sample'
 
+const SCREEN_SM = 640
+
 const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/TitleCardBasic.vue'))
 
 const TitleCardDetailed = defineAsyncComponent(() =>
@@ -17,6 +19,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 const filtersShown = ref(false)
 const hasInQueue = ref(false)
 const isAuth = ref(true)
+const isBannerDrag = ref(false)
 
 const breakpoints = {
   '(min-width: 640px)': {
@@ -24,6 +27,14 @@ const breakpoints = {
   },
   '(min-width: 1024px)': {
     slides: { perView: 4, spacing: 21 }
+  }
+}
+
+const changeToDragOnSmScreen = (details) => {
+  if (details.size < SCREEN_SM && !isBannerDrag.value) {
+    isBannerDrag.value = true
+  } else if (details.size > SCREEN_SM && isBannerDrag.value) {
+    isBannerDrag.value = false
   }
 }
 
@@ -40,7 +51,9 @@ const pageProvider = async (pageNumber, pageSize) => {
       <ContentSlider
         sliderItemClasses="dark"
         :data="[title, title, title, title, title]"
+        :drag="isBannerDrag"
         :loop="true"
+        @on-details-changed="changeToDragOnSmScreen"
         v-once
       >
         <template #default="{ item, index, navigator }">

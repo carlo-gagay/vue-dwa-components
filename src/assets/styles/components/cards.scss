@@ -170,7 +170,7 @@
 
 .comics-card {
   .comics-card-image img {
-    @apply aspect-[256/396];
+    @apply aspect-[256/350] sm:aspect-[256/396];
   }
 
   .comics-card-info {
@@ -182,7 +182,7 @@
 
 .chapter-card {
   .chapter-card-image img {
-    @apply aspect-[292.778/453.519];
+    @apply aspect-[256/350] sm:aspect-[292.778/453.519];
   }
 
   .chapter-card-info {

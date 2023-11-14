@@ -8,7 +8,12 @@
   }
   .light-opac {
     background: linear-gradient(90deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%),
-      linear-gradient(0deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%);
+      linear-gradient(0deg, #fff 8.46%, rgba(243, 241, 241, 0) 90.3%);
+
+    @screen sm {
+      background: linear-gradient(90deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%),
+        linear-gradient(0deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%);
+    }
   }
 }
 

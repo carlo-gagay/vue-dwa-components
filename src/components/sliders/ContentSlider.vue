@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useKeenSlider } from 'keen-slider/vue'
 
 const props = defineProps({
@@ -45,7 +45,9 @@ const props = defineProps({
   sliderStyles: Object
 })
 
-const [container, slider] = useKeenSlider({
+const emit = defineEmits(['onDetailsChanged'])
+
+const options = ref({
   breakpoints: props.breakpoints,
   drag: props.drag,
   loop: props.loop,
@@ -57,8 +59,11 @@ const [container, slider] = useKeenSlider({
   },
   range: props.range,
   created: (instance) => updateTracker(instance),
-  slideChanged: (instance) => updateTracker(instance)
+  slideChanged: (instance) => updateTracker(instance),
+  detailsChanged: (instance) => emit('onDetailsChanged', instance)
 })
+
+const [container, slider] = useKeenSlider(options.value)
 
 const navigator = ref({
   index: 0,
@@ -76,6 +81,14 @@ const updateTracker = (instance) => {
   navigator.value.index = details.rel
   navigator.value.length = details.slides.length
 }
+
+watch(
+  () => props.drag,
+  (newVal) => {
+    options.value.drag = newVal
+    slider.value.update(options.value)
+  }
+)
 </script>
 
 <template>

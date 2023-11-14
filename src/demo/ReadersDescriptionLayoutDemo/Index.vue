@@ -45,7 +45,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         v-once
       />
     </div>
-    <div class="container-flex px-4 sm:px-[121px]">
+    <div class="container-flex px-4 sm:px-[121px] bg-neutral-white">
       <AppTab gap="lg" size="md">
         <TabItem title="Issues" :active="true" />
         <TabItem title="Community" />
@@ -54,7 +54,7 @@ const pageProvider = async (pageNumber, pageSize) => {
     </div>
     <div class="container-flex mt-10 px-4 sm:px-[121px]">
       <Grid
-        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-[58px]"
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 sm:gap-y-[58px]"
         :length="8"
         :page-size="4"
         :page-provider="pageProvider"
