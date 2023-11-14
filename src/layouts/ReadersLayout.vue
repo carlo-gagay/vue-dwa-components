@@ -27,6 +27,7 @@ const onSignInClick = () => {
   isSignIn.value = true
   onAuthModalShow()
 }
+
 const onSignUpClick = () => {
   isSignIn.value = false
   onAuthModalShow()
