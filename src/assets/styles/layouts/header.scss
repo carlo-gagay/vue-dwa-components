@@ -12,6 +12,10 @@
       }
     }
 
+    .header-nav-link {
+      @apply justify-center sm:justify-start;
+    }
+
     .main-nav-wrap {
       @apply hidden sm:flex sm:items-center sm:ml-[35px] w-full mt-4 sm:mt-0;
 

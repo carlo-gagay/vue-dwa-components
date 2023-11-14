@@ -51,7 +51,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
     @on-show-mobile-navs="() => (showMobileNavs = !showMobileNavs)"
   >
     <template #slot-nav-links>
-      <div class="row-middle">
+      <div class="header-nav-link row-middle">
         <button class="tab tab-type-3" role="button">About Us</button>
       </div>
     </template>

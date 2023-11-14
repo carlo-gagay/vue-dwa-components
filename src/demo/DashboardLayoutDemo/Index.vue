@@ -35,7 +35,7 @@ import { demographic, myTitles, summary, topComics } from '@stores/sample'
         <TopComicsCard class="grow" header="TOP COMICS" :data="topComics" />
       </div>
     </div>
-    <div class="container-flex mt-[31px]">
+    <div class="container-flex mt-[20px] sm:mt-[31px]">
       <div
         class="grid grid-cols-1 gap-y-5"
         :class="{ 'lg:grid-cols-[auto_405px] gap-x-[30px]': !myTitles.length }"

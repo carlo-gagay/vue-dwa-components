@@ -42,7 +42,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
       <div class="mobile-view-logo">
         <button class="logo-mobile" role="button" @click="() => $router.push('/')">
           <!-- This is supposedly a logo -->
-          <IconAvatar class="icon text-yellow" />
+          <IconLogo class="icon text-yellow" />
           <!-- ... -->
         </button>
       </div>
