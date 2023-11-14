@@ -84,51 +84,64 @@
   @apply z-10 w-full bg-transparent;
   @apply transition-all duration-150 ease-in-out;
 
+  @media (max-width: '640px') {
+    box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+
+    .title {
+      font-size: 24px !important;
+      line-height: 32px !important;
+    }
+  }
+
   .title-card-details {
-    @apply flex-row;
+    @apply flex-col px-[11px] sm:px-0 sm:flex-row;
   }
 
   .hideable-hidden {
-    @apply hidden #{!important};
+    @screen sm {
+      @apply hidden #{!important};
+    }
   }
 
   .hideable-show {
     display: inherit !important;
   }
 
-  &:hover {
-    // @apply sm:absolute z-20 sm:w-[140%] sm:-ml-[20%] sm:-mt-[10%];
-    @apply z-20 absolute scale-105 lg:scale-125 bg-white;
-    box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
+  @screen sm {
+    &:hover {
+      // @apply sm:fixed z-20 sm:w-[140%] sm:-ml-[20%] sm:-mt-[10%] bg-white;
+      @apply z-20 absolute scale-105 lg:scale-125 bg-white;
+      box-shadow: 0px 0px 8px 0px rgba(12, 11, 11, 0.2);
 
-    .title-card-image img {
-      @apply aspect-[412/180];
-    }
+      .title-card-image img {
+        @apply aspect-[412/180];
+      }
 
-    .title-card-details {
-      @apply flex-col px-[11px];
+      .title-card-details {
+        @apply flex-col px-[11px];
 
-      .title-card-details-main .title-infos {
-        .title {
-          @apply text-sub-heading-1;
+        .title-card-details-main .title-infos {
+          .title {
+            @apply text-sub-heading-1;
+          }
+
+          .subtitle .text {
+            @apply text-small-text text-neutral-500;
+          }
         }
 
-        .subtitle .text {
-          @apply text-small-text text-neutral-500;
+        .title-card-details-sub .description {
+          // @apply text-small-text;
         }
       }
 
-      .title-card-details-sub .description {
-        @apply text-small-text;
+      .hideable-hidden {
+        display: inherit !important;
       }
-    }
 
-    .hideable-hidden {
-      display: inherit !important;
-    }
-
-    .hideable-show {
-      display: none !important;
+      .hideable-show {
+        display: none !important;
+      }
     }
   }
 }

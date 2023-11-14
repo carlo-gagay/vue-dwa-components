@@ -6,12 +6,12 @@ defineProps({
   title: String
 })
 
-const emits = defineEmits(['onClick'])
+defineEmits(['onClick'])
 </script>
 
 <template>
   <div class="comics-card">
-    <div class="comics-card-image" @click="emits('onClick')">
+    <div class="comics-card-image" @click="() => $emit('onClick')">
       <figure v-lazyload class="full-image">
         <img src="/images/placeholder.png" :data-url="image" :alt="alt" />
       </figure>

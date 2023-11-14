@@ -16,7 +16,7 @@ const TitleCardDetailed = defineAsyncComponent(() =>
 
 const filtersShown = ref(false)
 const hasInQueue = ref(false)
-const isAuth = ref(false)
+const isAuth = ref(true)
 
 const breakpoints = {
   '(min-width: 640px)': {
@@ -92,7 +92,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       </ContentSlider>
     </div>
     <!-- Continue reading -->
-    <div class="container-padded-40 pb-0">
+    <div v-if="isAuth" class="container-padded-40 pb-0">
       <div class="text-heading-2 sm:text-heading-1">Continue Reading</div>
       <div v-if="hasInQueue" class="mt-[20px]">
         <ContentSlider
