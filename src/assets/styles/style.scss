@@ -3,10 +3,10 @@
 }
 
 .footer {
-  @apply pt-[31px] px-4 sm:px-[40px] pb-[17px] bg-black;
+  @apply pt-[31px] px-4 sm:px-[40px] pb-[31px] sm:pb-[17px] bg-black;
 
   .inner {
-    @apply flex flex-col justify-start items-start sm:flex-row justify-between gap-y-[30px];
+    @apply flex flex-col-reverse justify-start items-start sm:flex-row justify-between gap-y-[30px];
 
     .branding-section {
       @apply flex flex-col justify-start items-start gap-y-[30px];
