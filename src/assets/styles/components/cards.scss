@@ -410,14 +410,14 @@
 }
 
 .auth-form {
-  @apply bg-beige pt-[43px] px-[89px] pb-[49px] rounded-[10px];
+  @apply bg-beige w-full h-screen sm:h-fit p-5 sm:pt-[43px] sm:px-[89px] sm:pb-[49px] sm:rounded-[10px];
   box-shadow: 0px 0px 14px 2px rgba(12, 11, 11, 0.16);
 
   .heading {
     @apply relative row-middle;
 
     .close-btn {
-      @apply absolute -right-10;
+      @apply absolute right-0 sm:-right-10;
     }
   }
 

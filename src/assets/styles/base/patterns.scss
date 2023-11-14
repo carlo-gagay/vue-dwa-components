@@ -18,4 +18,8 @@
   .column-start {
     @apply flex flex-col justify-start;
   }
+
+  .column-start-reverse {
+    @apply flex flex-col-reverse justify-start;
+  }
 }

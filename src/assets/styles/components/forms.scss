@@ -1,6 +1,10 @@
 .form-group {
   @apply relative flex flex-col gap-y-1;
 
+  &.min-w-436 {
+    @apply min-w-full sm:min-w-[436px];
+  }
+
   label.form-label {
     @apply text-caption text-beige text-neutral-01;
 

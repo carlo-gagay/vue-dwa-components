@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 const props = defineProps({
   id: String,
@@ -11,18 +11,19 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  width: Number
-})
-
-const groupWidth = computed(() => {
-  return props.width ? props.width.toString().concat('px') : 'auto'
+  minWidth: {
+    type: Number,
+    validator(value) {
+      return [436].includes(value)
+    }
+  }
 })
 
 const show = ref(false)
 </script>
 
 <template>
-  <div class="form-group" :style="{ 'min-width': groupWidth }">
+  <div class="form-group" :class="`min-w-${minWidth}`">
     <label :for="id" class="form-label" :class="{ required: required }">{{ label }}</label>
     <input
       v-bind="$attrs"

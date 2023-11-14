@@ -19,6 +19,8 @@ const form = reactive({
   password: ''
 })
 
+const showMobileNavs = ref(false)
+
 const onAuthModalShow = () => (authModal.shown = true)
 const onAuthModalClose = () => (authModal.shown = false)
 const onSignInClick = () => {
@@ -43,7 +45,11 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
 </script>
 
 <template>
-  <HeaderLayout @on-logo-click="() => $router.push('/')">
+  <HeaderLayout
+    :show-mobile-navs="showMobileNavs"
+    @on-logo-click="() => $router.push('/')"
+    @on-show-mobile-navs="() => (showMobileNavs = !showMobileNavs)"
+  >
     <template #slot-nav-links>
       <div class="row-middle">
         <button class="tab tab-type-3" role="button">About Us</button>
@@ -77,8 +83,8 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
           name="email"
           placeholder="johndoe@gmail.com"
           type="email"
+          :min-width="436"
           :required="true"
-          :width="436"
         />
         <InputPasswordField
           v-model="form.password"
@@ -87,8 +93,8 @@ onUnmounted(() => document.querySelector('body').classList.remove('readersLayout
           name="password"
           placeholder="Enter your password"
           type="password"
+          :min-width="436"
           :required="true"
-          :width="436"
         />
       </div>
       <div class="submit-button">

@@ -1,7 +1,9 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import HeaderLayout from './HeaderLayout.vue'
 import { IconAvatar, IconLogo } from '@components/svgs'
+
+const showMobileNavs = ref(false)
 
 onMounted(() => document.querySelector('body').classList.add('authenticatedLayout'))
 onUnmounted(() => document.querySelector('body').classList.remove('authenticatedLayout'))
@@ -11,7 +13,9 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
   <HeaderLayout
     header-classes="paneled"
     nav-alignment="end"
+    :show-mobile-navs="showMobileNavs"
     @on-logo-click="() => $router.push('/')"
+    @on-show-mobile-navs="() => (showMobileNavs = !showMobileNavs)"
   >
     <template #slot-brand>
       <button class="logo" role="button" @click="() => $router.push('/')">
@@ -30,8 +34,15 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
     </template>
   </HeaderLayout>
 
-  <aside class="aside" aria-label="Sidebar">
+  <aside class="aside" aria-label="Sidebar" :class="{ show: showMobileNavs }">
     <div class="aside-inner">
+      <div class="mobile-view-logo">
+        <button class="logo-mobile" role="button" @click="() => $router.push('/')">
+          <!-- This is supposedly a logo -->
+          <IconAvatar class="icon text-yellow" />
+          <!-- ... -->
+        </button>
+      </div>
       <ul>
         <li>
           <button
@@ -76,6 +87,7 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
   </aside>
 
   <div class="aside-body">
+    <div v-show="showMobileNavs" class="opac" @click="() => (showMobileNavs = false)"></div>
     <div class="aside-body-inner">
       <slot></slot>
     </div>

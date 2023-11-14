@@ -1,8 +1,24 @@
 .aside {
   @apply fixed bottom-0 left-0 z-40 w-[238px] h-[calc(100vh-60px)] transition-transform -translate-x-full sm:translate-x-0;
 
+  &.show {
+    @apply translate-x-0;
+  }
+
   .aside-inner {
-    @apply relative h-full py-[51px] pl-[40px] pr-[23px] overflow-y-auto bg-neutral-black;
+    @apply relative h-full pb-[51px] pt-4 sm:pt-[51px] pl-[40px] pr-[23px] overflow-y-auto bg-neutral-black;
+
+    .mobile-view-logo {
+      @apply pr-2 pb-2 flex sm:hidden justify-center mb-4;
+
+      .logo-mobile {
+        @apply text-yellow;
+      }
+
+      .logo-mobile svg {
+        @apply w-[50px] h-[50px];
+      }
+    }
 
     ul {
       @apply space-y-2 font-medium;
@@ -27,7 +43,11 @@
 }
 
 .aside-body {
-  @apply p-4 sm:ml-[238px] mt-[60px] transition-all;
+  @apply relative p-4 sm:ml-[238px] mt-[60px] transition-all;
+
+  .opac {
+    @apply absolute inset-0 bg-neutral-black opacity-50 z-10 transition-all;
+  }
 
   .aside-body-inner {
     @apply w-full h-full pt-[29px] pb-[27px] sm:px-5;

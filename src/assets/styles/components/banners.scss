@@ -1,6 +1,10 @@
 @layer components {
   .dark-opac {
-    background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 54.3%);
+    background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 90.3%);
+
+    @screen sm {
+      background: linear-gradient(90deg, #000 8.46%, rgba(0, 0, 0, 0) 54.3%);
+    }
   }
   .light-opac {
     background: linear-gradient(90deg, #fff 8.46%, rgba(243, 241, 241, 0) 54.3%),

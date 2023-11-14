@@ -8,7 +8,7 @@
       @apply flex justify-between items-center;
 
       .mobile-menu-toggler .icon {
-        @apply block sm:hidden transition;
+        @apply block sm:hidden transition text-beige;
       }
     }
 

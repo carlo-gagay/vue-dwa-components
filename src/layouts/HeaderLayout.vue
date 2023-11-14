@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { IconLogo } from '@components/svgs'
 
 defineProps({
@@ -10,12 +9,14 @@ defineProps({
     validator(value) {
       return ['between', 'center', 'end', 'start'].includes(value)
     }
+  },
+  showMobileNavs: {
+    type: Boolean,
+    default: false
   }
 })
 
-const emit = defineEmits(['onLogoClick'])
-
-const showMobileNavs = ref(false)
+defineEmits(['onLogoClick', 'onShowMobileNavs'])
 </script>
 
 <template>
@@ -24,12 +25,12 @@ const showMobileNavs = ref(false)
       <div class="header-inner">
         <div class="nav-brand">
           <slot name="slot-brand">
-            <button class="logo" role="button" @click="() => emit('onLogoClick')">
+            <button class="logo" role="button" @click="() => $emit('onLogoClick')">
               <IconLogo />
             </button>
           </slot>
           <div class="mobile-menu-toggler">
-            <button class="text-beige" @click="() => (showMobileNavs = !showMobileNavs)">
+            <button class="text-beige" @click="() => $emit('onShowMobileNavs')">
               <i class="icon icon--s32" :class="showMobileNavs ? 'icon-close' : 'icon-menu'"></i>
             </button>
           </div>
