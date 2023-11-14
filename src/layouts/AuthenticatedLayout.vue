@@ -36,6 +36,9 @@ onUnmounted(() => document.querySelector('body').classList.remove('authenticated
 
   <aside class="aside" aria-label="Sidebar" :class="{ show: showMobileNavs }">
     <div class="aside-inner">
+      <button class="mobile-close-button" @click="() => (showMobileNavs = false)">
+        <i class="icon icon-close icon--s32"></i>
+      </button>
       <div class="mobile-view-logo">
         <button class="logo-mobile" role="button" @click="() => $router.push('/')">
           <!-- This is supposedly a logo -->
