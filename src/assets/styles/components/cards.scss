@@ -389,7 +389,7 @@
           @apply text-black;
         }
 
-        .text-link {
+        & > .text-link-underline {
           @apply text-yellow;
         }
       }
