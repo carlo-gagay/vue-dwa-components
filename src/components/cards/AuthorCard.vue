@@ -27,7 +27,7 @@ defineProps({
         </div>
         <div class="website">
           <i class="icon icon-link icon--s16"></i>
-          <a href="#" class="text-link">{{ website }}</a>
+          <a href="#" class="text-link-underline">{{ website }}</a>
         </div>
       </div>
       <div class="description text-body-2">

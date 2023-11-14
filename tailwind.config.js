@@ -47,6 +47,19 @@ module.exports = {
           '03': '#FFE6AC',
           '04': '#FFF2D3'
         }
+      },
+      fontSize: {
+        'title': ['60px', {lineHeight: '80px'}],
+        'heading-1': ['40px', {lineHeight: '48px', fontWeight: '700'}],
+        'heading-2': ['30px', {lineHeight: '40px', fontWeight: '700'}],
+        'sub-heading-1': ['24px', {lineHeight: '32px', fontWeight: '500'}],
+        'sub-heading-2': ['20px', {lineHeight: '30px'}],
+        'body-1': ['14px', {lineHeight: '20px', fontWeight: '700'}],
+        'body-2': ['14px', {lineHeight: '20px'}],
+        'link': ['14px', {lineHeight: '20px'}],
+        'button': ['14px', {lineHeight: '20px', fontWeight: '600'}],
+        'caption': ['12px', {lineHeight: '16px'}],
+        'small-text': ['10px', {lineHeight: '14px', fontWeight: '500'}]
       }
     },
   },
