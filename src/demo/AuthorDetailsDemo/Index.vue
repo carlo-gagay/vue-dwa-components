@@ -10,8 +10,8 @@ const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/Titl
 <template>
   <ReadersLayout>
     <div class="container-flex relative">
-      <div class="pl-[112px] py-[51px] pr-[61px]">
-        <div class="row-start gap-x-[47px]">
+      <div class="px-4 sm:pl-[112px] py-4 sm:py-[51px] sm:pr-[61px]">
+        <div class="column-middle sm:row-start gap-x-[47px]">
           <div class="py-5">
             <AuthorCard
               :address="author.address"
@@ -24,9 +24,9 @@ const TitleCardBasic = defineAsyncComponent(() => import('@components/cards/Titl
               :website="author.website"
             />
           </div>
-          <div class="container-flex">
+          <div class="container-flex mt-[20px] sm:mt-0">
             <div class="text-heading-2">Comic Series</div>
-            <div class="grid grid-cols-2 gap-6 mt-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-5">
               <template v-for="n of 9" :key="n">
                 <TitleCardBasic
                   titleClasses="text-body-2"
