@@ -98,7 +98,7 @@ const title = {
   views: '105k'
 }
 
-const myTitles = []
+const myTitles = [title, title, title]
 
 const topComics = [
   { type: 'Title', name: 'The Glove' },

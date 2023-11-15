@@ -41,9 +41,9 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
     </figure>
     <div class="opac"></div>
     <div class="content column-middle">
-      <div class="block max-w-[430px]">
+      <div class="block">
         <div v-if="title" class="card-title title-banner-texts">{{ title }}</div>
-        <div class="row-middle gap-x-4 mt-1">
+        <div class="row-middle gap-x-4 mt-1 max-w-[430px]">
           <button
             v-if="author"
             class="card-sub-titles title-banner-texts"
@@ -66,7 +66,7 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
             <i class="icon icon-information-outline icon--s20 text-neutral-02"></i>
           </template>
         </div>
-        <div class="badges row-middle gap-x-[10px] mt-4">
+        <div class="badges row-middle gap-x-[10px] mt-4 max-w-[430px]">
           <div v-if="likes" class="row-middle gap-x-[4.5px]">
             <i class="icon icon-favorite icon--s12 title-banner-texts" />
             <div class="text-caption title-banner-texts">{{ likes }}</div>
@@ -106,14 +106,14 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
         </div>
         <div
           v-if="description"
-          class="description title-banner-texts ellipsable"
+          class="description title-banner-texts ellipsable max-w-[430px]"
           :class="{ disabled: !descriptionEllipsisEnabled }"
         >
           <input :id="id" type="checkbox" />
           <span class="text-body-2 text">{{ description }}</span>
           <label :for="id" class="primary">See More</label>
         </div>
-        <div class="mt-6 row-middle gap-x-6">
+        <div class="mt-6 row-middle gap-x-6 max-w-[430px]">
           <button
             v-if="url"
             :href="url"
