@@ -29,7 +29,7 @@ defineEmits(['onLogoClick', 'onShowMobileNavs'])
               <IconLogo />
             </button>
           </slot>
-          <div class="mobile-menu-toggler">
+          <div class="mobile-menu-toggler" :style="{display: `flex`}">
             <button class="text-beige" @click="() => $emit('onShowMobileNavs')">
               <i class="icon icon--s32" :class="showMobileNavs ? 'icon-close' : 'icon-menu'"></i>
             </button>
