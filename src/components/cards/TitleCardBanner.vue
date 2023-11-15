@@ -43,7 +43,7 @@ const emit = defineEmits(['onAuthorClick', 'onBookmark', 'onLike', 'onPlayAudio'
     <div class="content column-middle">
       <div class="block">
         <div v-if="title" class="card-title title-banner-texts">{{ title }}</div>
-        <div class="row-middle gap-x-4 mt-1 max-w-[430px]">
+        <div class="row-middle gap-x-2 sm:gap-x-4 mt-1 max-w-[430px]">
           <button
             v-if="author"
             class="card-sub-titles title-banner-texts"

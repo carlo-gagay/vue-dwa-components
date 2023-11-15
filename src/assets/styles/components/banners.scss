@@ -29,14 +29,19 @@
   }
 
   .content {
-    @apply absolute inset-0 py-16 px-8 sm:py-[151px] sm:px-[121px] justify-end sm:justify-center;
+    @apply absolute inset-0 py-16 px-4 sm:py-[151px] sm:px-[121px] justify-end sm:justify-center;
 
     .card-title {
-      @apply text-heading-1 sm:text-title sm:font-normal;
+      @apply text-[32px] font-medium sm:text-title sm:font-normal lg:max-w-[90%] xl:max-w-[60%];
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .card-sub-titles {
-      @apply text-body-1 sm:text-sub-heading-1 sm:font-medium;
+      @apply text-body-2 sm:text-sub-heading-1 font-medium;
     }
 
     .badges {
@@ -44,7 +49,11 @@
     }
 
     .description {
-      @apply mt-[20px];
+      @apply mt-4 sm:mt-5 overflow-y-auto;
+
+      span {
+        @apply max-h-[160px] sm:max-h-fit;
+      }
     }
   }
 

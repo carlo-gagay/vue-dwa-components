@@ -58,7 +58,7 @@ const pageProvider = async (pageNumber, pageSize) => {
       >
         <template #default="{ item, index, navigator }">
           <TitleCardBanner
-            :alt="`${item.title} ${index}`"
+            :alt="item.title"
             :author="item.author"
             :books="item.books"
             :chapters="item.chapters"
@@ -71,7 +71,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             :isAudioPlaying="false"
             :likes="item.likes"
             :rating="item.rating"
-            :title="`${item.title} ${index}`"
+            :title="item.title"
             :url="item.url"
             @onAuthorClick="() => $router.push('/author')"
             @onBookmark="() => {}"
@@ -120,7 +120,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         >
           <template #default="{ item, index }">
             <TitleCardBasic
-              :alt="`${item.title} ${index}`"
+              :alt="item.title"
               :author="item.author"
               :books="item.books"
               :chapters="item.chapters"
@@ -129,7 +129,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               :image="`https://picsum.photos/19${index}`"
               :isAudioPlaying="false"
               :progress="Number(`${5}${index}`)"
-              :title="`${item.title} ${index}`"
+              :title="item.title"
               @onClick="() => $router.push('/comics')"
               @onPlayAudio="() => console.log('audio playing')"
               v-once
@@ -261,7 +261,7 @@ const pageProvider = async (pageNumber, pageSize) => {
             <TitleCardDetailed
               v-once
               class="expose-details-on-hover"
-              :alt="`${item.title} ${index}`"
+              :alt="item.title"
               :author="item.author"
               :content-rating="item.contentRating"
               :description="item.description"
@@ -272,7 +272,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               :isAudioPlaying="false"
               :likes="item.likes"
               :published="item.published"
-              :title="`${item.title} ${index}`"
+              :title="item.title"
               @onClick="() => $router.push('/comics')"
               @onPlayAudio="() => console.log('audio playing')"
             />
@@ -303,7 +303,7 @@ const pageProvider = async (pageNumber, pageSize) => {
           <div class="title-card-wrapper" :style="style">
             <TitleCardDetailed
               class="expose-details-on-hover"
-              :alt="`${item.title} ${index}`"
+              :alt="item.title"
               :author="item.author"
               :content-rating="item.contentRating"
               :description="item.description"
@@ -314,7 +314,7 @@ const pageProvider = async (pageNumber, pageSize) => {
               :is-audio-playing="false"
               :likes="item.likes"
               :published="item.published"
-              :title="`${item.title} ${index}`"
+              :title="item.title"
               @on-click="() => $router.push('/comics')"
               @on-play-audio="() => console.log('audio playing')"
               v-once

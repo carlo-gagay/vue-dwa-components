@@ -28,25 +28,41 @@
 
 [data-popper-placement='bottom-start'].v-popper__popper.v-popper--theme-dropdown {
   .dropdown-popper {
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 5px;
+
+    @screen sm {
+      border-radius: 0px 10px 10px 10px;
+    }
   }
 }
 
 [data-popper-placement='bottom-end'].v-popper__popper.v-popper--theme-dropdown {
   .dropdown-popper {
-    border-radius: 10px 0px 10px 10px;
+    border-radius: 5px;
+
+    @screen sm {
+      border-radius: 10px 0px 10px 10px;
+    }
   }
 }
 
 [data-popper-placement='top-end'].v-popper__popper.v-popper--theme-dropdown {
   .dropdown-popper {
-    border-radius: 10px 10px 0px 10px;
+    border-radius: 5px;
+
+    @screen sm {
+      border-radius: 10px 10px 0px 10px;
+    }
   }
 }
 
 [data-popper-placement='top-start'].v-popper__popper.v-popper--theme-dropdown {
   .dropdown-popper {
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 5px;
+
+    @screen sm {
+      border-radius: 10px 10px 10px 0px;
+    }
   }
 }
 

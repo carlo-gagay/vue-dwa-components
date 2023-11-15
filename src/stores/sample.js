@@ -93,12 +93,12 @@ const title = {
   pages: 1100,
   published: '26 January, 2023',
   rating: '4.5',
-  title: 'Criminal King',
+  title: 'Lorem Ipsum is Simply Dummy Text - Addition',
   url: '/',
   views: '105k'
 }
 
-const myTitles = [title, title, title]
+const myTitles = []
 
 const topComics = [
   { type: 'Title', name: 'The Glove' },

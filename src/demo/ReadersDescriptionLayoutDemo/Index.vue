@@ -52,7 +52,7 @@ const pageProvider = async (pageNumber, pageSize) => {
         <TabItem title="Casts" />
       </AppTab>
     </div>
-    <div class="container-flex mt-10 px-4 sm:px-[121px]">
+    <div class="container-flex mt-10 px-4 sm:px-[121px] pb-20 sm:pb-[64px]">
       <Grid
         class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 sm:gap-y-[58px]"
         :length="8"
@@ -75,6 +75,5 @@ const pageProvider = async (pageNumber, pageSize) => {
         </template>
       </Grid>
     </div>
-    <div class="h-[62px]"></div>
   </ReadersDescriptionLayout>
 </template>

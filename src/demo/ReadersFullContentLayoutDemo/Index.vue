@@ -13,13 +13,13 @@ const pageProvider = async (pageNumber, pageSize) => {
 
 <template>
   <ReadersFullContentLayout @onBack="() => $router.push('/comics')">
-    <div class="column-middle gap-y-[26px] items-center">
+    <div class="column-middle gap-y-4 sm:gap-y-[26px] items-center">
       <div class="text-[36.993px] dark:text-white">Comic Title</div>
       <div class="text-sub-heading-2 sm:text-[55.681px] dark:text-neutral-white">
         Book 01: <strong>Title Goes Here</strong>
       </div>
     </div>
-    <div class="mt-[66px]">
+    <div class="mt-10 sm:mt-[66px]">
       <Grid
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[60px] gap-y-8 sm:gap-y-[45px]"
         :length="9"
