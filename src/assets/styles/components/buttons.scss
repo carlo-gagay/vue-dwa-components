@@ -198,11 +198,11 @@
     @apply absolute top-[calc(50%-20px)] z-10 text-yellow;
 
     &.backward {
-      @apply hidden sm:inline-block left-[46px];
+      @apply hidden sm:inline-block left-[40px];
     }
 
     &.forward {
-      @apply hidden sm:inline-block right-[46px];
+      @apply hidden sm:inline-block right-[40px];
     }
   }
 }
